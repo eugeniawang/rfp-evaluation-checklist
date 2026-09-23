@@ -1,0 +1,95 @@
+# RFP → Evaluation Matrix
+
+A folder that turns a public-sector Request for Proposals into the twelve-column evaluation matrix a proposal manager builds by hand at the start of every pursuit. Drop it into a Claude project, hand it an RFP, get back one row per scored criterion, in the RFP's own words, with every cell cited to the page and line it came from. A stdlib checker re-reads every citation and refuses the matrix if a single cell is not in the source.
+
+Built for Clief Notes weekly competition #13, The Translator.
+
+## What it converts
+
+| | |
+|---|---|
+| **In** | An RFP / RFQ / solicitation (PDF with a text layer, or plain text), plus addenda. Public owners: cities, counties, state agencies, universities, transit. |
+| **Out** | `outputs/<rfp>.matrix.json`, rendered as `.md`, `.csv` and `.xlsx`. Twelve columns, one row per scored item, a TOTAL row, a "Could not map" list, and a stop state when the arithmetic does not reconcile or no scoring is published. |
+| **Who does this by hand** | Proposal managers and capture leads at construction, engineering and architecture firms, usually the afternoon the RFP drops, usually in a spreadsheet. |
+
+## The folder
+
+```
+identity.md         what it converts, from what, to what, and what it refuses to do
+rules.md            how each column is filled, what "verbatim" means, when to stop
+examples.md         three real RFPs in, three matrices out, side by side
+reference/schema.md the contract: every field, its type, its source, and what the checker proves
+fixtures/           three public RFPs (PDF) and their numbered source text
+outputs/            the three matrices (JSON, Markdown, CSV, XLSX)
+tools/extract.py    PDF or text → numbered source text (p<page>:<line>| on every line)
+tools/check_matrix.py   the gate: every claim in the matrix must be found in the source
+tools/write_matrix.py   renders a matrix the gate accepted
+tests/              20 tests, including the ones that prove the gate can fail
+```
+
+## Use it
+
+**1. Attach the folder to a Claude project** (Claude.ai Projects, or Claude Code with this directory open). `identity.md` and `rules.md` make Claude the translator.
+
+**2. Extract the RFP.** Python 3.9+ and poppler (`brew install poppler` / `apt install poppler-utils`) for PDFs.
+
+```
+python3 tools/extract.py fixtures/your-rfp.pdf
+```
+
+That writes `fixtures/your-rfp.source.txt`. Every line looks like `p11:14|            Staff Experience - 40 points`. Attach that file too, or paste it.
+
+**3. Ask for the matrix.**
+
+> Translate `fixtures/your-rfp.source.txt` into an evaluation matrix. Write `outputs/your-rfp.matrix.json` per `reference/schema.md`.
+
+Claude reads the source, writes the JSON, and says which human columns are waiting on a person.
+
+**4. Check it. Then render it.**
+
+```
+python3 tools/check_matrix.py outputs/your-rfp.matrix.json
+python3 tools/write_matrix.py outputs/your-rfp.matrix.json
+```
+
+`PASS` means every criterion, every points figure, every input sentence and every "could not map" entry was found, verbatim, at the line it cites, and the points reconcile. `FAIL` names each cell that was not. The renderer refuses a matrix the checker rejects, so nothing unverified becomes a spreadsheet.
+
+**Try it on the shipped fixtures right now:**
+
+```
+for f in outputs/*.matrix.json; do python3 tools/check_matrix.py "$f"; done
+python3 -m unittest discover tests
+```
+
+## What comes back
+
+The twelve columns, always in this order:
+
+`#` · RFP section · RFP criterion (their words) · Points · Input needed · Input data source · Evaluation criteria (what the scorer looks for) · Proposal section that answers it · Owner · Claude does · Human check · Status
+
+Six of them come from the RFP and carry a `[p<page>:<line>]` citation. Three (Input data source, Owner, Human check) are the firm's knowledge and are always empty on hand-over; the Markdown ends with a count of rows waiting on a person. `Claude does` is one of three fixed phrases. `Status` is `open`.
+
+A cell with nothing in the RFP to cite says `not in source`. A matrix whose points do not add up to the RFP's stated total carries a one-sentence `stop` instead of an adjusted row. An RFP with no published scoring produces a valid matrix with zero rows and a `stop`.
+
+## Why the checker is the point
+
+The failure that makes RFP tooling untrustworthy is a criterion that reads well and is not what the RFP said. The scorer is reading their own words; a paraphrase loses the match, and a points figure remembered from a similar RFP loses the pursuit. So the contract is mechanical: text must be a whitespace-normalized substring of the cited lines, numbers must appear as numbers on the cited lines, and the tests in `tests/test_matrix.py` prove the checker fails on a paraphrase, a respelled word, an invented figure, a wrong citation, a filled human column, and an unreconciled sum. A gate that cannot fail is not a gate.
+
+## Fixtures
+
+All three are public documents, downloaded 2026-09-23 from the issuing agencies' sites:
+
+- City of Tucker, GA, RFP 2026-016, CEI Services (100 points, three criteria)
+- City of Tucker, GA, RFP 2026-008, Right-of-Way Maintenance (100 points, three criteria with descriptions)
+- Colorado DOT, US 50 Passing Lanes, Construction Manager services, Final RFP 4/14/26 (60-point proposal + 40-point interview, sub-criteria)
+
+## Limits, stated
+
+- A scanned PDF with no text layer cannot be cited and is refused by `extract.py`. Run OCR first and feed the text.
+- Column layouts that `pdftotext -layout` interleaves can split a criterion across lines in an odd order; cite a range and the checker joins the lines.
+- Addenda are separate source files; a criterion changed by an addendum is cited to the addendum. The checker reads one source per matrix today, so an addendum-changed row should be built from a merged source text.
+- The translator maps what the RFP says. Which internal system holds a resume, and who owns the cost form, is the firm's knowledge and stays in the human columns.
+
+## License
+
+MIT. The fixtures are public government solicitations reproduced for testing.

@@ -1,0 +1,2270 @@
+p1:1|         Final Request for Proposals (RFP)
+p1:2|
+p1:3|         Construction Manager (CM) Services
+p1:4|for the Preconstruction Phase of the Project using CM/GC Delivery
+p1:5|
+p1:6|
+p1:7|
+p1:8|
+p1:9|                  US50B SHIFT Passing Lanes
+p1:10|
+p1:11|
+p1:12|
+p1:13|
+p1:14|              PROJECT NUMBERS: NH 0505-053
+p1:15|        PROJECT LOCATION: US50B Pueblo to Kansas
+p1:16|                    PROJECT CODE: 25781
+p1:17|
+p1:18|
+p1:19|
+p1:20|
+p1:21|                             April 14, 2026
+p1:22|
+p1:23|
+p1:24|
+p1:25|
+p1:26|                  Colorado Department of Transportation
+p1:27|                        5615 Wills Blvd, Suite A
+p1:28|                           Pueblo, CO 81008
+p2:1|                                                 Final Request for Proposals 4/14/26
+p2:2|                                                          Project No. NH 0505-053
+p2:3|                                                       US50B SHIFT Passing Lanes
+p2:4|
+p2:5|                         TABLE OF CONTENTS
+p2:6|TABLE OF CONTENTS                                                      2
+p2:7|SECTION 1 – SCOPE OF WORK AND PROJECT INFORMATION                      3
+p2:8|   1.1.   CM SERVICES SCOPE OF WORK                                    3
+p2:9|   1.2.   PROJECT GOALS                                               11
+p2:10|   1.3.   PROJECT DESCRIPTION/SCOPE OF WORK                           11
+p2:11|   1.4.   PROJECT FUNDING                                             15
+p2:12|   1.6.   PROJECT ADMINISTRATION                                      16
+p2:13|   1.7.   PROJECT COORDINATION                                        16
+p2:14|   1.8.   CONSTRUCTION BUDGET                                         17
+p2:15|   1.9.   PROJECT SCHEDULES                                           18
+p2:16|   1.10. PRELIMINARY DOCUMENTS AND DRAWINGS                           19
+p2:17|   1.11. SPECIFICATIONS                                               19
+p2:18|   1.12. OWNERSHIP OF THE DOCUMENTS                                   19
+p2:19|   1.13. REQUIRED PERCENTAGE OF WORK SELF-PERFORMED BY CM             19
+p2:20|   1.14. PROJECT COMPUTER SOFTWARE REQUIREMENTS                       19
+p2:21|   1.15. REQUIRED AVAILABILITY OF KEY PERSONNEL                       19
+p2:22|   1.16. ORGANIZATIONAL CONFLICTS AND INELIGIBLE FIRMS                20
+p2:23|   1.17. APPLICABLE FEDERAL REGULATIONS, STATE REGULATIONS AND INDUSTRY
+p2:24|   STANDARDS                                                          20
+p2:25|   1.18. NONDISCRIMINATION                                            21
+p2:26|   1.19. NONDISCRIMINATION ASSURANCE                                  21
+p2:27|   1.20. MAXIMUM COMPENSATION FOR CM PRECONSTRUCTION SERVICES         21
+p2:28|   1.21. EXPLANATION OF CAP                                           21
+p2:29|   1.22. PUBLIC INFORMATION                                           22
+p2:30|   1.23. SUBCONTRACTING REQUIREMENTS                                  23
+p2:31|   1.24. PROMPT PAYMENT                                               23
+p2:32|SECTION 2 – CM PROPOSAL REQUIREMENTS AND INSTRUCTIONS                 24
+p2:33|   2.1.   PROPOSAL GENERAL INFORMATION                                24
+p2:34|   2.2.   MINIMUM PROPOSAL REQUIREMENTS                               26
+p2:35|   2.3.   KEY EVENTS SCHEDULE AND RFP DATES                           27
+p2:36|   2.4.   INFORMAL ONE-ON-ONE MEETINGS                                27
+p2:37|   2.5.   QUESTIONS AND CHANGES TO THE RFP                            27
+p2:38|   2.6.   CONTRACTOR PROTEST RULES                                    28
+p2:39|   2.7.   AWARD OF CONTRACT                                           28
+p2:40|   2.8.   MANAGEMENT PRICE PERCENTAGE                                 29
+p2:41|   2.9.   PROPOSAL SUBMITTAL – STEP 1                                 29
+p2:42|   2.10. INTERVIEWS - STEP 2                                          31
+p2:43|SECTION 3 – PROPOSAL CONTENT AND EVALUATION CRITERIA                  32
+p2:44|   3.1.   EVALUATION CRITERIA FOR PROPOSALS (60 Points Possible)      32
+p2:45|   3.2 EVALUATION CRITERIA FOR INTERVIEWS (40 Points Possible)        38
+p2:46|APPENDIX A: PRECONSTRUCTION ROLES AND RESPONSIBILITIES MATRIX         39
+p2:47|APPENDIX B: EVALUATION NOTES AND FORMS                                44
+p2:48|APPENDIX C: CONSTRUCTION GENERAL CONDITIONS                           48
+p2:49|APPENDIX D: SAMPLE CONSTRUCTION MANAGER CONTRACT                      49
+p2:50|
+p2:51|
+p2:52|
+p2:53|
+p2:54|                                                                                  2
+p3:1|                                                                            Final Request for Proposals 4/14/26
+p3:2|                                                                                     Project No. NH 0505-053
+p3:3|                                                                                  US50B SHIFT Passing Lanes
+p3:4|
+p3:5|SECTION 1 – SCOPE OF WORK AND PROJECT INFORMATION
+p3:6|1.1.       CM SERVICES SCOPE OF WORK
+p3:7|CDOT is soliciting Construction Manager services for the US50 SHIFT Passing Lanes project. This
+p3:8|project includes roadway widening for twelve passing lanes between MP 317.5 & MP 467.5 on US50B.
+p3:9|The major features of widening work include embankment, unclassified excavation, paving, resurfacing,
+p3:10|guardrail, drainage features, utility coordination/relocation, signage and pavement markings. The
+p3:11|Successful Proposer (also referred to as “Construction Manager (CM))”, will provide CM services for the
+p3:12|preconstruction phase and will have the opportunity to negotiate a price to complete the construction of
+p3:13|any package(s). If negotiation is successful, the CM will become the General Contractor (GC) with
+p3:14|CDOT for the construction of that package. The GC Construction Project Contract award to the CM is not
+p3:15|guaranteed but is contingent on a successful negotiation of a Construction Agreed Price (CAP).
+p3:16|The Project Scope Elements are described in Section 1.3.B of this Request for Proposal (RFP). The
+p3:17|Project Scope Elements may be modified based on packaging, CM input, Stakeholder input, and final
+p3:18|design refinements.
+p3:19|The scope of work reflects an approach based on the Project Goals and known risks. A primary benefit of
+p3:20|CM/GC is the ability to contractually allocate risks to the party best able to manage the risk. Risk
+p3:21|assessment will be a continual process throughout the preconstruction and construction phase of the
+p3:22|project. The process will incorporate risk sharing between public and private parties holding both parties
+p3:23|accountable for performance and expenditure of public resources.
+p3:24|The CM shall analyze the Project Goals, evaluate work elements, identify risks, quantify risk, and
+p3:25|mitigate risks. The CM shall also articulate a clear, well thought out plan for delivering the Project on
+p3:26|time and on budget with accountability of public resources throughout the process. The CM shall consider
+p3:27|new approaches, innovation, modifying the Project work elements, the Project sequencing, and/or the
+p3:28|Project packaging to increase the efficiency of the Project delivery.
+p3:29|The CM will be part of an integrated design team (Design Team) which will consist of CDOT, the Design
+p3:30|Consultant, and the Independent Cost Estimator (ICE). The CM will provide input on schedule, phasing,
+p3:31|constructability, quality assurance of the design, and project cost estimating throughout the
+p3:32|preconstruction phase of the Project as well as general support services to ensure complete and efficient
+p3:33|scoping of the different Project Elements. The CM will offer innovative ideas and risk mitigation
+p3:34|measures throughout the preconstruction phase to proactively assist the Design Team. In addition to the
+p3:35|base input expected of the CM, the CM should also provide opportunities, means, and methods to protect
+p3:36|the traveling public and reduce the construction duration to minimize impacts to traveling public and
+p3:37|reduce costs.
+p3:38|If it is determined to be in the interest of CDOT, CDOT may forgo negotiations of any portion of the
+p3:39|project and advertise/procure those portions of the Project separately. If this happens, the CM's Firm will
+p3:40|not be eligible to submit a bid for any package, advertised or procured separately, in which the CM’s Firm
+p3:41|participated in the preconstruction activities.
+p3:42|The CM’s tasks during the preconstruction phase include, but are not limited to:
+p3:43|       A. Design Review:
+p3:44|          ●   Thorough review of all plans, specifications, reports, diagrams, shop drawings, as-built plans,
+p3:45|              site conditions, and all other necessary Project documentation to provide design validation
+p3:46|              from a construction expertise perspective.
+p3:47|
+p3:48|
+p3:49|
+p3:50|                                                                                                             3
+p4:1|                                                                    Final Request for Proposals 4/14/26
+p4:2|                                                                             Project No. NH 0505-053
+p4:3|                                                                          US50B SHIFT Passing Lanes
+p4:4|
+p4:5|●   Conduct and analyze preliminary field work (coring, sampling, test holes, etc.) as directed to
+p4:6|    assist with the pre-construction phase.
+p4:7|●   Independently calculate quantities for verification purposes of construction packages,
+p4:8|    independent from both the Design Consultant and the Independent Cost Estimator.
+p4:9|●   Provide constructability input on all facets of the Project including, but not limited to:
+p4:10|    o   Structural Foundations and Walls,
+p4:11|    o   Geotechnical,
+p4:12|    o   Hazardous Materials,
+p4:13|    o   Resiliency,
+p4:14|    o   Environmental Commitments,
+p4:15|    o   Roadway and Safety Improvements,
+p4:16|    o   Intelligent Transportation Systems,
+p4:17|    o   Maintaining Traffic Operations and the Existing Capacity of all roads and accesses,
+p4:18|    o   Minimizing impacts of Construction to the traveling public,
+p4:19|    o   Material availability and lead times,
+p4:20|    o   Staging,
+p4:21|    o   Stormwater Management Plan,
+p4:22|    o   Roadway Drainage,
+p4:23|    o   Phasing Techniques,
+p4:24|    o   Accelerated Construction Techniques,
+p4:25|    o   Existing Subsurface Utilities, and
+p4:26|    o   Quality assurance of design deliverables specific to mitigation of error and omission prior
+p4:27|        to negotiation.
+p4:28|●   Provide written reviews or reports and details/redlines of the Project plans and specification
+p4:29|    packages at Project milestones. Comments should be related to constructability, construction
+p4:30|    phasing, clarifications, design errors or omission mitigation and tracking, impacts to
+p4:31|    schedule, impacts to cost, risk identification, and recommendations to increase efficiencies of
+p4:32|    the Project.
+p4:33|●   Coordinate with the Design Team to make determinations whether multiple independent and
+p4:34|    severable CAP packages are:
+p4:35|    o   Efficient,
+p4:36|    o   Add value to the Project,
+p4:37|    o   Provide an overall benefit to the Project,
+p4:38|    o   Have the potential to accelerate the start of construction, and
+p4:39|    o   Bring the overall Project measurably under the Construction Budget.
+p4:40|
+p4:41|
+p4:42|                                                                                                     4
+p5:1|                                                                      Final Request for Proposals 4/14/26
+p5:2|                                                                               Project No. NH 0505-053
+p5:3|                                                                            US50B SHIFT Passing Lanes
+p5:4|
+p5:5|   ●   Coordinate with the Design Team to make determinations whether early procurement
+p5:6|       packages for materials (long lead-time procurement “LLTP”):
+p5:7|       o   Are viable and cost effective,
+p5:8|       o   Offer a potential to reduce the construction schedule, and
+p5:9|       o   Provide an overall benefit to the Project.
+p5:10|   Procurement of any LLTP materials may be done by the CM through a separate early GC
+p5:11|   Construction Project Contract with CDOT ahead of construction but not prior to completion of
+p5:12|   the National Environmental Policy Act (“NEPA”) process resulting in a signed decision
+p5:13|   document.
+p5:14|   ●   Actively participate in discussions to study the feasibility of design options and provide input
+p5:15|       on passing lane location selection and packaging, constructability, pricing, innovation, value,
+p5:16|       risk mitigation, and quality.
+p5:17|   ●   Provide additional milestone reviews depending on package complexity.
+p5:18|   ●   Provide timely feedback from design reviews to assist in decision making.
+p5:19|B. Cost Estimating:
+p5:20|   Ongoing Tasks
+p5:21|   ●   The CM shall provide rough order of magnitude (ROM) cost estimating along with schedule
+p5:22|       impacts as design concepts/alternatives are being developed and evaluated throughout the
+p5:23|       preconstruction phase to help inform decisions. This may include:
+p5:24|       o   Evaluating means and methods of various construction techniques that may influence
+p5:25|           design solutions with considerations of cost and schedule impacts.
+p5:26|       o   Evaluating industry standard operating and maintenance costs to determine life-cycle
+p5:27|           costs.
+p5:28|       o   Proposing design alternatives to reduce cost. All design alternatives must be approved by
+p5:29|           CDOT and may also require Project stakeholder(s) approval. Any resulting Cost savings
+p5:30|           may be reinvested into the Project .
+p5:31|   CM Tasks at Milestones
+p5:32|   ●   Provide initial ROM construction estimate and associated schedule for the full Project within
+p5:33|       one month of CDOT’s issuance of the preconstruction CM phase’s Notice to Proceed (NTP).
+p5:34|   ●   Collaborate with CDOT to establish the expectations and the format of the Cost Model for
+p5:35|       construction packages through a series of Cost Model meetings. See Section 1.21 of this RFP
+p5:36|       for additional information regarding the Cost Model.
+p5:37|   ●   Provide construction cost estimates at milestones that shall include the following activities:
+p5:38|       o   Item identification that is compatible with CDOT’s cost estimating, standards, and
+p5:39|           specifications.
+p5:40|       o   Submission of Opinion of Probable Construction Costs (“OPCCs”) at 30%, 60% and
+p5:41|           90% milestones for each construction package (or alternative milestones as agreed to).
+p5:42|           Analysis should include availability of labor, equipment, and materials. Additional
+p5:43|           OPCCs may be required at the request of CDOT if: the package complexity indicates an
+p5:44|
+p5:45|                                                                                                        5
+p6:1|                                                                     Final Request for Proposals 4/14/26
+p6:2|                                                                              Project No. NH 0505-053
+p6:3|                                                                           US50B SHIFT Passing Lanes
+p6:4|
+p6:5|           added benefit, analysis of proposed alternatives is necessary, analysis of means and
+p6:6|           methods is necessary, if significant package errors or omissions are identified, or work is
+p6:7|           added to the Project.
+p6:8|       o   Additional OPCCs may be required before entering the CAP negotiations at the request
+p6:9|           of CDOT to facilitate comparisons with ICE estimates, both Contractor and
+p6:10|           subcontractor cost estimates will be included in an open book review.
+p6:11|       o   The CM shall submit a CAP proposal when both the CM and CDOT agree the design has
+p6:12|           progressed to the appropriate level, typically at 90%.
+p6:13|           ▪ Quantity and schedule reconciliation will be required between the CM, Design
+p6:14|             Consultant, the ICE, and CDOT. This may include verification of assumptions, and
+p6:15|             means of methods.
+p6:16|           ▪ CDOT will request the CM submit a CAP proposal on early construction packages or
+p6:17|             for the procurement of long-lead items.
+p6:18|           ▪ During CAP proposal reviews, the CM shall provide CDOT all production rates,
+p6:19|             material assumptions, indirect costs, and any other information as requested by CDOT
+p6:20|             to aid in reaching an agreement on a CAP proposal.
+p6:21|           ▪ If a CAP proposal is successfully negotiated and accepted, the CM shall submit those
+p6:22|             CAP proposals as an Electronic Bid Submittal (“EBS”).
+p6:23|C. Project Schedule:
+p6:24|   ●   Impact to the traveling public must be minimized and is a high priority consideration in the
+p6:25|       determination of daily working time schedules allowed. The CM and/or GC must work and
+p6:26|       communicate with Project stakeholders and citizens before and during construction. Seasonal,
+p6:27|       weekly, and daily traffic patterns must be considered when planning and scheduling work.
+p6:28|   ●   Notable Project schedule constraints to be considered:
+p6:29|       o   Environmental Requirements
+p6:30|           ▪ All work is anticipated to conform to the CatEx and associated documentation that is
+p6:31|             expected to be completed in 2027.
+p6:32|           ▪ Any early packages shall have the appropriate environmental clearances, approvals,
+p6:33|             and permits.
+p6:34|           ▪ On-going environmental work during the design process will also be considered.
+p6:35|             Those tasks are listed in Section 1.3.E of this RFP.
+p6:36|           ▪ Environmental clearances (NEPA) for identified elements within a package must be
+p6:37|             received and approved before a CAP is accepted and before CDOT issues an NTP.
+p6:38|       o   Grant Requirements
+p6:39|               ▪   FHWA requirement to have construction begin within 18 months of the grant
+p6:40|                   execution
+p6:41|               ▪   FHWA requirement to have all funds obligated by September of 2028 with
+p6:42|                   submission to FHWA by May 2028
+p6:43|               ▪   Planned Construction Substantial Completion and Open to Traffic Date for Phase
+p6:44|                   I: 12/31/2029
+p6:45|
+p6:46|                                                                                                      6
+p7:1|                                                             Final Request for Proposals 4/14/26
+p7:2|                                                                      Project No. NH 0505-053
+p7:3|                                                                   US50B SHIFT Passing Lanes
+p7:4|
+p7:5|        ▪   Planned Construction Substantial Completion and Open to Traffic Date for Phase
+p7:6|            II: 12/31/2030
+p7:7|o   Grant Agreement Phases. The Grant Agreement is being reviewed by FHWA. The
+p7:8|    submitted Grant Agreement contains the following funding phases:
+p7:9|        ▪   Base Phase: Preliminary Design and NEPA. This phase will complete
+p7:10|            preliminary design for two construction packages with the related NEPA
+p7:11|            clearances. The work will include confirmation of the passing lane locations with
+p7:12|            updated safety and operations analysis, topographic and ROW survey, subsurface
+p7:13|            utility (SUE) exploration, geotechnical investigations, preliminary design,
+p7:14|            environmental clearance (NEPA clearance when the top half of CDOT Form 128
+p7:15|            is signed), and determination of permanent or temporary Right-of-Way (ROW)
+p7:16|            easement needs for all twelve passing lane locations. As part of the design, the
+p7:17|            first step of the design process will start with the Project Team, Designer, and
+p7:18|            CM/GC Contractor working together to determine the appropriate locations to be
+p7:19|            included in the final design and construction packages ensuring the most optimal
+p7:20|            and successful project delivery. Considerations for packaging will include
+p7:21|            existing condition risks, distance between locations, environmental and ROW
+p7:22|            impacts, updated operations and safety data, along with any items the Contractor
+p7:23|            may indicate are important for package planning. As the overall project cost is
+p7:24|            more than $ 50 million, a Value Engineering study will be completed during the
+p7:25|            base phase as per the Value Engineering Guidelines.
+p7:26|        ▪   Phase I: Final Design (after NEPA clearance signed for package 1), ROW,
+p7:27|            Independent Cost Estimate, Construction, and Close Out of Construction
+p7:28|            Package 1 (CP1). This phase will include the final design, construction, and
+p7:29|            closeout of Construction Package 1 which will include six passing lanes. The
+p7:30|            work will include finalizing design, final clearances, ROW Acquisition,
+p7:31|            Independent Cost Estimate, and Construction Agreed Price (CAP) negotiations
+p7:32|            for Construction Package 1. Work in this phase will also include completed
+p7:33|            construction of the roadway widening for the passing lanes selected for this
+p7:34|            package, design support during construction, construction project management,
+p7:35|            testing and inspection of the completed work, and final project closeout.
+p7:36|        ▪   Phase II: Final Design (after NEPA clearance signed for Construction Package
+p7:37|            2), ROW, Independent Cost Estimation, Construction, and Close Put of
+p7:38|            Construction Package 2 (CP2). This phase will include the final design,
+p7:39|            construction, and closeout of Construction Package 2 which will include six
+p7:40|            passing lanes. The work will include finalizing design, final clearances, ROW
+p7:41|            Acquisition, Independent Cost Estimate, and Construction Agreed Price (CAP)
+p7:42|            negotiations for Construction Package 2. Work in this phase will also include
+p7:43|            completed construction of the roadway widening for the passing lanes selected
+p7:44|            for this package, design support during construction, construction project
+p7:45|            management, testing and inspection of the completed work, and final project
+p7:46|            closeout.
+p7:47|o   Lane Closure Policy - See Section 1.3.F of this RFP for additional information.
+p7:48|o   Utility Relocation - See Section 1.3.G of this RFP for additional information.
+p7:49|o   Temporary and Permanent ROW Impacts
+p7:50|o   Irrigation Company and Railroad Coordination
+p7:51|
+p7:52|                                                                                              7
+p8:1|                                                                      Final Request for Proposals 4/14/26
+p8:2|                                                                               Project No. NH 0505-053
+p8:3|                                                                            US50B SHIFT Passing Lanes
+p8:4|
+p8:5|       o   Resource availability due to other major regional projects.
+p8:6|   ●   See Section 1.9 of this RFP for additional information regarding Project Schedules.
+p8:7|
+p8:8|D. Risk:
+p8:9|   Risk is defined as an uncertain event or condition that, if it occurs, has an impact, either positive
+p8:10|   or negative, on a project’s goals and objectives. The CM/GC delivery method provides a forum to
+p8:11|   communicate and discuss risk in the preconstruction phase and to collaboratively address and
+p8:12|   reduce risk with the Owner, CM, and the Design Consultant. A primary benefit of CM/GC is the
+p8:13|   ability to contractually allocate risks to the party best able to manage the risk. Risk assessment
+p8:14|   will be a continual process throughout the preconstruction and construction phases with risk
+p8:15|   sharing between public and private parties that holds both accountable for performance and
+p8:16|   expenditure of public resources.
+p8:17|   Risk management will be a topic at both the 2-day Kickoff meeting and an initial Risk
+p8:18|   Management and Assessment Workshop. The workshop shall be scheduled by the CM early in
+p8:19|   the preconstruction phase. Regular risk meetings, facilitated by the CM, will be held to monitor
+p8:20|   progress. Risk responsibilities include:
+p8:21|   ●   Facilitate quantitative and qualitative risk management discussions to identify risks, quantify
+p8:22|       probabilities, quantify impacts, develop mitigation strategies, and assign risk responsibility.
+p8:23|   ●   Set risk meeting frequencies and prepare and update the Project Risk Matrix throughout the
+p8:24|       Project lifecycle.
+p8:25|   ●   Collaborate with the Project Team to develop a Risk Management Plan, perform risk
+p8:26|       assessments, and prepare and update the Risk Matrix.
+p8:27|
+p8:28|   ●   Finalize Risk Register, including narratives, to be submitted with CAP estimates.
+p8:29|
+p8:30|E. Innovation:
+p8:31|
+p8:32|   ●   The innovation process will be a topic of the Kick-Off Workshop, see Section 1.1.F of this
+p8:33|       RFP. The innovation process is intended to be an interactive and cooperative process to
+p8:34|       generate value for the Project. Following the Kick-Off Workshop:
+p8:35|
+p8:36|   ●   A combined Project Innovation and Value Engineering Workshop will be scheduled early in
+p8:37|       the preconstruction phase.
+p8:38|
+p8:39|   ●   The innovation process during preconstruction will be an ongoing integrated process as the
+p8:40|       design progresses. The CM shall provide ongoing analysis of the design concepts specifically
+p8:41|       focused on seeking opportunity for innovation during all phases of the Project. The CM will
+p8:42|       document this analysis through regularly submitted written reports and recommendations.
+p8:43|
+p8:44|   ●   Major cost elements of the Project will be discussed at the regular progress meeting and the
+p8:45|       topic will include innovations that may result in potential cost and schedule savings. CDOT
+p8:46|       expects cost savings greater than the fee paid for CM preconstruction services, which will
+p8:47|       result in better project value.
+p8:48|
+p8:49|F. Meetings:
+p8:50|
+p8:51|
+p8:52|                                                                                                       8
+p9:1|                                                                  Final Request for Proposals 4/14/26
+p9:2|                                                                           Project No. NH 0505-053
+p9:3|                                                                        US50B SHIFT Passing Lanes
+p9:4|
+p9:5|●   The Kick-Off Workshop will emphasize the importance of partnering within the CM/GC
+p9:6|    delivery method by focusing on team building and partnering over a 2-day period. This
+p9:7|    workshop is mandatory for all key team members including key subcontractors. This
+p9:8|    workshop will be facilitated by CDOT and will cover at a minimum the following items:
+p9:9|    o   Introduction to the Project, CM/GC, partnering, Project stakeholder engagement,
+p9:10|        identification of roles and responsibilities. Subcontractors performing major and high-risk
+p9:11|        work items should be in attendance.
+p9:12|    o   The Team will review Project status, vision, goals, objectives, funding, grant status,
+p9:13|        preliminary preconstruction schedule, what success looks like, current design, etc.
+p9:14|    o   Initial discussion of preliminary innovations, phasing, and risk mitigations being
+p9:15|        proposed by the CM and Design Consultant.
+p9:16|    o   Discussion of the Cost Model review and coordination with the ICE during OPCCs.
+p9:17|    o   Cost Model components.
+p9:18|    o   Coordinate Project Schedule meetings in accordance with Section 1.9 of this RFP.
+p9:19|    o   Coordinate progress meeting frequencies and initiate task force groups for various
+p9:20|        elements of the Project. Progress meetings may include project management meetings,
+p9:21|        design meetings, discipline/specialty meetings, stakeholder meetings, and public
+p9:22|        meetings.
+p9:23|    o   Strategy, timing, and approach for the Project Innovation and Value Engineering
+p9:24|        Workshop.
+p9:25|●   The Project Innovation and Value Engineering Workshop will be facilitated by a value
+p9:26|    engineering facilitator selected by CDOT. Attendance and duration will be outlined at the
+p9:27|    Kick-Off Meeting. It is also anticipated that Project stakeholders’ input will also be
+p9:28|    incorporated into this workshop. The approach, agenda, format, and duration for the
+p9:29|    workshop will be developed in collaboration with CDOT, the CM, ICE, and the Design
+p9:30|    Consultant. The CM shall provide input into how to achieve the desired results for the
+p9:31|    Project. This workshop could require several sessions, over an extended period. The purpose
+p9:32|    of this workshop is to evaluate the Preferred Alternative, consider any CM innovations or
+p9:33|    design refinements for the Project, incorporate value engineering principles to the Project,
+p9:34|    incorporate stakeholder input and get support for endorsement of any potential changes to the
+p9:35|    Preferred Alternative.
+p9:36|●   The CM shall, unless otherwise directed, attend meetings with CDOT at the CDOT Region 2
+p9:37|    Headquarters Office at 5615 Wills Blvd Suite A. Pueblo, CO 81008. Meetings are to be
+p9:38|    attended in person unless virtual attendance is negotiated prior to the meeting.
+p9:39|●   The following meetings are key to success on this project and attendance by the CM shall be
+p9:40|    anticipated. Other meetings may be deemed useful and necessary. Attendance to any
+p9:41|    additional meetings by the CM shall be coordinated with CDOT:
+p9:42|    o   Kick-Off Workshop
+p9:43|    o   Regular Partnering meetings
+p9:44|    o   Design Discipline Task Force Meetings (as agreed upon by Design Team and CM)
+p9:45|    o   Project Innovation and Value Engineering Workshop
+p9:46|
+p9:47|
+p9:48|                                                                                                   9
+p10:1|                                                                    Final Request for Proposals 4/14/26
+p10:2|                                                                             Project No. NH 0505-053
+p10:3|                                                                          US50B SHIFT Passing Lanes
+p10:4|
+p10:5|       o   Field Inspection Review (FIR) for each construction scope package – 30%
+p10:6|       o   Design Office Review (DOR) for each construction scope package – 60%
+p10:7|       o   Final Office Review (FOR) for each construction scope package – 90%
+p10:8|       o   Cost Model Review Meetings
+p10:9|       o   Quantity Reconciliation Meetings
+p10:10|       o   Risk Management Meetings
+p10:11|       o   Innovation Meetings
+p10:12|       o   OPCC Review Meetings
+p10:13|       o   CAP Review Meetings
+p10:14|       o   CAP Negotiations and Assumption Resolution Meetings (if applicable)
+p10:15|       o   Construction Hand Off Meeting
+p10:16|       o   Ongoing Lessons Learned
+p10:17|       o   Other Project Meetings:
+p10:18|           ▪ Weekly Project updates with CDOT Project Management Team
+p10:19|           ▪ Public Information Planning Meetings
+p10:20|           ▪ Monthly Project Leadership Team (PLT) Meetings
+p10:21|           ▪ Monthly Technical Team (TT) Meetings
+p10:22|           ▪ Preconstruction Public Meetings
+p10:23|   ●   The CM shall be prepared to conduct Project Vision Meetings to analyze how Project
+p10:24|       progress is aligning and tracking with Project Goals. Items of focus include priorities,
+p10:25|       commitments, approach, scope, schedule, and cost reasonableness. The Project Vision
+p10:26|       Meetings are anticipated to be scheduled quarterly, at a minimum, to track and trend the
+p10:27|       pursuit of the Project Goals.
+p10:28|G. Deliverables:
+p10:29|   ●   The CM shall develop and produce the following reports and deliverables:
+p10:30|       o   Cost Model Subcontractor Selection Plan
+p10:31|       o   Material Sourcing Plan
+p10:32|       o   Phasing and Packaging Plan
+p10:33|       o   Worker and Public Safety Plan
+p10:34|       o   Risk Management Plan
+p10:35|       o   Comments, input, and support that will be incorporated into the Value Engineering
+p10:36|           Report (the CM will not be creating the actual document)
+p10:37|       o   Innovation Tracking and Performance Report
+p10:38|       o   Procurement Review Report for each LLTP; CAP (GC Construction Project Contract) if
+p10:39|           required
+p10:40|
+p10:41|                                                                                                    10
+p11:1|                                                                            Final Request for Proposals 4/14/26
+p11:2|                                                                                     Project No. NH 0505-053
+p11:3|                                                                                  US50B SHIFT Passing Lanes
+p11:4|
+p11:5|              o   Submit monthly invoices and project reports to support payment of preconstruction CM
+p11:6|                  services
+p11:7|       H. Other Tasks:
+p11:8|          ●   If CAP proposals are accepted by CDOT, then a separate GC Contract will be awarded to the
+p11:9|              CM, and they shall become the GC. The GC shall ensure all environmental, safety, and
+p11:10|              permit commitments that are specified in the plans, specifications, and contract documents
+p11:11|              are implemented during construction in accordance with applicable laws and regulations.
+p11:12|          ●   The Design Consultant will develop the Stormwater Management Plan during
+p11:13|              preconstruction with input from the CM. CDOT will review the plan throughout the
+p11:14|              development process and apply for the permit. If a CAP proposal is successfully negotiated
+p11:15|              and agreed upon, the GC will be added to the permit after the award.
+p11:16|          ●   Coordinating with CDOT’s Public Information Officer during preconstruction to ensure a
+p11:17|              smooth transition of communication into construction. Coordination will include involvement
+p11:18|              of the CM’s proposed Public Information Manager to help develop the Public Information
+p11:19|              Plan prior to construction, to aid in public/stakeholder outreach and public meetings during
+p11:20|              preconstruction.
+p11:21|          ●   Assisting in the preparation and attendance of public meetings and/or open house meetings.
+p11:22|
+p11:23|1.2.       PROJECT GOALS
+p11:24|The CDOT Project Goals reflect the values that this Project holds and expects. An exceptional proposal
+p11:25|will demonstrate how each of the Project Goals will be pursued by the Proposer.
+p11:26|
+p11:27|        1. Maximize the project scope and corridor improvements within the project budget and schedule
+p11:28|           (consider structures, resurfacing, intersection improvements).
+p11:29|
+p11:30|        2. Passing lane locations meet optimal length requirements with tapers (meet or exceed design
+p11:31|           standards requirements).
+p11:32|
+p11:33|        3. Minimize ROW and Environmental impacts.
+p11:34|
+p11:35|        4. Passing lane locations meet Grant commitments and maximize safety and operations within
+p11:36|           those segments.
+p11:37|
+p11:38|        5. Minimize inconvenience to traveling public; no full closures.
+p11:39|
+p11:40|1.3.       PROJECT DESCRIPTION/SCOPE OF WORK
+p11:41|       A. Project Background
+p11:42|          The US 50 SHIFT Passing Lanes project is located along the US50B High Plains Freight
+p11:43|          Corridor, which is part of the National Highway Freight Network. The project focuses on
+p11:44|          providing passing lanes in stretches of two-way head-to-head highway conditions. The corridor is
+p11:45|          a heavy freight and agriculture route, and construction must accommodate large trucks and
+p11:46|          oversized loads. This project aims to increase efficiency and reliability and improve overall safety
+p11:47|          along the corridor. The status of the project can be found at the following link:
+p11:48|          https://www.codot.gov/projects/studies/us50passinglanes
+p11:49|
+p11:50|
+p11:51|                                                                                                            11
+p12:1|                                                                         Final Request for Proposals 4/14/26
+p12:2|                                                                                  Project No. NH 0505-053
+p12:3|                                                                               US50B SHIFT Passing Lanes
+p12:4|
+p12:5|
+p12:6|
+p12:7|   B. Project Information and Definition
+p12:8|       The goal of the Project is to construct the Project scope elements below in their entirety while
+p12:9|       minimizing impacts to the traveling public and other stakeholders. The Project Scope Elements
+p12:10|       may be modified based on packaging, CM input, Stakeholder input, and final design refinements.
+p12:11|          Project Scope Elements
+p12:12|       The core of the Project is roadway widening to add 12 passing lanes within 5 designated
+p12:13|       segments of highway between Pueblo and the Kansas state line. The passing lanes shall be of
+p12:14|       optimal length and adhere to grant commitments while maximizing safety and minimizing
+p12:15|       inconvenience to the traveling public. Minimal design has been completed. The CM, Design
+p12:16|       Consultant, the ICE, and CDOT will work collaboratively to determine the optimal location of
+p12:17|       each passing lane within the segments, design, and package the passing lanes through final
+p12:18|       design.
+p12:19|       The 12 locations and five segments of US 50 are as follows:
+p12:20|             Segment                         Number of Passing Lanes
+p12:21|Pueblo to Fowler                        2 (1 EB, 1 WB)
+p12:22|Fowler to Manzanola                     1 (1 EB)
+p12:23|La Junta to Las Animas                  3 (1 EB, 2 WB)
+p12:24|Las Animas to Lamar                     4 (2 EB, 2 WB)
+p12:25|Lamar to Kansas Border                  2 (1 EB, 1 WB)
+p12:26|
+p12:27|       The proposed packaging is to include up to 6 passing lanes with the lowest risk (e.g., minimal
+p12:28|       ROW required, limited utility conflicts, less extensive environmental review) into Package 1 and
+p12:29|       then the remaining passing lanes into Package 2.
+p12:30|   C. Project Features and Specialty Work
+p12:31|       Major work items may include but are not limited to:
+p12:32|           ● Earthwork
+p12:33|           ● Traffic control
+p12:34|           ● Roadway construction and resurfacing
+p12:35|           ● Possible structure work
+p12:36|           ● Guardrail
+p12:37|           ● Drainage features
+p12:38|           ● Signing/striping
+p12:39|           ● Revegetation.
+p12:40|   D. Major Project Risks
+p12:41|       Below is a general description (but not limited to) of the Major Project Risks:
+p12:42|           ● Budget/Funding: The Estimated Budget is $72,500,000. Sources of funding include
+p12:43|              Regional Priority Program (RPP), 10 Year (10Y), and Rural Grant Funds.
+p12:44|
+p12:45|                                                                                                         12
+p13:1|                                                                     Final Request for Proposals 4/14/26
+p13:2|                                                                              Project No. NH 0505-053
+p13:3|                                                                           US50B SHIFT Passing Lanes
+p13:4|
+p13:5|       ● Schedule/Deadlines: FHWA requirement to have construction begin within 18 months of
+p13:6|          the grant execution. FHWA requirement to have all funds obligated by September of
+p13:7|          2028 with submission to FHWA by May 2028.
+p13:8|       ● Right-of-Way (ROW): Duration of acquiring permanent and temporary easements of
+p13:9|          ROW will be a major obstacle. The department would like to use the strategy of avoiding
+p13:10|          permanent acquisition if possible.
+p13:11|       ● Utility relocation between the highway and railroad is difficult, and design will likely
+p13:12|          avoid relocating irrigation ditches. Ditch/Irrigation Companies and Railroads require
+p13:13|          third-party agreements.
+p13:14|       ● Construction Impacts: Phasing of construction is critical to minimizing impact on the
+p13:15|          traveling public. Narrow shoulders and maintaining the many accesses are safety
+p13:16|          challenges during construction. Narrowing existing pavement will be needed for ample
+p13:17|          workspace.
+p13:18|       ● Environmental: Greater chance of construction stipulations due to endangered species,
+p13:19|          wetlands, historic ditches, farmlands, and buildings. Noise studies may be triggered.
+p13:20|          NEPA Requirements (Cat/Ex anticipated for all locations) must be met.
+p13:21|       ● Safety: Challenges include Heavy Truck traffic and slow-moving farm equipment. Narrow
+p13:22|          shoulders and maintaining accesses pose safety risks.
+p13:23|
+p13:24|
+p13:25|E. Project Design and Development Status
+p13:26|   Per 23CFR625.505(f), no commitments may be made to any alternative during the NEPA
+p13:27|   process, and the comparative merits of all alternatives identified and considered during the NEPA
+p13:28|   process, including the no-build alternative, will be evaluated and fairly considered.
+p13:29|   Below is a general description of work progressed to date through the Categorical Exclusion/30%
+p13:30|   Design Phase and anticipated ongoing work, milestones, and potential early packages:
+p13:31|   ●   Design: Preliminary activities have been conducted and a survey has been performed at one
+p13:32|       location for two passing lanes. Design will remain flexible to accommodate input from the
+p13:33|       CM in the preconstruction phase.
+p13:34|   ●   Roadway/Alignment: Preliminary roadway design has been advanced to approximately 20%
+p13:35|       at the one location (west of Fowler) for one passing lane.
+p13:36|   ●   Hydrology/Hydraulics: Preliminary hydraulics analysis has not begun. Hydraulics design and
+p13:37|       analysis will be completed in the design phase.
+p13:38|   ●   Geotechnical: Geotechnical exploration and pavement recommendations are anticipated and
+p13:39|       will be completed in the design phase, as needed.
+p13:40|   ●   Environmental: CDOT anticipates that each site would be cleared through a categorical
+p13:41|       exclusion from NEPA and will be completed in the design phase.
+p13:42|   ●   Permitting and Certifications:
+p13:43|       o   It is anticipated that if the CM were to become the GC, that they will need to obtain
+p13:44|           permits that may be required for construction of any portion of the Project.
+p13:45|   ●   ROW: The ROW acquisition process will start after NEPA is completed. All twelve of the
+p13:46|
+p13:47|                                                                                                     13
+p14:1|                                                                         Final Request for Proposals 4/14/26
+p14:2|                                                                                  Project No. NH 0505-053
+p14:3|                                                                               US50B SHIFT Passing Lanes
+p14:4|
+p14:5|           individual passing lanes proposed for installation will strive to take place within existing
+p14:6|           CDOT right-of-way (ROW). However, CDOT cannot guarantee that temporary or permanent
+p14:7|           easements will not be required. CDOT has budgeted ROW funding in case those are needed,
+p14:8|           and impacts will be minimized as much as possible.
+p14:9|   F. Existing Operations and Traffic Restrictions
+p14:10|       Traffic operations on the corridor are a priority for CDOT. Unless otherwise permitted by the
+p14:11|       CDOT Region 2 Lane Closure Strategy or approval from CDOT’s traffic group, the existing
+p14:12|       number of lanes shall be maintained, through all phases of the Project.
+p14:13|       The latest CDOT Region 2 Lane Closure Strategy outlines lane closure restrictions through the
+p14:14|       Project area for each month of the year and is available upon request.
+p14:15|       The CM may propose changes to the Lane Closure Strategy, should the changes be needed for
+p14:16|       constructability or provide a benefit to the Project/traveling public. The process to request a
+p14:17|       change to the current restrictions is outlined in the CDOT Region 2 Lane Closure Strategy and
+p14:18|       shall also include a traffic analysis and a public information plan, to support the request. The CM
+p14:19|       may seek approval for variances to the Lane Closure Strategy, however approval is not
+p14:20|       guaranteed and will be at the sole discretion of CDOT.
+p14:21|
+p14:22|
+p14:23|   G. Project Coordination Efforts
+p14:24|       Lead and Supporting Agencies: CDOT is the lead agency and Owner of the Project.
+p14:25|       Oversight is provided by FHWA.
+p14:26|       Stakeholders: Primary Project stakeholders and their role or involvement in the Project
+p14:27|       are listed in the following table:
+p14:28|                                             Stakeholders
+p14:29|
+p14:30|           Agency/Stakeholder                                   Role or Involvement
+p14:31|Federal Highway Administration                    ●   Project oversight
+p14:32|(“FHWA”)                                          ●   Funding Partner
+p14:33|Pueblo County                                     ●   Project Limits within Pueblo County
+p14:34|Otero County                                      ●   Project Limits within Otero County
+p14:35|Bent County                                       ●   Project Limits within Bent County
+p14:36|Prowers County                                    ●   Project Limits within Prowers County
+p14:37|
+p14:38|                                  Additional Coordination Contacts
+p14:39|
+p14:40|        Other Stakeholders                                  Role or Involvement
+p14:41|Private Property Owners and             ● ROW/Easement impacts
+p14:42|Businesses                              ● Travel impacts/delays/detours coordination and notification
+p14:43|                                        ● Roadway safety/trip reliability input
+p14:44|Traveling public
+p14:45|                                        ● Travel impacts/delays/detours coordination and notification
+p14:46|
+p14:47|
+p14:48|
+p14:49|                                                                                                         14
+p15:1|                                                                              Final Request for Proposals 4/14/26
+p15:2|                                                                                       Project No. NH 0505-053
+p15:3|                                                                                    US50B SHIFT Passing Lanes
+p15:4|
+p15:5|                                           ● Emergency response/access input
+p15:6|                                           ● Travel impacts/delays/detours coordination and notification
+p15:7|Emergency Responders/Incident
+p15:8|Command                                    ● Local emergency responders are on the Members of the
+p15:9|                                             Project’s Technical Team
+p15:10|                                           ● Incident Management and Planning for all potential impacts
+p15:11|Utilities                                  See table below.
+p15:12|
+p15:13|                                Anticipated Utility Coordination/Relocations
+p15:14|
+p15:15|Known Utilities within the project limits. Impact is unknown until specific locations are determined. This
+p15:16|is not an all inclusive list.
+p15:17|                                                                                           Relocation
+p15:18|Utility Identification                           Facility type
+p15:19|                                                                                           Required?
+p15:20|SECPA                                            Electric Cooperative                             TBD
+p15:21|
+p15:22|CDOT – ITS                                       Fiber                                            TBD
+p15:23|
+p15:24|CDOT – Storm Sewer                               Storm                                            TBD
+p15:25|
+p15:26|Colorado Natural Gas                             Gas                                              TBD
+p15:27|
+p15:28|Lumen                                            Fiber                                            TBD
+p15:29|
+p15:30|Kinder Morgan                                    High Pressure transmission pipeline              TBD
+p15:31|
+p15:32|Southern Star Central Gas                        Gas                                              TBD
+p15:33|
+p15:34|Rural Water Associations                         Water                                            TBD
+p15:35|
+p15:36|SECOM (SECPA)                                    Fiber                                            TBD
+p15:37|
+p15:38|Xcel Energy – Distribution Gas                   Gas                                              TBD
+p15:39|
+p15:40|Xcel Energy – Transmission Gas                   High Pressure transmission pipeline              TBD
+p15:41|
+p15:42|Viaero Wireless                                  Telecommunications                               TBD
+p15:43|
+p15:44|During the preconstruction phase, the CM shall coordinate and consider adjacent projects when analyzing
+p15:45|construction packaging, sequencing of the work, phasing and construction traffic control. Known projects
+p15:46|within or adjacent to the project limits described are listed below. If other adjacent projects are identified
+p15:47|during pre-construction or construction, the CM must also closely coordinate with those projects as well.
+p15:48|            ●   No known projects at this time
+p15:49|
+p15:50|1.4.        PROJECT FUNDING
+p15:51|This project is fully funded through State and Federal resources. The Estimated Budget is $72,500,000.
+p15:52|The funding sources are Regional Priority Program (RPP) ($12,000,000), FY19-26 10Y ($15,000,000),
+p15:53|
+p15:54|                                                                                                              15
+p16:1|                                                                          Final Request for Proposals 4/14/26
+p16:2|                                                                                   Project No. NH 0505-053
+p16:3|                                                                                US50B SHIFT Passing Lanes
+p16:4|
+p16:5|FY27-30 10Y ($5,000,000), and Rural Grant funds ($40,500,000), totaling $72,500,000.
+p16:6|
+p16:7|
+p16:8|1.5.       PROJECT DURATION
+p16:9|It is estimated that the Project construction will take 30 months. CDOT anticipates that the start of
+p16:10|construction on the Project will begin no later than Summer-2028. The CM shall explore opportunities to
+p16:11|measurably reduce the construction duration to minimize impacts to the traveling public and to optimize
+p16:12|costs.
+p16:13|
+p16:14|1.6.        PROJECT ADMINISTRATION
+p16:15|The CM shall utilize the following project administration contacts for the Project:
+p16:16|       A. CDOT Project Director
+p16:17|          Zachary Bay
+p16:18|          5615 Wills Blvd.
+p16:19|          Pueblo, CO 81008
+p16:20|          W: 719-688-2902
+p16:21|          Zachary.bay@state.co.us
+p16:22|       B. Contract Officer
+p16:23|          Jan Walker
+p16:24|          CDOT Contracting Officer
+p16:25|          2829 W Howard Place Denver, CO 80204
+p16:26|          W: 303-757-9296
+p16:27|          Primary means of communication: jan.walker@state.co.us
+p16:28|
+p16:29|1.7.        PROJECT COORDINATION
+p16:30|The CM shall utilize the following project coordination items for the Project:
+p16:31|       A. Routine Working Contact
+p16:32|          The routine working contact will be between the Project Management Team (“PMT”), which will
+p16:33|          be comprised of the CDOT Resident Engineer, CDOT Construction Project Engineer, the CDOT
+p16:34|          Design PM, CDOT Environmental Project Manager, the Design Consultant Project Manager
+p16:35|          (“DC PM”), the Independent Cost Estimator (“ICE”) Project Manager, and the Construction
+p16:36|          Manager Project Manager (“CM PM”).
+p16:37|       B. Project Management Team Correspondence/Communication Requirements
+p16:38|          The PMT members are expected to communicate relevant contacts, coordination efforts,
+p16:39|          conversations, and emails where important Project Information is discussed.
+p16:40|       C. Coordination
+p16:41|          In addition to the stakeholders listed in Section 1.3.G, the CM shall partner and coordinate with
+p16:42|          the groups below. The CDOT Project Management Team (defined below) shall be included in all
+p16:43|          coordination.
+p16:44|           ●   Executive Oversight Committee
+p16:45|           ●   CDOT Project Management Team
+p16:46|                       ▪   CDOT Program Engineer - Jennifer Sparks, PE
+p16:47|                       ▪   CDOT Resident Engineer Design – Laurel Jones, PE
+p16:48|
+p16:49|                                                                                                          16
+p17:1|                                                                             Final Request for Proposals 4/14/26
+p17:2|                                                                                      Project No. NH 0505-053
+p17:3|                                                                                   US50B SHIFT Passing Lanes
+p17:4|
+p17:5|                       ▪   CDOT Resident Engineer Construction – Roger Graham, PE
+p17:6|                       ▪   CDOT Project Director – Zachary Bay, PE
+p17:7|                       ▪   CDOT Assistant Project Manager – Jordan Garcia
+p17:8|           ●   CDOT Specialty Groups
+p17:9|                       ▪   Region 2 Materials
+p17:10|                       ▪   Region 2 Traffic
+p17:11|                       ▪   Region 2 Hydrology and Hydraulics
+p17:12|                       ▪   Region 2 Survey
+p17:13|                       ▪   Region 2 Environmental
+p17:14|                       ▪   Region 2 Right-of-Way
+p17:15|                       ▪   Region 2 Utilities
+p17:16|                       ▪   CDOT Staff Bridge
+p17:17|                       ▪   CDOT Staff Geotech
+p17:18|                       ▪   CDOT Public Information Officer
+p17:19|           ●   Design Consultant and Subconsultants
+p17:20|                   o   Design Consultant – To be determined
+p17:21|           ●   Project Construction Oversight (Owner's representative in construction) and any
+p17:22|               subcontractors - To be determined
+p17:23|           ●   CDOT Engineering Estimates and Market Analysis (EEMA) Group
+p17:24|           ●   CDOT Maintenance Forces
+p17:25|           ●   Headquarters and Regional Civil Rights Manager
+p17:26|       D. Project Co-Location
+p17:27|           A determination whether or not co-location is essential to the success of the project will occur
+p17:28|           after selection. The location and timeframe for co-location is to be determined but is anticipated
+p17:29|           to be within the Project vicinity. Co-location is not anticipated for this project but is at the
+p17:30|           discretion of CDOT.
+p17:31|
+p17:32|1.8.        CONSTRUCTION BUDGET
+p17:33|The Construction Budget is defined as the portion of the Project budget estimated for General Contracts
+p17:34|for Construction. The estimated required Construction Budget for this Project is $67 million. This amount
+p17:35|does not include non-construction Project costs (which are in addition to this amount) and are still being
+p17:36|evaluated by CDOT with the goal of optimizing efficiency.
+p17:37|It is estimated that each General Contract for Construction shall include:
+p17:38|       ●   Agreed upon CAP amount;
+p17:39|       ●   The Management Price Percentage (MPP) applied to each construction item, see Section 2.8 of
+p17:40|
+p17:41|                                                                                                             17
+p18:1|                                                                             Final Request for Proposals 4/14/26
+p18:2|                                                                                      Project No. NH 0505-053
+p18:3|                                                                                   US50B SHIFT Passing Lanes
+p18:4|
+p18:5|           this RFP for additional information;
+p18:6|       ●   GC indirect costs allowed as indicated in Appendix C of this RFP;
+p18:7|       ●   Force accounts, and risk pools that are associated with the construction of all elements of the
+p18:8|           Work described in the General Contract for Construction;
+p18:9|       ●   Performance and Payment Bonds; and
+p18:10|       ●   Insurance Certificate(s) for Policy Requirements identified in CDOT’s Standard Specifications.
+p18:11|           Note: Additional Exhibits, Attachments, Terms and Conditions that are a part of CDOT's standard
+p18:12|           Construction Contract Document for a Work Package will be provided at the time of issuance of a
+p18:13|           Notice of Award for a Work Package.
+p18:14|
+p18:15|1.9.        PROJECT SCHEDULES
+p18:16|Upon CM contract award, the CM shall establish a Preconstruction Schedule according to the Project
+p18:17|Scope Elements listed in Section 1.3B of this RFP in coordination with the Design Team. The CM shall
+p18:18|incorporate the preconstruction roles and responsibilities as defined in Appendix A of this RFP. The
+p18:19|Preconstruction Schedule will be used to establish the initial schedule for the Project and shall include a
+p18:20|proposed construction schedule.
+p18:21|After the scope, schedule, and budget is established for each package, an analysis shall be performed as to
+p18:22|the status of the Project when compared to the Preconstruction Schedule. The CM shall provide
+p18:23|continuous schedule validation for construction schedules and the overall schedule for the duration of the
+p18:24|CM preconstruction phase.
+p18:25|The CM shall use either of the scheduling software programs listed in Section 1.14 of this RFP and the
+p18:26|CM shall maintain the schedule in the same format throughout the duration of the Project. The CM shall
+p18:27|submit monthly schedule updates to the CDOT Project Director, or after any significant change in scope,
+p18:28|schedule or budget, to the Project, or as otherwise directed by CDOT.
+p18:29|It is anticipated that the CM will incorporate or perform the following items while developing the
+p18:30|Preconstruction Schedule and maintaining it for the duration of the CM preconstruction phase:
+p18:31|       ●   Incorporate all preconstruction activities for both the Design Team and the CM.
+p18:32|       ●   Develop a preliminary construction schedule and construction packaging strategy within CDOT’s
+p18:33|           Construction Budget. Collaborate with the Design Team to determine if early construction
+p18:34|           packages are viable, cost effective and provide an overall benefit to the Project.
+p18:35|       ●   Assist in determining the scope for any potential early construction packages.
+p18:36|       ●   Prepare construction schedules and phasing alternatives at each preconstruction milestone to
+p18:37|           support development of OPCCs, validate deadlines, and help develop project delivery strategies.
+p18:38|       ●   Develop a resource-loaded, critical path method, construction schedule at all OPCC milestones,
+p18:39|           as well as for all CAP proposals.
+p18:40|       ●   Ensure each CAP package will be severable; will have specific beginning and end points; and
+p18:41|           will have independent overhead, mobilization, traffic control, and Project costs. Each CAP
+p18:42|           package will include provisions for liquidated damages, incentive/disincentive, and roadway user
+p18:43|           costs as determined by CDOT in its sole discretion. The CM and CDOT are responsible for
+p18:44|           ensuring the severability of each package.
+p18:45|       ●   Compare and verify construction schedules and all assumptions with the ICE.
+p18:46|
+p18:47|                                                                                                             18
+p19:1|                                                                           Final Request for Proposals 4/14/26
+p19:2|                                                                                    Project No. NH 0505-053
+p19:3|                                                                                 US50B SHIFT Passing Lanes
+p19:4|
+p19:5|1.10.    PRELIMINARY DOCUMENTS AND DRAWINGS
+p19:6|The Project is currently in the preliminary design phase; therefore, design work, preliminary drawings,
+p19:7|and reports are limited and conceptual in nature and will not be released.
+p19:8|
+p19:9|1.11.    SPECIFICATIONS
+p19:10|The most current version of CDOT’s Standard Specifications for Road and Bridge Construction at the
+p19:11|time of each successful CAP proposal negotiation shall control construction of that CAP package. The
+p19:12|Project team will develop the project special provisions and standard special provisions that will take
+p19:13|precedence over the Standard Specifications and plans during development of each scope package.
+p19:14|
+p19:15|1.12.    OWNERSHIP OF THE DOCUMENTS
+p19:16|All tracings, bids, plans, manuscripts, specifications, schedules, OPCC’s, data, maps, etc., prepared by or
+p19:17|obtained by the CM because of working on this contract shall be delivered to and become the property of
+p19:18|CDOT. All proposals submitted in response to this Request for Proposal, shall become the property of
+p19:19|CDOT, including all unsuccessful proposals. All proposals will be confidential until award, and then will
+p19:20|be subject to the provisions of the Colorado Open Records Act (C.R.S. 24-72-201, et seq.) and any other
+p19:21|laws and regulations applicable to the disclosure of documents submitted under this RFP.
+p19:22|
+p19:23|1.13.    REQUIRED PERCENTAGE OF WORK SELF-PERFORMED BY CM
+p19:24|The Proposer shall self-perform no less than 30% of the total work for CM services in the preconstruction
+p19:25|phase by its own staff, not through subcontractors. For any awarded General construction contracts, the
+p19:26|GC must self-perform work valued at not less than 30% of the total construction work by its own staff,
+p19:27|not through subcontractors.
+p19:28|
+p19:29|1.14.    PROJECT COMPUTER SOFTWARE REQUIREMENTS
+p19:30|The Contractor shall utilize the most recent CDOT adopted software. The latest version is defined as the
+p19:31|version in use by CDOT at the release of this RFP. Upgrades to the version of any software on this list
+p19:32|that occur for the duration of the Project, will be evaluated for efficacy on a case-by-case basis. The
+p19:33|primary software used by CDOT is as follows:
+p19:34|    A. Estimating
+p19:35|        Microsoft Excel (latest version) or other software that is compatible with providing pricing in the
+p19:36|        CDOT Schedule of Bid Items standard format using the most current CDOT Item Code Book.
+p19:37|    B. Scheduling
+p19:38|        Microsoft Project (latest version) or Primavera (latest version)
+p19:39|    C. Specifications
+p19:40|        Microsoft Word (latest version)
+p19:41|    D. CADD
+p19:42|        Bentley OpenRoads Designer (latest version) & Bentley ProjectWise Cloud (latest version)
+p19:43|
+p19:44|
+p19:45|1.15.    REQUIRED AVAILABILITY OF KEY PERSONNEL
+p19:46|Key Personnel in the Project Management Team section of the Proposal, see Section 3.1 of this RFP,
+p19:47|
+p19:48|                                                                                                           19
+p20:1|                                                                            Final Request for Proposals 4/14/26
+p20:2|                                                                                     Project No. NH 0505-053
+p20:3|                                                                                  US50B SHIFT Passing Lanes
+p20:4|
+p20:5|constitutes an agreement by the Proposer to make the Key Personnel available to complete the services of
+p20:6|the contract at the level the Project requires. CDOT requires that all Key Personnel be engaged to perform
+p20:7|their specialty for all services required by this contract, and the Key Personnel shall be retained for the
+p20:8|life of this contract to the extent practicable and to the extent that such services maximize the quality of
+p20:9|work hereunder.
+p20:10|If the CM or a subcontractor decides to replace any of its Key Personnel, the CM shall notify the CDOT
+p20:11|Project Director in writing of the desired change. No such changes shall be made until at least two
+p20:12|qualified replacement candidates are recommended by the CM and a replacement is approved in writing
+p20:13|by the Project Director or its designated representative. The approval shall not be unreasonably withheld.
+p20:14|Failure of the CM to comply with the requirements of this provision may be the cause for CDOT’s
+p20:15|termination of the contract.
+p20:16|The Project Director or its designated representative will respond to the CM’s written notice regarding
+p20:17|replacement of Key Personnel within fifteen working days after receipt of the list of proposed changes. If
+p20:18|the Project Director or its designated representative does not respond within that time, the listed changes
+p20:19|shall be deemed to be approved.
+p20:20|If, during the term of the contract, the Project Director or its designated representative determines that the
+p20:21|performance of approved Key Personnel is not acceptable, a notification shall be sent to the CM. The
+p20:22|notification shall include a reasonable timeframe to cure the unacceptable performance. Thereafter the
+p20:23|CM may be required to reassign or replace such Key Personnel. If the Project Director or its designated
+p20:24|representative notifies the CM that certain Key Personnel of a subcontractor should be replaced, the CM
+p20:25|shall use its best efforts to replace such Key Personnel within a reasonable time, but not to exceed fifteen
+p20:26|working days from the date of the notice.
+p20:27|
+p20:28|1.16.    ORGANIZATIONAL CONFLICTS AND INELIGIBLE FIRMS
+p20:29|The Proposer shall include a full disclosure of all potential organizational conflicts of interest in its
+p20:30|Proposal. An organizational Conflict of Interest exists when a person or business entity has an unfair
+p20:31|competitive advantage because of other activities or relationships with other persons. No Person or
+p20:32|business entity prior to Proposal submission, that was engaged by the State of Colorado in the preparation
+p20:33|of this Request for Proposal, that had access to procurement sensitive information related to this Request
+p20:34|for Proposal including but not limited to Requirements, Statements of Work, or Evaluation Criteria will
+p20:35|be eligible to directly submit or participate in the submittal of a proposal for this initiative.
+p20:36|By submitting its Proposal, each Proposer agrees that, if an organizational conflict of interest is thereafter
+p20:37|discovered, the Proposer will make an immediate and full written disclosure to CDOT that includes a
+p20:38|description of the action that the Proposer has taken or proposes to take to avoid or mitigate such
+p20:39|conflicts. If an organizational conflict of interest is determined to exist without satisfactory mitigation,
+p20:40|CDOT may, at its discretion, cancel the award or terminate the contract.
+p20:41|If the Proposer was aware of an organizational conflict of interest prior to the award of the contract and
+p20:42|did not disclose the conflict to CDOT, CDOT may terminate the contract for Default. No firm that is
+p20:43|ineligible for State contracts may be part of any Proposer Team. Each Proposer is responsible for
+p20:44|determining the eligibility of its team members.
+p20:45|
+p20:46|1.17. APPLICABLE FEDERAL REGULATIONS, STATE REGULATIONS AND INDUSTRY
+p20:47|STANDARDS
+p20:48|The Proposer shall conform to all applicable State and Federal laws and regulations and recognized
+p20:49|industry, safety, environmental, and design standards.
+p20:50|
+p20:51|
+p20:52|                                                                                                             20
+p21:1|                                                                            Final Request for Proposals 4/14/26
+p21:2|                                                                                     Project No. NH 0505-053
+p21:3|                                                                                  US50B SHIFT Passing Lanes
+p21:4|
+p21:5|1.18.    NONDISCRIMINATION
+p21:6|The CM shall comply with all applicable legal requirements that: enumerate unlawful employment
+p21:7|practices including discrimination because of race, religion, color, gender, age, disability, or national
+p21:8|origin, and define actions required for affirmative action and minority/disadvantaged business programs.
+p21:9|The CM shall not discriminate against any employee or applicant for employment because of race, color,
+p21:10|national origin, religion, gender, age, or physical handicap.
+p21:11|The CM shall take affirmative action to ensure that applicants are employed, and that employees are
+p21:12|treated during employment, without regard to their race, religion, color, gender, age, disability, or national
+p21:13|origin. Such action shall include the following: employment, upgrading, demotion or transfer; recruitment
+p21:14|or recruitment advertising; layoff or termination; rates of pay or other forms of compensation; and
+p21:15|selection for training, including apprenticeship. The CM agrees to post in conspicuous places, available to
+p21:16|employees and applicants for employment, notices setting forth the provisions of this nondiscrimination
+p21:17|clause.
+p21:18|
+p21:19|1.19.    NONDISCRIMINATION ASSURANCE
+p21:20|By submitting a proposal for this contract, the CM agrees to the following assurance and shall include this
+p21:21|language in all subcontracts:
+p21:22|
+p21:23|    ●   The CM, subrecipient, or subcontractor must not discriminate on the basis of race, color, national
+p21:24|        origin, or sex in the performance of this contract.
+p21:25|    ●   The CM shall carry out applicable requirements of 49 CFR Part 26 in the award and
+p21:26|        administration of DOT assisted contracts.
+p21:27|    ●   Failure by the CM to carry out these requirements is a material breach of this contract, which may
+p21:28|        result in the termination of this contract, or other such remedy as CDOT deems appropriate,
+p21:29|        which may include, but is not limited to:
+p21:30|            • Withholding monthly progress payments
+p21:31|
+p21:32|            •   Assessing sanctions/disincentives
+p21:33|
+p21:34|1.20.    MAXIMUM COMPENSATION FOR CM PRECONSTRUCTION SERVICES
+p21:35|As stated in Section 1.8 of this RFP, the Construction Budget is defined as the portion of the Project
+p21:36|budget estimated for General Construction Contracts. The estimated required Construction Budget for this
+p21:37|Project is $67 million. This amount does not include non-construction Project costs (which are in addition
+p21:38|to this amount). The funding for the Project has been fully identified at the time of this RFP.
+p21:39|The successful Proposer will be paid an amount not to exceed $750,000 for the CM preconstruction
+p21:40|services described in this RFP. Please see Form B-1 in Appendix B.
+p21:41|The CM shall submit monthly invoices to the CDOT Project Director for payment as work progresses.
+p21:42|The estimated percentage of CM preconstruction services completed will be discussed and agreed upon
+p21:43|with the CDOT Project Director prior to payment.
+p21:44|If it is in CDOT’s interest, any portion of the preconstruction scope described in this RFP may be
+p21:45|withheld, and the fee for preconstruction services will be adjusted, appropriate to the deducted scope.
+p21:46|
+p21:47|1.21.    EXPLANATION OF CAP
+p21:48|A reviewed, negotiated, and agreed upon CAP proposal is the amount that may be incorporated into the
+p21:49|
+p21:50|                                                                                                            21
+p22:1|                                                                           Final Request for Proposals 4/14/26
+p22:2|                                                                                    Project No. NH 0505-053
+p22:3|                                                                                 US50B SHIFT Passing Lanes
+p22:4|
+p22:5|standard General Contract for Construction.
+p22:6|The CAP is the sum of the direct Cost of Construction and the Management Price Percentage for a
+p22:7|specific construction package. The Cost Model consists of bid items, quantities, risks, and assumptions
+p22:8|for the construction package, and will be refined and finalized through a series of Cost Model meetings.
+p22:9|The CM will propose a CAP to provide Construction services; CDOT and the CM will negotiate the
+p22:10|direct Cost of Construction for that package with the goal of agreeing on a final CAP. CDOT makes no
+p22:11|guarantees that it will accept or agree to a CAP proposal submitted by any party. If CDOT successfully
+p22:12|negotiates, agrees, and accepts a CAP proposal, then payment for the construction of the Project will be
+p22:13|based on the negotiated and accepted CAP which includes, but is not limited to, a Schedule of Bid items
+p22:14|as per the Standard Specifications for Road and Bridge Construction.
+p22:15|CDOT anticipates requesting CAP proposals when both the CM and CDOT agree the design has
+p22:16|progressed to the appropriate level, typically at 90%, for each individual construction package. If CDOT
+p22:17|and the CM have negotiated, agreed on, and accepted a CAP proposal, the CM shall then submit the CAP
+p22:18|proposal via the Electronic Bid Submittals (“EBS”) system. The CM may develop multiple CAP proposal
+p22:19|packages, and CDOT may negotiate and accept those CAP proposals during the preconstruction and
+p22:20|construction phases of this Project. CDOT reserves the right not to award any part(s) or all the General
+p22:21|Contracts for Construction Services, and bid/award some or all the construction work separately. If the
+p22:22|CM participated in the pre-construction development of the work to be bid/awarded separately, the CM
+p22:23|shall not be eligible to compete for the work. The CM shall deliver to CDOT a proposed GC CAP and GC
+p22:24|CAP supporting documents for any appropriate milestones identified at the Project Scoping Workshop,
+p22:25|and for any appropriate LLTP or construction phase.
+p22:26|The construction contract price is fixed and will not be increased except for CDOT-approved change
+p22:27|orders related to unforeseen conditions, negotiated overruns, or agreed-upon risk pool items. The General
+p22:28|Contractor (GC) assumes all performance risks, including the management of subcontractors and
+p22:29|suppliers. Any costs exceeding the contract price that fall outside of negotiated overruns or the executed
+p22:30|Risk Register are the sole responsibility of the GC.
+p22:31|A CAP proposal can be offered and negotiated three times. If the third attempt at a CAP negotiation fails,
+p22:32|CDOT reserves the right to prepare the plans, specifications, and estimate package for public, low-bid,
+p22:33|advertisement. The CM services contractor is not allowed to bid on this public advertisement.
+p22:34|CDOT will review and determine whether to accept the risk and shared risk contingency pools with the
+p22:35|CM during the preconstruction phase, if accepted, the risk and shared risk contingency pools could
+p22:36|potentially be incorporated into a negotiated CAP proposal. The purpose of the contingency risk-sharing
+p22:37|pool is to develop a budget for items foreseen at the time of negotiating a CAP proposal but were not
+p22:38|detailed enough for itemized pricing. All items fitting this category will be identified separately in a CAP
+p22:39|proposal by CDOT and the CM and will be monitored for progress and cost by CDOT.
+p22:40|In developing this shared risk contingency pool, CDOT may agree to share any residual risk pool budget
+p22:41|at the completion of construction (not attributed to any reduction in the scope of work or reduction in
+p22:42|operating performance for the corridor).
+p22:43|
+p22:44|1.22.    PUBLIC INFORMATION
+p22:45|The US50B Freight corridor sees a high volume of traffic with a high percentage of commercial trucks
+p22:46|and farm equipment. Construction activities have the potential to disrupt travel and commerce.
+p22:47|
+p22:48|
+p22:49|During the project development phase, CDOT will be the primary point of contact responsible for Public
+p22:50|
+p22:51|                                                                                                           22
+p23:1|                                                                           Final Request for Proposals 4/14/26
+p23:2|                                                                                    Project No. NH 0505-053
+p23:3|                                                                                 US50B SHIFT Passing Lanes
+p23:4|
+p23:5|Information. If a General Contract for Construction Services is awarded, then CDOT will still be the
+p23:6|primary point of contact, however, the GC will be required to provide timely updates and responses for
+p23:7|Public Information requests for the duration of construction.
+p23:8|The cost for Public Information effort during construction shall be included in the individual construction
+p23:9|packages. This work consists of providing regular and continuous communications services throughout
+p23:10|the duration of construction including community and stakeholder outreach as well as media support.
+p23:11|1.23.   SUBCONTRACTING REQUIREMENTS
+p23:12|The CM shall comply with all applicable requirements of the contract documents relating to
+p23:13|subcontracts and shall ensure that its subcontractors comply with all applicable requirements of the
+p23:14|contract documents relating to subcontracting. The CM shall not sublet, sell, transfer, assign, or dispose
+p23:15|of the contract or any portion thereof without written permission of the CDOT Project Manager. Before
+p23:16|beginning work by the subcontractor, the CM shall request permission from the CDOT Project Director
+p23:17|by submitting a completed Construction Management Sublet Permit Application, CDOT CM Form
+p23:18|205, via the B2GNow software system (https://cdot.dbesystem.com). The subcontracted work shall not
+p23:19|begin until the CM has received the CDOT Project Manager’s written permission. All firms that the
+p23:20|CM will be subletting a portion of the contract shall have an account in the B2GNow software system.
+p23:21|If the firm does not have an account created, approval of the CDOT CM Form 205 may be withheld.
+p23:22|
+p23:23|1.24.   PROMPT PAYMENT
+p23:24|The CM is responsible for ensuring that all subcontractors and suppliers at all tiers are promptly paid. All
+p23:25|subcontractors and suppliers shall be paid within 7 calendar days of the CM being paid from CDOT. If
+p23:26|the CM or its subcontractors fail to comply with this provision, the CDOT Project Manager will not
+p23:27|authorize further payments to the CM until the required payments have been made or CDOT determines
+p23:28|that there is sufficient good cause to delay payment. The CM shall include in all subcontracts a provision
+p23:29|that this requirement for prompt payment to subcontractors and suppliers must be included in all
+p23:30|subcontracts at every tier.
+p23:31|
+p23:32|    ●   Good Cause Exception. If the CM has “good cause” to delay or withhold a subcontractor’s or
+p23:33|        supplier’s, as applicable, progress payment, the CM shall notify CDOT and the subcontractor or
+p23:34|        supplier, as applicable, in writing within 7 calendar days after receiving payment from CDOT.
+p23:35|        The notification shall specify the amount being withheld and provide adequate justification for
+p23:36|        withholding the payment. The notice shall also clearly state what conditions the subcontractor or
+p23:37|        supplier, as applicable, must meet to receive payment. “Good cause” shall include, but not be
+p23:38|        limited to, the failure of the subcontractor or supplier, as applicable, to make timely submission of
+p23:39|        required paperwork.
+p23:40|
+p23:41|
+p23:42|
+p23:43|
+p23:44|                                                                                                             23
+p24:1|                                                                               Final Request for Proposals 4/14/26
+p24:2|                                                                                        Project No. NH 0505-053
+p24:3|                                                                                     US50B SHIFT Passing Lanes
+p24:4|
+p24:5|SECTION 2 – CM PROPOSAL REQUIREMENTS AND INSTRUCTIONS
+p24:6|2.1.        PROPOSAL GENERAL INFORMATION
+p24:7|This RFP is a two-phase procurement process that includes a Proposal (Phase 1), resulting in the
+p24:8|shortlisting of Proposers by the Selection Panel, followed by an Interview of the shortlisted Proposers
+p24:9|(Phase 2). CDOT intends to identify three shortlisted Proposers but reserves the right to identify as few as
+p24:10|two and as many as four. Proposals in response to the RFP shall be submitted in one package for
+p24:11|preconstruction CM services. The Proposers Technical Score and their Interview Score will be summed
+p24:12|and tabulated which will be referred to as their “Total Score”, The Proposers’ “Total Scores” will be
+p24:13|ranked and the Proposer with the highest “Total Score” will be considered the apparent successful
+p24:14|Proposer in accordance with the evaluation criteria set forth in Section 3 of this RFP.
+p24:15|All Proposers to this RFP accept the conditions of this RFP, including, but not limited to, the following:
+p24:16|       A. Multiple proposals from a single Proposer will be considered non-responsive and will not be
+p24:17|          evaluated or scored.
+p24:18|       B. The costs associated with the preparation of the Proposal, required documentation, interviews,
+p24:19|          presentations, discussions, the selection process, the contract negotiation process, and/or any
+p24:20|          related activities are the sole responsibility of the Proposer, reimbursement will not be made by
+p24:21|          CDOT.
+p24:22|       C. The Proposer shall include a full disclosure of all potential organizational conflicts of interest as
+p24:23|          outlined in Section 1.16 of this RFP.
+p24:24|       D. Any proposal received by CDOT after the time specified in Section 2.3 of this RFP shall be
+p24:25|          deemed non-responsive and shall not be evaluated or scored.
+p24:26|       E. This RFP, including all material submitted by Proposers, at any stage, including but not limited to
+p24:27|          the Procurement phase, selection, and any resulting contracts, are subject to the provisions of the
+p24:28|          Colorado Open Records Act (C.R.S. 24-72-201, et seq.) and any other laws and regulations
+p24:29|          applicable to the disclosure of documents submitted under this RFP.
+p24:30|           Material subject to open records laws includes, but is not limited to, all records, documents,
+p24:31|           drawings, plans, specifications, and other materials relating to the Project, the solicitation, and the
+p24:32|           conduct of CDOT business. CDOT will also follow and adhere to CDOT Policy Directive 508.2
+p24:33|           for this RFP and resulting contracts.
+p24:34|           The Proposer shall specifically identify and mark any proprietary information, trade secrets, or
+p24:35|           confidential commercial and financial information that a Proposer believes should be exempted
+p24:36|           from disclosure.
+p24:37|           During the Procurement phase, CDOT will accept materials clearly and prominently labeled
+p24:38|           “PROPRIETARY”, “TRADE SECRET”, or “CONFIDENTIAL” by the Proposer.
+p24:39|           Blanket, all-inclusive identifications by designation of whole pages or sections as containing
+p24:40|           proprietary information, trade secrets, confidential commercial or financial information shall not
+p24:41|           be permitted and shall be deemed invalid except that blanket identifications can be made in the
+p24:42|           Strategic Project Approach, Approach to Risk, Schedule, and Pricing; and the Management Price
+p24:43|           Percentage breakdown (Appendix C) as defined in Section 2.8 of this RFP.
+p24:44|           CDOT will follow CDOT Policy Directive 508.2 in determining disclosure of documents
+p24:45|           requested. CDOT will advise the Proposer of any request pursuant to the Colorado Open Records
+p24:46|           Act and any other applicable laws for the disclosure of any materials. Under no circumstances,
+p24:47|
+p24:48|                                                                                                               24
+p25:1|                                                                      Final Request for Proposals 4/14/26
+p25:2|                                                                               Project No. NH 0505-053
+p25:3|                                                                            US50B SHIFT Passing Lanes
+p25:4|
+p25:5|     however, will CDOT be responsible or liable to the Proposer or any other party for the disclosure
+p25:6|     of any such labeled materials, whether the disclosure is deemed required by law, by an order of
+p25:7|     the court, or occurs through inadvertence, mistake, or negligence on the part of CDOT or its
+p25:8|     officers, employees, contractors, or consultants.
+p25:9|     CDOT will not advise the Proposer as to the nature or content of documents entitled to protection
+p25:10|     from disclosure under the Colorado Open Records Act or other applicable laws, as to the
+p25:11|     interpretation of the Colorado Open Records Act, or as to the definition of trade secret. The
+p25:12|     Proposer shall be solely responsible for:
+p25:13|     ● All determinations made by it under applicable laws; and
+p25:14|     ●   Clearly and prominently marking each and every page or sheet of materials with
+p25:15|         “PROPRIETARY”, “TRADE SECRET”, or “CONFIDENTIAL” as the proposer determines
+p25:16|         to be appropriate.
+p25:17|     Each Proposer is advised to contact its own legal counsel concerning the Colorado Open Records
+p25:18|     Act, other applicable laws, and their application to the Proposer’s own circumstances.
+p25:19|     In the event of litigation concerning the disclosure of any materials submitted by the Proposer.
+p25:20|     CDOT’s sole involvement will be as a stakeholder retaining the material until ordered by a Court,
+p25:21|     and the Proposer shall be responsible for otherwise prosecuting or defending any action
+p25:22|     concerning the materials at its sole expense and risk.
+p25:23|     All submittals will become the property of CDOT, will not be returned, and will be disposed of
+p25:24|     according to Department policies. The concepts and ideas in the information contained in the
+p25:25|     Proposal, including any proprietary, trade secret, or confidential information (exclusive of any
+p25:26|     patented concepts or trademarks) submitted by all Proposers, shall also become the property of
+p25:27|     CDOT.
+p25:28|F.   The Proposer shall email a redacted proposal to the contracts officer at jan.walker@state.co.us
+p25:29|     within 10 business days of the proposal deadline.
+p25:30|G. CDOT reserves the right to reject any or all Proposals. Proposals that do not meet the Minimum
+p25:31|   Proposal Requirements listed in Section 2.2 of this RFP will be deemed non-responsive and will
+p25:32|   not be evaluated, evaluation will be ceased upon discovery of non-responsive determination and
+p25:33|   will not be scored.
+p25:34|H. Unsuccessful proposers may elect to participate in a debriefing by submitting the request via
+p25:35|   email to Contract Officer identified in Section 1.6.B within 5 working days after the
+p25:36|   Announcement of the Successful Proposer. All debriefs shall be conducted within 10 working
+p25:37|   days of the Announcement.
+p25:38|I.   The successful Proposer will be contracted for CM preconstruction services for this Project.
+p25:39|     CDOT may terminate the CM services contract at the completion of the preconstruction phase for
+p25:40|     convenience.
+p25:41|J.   If CDOT and the successful Proposer fail to successfully negotiate a Construction Agreed upon
+p25:42|     Price for any portion of the Project and CDOT chooses to publicly advertise a new solicitation of
+p25:43|     the GC portion of this Project for bids, the successful Proposer will not be permitted to submit a
+p25:44|     bid.
+p25:45|
+p25:46|
+p25:47|
+p25:48|
+p25:49|                                                                                                        25
+p26:1|                                                                              Final Request for Proposals 4/14/26
+p26:2|                                                                                       Project No. NH 0505-053
+p26:3|                                                                                    US50B SHIFT Passing Lanes
+p26:4|
+p26:5|2.2.        MINIMUM PROPOSAL REQUIREMENTS
+p26:6|All Proposals will be required to meet minimum proposal requirements to be considered for this Project.
+p26:7|To be considered qualified, Proposers shall have, as a minimum:
+p26:8|       A. Submit a Letter of Interest. At least one member of the proposed Project Team will have submitted
+p26:9|          a Letter of Interest prior to February 27, 2026. Any proposal received without a corresponding LOI
+p26:10|          will be determined by CDOT to be non-responsive. The corresponding non-responsive proposal
+p26:11|          will not be evaluated or scored and will not continue in the procurement process. CDOT will accept
+p26:12|          proposals from Joint Ventures where at least one of the major partners submitted a Letter of Interest.
+p26:13|       B. Demonstrated a bonding capability for $67 million for an individual project in addition to its
+p26:14|          current and anticipated bond commitment workload. Provided a letter from a surety company
+p26:15|          indicating that the Proposer is capable of obtaining Payment and Performance Bonds covering
+p26:16|          Project No. NH 0505-053, US50 SHIFT Passing Lanes, for at least $67 million. Letters indicating
+p26:17|          “unlimited” bonding/security capability are not acceptable.
+p26:18|           The surety submitting the letter must be a surety company or companies licensed by the State of
+p26:19|           Colorado and listed in the current United States Department of the Treasury Circular 570 as
+p26:20|           acceptable sureties for the bond amount on Federal Bonds. Performance and Payment Bonds will
+p26:21|           be required at the time the Construction Agreed upon Price negotiation begins, for any portion of
+p26:22|           the Project. The final value of the Bonds will equal the final construction contract amount.
+p26:23|       C. Provided CDOT with evidence of insurability that meets the requirements of Subsection 107.15
+p26:24|          of the Standard Specifications for Road and Bridge Construction. The Proposer is not required to
+p26:25|          provide Professional Liability insurance certificates.
+p26:26|           CDOT may, at its election, implement an Owner Controlled Insurance Program (“OCIP”) for the
+p26:27|           construction of this Project. Lines of insurance coverage may include any or all the following:
+p26:28|           Workers Compensation, Commercial General and Excess/Umbrella Liability, Contractors
+p26:29|           Pollution Liability, and/or Builders Risk. CDOT reserves the right to determine who participates
+p26:30|           in the OCIP. The CM can assume that CDOT will make this determination at the 60% OPCC for
+p26:31|           each CAP package.
+p26:32|       D. Provided CDOT with evidence of having been pre-qualified with the CDOT Contracts and
+p26:33|          Market Analysis Branch at the >$20,000,000 level and satisfy all requirements of pre-
+p26:34|          qualification per 2 CCR 601-10, Rules Governing Construction Bidding for CDOT Public
+p26:35|          Projects, within 14 calendar days of the Proposal submittal deadline as shown in Section 2.3 of
+p26:36|          this RFP.
+p26:37|           Federal and State regulations require certification by prospective participants (including
+p26:38|           contractors, subcontractors, and principals) as to current history regarding debarment, eligibility,
+p26:39|           indictments, convictions, or civil judgments.
+p26:40|       E. Meet all the Proposal Submittal requirements of Section 2.8 (Management Price Percentage)
+p26:41|          and Section 2.9 (Proposal Submittal) of this RFP.
+p26:42|       F. Provided CDOT with a signed Anti-Collusion Affidavit, CDOT form #606 with the initial
+p26:43|          proposal materials.
+p26:44|
+p26:45|
+p26:46|
+p26:47|
+p26:48|                                                                                                              26
+p27:1|                                                                          Final Request for Proposals 4/14/26
+p27:2|                                                                                   Project No. NH 0505-053
+p27:3|                                                                                US50B SHIFT Passing Lanes
+p27:4|
+p27:5|2.3.     KEY EVENTS SCHEDULE AND RFP DATES
+p27:6|Proposers are required to meet the dates set for the Proposal submission, and the interviews. Proposers are
+p27:7|also required to meet the information submittal dates outlined in the summary below. Failure to meet
+p27:8|these dates will result in the Proposal being considered non-responsive. All times listed in the table below
+p27:9|are Mountain Standard Time (MST). CDOT is fully committed to delivering the Project and meeting the
+p27:10|milestones shown in the table below. CDOT does reserve the right to modify the timeframes if it is
+p27:11|determined by CDOT to be in the best interest of the State, and the Project.
+p27:12|
+p27:13| Key Event                                                                           Date           Time
+p27:14| Draft RFP for CM Services                                                       3/19/2026          N/A
+p27:15|                                                                                 see section
+p27:16| Optional One-On-One Meetings (50-minutes)                                                          TBD
+p27:17|                                                                                     2.4
+p27:18| Draft RFP Proposer Questions/Comments Due                                         4/1/26        2:00 p.m.
+p27:19| Final RFP for CM Services                                                         4/14/26          N/A
+p27:20| Proposal Submission Deadline                                                      5/15/26       2:00 p.m.
+p27:21| Shortlist Notification Emails                                                     6/05/26          N/A
+p27:22| Interviews                                                                        6/24/26          TBD
+p27:23| Chief Engineer Selection Approval                                                 7/01/26          N/A
+p27:24| Selection Notification Emails                                                     7/06/26          N/A
+p27:25| Evaluation Result Public Posting                                                  7/6/26           N/A
+p27:26| Anticipated Contract Execution/NTP                                                8/5/26           N/A
+p27:27|
+p27:28|2.4.     INFORMAL ONE-ON-ONE MEETINGS
+p27:29|The Optional One-On-One Meeting opportunities are provided to allow Proposers an opportunity to ask
+p27:30|questions regarding the Project, established goals, the draft RFP, and the CM/GC Procurement Process.
+p27:31|Proposers that have submitted a Letter of Interest may sign up for an Optional One-On-One Meeting with
+p27:32|CDOT staff by emailing Zachary.Bay@state.co.us.
+p27:33|
+p27:34|2.5.     QUESTIONS AND CHANGES TO THE RFP
+p27:35|CDOT reserves the right to make changes to the RFP. Changes to the RFP generally consist of
+p27:36|clarifications, scope changes, or time and/or date changes that are in the interest of CDOT. All changes to
+p27:37|the RFP prior to the receipt of proposals shall be made by an addendum to the RFP and shall be available
+p27:38|publicly to all Proposers on the CDOT procurement webpage. Following receipt of proposals, changes to
+p27:39|the RFP (if any) will be conveyed in writing directly to those Proposers determined to be responsive.
+p27:40|Proposers may submit questions, request clarification, or request a change to the Draft RFP by submitting
+p27:41|a written request to the Project Director at the email address set forth in Section 1.6 of this RFP.
+p27:42|The request shall specify the provision and section of the Draft RFP in question, and, if a change is
+p27:43|requested, contain an explanation for the requested change. CDOT will not respond to questions or
+p27:44|change requests received after time specified in the above table within Section 2.3 of this RFP.
+p27:45|
+p27:46|
+p27:47|                                                                                                           27
+p28:1|                                                                            Final Request for Proposals 4/14/26
+p28:2|                                                                                     Project No. NH 0505-053
+p28:3|                                                                                  US50B SHIFT Passing Lanes
+p28:4|
+p28:5|CDOT will evaluate any questions and/or requests submitted to determine merit but reserves the right to
+p28:6|determine whether to respond or accept the requested change at its sole discretion. All questions, requests
+p28:7|for clarification, or RFP Addendums, and CDOT’s response will be posted at the following link:
+p28:8|https://www.codot.gov/projects/studies/us50passinglanes
+p28:9|Proposers shall not rely on oral or written instruction changes or clarifications regarding this RFP, unless
+p28:10|issued in writing by the CDOT Project Director as an addendum to this RFP.
+p28:11|Proposers must acknowledge all issued addenda in their submittal and proposal.
+p28:12|
+p28:13|2.6.     CONTRACTOR PROTEST RULES
+p28:14|Protests will be handled per 2-CCR 601-10 Rules Governing Construction Bidding for CDOT Public
+p28:15|Projects, as follows:
+p28:16|Any actual or prospective contractors who are aggrieved in connection with a solicitation or award of a
+p28:17|contract may protest to the Chief Engineer. The protest shall be submitted within seven working days
+p28:18|after the aggrieved person knows or should have known of facts giving rise to the protest. A protest shall
+p28:19|not stay the procurement.
+p28:20|The Chief Engineer or designee shall have the authority to settle and resolve a protest of a Contractor,
+p28:21|actual or prospective, concerning the solicitation or award of a contract. A written decision regarding the
+p28:22|protest shall be rendered within seven working days after the protest is filed.
+p28:23|The decision shall be based on and limited to a review of only those issues raised by the aggrieved
+p28:24|Contractor, and will set forth each factor considered, in reaching the decision.
+p28:25|The decision will constitute the final agency action of the Colorado Department of Transportation
+p28:26|regarding the protest.
+p28:27|Entitlement to costs: When a protest is sustained by the Chief Engineer or designee, or upon
+p28:28|administrative or judicial review, and the Contractor should have been awarded the contract under the
+p28:29|solicitation but was not, the protestor will be entitled to recover Proposal preparation costs. No other costs
+p28:30|or fees will be permitted or awarded including, but not limited, to attorney’s fees.
+p28:31|
+p28:32|
+p28:33|2.7.     AWARD OF CONTRACT
+p28:34|CDOT intends to evaluate, select, and award one CM contract to the top ranked Proposer based on the
+p28:35|result of the Responsiveness Review and the Total Score of the Proposal with Chief Engineer
+p28:36|Concurrence of the Selection Panel’s recommendation. The apparent successful Proposer receiving Chief
+p28:37|Engineer concurrence will be awarded a contract for CM Preconstruction Services.
+p28:38|
+p28:39|
+p28:40|Selection evaluation criteria and scoring of the proposals is detailed in Appendix B of this RFP. Contract
+p28:41|Award and contract execution will be contingent on availability of proposed Key Personnel and
+p28:42|subcontractors, committed to by the CM in the proposal.
+p28:43|The General Contract for Construction (if any) will be separate from the CM contract.
+p28:44|All negotiations shall be open book. CDOT and their Independent Cost Estimating Consultant shall have
+p28:45|access to all CAP proposal documents, quotations, takeoffs, and other construction cost estimates,
+p28:46|including those for subcontractors, during negotiations.
+p28:47|The General Contract for Construction (if any) will be separate from the CM contract.
+p28:48|
+p28:49|                                                                                                            28
+p29:1|                                                                            Final Request for Proposals 4/14/26
+p29:2|                                                                                     Project No. NH 0505-053
+p29:3|                                                                                  US50B SHIFT Passing Lanes
+p29:4|
+p29:5|Issuance of the General Contract for Construction will be subject to the CM’s firm posting 100%
+p29:6|performance and payment bonds and being compliant with CDOT procurement policies. The CM’s firm
+p29:7|will competitively procure and award qualified subcontractors in accordance with their proposed
+p29:8|subcontracting plan, as described in Section 2 and Section 3 of this RFP.
+p29:9|
+p29:10|2.8.       MANAGEMENT PRICE PERCENTAGE
+p29:11|The Management Price Percentage is a percentage which will be applied to all Construction Phase CAP
+p29:12|Proposals. The Management Price Percentage shall include all applicable line items in Appendix C of
+p29:13|this RFP, including profit and indirect costs as defined in Appendix C of this RFP.
+p29:14|CDOT has established the Management Price Percentage for the Project at 10.5%. Proposer acceptance of
+p29:15|the Management Price Percentage will be submitted with the Proposal using Form B-2 in Appendix B of
+p29:16|this RFP and the information in Appendix C of this RFP, collectively called Management Price
+p29:17|Percentage Certification (MPPC).
+p29:18|The MPPC shall consist of a maximum of 3-total pages: (1) completed Form B-2 and (2) 2-page
+p29:19|maximum limit of detailed information showing the breakout of the Management Price Percentage, in
+p29:20|Appendix C of this RFP. The 3-total pages maximum shall be submitted with the Proposal in accordance
+p29:21|with deadlines in Section 2.3 of this RFP. Other indirect and non-reimbursable costs outlined in
+p29:22|Appendix C of this RFP must be considered when certifying agreement to the MPPC.
+p29:23|The MPPC will be evaluated for responsiveness. If the MPPC is determined by CDOT to be non-
+p29:24|responsive, the corresponding Proposal will also be determined by CDOT to be non-responsive. The
+p29:25|corresponding non-responsive Proposal will not be evaluated or scored and will not continue in the
+p29:26|procurement process.
+p29:27|
+p29:28|2.9.       PROPOSAL SUBMITTAL – STEP 1
+p29:29|Proposers must comply with the following items. CDOT retains the right to waive any minor irregularity
+p29:30|or requirement, so long as CDOT determines that it is in its, and the Project’s best interest, as determined
+p29:31|by CDOT, in its sole discretion.
+p29:32|       A. Please submit electronically through BidNet at:
+p29:33|          https://www.bidnetdirect.com/colorado/cdotconstructionengineeringservices.
+p29:34|          Please contact BidNet Direct support for help at (800) 835-4603 with any issues submitting
+p29:35|          electronically.
+p29:36|          ●   The maximum file size is 50 MB.
+p29:37|          ●   CDOT will only evaluate the files that are received by the date and time deadline set forth in
+p29:38|              Section 2.3 of this RFP.
+p29:39|       B. Proposal Format:
+p29:40|          ●   Submittals shall be formatted with section headers/tabs in the exact form and alphanumeric
+p29:41|              sequence of Section 3 of this RFP.
+p29:42|          ●   All submittals shall use a minimum font size of 11 Times New Roman and a minimum font
+p29:43|              size of 10 Times New Roman exclusively for charts, graphs, and figures.
+p29:44|          ●   Web links or QR codes to external documents, information, videos, etc. are not allowed.
+p29:45|          ●   Introductory Letter
+p29:46|
+p29:47|
+p29:48|                                                                                                            29
+p30:1|                                                                  Final Request for Proposals 4/14/26
+p30:2|                                                                           Project No. NH 0505-053
+p30:3|                                                                        US50B SHIFT Passing Lanes
+p30:4|
+p30:5|    o 1-page limit (8-1/2” x 11” electronic paper size). Proposers shall acknowledge all issued
+p30:6|      addenda within this letter.
+p30:7|●   Proposal Section
+p30:8|    o 10-page limit (8-1/2” x 11” electronic paper size).
+p30:9|    o 3-page limit (11” x 17” electronic paper size) shall be reserved exclusively for visual aids
+p30:10|      such as charts, graphics, and plan sheets.
+p30:11|    o The total page limit for the Proposal Section is 13-pages (single sided).
+p30:12|    o Background information for Key Personnel or other Team members does not need to be
+p30:13|      duplicated in the Proposal Section. Proposers can refer to the Appendix Section for this
+p30:14|      information.
+p30:15|●   Appendix Section
+p30:16|    The Appendix Section shall only include:
+p30:17|    o Potential conflicts of interest: No page limit (8-1/2” x 11” electronic paper size).
+p30:18|    o Signed Anti-Collusion Affidavit, CDOT form #606: No page limit (8-1/2” x 11”
+p30:19|      electronic paper size).
+p30:20|    o Evidence of Prequalification per Section 2.2.D of this RFP.
+p30:21|    o Surety Letters: No page limit (8-1/2” x 11” electronic paper size).
+p30:22|    o Evidence of insurability: No page limit (8-1/2” x 11” electronic paper size).
+p30:23|    o Resumes and references for team members: 20-page limit (8-1/2” x 11” electronic paper
+p30:24|      size). At a minimum, it is expected that resumes and references are included for all Key
+p30:25|      Personnel. The Proposer may include resumes and references for non-Key Personnel team
+p30:26|      members but shall adhere to the 20-page maximum page limit.
+p30:27|    o MPPC (Form B-2 and Appendix C): Maximum of 3-total page limit (8-1/2” x 11”
+p30:28|      electronic paper size).
+p30:29|    o Maximum Compensation for Construction Manager Preconstruction Services (Form B-1):
+p30:30|      1-page limit.
+p30:31|●   Supplemental Section
+p30:32|    o 5-page limit (8-1/2” x 11” or 11” x 17” electronic paper size).
+p30:33|    o The Supplemental Section shall be reserved exclusively for supplemental materials for risk
+p30:34|      assessments, Cost Model examples, process illustrations, the organizational chart, and
+p30:35|      additional photos, exhibits, or schedules.
+p30:36|    o Supplemental information will only be considered in the scoring if clearly referenced in
+p30:37|      the Proposer’s responses to SECTION 3 – PROPOSAL CONTENT AND EVALUATION
+p30:38|      CRITERIA
+p30:39|●   Commendation Section
+p30:40|    o 5-page limit (8-1/2” x 11” electronic paper size).
+p30:41|    o The Commendation Section shall be reserved for awards or letters of recommendations.
+p30:42|
+p30:43|
+p30:44|                                                                                                  30
+p31:1|                                                                            Final Request for Proposals 4/14/26
+p31:2|                                                                                     Project No. NH 0505-053
+p31:3|                                                                                  US50B SHIFT Passing Lanes
+p31:4|
+p31:5|    C. CDOT shall evaluate Proposals in accordance with criteria as indicated in Section 3.1 of this RFP
+p31:6|       and subsequently score the submitted responsive Proposals in accordance with criteria in
+p31:7|       Appendix B of this RFP.
+p31:8|    D. Responses to all items shall be complete; Proposers are encouraged to cross-reference to other
+p31:9|       sections of their proposal where applicable.
+p31:10|    E. All references shall be current and relevant.
+p31:11|    F. Tabs, covers, and tables of content pages do not count toward the page count. All proposals must
+p31:12|       be submitted in .pdf format and transmitted electronically to CDOT.
+p31:13|    G. Short List
+p31:14|        From the Proposals received, the Selection Panel intends to shortlist the top three Proposers but
+p31:15|        reserves the right to shortlist two or four Proposers if it is in CDOT’s and the Project’s interest to
+p31:16|        do so. The Proposals will be evaluated and scored using the scoring indicated in Section 3 and
+p31:17|        Appendix B of this RFP.
+p31:18|
+p31:19|2.10.    INTERVIEWS - STEP 2
+p31:20|Mandatory interviews will be conducted for the shortlisted teams only. Interview times will be arranged
+p31:21|by CDOT per Section 2.3 of this RFP and are subject to change; all shortlisted firms will be notified in
+p31:22|advance. Interviews will be evaluated and scored using the scoring indicated in Section 3 and Appendix
+p31:23|B of this RFP.
+p31:24|
+p31:25|
+p31:26|
+p31:27|
+p31:28|                                                                                                            31
+p32:1|                                                                               Final Request for Proposals 4/14/26
+p32:2|                                                                                        Project No. NH 0505-053
+p32:3|                                                                                     US50B SHIFT Passing Lanes
+p32:4|
+p32:5|
+p32:6|
+p32:7|SECTION 3 – PROPOSAL CONTENT AND EVALUATION CRITERIA
+p32:8|3.1.       EVALUATION CRITERIA FOR PROPOSALS (60 Points Possible)
+p32:9|       A. CM Project Management Team (10 Points Possible)
+p32:10|          Composition and Commitment of the CM Project Management Team
+p32:11|          ●   Provide a description of the composition of the team’s Project Key Personnel. If the Proposer
+p32:12|              team is a Joint Venture or association, indicate specific responsibilities of each party to the
+p32:13|              Joint Venture.
+p32:14|          ●   Provide, identify, and discuss the qualifications of the Key Personnel and include the
+p32:15|              following:
+p32:16|              o   Provide job descriptions, responsibilities, and authority;
+p32:17|              o   Provide a list of the concurrent projects, responsibilities, and commitments that each may
+p32:18|                  have for the duration of the Project;
+p32:19|              o   Current home office location;
+p32:20|              o   Qualifications and past construction experience relevant to this Project, in addition to
+p32:21|                  length of time performing those job duties;
+p32:22|              o   Unique skills or knowledge each may possess related to the Project;
+p32:23|              o   Length of time of overall experience pertinent to the scope of this project and length of
+p32:24|                  time with the current firm for each;
+p32:25|              o   Experience on similar projects as a team; and
+p32:26|              o   Provide resumes and two current references for the Key Personnel in an appendix to the
+p32:27|                  Proposal. References will be considered current if the party’s name, current position/title,
+p32:28|                  and position/title held at the time for which the recommendation is being sought are
+p32:29|                  provided; telephone numbers must be current as of the proposal due date.
+p32:30|          ●   The following Tier I, II, and III Key Personnel descriptions contain the suggested skills,
+p32:31|              experience, knowledge, and level of commitment for each role. The Proposer is not required
+p32:32|              to meet the following suggestions but is encouraged to propose their strongest team. If at any
+p32:33|              time, the Key Personnel are performing substandard to CDOT’s expectations, CDOT reserves
+p32:34|              the right to request additional Key Personnel.
+p32:35|          Tier Breakdown
+p32:36|          ●   TIER I: One team member should comprise the role as the Key Personnel for the Project, and
+p32:37|              should have the following Tier I skills, experience, and knowledge:
+p32:38|              o   Project Manager (PM)
+p32:39|                  ▪ This team member shall serve as the overall PM for the CM services and, if awarded a
+p32:40|                    GC Construction Project Contract, GC construction services. The PM shall be the
+p32:41|                    main point of communication for the Project team;
+p32:42|                  ▪ This team member shall remain in this role for the duration of the Project and is not
+p32:43|                    permitted to fulfill any Tier II or Tier III responsibilities unless approved by CDOT
+p32:44|
+p32:45|
+p32:46|                                                                                                               32
+p33:1|                                                                 Final Request for Proposals 4/14/26
+p33:2|                                                                          Project No. NH 0505-053
+p33:3|                                                                       US50B SHIFT Passing Lanes
+p33:4|
+p33:5|           Project Director;
+p33:6|        ▪ This team member shall have a minimum of 10 years of industry experience and shall
+p33:7|          have demonstrated experience and expertise in a similar role in the delivery of projects
+p33:8|          of a similar scope, value, nature, and complexity to the Project; and
+p33:9|        ▪ Anticipated time commitment: 75-100% throughout the duration of the Project.
+p33:10|●   TIER II: Key Personnel are expected to attend relevant Project meetings.The following staff
+p33:11|    members shall comprise Key Personnel for the Project, and should have the following Tier II
+p33:12|    skills, experience, and knowledge:
+p33:13|    o   Construction Manager
+p33:14|        ▪ This team member shall be responsible for providing construction and constructability
+p33:15|          expertise, construction phasing, and seeking innovative solutions during
+p33:16|          preconstruction services;
+p33:17|        ▪ This team member shall have a minimum of 10 years of experience in construction
+p33:18|          and management of construction on highway projects similar in scope, value, nature,
+p33:19|          and complexity of the Project; and
+p33:20|        ▪ Anticipated time commitment: 50-75% during preconstruction, 100% during
+p33:21|          construction (if applicable).
+p33:22|    o   Scheduling Expert/Project Controls
+p33:23|        ▪ This team member shall be responsible for managing the Project schedule and Project
+p33:24|          risk;
+p33:25|        ▪ This team member shall have a minimum of 5 years of industry experience specific to
+p33:26|          this expertise and be able to confidently use the scheduling software of choice as
+p33:27|          shown in Section 1.14 of this RFP; and
+p33:28|        ▪ Anticipated time commitment: Depending on the number, size, and complexity of
+p33:29|          construction packages, may be committed 30-50% during preconstruction, 50-75%
+p33:30|          during construction (if applicable).
+p33:31|    o   Quality Manager
+p33:32|        ▪ This team member shall be responsible for quality assurance during the
+p33:33|          preconstruction phase and if a CAP is successfully negotiated this position may
+p33:34|          transition into managing Contractor Project quality control throughout
+p33:35|          construction;
+p33:36|        ▪ This team member shall have a minimum of 5 years of industry experience specific to
+p33:37|          this expertise; and
+p33:38|        ▪ Anticipated time commitment: Depending on the number, size, and complexity of
+p33:39|          construction packages, may be committed 30-50% during preconstruction, 75-100%
+p33:40|          during construction (if applicable).
+p33:41|    o   Cost Estimator
+p33:42|        ▪ This team member shall be responsible for providing ROM cost estimates and OPCCs
+p33:43|          during preconstruction services;
+p33:44|
+p33:45|
+p33:46|                                                                                                 33
+p34:1|                                                                  Final Request for Proposals 4/14/26
+p34:2|                                                                           Project No. NH 0505-053
+p34:3|                                                                        US50B SHIFT Passing Lanes
+p34:4|
+p34:5|        ▪ This team member shall have a minimum of 5 years of industry experience specific to
+p34:6|          this expertise; and
+p34:7|        ▪ Anticipated time commitment: Depending on the number, size, and complexity of
+p34:8|          construction packages, may be committed 30-60% during preconstruction, and 10%
+p34:9|          during construction (if applicable).
+p34:10|    o   Environmental Specialist
+p34:11|        ▪ This team member shall be responsible for providing input on all environmental
+p34:12|          issues, for example the incorporation and construction of erosion control measures
+p34:13|          into the Stormwater Management Plan (SWMP);
+p34:14|        ▪ This team member shall have a minimum of 5 years of environmental experience,
+p34:15|          including preconstruction and construction experience; and
+p34:16|        ▪ Anticipated time commitment: Depending on the number, size, and complexity of
+p34:17|          construction packages, may be committed 20-40% during preconstruction, and 50-
+p34:18|          75% during construction (as needed).
+p34:19|    o   Traffic & Safety
+p34:20|        ▪ This team member shall be responsible for verification of MUTCD and CDOT S
+p34:21|          standards compliance on all traffic and safety related aspects of the project, including
+p34:22|          various elements of the TMP, TCP, and TO plan;
+p34:23|        ▪ This team member shall have a minimum of 5 years of traffic, safety and operations,
+p34:24|          including preconstruction and construction experience; and
+p34:25|        ▪ Anticipated time commitment: Depending on the number, size, and complexity of
+p34:26|          construction packages, may be committed 20-40% during preconstruction, and 75-
+p34:27|          100% during construction (as needed).
+p34:28|    o
+p34:29|●   TIER III: Technical Experts will make-up Tier III of the organization structure but are not
+p34:30|    considered Key Personnel. Technical Experts are expected to attend relevant Project
+p34:31|    meetings. Tier III staff should provide the following skillsets, knowledge, and experience:
+p34:32|    o   Materials,
+p34:33|    o   Geotechnical,
+p34:34|    o   Utilities/Irrigation,
+p34:35|    o   Roadway,
+p34:36|    o   Drainage,
+p34:37|    o   Railroad
+p34:38|    o   Civil Rights (Equal Employment Opportunity).
+p34:39|●   Multiple Tier II and Tier III skill sets may be fulfilled by one individual if adequate
+p34:40|    justification is made in the proposal to define who is fulfilling what role and their
+p34:41|    qualifications with the exception of the Quality Manager. Proposers shall identify a lead
+p34:42|    person for each skillset.
+p34:43|
+p34:44|
+p34:45|                                                                                                  34
+p35:1|                                                                      Final Request for Proposals 4/14/26
+p35:2|                                                                               Project No. NH 0505-053
+p35:3|                                                                            US50B SHIFT Passing Lanes
+p35:4|
+p35:5|   ●   The Proposer may identify and include additional Key Personnel within the Proposal that are
+p35:6|       necessary for the success of the Project. The Proposer shall include an explanation for the
+p35:7|       additional Key Personnel, and the added value they bring to the Project. The Key Personnel
+p35:8|       requirement within Section 1.15 of this RFP will apply to any additional Key Personnel
+p35:9|       identified by the Proposer.
+p35:10|   ●   All Key Personnel are expected to attend relevant Project meetings.
+p35:11|   ●   Key Personnel are expected to have been delegated a reasonable level of decision-making
+p35:12|       authority on behalf of the CM.
+p35:13|   Organizational Chart and Succession Planning
+p35:14|   ●   Provide a graphic showing the CM’s organizational chart, complete with working titles for
+p35:15|       the team for the preconstruction phase. Provide an explanation of any variation to the
+p35:16|       anticipated Key Personnel time commitments stated above.
+p35:17|   ●   Provide a narrative describing succession planning for team stability and planning for any
+p35:18|       member of the project team that may leave.
+p35:19|   ●   See Section 1.15 of this RFP for additional information related to Key Personnel.
+p35:20|   Safety Record and Performance
+p35:21|   ●   Provide a narrative of the Proposer’s largest foreseen safety risks for the Project and describe
+p35:22|       the safety programs, processes, and initiatives that the Proposer currently has in place to help
+p35:23|       manage/mitigate/or eliminate the safety risks.
+p35:24|   ●   Provide the following information for each entity involved, covering the last 4 years (2021-
+p35:25|       2025).
+p35:26|       o   Experience Modification Rates (EMR)
+p35:27|       o   OSHA Reportable Incident Statistics
+p35:28|B. Contractor Capability (10 Points Possible)
+p35:29|   Pursuant to Section 24-93-110, (1), C.R.S. CDOT will not exclude a Proposer from the short list
+p35:30|   based solely on the Proposer’s lack of experience in delivering a public project in the State using
+p35:31|   the CM/GC delivery method.
+p35:32|   Prior Project Experience/Performance/References
+p35:33|   ●   Provide a summary of the Proposer’s previous project experience relevant to the general
+p35:34|       scope and construction value of work for this Project.
+p35:35|   ●   Provide three or more relevant projects/programs that demonstrate the Proposer’s ability to be
+p35:36|       successful on this Project. For each listed project or experience, include the name of the
+p35:37|       owner, any architect/engineer references, and the contract information CDOT may at its
+p35:38|       discretion, contact references on the listed projects.
+p35:39|       Provide at a minimum:
+p35:40|       o   The project/contract name,
+p35:41|       o   Project delivery method,
+p35:42|       o   Description of services provided,
+p35:43|
+p35:44|                                                                                                      35
+p36:1|                                                                     Final Request for Proposals 4/14/26
+p36:2|                                                                              Project No. NH 0505-053
+p36:3|                                                                           US50B SHIFT Passing Lanes
+p36:4|
+p36:5|       o   Overall construction cost of the project, as applicable, including the initial
+p36:6|           contract/construction value and value at final acceptance. Please provide reasoning for
+p36:7|           any differential,
+p36:8|       o   Description of project schedule performance, including initial schedule, and reasons for
+p36:9|           schedule change,
+p36:10|       o   Coordination with stakeholders, if any,
+p36:11|       o   Key personnel assigned or in-house staff and their level of involvement,
+p36:12|       o   Senior Leadership assigned and their commitment in time to the overall success of the
+p36:13|           project, as well as their commitment to the success of the Owner’s Program,
+p36:14|       o   Major subcontractors and primary subcontracts used in the performance of the contract,
+p36:15|           and
+p36:16|       o   Project Reference(s). All references submitted shall be current for relevant projects.
+p36:17|           References will be considered current if the party’s name, current position/title, and
+p36:18|           position/title held at the time for which the recommendation is being sought are provided;
+p36:19|           telephone numbers must be current as of proposal due date.
+p36:20|C. Strategic Project Approach (20 Points Possible)
+p36:21|           Preconstruction Services
+p36:22|           Provide a narrative that describes the Proposer’s project specific plan and approach to
+p36:23|           meeting the Project Goals. Identify how the Proposer will manage schedule, budget, and
+p36:24|           incorporation of innovation.
+p36:25|           CDOT determined that CM/GC is the most appropriate delivery method for the Project
+p36:26|           because of the ability for risk sharing, early construction manager input into the design,
+p36:27|           and to develop early cost certainty for the Project. Describe the Proposer’s role and
+p36:28|           responsibility in refinement of the design, quality of the design, accuracy of the scope,
+p36:29|           and ensuring efficiency of the execution of delivery for the Project. Specifically, the
+p36:30|           Proposer shall address:
+p36:31|                       ●   Grant Alignment & Milestone Management, Site Selection &
+p36:32|                           Optimization
+p36:33|           Describe the Proposer’s strategy for project management for the Project that would
+p36:34|           encourage building a culture of success and collaboration. Highlight how the Proposer
+p36:35|           will manage preconstruction milestones, quality control during preconstruction, project
+p36:36|           resources, and environmental resources. The narrative should specifically address the
+p36:37|           "Categorical Exclusion" (CatEx) strategy and how the Proposer will identify site-specific
+p36:38|           stipulations (endangered species, historic ditches, noise, etc.) early to avoid design
+p36:39|           restarts.
+p36:40|           Describe how the Proposer will partner with CDOT, and the designer, to ensure that
+p36:41|           every dollar invested into the preconstruction phase of the Project adds value to the
+p36:42|           Project.
+p36:43|           Construction Services
+p36:44|           Describe the Proposer’s project specific plan and approach to construction project
+p36:45|           management for the Project. Describe how the Proposer is uniquely skilled to manage the
+p36:46|           challenges of the Project. Highlight the strategy to meeting construction milestones,
+p36:47|
+p36:48|                                                                                                        36
+p37:1|                                                                     Final Request for Proposals 4/14/26
+p37:2|                                                                              Project No. NH 0505-053
+p37:3|                                                                           US50B SHIFT Passing Lanes
+p37:4|
+p37:5|           project sequencing, early action opportunities, critical scope elements, stakeholder
+p37:6|           coordination, and market conditions. In addition, please provide specific details
+p37:7|           regarding:
+p37:8|               ●   Corridor Logistics & Phasing
+p37:9|               ●   Freight & Agricultural Vehicle Access
+p37:10|               ●   Phasing and Packaging Strategy
+p37:11|           Describe the Proposer’s project specific plan and approach to scope management, self-
+p37:12|           performance, subcontractor management, and management of Civil Rights compliance.
+p37:13|
+p37:14|           Describe the Proposer’s plan and approach to environmental management for the Project.
+p37:15|           Address how the Proposer will manage construction activities around the irrigation
+p37:16|           season and avoid impacts to irrigation ditches and wetlands.
+p37:17|
+p37:18|           Describe the Proposer’s plan and approach for incident response. Include how your team
+p37:19|           will remain agile to coordinate, adapt, complement, and contribute to the Incident
+p37:20|           Command’s direction, if required. Due to the long emergency detour routes on the US 50
+p37:21|           corridor, specifically describe the communication plan for rapid incident clearance to
+p37:22|           prevent corridor-wide delays.
+p37:23|           Project Innovations
+p37:24|           Describe the Proposer’s practical innovative ideas specific to the Project in detail. All
+p37:25|           innovative ideas presented by the Proposer will be considered proprietary in accordance
+p37:26|           with Section 2.1.E of this RFP.
+p37:27|D. Approach to Risk, Schedule, and Pricing (20 Points Possible)
+p37:28|           Risk Approach
+p37:29|           Define the key steps to risk management that the Proposer will employ. Describe how
+p37:30|           those steps will be applied to both the preconstruction and construction process.
+p37:31|           Describe the techniques and tools that the Proposer will use to quantify the risk, establish
+p37:32|           a risk pool, and participate in management of the risk pools and contingencies.
+p37:33|           Identify and describe the top five risks the Proposer has identified on the Project and
+p37:34|           what are the preliminary plans to manage those risks. Be specific on how the Proposer
+p37:35|           will prioritize those risks and manage them.
+p37:36|           Schedule Approach
+p37:37|           Describe the Proposer’s plan and approach to managing the construction schedule in such
+p37:38|           a way as to minimize impacts to the traveling public, encourage efficient execution,
+p37:39|           inform the preconstruction process, manage the critical path, incorporate innovation, and
+p37:40|           provide reasonable float.
+p37:41|           Cost Model Approach
+p37:42|           Describe the Proposer’s approach to Transparency and Accountability in the Cost Model.
+p37:43|           Describe how the Proposer will contribute to the pursuit of the project goals and provide
+p37:44|           easy to interpret deliverables using standard agreed upon terms and inputs.
+p37:45|           Describe how the Proposer’s cost model will incorporate the variables that affect project
+p37:46|           costs, innovation, essential inputs needed, coordination with the Owner and their
+p37:47|
+p37:48|
+p37:49|                                                                                                     37
+p38:1|                                                                          Final Request for Proposals 4/14/26
+p38:2|                                                                                   Project No. NH 0505-053
+p38:3|                                                                                US50B SHIFT Passing Lanes
+p38:4|
+p38:5|                 Independent Cost Estimator, and be reliable over multiple construction seasons.
+p38:6|
+p38:7|
+p38:8|3.2       EVALUATION CRITERIA FOR INTERVIEWS (40 Points Possible)
+p38:9|An interview will be a mandatory part of the selection process for those Proposers on the Short List. At a
+p38:10|minimum, all Tier I and Tier II Key personnel shall attend the interview. The structure of the interview
+p38:11|will be as follows:
+p38:12|      A. Short Presentation (15 Points)
+p38:13|         Summarize the Proposal and describe the Proposer’s innovative ideas and unique resources (20
+p38:14|         Minutes). The Proposer needs to communicate to the Selection Panel why the Selection Panel
+p38:15|         should determine the Proposer as the apparent successful Proposer. What strategies and abilities
+p38:16|         does the Proposer bring to this Project to distinguish them from the other shortlisted Proposers?
+p38:17|         Limit the presentation to the most critical points of the Proposal and focus on what your team can
+p38:18|         bring to the project and why.
+p38:19|      B. Question and Answer Session with the Selection Panel (25 Points)
+p38:20|         The questions asked by the Selection Panel in this session will be the same for each Proposer. The
+p38:21|         Proposer will be allocated 60 total minutes for this session. The Evaluation Facilitator will read
+p38:22|         each question and allow the Proposer to respond to the question for evaluation and scoring by the
+p38:23|         Selection Panel. The interview typically includes multiple questions, all questions and follow up
+p38:24|         questions must be responded to in the allotted 60-minute time limit. The Proposer shall monitor
+p38:25|         the 60 total minutes. If time remains after all questions are asked and answered, and the Proposer
+p38:26|         does not have any questions, the Selection Panel may ask follow-up questions regarding the
+p38:27|         Proposers proposal, short presentation, or questions and answers.
+p38:28|         The interview presentation and question/answer scoring will be based on the following criteria:
+p38:29|         ●   Project Understanding and goals,
+p38:30|         ●   Project Approach,
+p38:31|         ●   Project Innovation,
+p38:32|         ●   Team Collaboration
+p38:33|         ●   Communication Skills, and
+p38:34|         ●   Understanding of CM/GC Project Delivery Method.
+p38:35|
+p38:36|
+p38:37|
+p38:38|
+p38:39|                                                                                                           38
+p39:1|                                                                                                                 Appendix A
+p39:2|                                                                                           Final Request for Proposals 4/14/26
+p39:3|                                                                                                    Project No. NH 0505-053
+p39:4|                                                                                                 US50B SHIFT Passing Lanes
+p39:5|
+p39:6|APPENDIX A: PRECONSTRUCTION ROLES AND RESPONSIBILITIES MATRIX
+p39:7|This table has been reformatted for clarity and to accommodate accessibility for public posting
+p39:8|The following tables outline the communication, consensus building, project team reviews, conceptual design, data
+p39:9|gathering, documentation, and formal public notice activities required during the Preconstruction phase. All activities
+p39:10|must be planned by the appropriate responsible party and coordinated with all team members to ensure parallel paths of
+p39:11|activity are completed in accordance with the shortest possible schedule. The type and number of meetings and
+p39:12|documents will vary based on the specific category and characteristics of the project work.
+p39:13|This matrix serves as the foundational agreement for workload distribution. The Construction Manager (CM) shall
+p39:14|work with the Design Team to finalize this Appendix, ensuring the "Lead," "Support," and "Collaborative" designations
+p39:15|align with the specific needs of the project, for final approval by the Project Director.
+p39:16|Legend:
+p39:17|•       Lead: Primary responsibility for the item.
+p39:18|•       Support: Secondary responsibility to assist or provide data.
+p39:19|•       Collaborative: Shared responsibility requiring active participation from all parties.
+p39:20|
+p39:21|
+p39:22|
+p39:23|
+p39:24|                                                                                                                           39
+p40:1|                                                                                                          Appendix A
+p40:2|                                                                                    Final Request for Proposals 4/14/26
+p40:3|                                                                                             Project No. NH 0505-053
+p40:4|                                                                                          US50B SHIFT Passing Lanes
+p40:5|
+p40:6|PRECONSTRUCTION ROLES AND RESPONSIBILITIES MATRIX
+p40:7|
+p40:8|I. Initial Project Scoping & Progress Meetings
+p40:9|
+p40:10| Activity                                   Contractor      Design Consultant   CDOT / Others
+p40:11|
+p40:12| Partnering Intro Session                   Support         Support             Lead
+p40:13|
+p40:14| Project Site Visit & Inspection            Lead            Support             Support
+p40:15|
+p40:16| Review Status, Goals, & Schedule           Collaborative   Collaborative       Collaborative
+p40:17|
+p40:18| Initial Risk Management Plan               Lead            Support             Support
+p40:19|
+p40:20| Review Environmental Documents             Lead            Lead                Support
+p40:21|
+p40:22| Independent Design & As-Built Review       Lead            —                   —
+p40:23|
+p40:24| Develop Project Schedule & Tasks           Lead            Support             Lead
+p40:25|
+p40:26| Identify Design Criteria                   —               Lead                Support
+p40:27|
+p40:28| Discussion of Long Lead Items              Lead            Support             Support
+p40:29|
+p40:30| Analysis of Phasing/ PS&E Packaging        Lead            Support             Support
+p40:31|
+p40:32| Set Naming Convention Standards            Support         Lead                Support
+p40:33|
+p40:34| Develop Document Review Process            Support         Lead                Support
+p40:35|
+p40:36|
+p40:37|II. Project Development Process & Communication
+p40:38|
+p40:39| Activity                                   Contractor      Design Consultant   CDOT / Others
+p40:40|
+p40:41| Project Management                         Support         Support             Lead
+p40:42|
+p40:43| Communication & Consensus Building         Support         Support             Lead
+p40:44|
+p40:45| Maintain Updated Contact List              Support         Lead                Support
+p40:46|
+p40:47| Graphics Support & Presentations           Collaborative Collaborative         Collaborative
+p40:48|
+p40:49| Provide Local Office                       —               —                   Lead
+p40:50|
+p40:51| PM Updates on Progress                     Collaborative Collaborative         Collaborative
+p40:52|
+p40:53| Project Discussion                         Collaborative Collaborative         Collaborative
+p40:54|
+p40:55| Project Meeting Minutes                    —               Lead                Support
+p40:56|
+p40:57|
+p40:58|
+p40:59|
+p40:60|                                                                                                                    40
+p41:1|                                                                                                   Appendix A
+p41:2|                                                                             Final Request for Proposals 4/14/26
+p41:3|                                                                                      Project No. NH 0505-053
+p41:4|                                                                                   US50B SHIFT Passing Lanes
+p41:5|
+p41:6|PRECONSTRUCTION ROLES AND RESPONSIBILITIES MATRIX
+p41:7|III. Preliminary Design
+p41:8|
+p41:9|Activity                               Contractor      Design Consultant   CDOT / Others
+p41:10|
+p41:11|Preliminary Design Development         —               Lead                Lead
+p41:12|
+p41:13|CDOT Specialty Unit Coordination       —               Support             Lead
+p41:14|
+p41:15|Environmental Data and Analysis        —               Support             Lead
+p41:16|
+p41:17|Environmental Mitigation Development   Support         Support             Lead
+p41:18|
+p41:19|Environmental Clearances and Permits   —               —                   Lead
+p41:20|
+p41:21|Hazardous Material Investigation       —               Lead                Support
+p41:22|
+p41:23|ROW Clearances                         —               Support             Lead
+p41:24|
+p41:25|Local Clearances                       —               Support             Lead
+p41:26|
+p41:27|CDOT Forms/Process                     —               —                   Lead
+p41:28|
+p41:29|Utility Coordination                   Support         Support             Lead
+p41:30|
+p41:31|Conduct Field Survey                   —               Lead                Lead
+p41:32|
+p41:33|Field and Project Research             Collaborative   Collaborative       Collaborative
+p41:34|
+p41:35|Develop and Calculate Quantities       Support         Lead                Support
+p41:36|
+p41:37|Provide PS&E Packages                  —               Lead                Support
+p41:38|
+p41:39|
+p41:40|
+p41:41|
+p41:42|                                                                                                             41
+p42:1|                                                                                                      Appendix A
+p42:2|                                                                                Final Request for Proposals 4/14/26
+p42:3|                                                                                         Project No. NH 0505-053
+p42:4|                                                                                      US50B SHIFT Passing Lanes
+p42:5|
+p42:6|PRECONSTRUCTION ROLES AND RESPONSIBILITIES MATRIX
+p42:7|IV. Preconstruction
+p42:8|
+p42:9|Activity                                  Contractor      Design Consultant   CDOT / Others
+p42:10|
+p42:11|Construction Requirements                 Lead            Support             Support
+p42:12|
+p42:13|Innovation Development & Tracking         Lead            Support             Support
+p42:14|
+p42:15|Value Engineering                         Lead            Support             Support
+p42:16|
+p42:17|Verify As-Built Plans                     Collaborative   Collaborative       Collaborative
+p42:18|
+p42:19|Develop Cost Model                        Lead            Support             Support
+p42:20|
+p42:21|Construction Phasing Plan                 Lead            Support             Support
+p42:22|
+p42:23|Preliminary Construction Schedule         Lead            Support             Support
+p42:24|
+p42:25|Risk Register Management                  Lead            Support             Support
+p42:26|
+p42:27|Maintain ESB and Subcontractor Plan       Lead            —                   Support
+p42:28|
+p42:29|Constructability Reviews                  Lead            Support             Support
+p42:30|
+p42:31|
+p42:32|V. Milestone Reviews (30% FIR & 90% FOR)
+p42:33|
+p42:34|Activity                                  Contractor      Design Consultant    CDOT / Others
+p42:35|
+p42:36|Compile Milestone Plans/Specs             —               Lead                 Support
+p42:37|
+p42:38|Provide Updated Quantities                Support         Lead                 Support
+p42:39|
+p42:40|Prepare Engineer’s Estimate               —               —                    Lead
+p42:41|
+p42:42|Provide OPCC                              Lead            —                    —
+p42:43|
+p42:44|Review PS&E Package/Redlines              Lead            —                    Lead
+p42:45|
+p42:46|Document Design Deviation Justification   —               Lead                 Support
+p42:47|
+p42:48|Attend FIR/FOR Meetings                   Collaborative   Collaborative        Collaborative
+p42:49|
+p42:50|Post-Milestone Revisions & Memos          —               Lead                 —
+p42:51|
+p42:52|Update Cost Model                         Lead            —                    Support
+p42:53|
+p42:54|
+p42:55|
+p42:56|
+p42:57|                                                                                                                42
+p43:1|                                                                                              Appendix A
+p43:2|                                                                        Final Request for Proposals 4/14/26
+p43:3|                                                                                 Project No. NH 0505-053
+p43:4|                                                                              US50B SHIFT Passing Lanes
+p43:5|
+p43:6|PRECONSTRUCTION ROLES AND RESPONSIBILITIES MATRIX
+p43:7|VI. CAP Proposal & Negotiations
+p43:8|
+p43:9|Activity                            Contractor      Design Consultant   CDOT / Others
+p43:10|
+p43:11|Supply Cost Model to ICE            Lead            —                   Support
+p43:12|
+p43:13|Construction Contract Checklist     —               —                   Lead
+p43:14|
+p43:15|Prepare/Submit CAP Proposals        Lead            —                   Support
+p43:16|
+p43:17|Procure Independent Cost Estimate   —               —                   Lead
+p43:18|
+p43:19|Review CAP vs. Engineer Estimate    —               —                   Lead
+p43:20|
+p43:21|Negotiate Final CAPs                Collaborative   —                   Collaborative
+p43:22|
+p43:23|Submit Electronic Bid               Lead            —                   —
+p43:24|
+p43:25|
+p43:26|
+p43:27|
+p43:28|                                                                                                        43
+p44:1|                                                                                                                       Appendix B
+p44:2|                                                                                                 Final Request for Proposals 4/14/26
+p44:3|                                                                                                          Project No. NH 0505-053
+p44:4|                                                                                                       US50B SHIFT Passing Lanes
+p44:5|
+p44:6|
+p44:7|                          APPENDIX B: EVALUATION NOTES AND FORMS
+p44:8|Proposal Evaluation and Interview Evaluation Scoring Notes:
+p44:9|
+p44:10|  1.   CDOT has developed an Evaluation Manual to promote objectivity and transparency. Selection Panel
+p44:11|       Members are required to read, attend training, and follow all scoring guidelines.
+p44:12|  2.   All Selection Panel Members have signed Non-Disclosure Agreements and Conflict of Interest Disclaimers
+p44:13|       as part of this procurement and cannot directly be contacted by or contact anyone outside of the Evaluation
+p44:14|       Facilitator about this project until the CM Services contract has been executed.
+p44:15|  3.   Points have been assigned prior to evaluation and are to be consistent on all evaluation forms. Comments by
+p44:16|       Selection Panel members are required on all scoring forms so that all Proposers may receive constructive
+p44:17|       feedback on their proposals and performance.
+p44:18|  4.   Selection Panel scoring values will be only numbers in whole, half, or quarter-number increments (i.e. 2.25,
+p44:19|       3.50, 4.00.). Scoring of the Proposal and Interview will be based on the Evaluation Assessment Guidelines
+p44:20|       as set forth in the table below.
+p44:21|  5.   Strengths and Weaknesses for the Evaluation Assessment Guidelines as set forth in the table below are
+p44:22|       defined as follows:
+p44:23|        A. Strengths – That part of the Proposal that ultimately represents a benefit to the Project and is expected
+p44:24|           to increase the Proposer’s ability to meet or exceed the Project Goals. A Minor Strength has a slight
+p44:25|           positive influence on the Proposer’s ability to meet or exceed the Project Goals while a Significant
+p44:26|           Strength has a considerable positive influence on the Proposer’s ability to meet or exceed the Project
+p44:27|           Goals.
+p44:28|        B. Weaknesses – That part of a Proposal which detracts from the Proposer’s ability to meet the Project
+p44:29|           Goals or may result in inefficient or ineffective performance. A Minor Weakness has a slight negative
+p44:30|           influence on the Proposer’s ability to meet the Project Goals while a Significant Weakness has a
+p44:31|           considerable negative influence on the Proposer’s ability to meet the Project Goals.
+p44:32|
+p44:33|
+p44:34|
+p44:35|
+p44:36|                                                                                                                                 44
+p45:1|                                                                                                                      Appendix B
+p45:2|                                                                                                Final Request for Proposals 4/14/26
+p45:3|                                                                                                         Project No. NH 0505-053
+p45:4|                                                                                                      US50B SHIFT Passing Lanes
+p45:5|
+p45:6|                                       Evaluation Assessment Guidelines
+p45:7|Selection Panel members will individually evaluate and score their assigned proposal category in accordance with the
+p45:8|evaluation criteria set forth in this RFP and assign a numerical score according to the scoring methodology listed below.
+p45:9|Score                                                         Description
+p45:10|         The Proposer demonstrates several Significant Strengths and/or several Minor Strengths, has no Significant
+p45:11|         Weaknesses or no Minor Weaknesses regarding the following bullets:
+p45:12|               ● The Proposer’s understanding of and approach to meeting the Project Goals.
+p45:13|               ● The Proposer’s understanding of and approach to meeting the stated requirements and objectives of this
+p45:14|  5                scoring category.
+p45:15|               ● The Proposer communicates a commitment to quality for all phases of the Project.
+p45:16|               ● The Proposer's qualifications.
+p45:17|         The response supports an extremely strong expectation of successful Project performance if ultimately selected
+p45:18|         as the CM.
+p45:19|         The Proposer demonstrates several Minor Strengths and/or few Significant Strengths, has few Minor
+p45:20|         Weaknesses and no Significant Weaknesses regarding the following bullets:
+p45:21|               ● The Proposer’s understanding of and approach to meeting the Project Goals.
+p45:22|               ● The Proposer’s understanding of and approach to meeting the stated requirements and objectives of this
+p45:23|                   scoring category.
+p45:24|  4
+p45:25|               ● The Proposer communicates a commitment to quality for all phases of the Project.
+p45:26|               ● The Proposer's qualifications.
+p45:27|         The possibility exists that if selected, the Proposer may offset the Weakness of the response with their strengths.
+p45:28|         However, their minor weakness could slightly affect the success of the Project.
+p45:29|         The Proposer demonstrates several Minor Strengths and no Significant Strengths, has several Minor
+p45:30|         Weaknesses and few Significant Weaknesses regarding the following bullets:
+p45:31|               ● The Proposer’s understanding of and approach to meeting the Project Goals.
+p45:32|               ● The Proposer’s understanding of and approach to meeting the stated requirements and objectives of this
+p45:33|                   scoring category.
+p45:34|  3
+p45:35|               ● The Proposer communicates a commitment to quality for all phases of the Project.
+p45:36|               ● The Proposer's qualifications.
+p45:37|         The possibility exists that if selected, the Proposer’s Weaknesses could have an adverse effect on the success of
+p45:38|         the Project.
+p45:39|         The Proposer demonstrates few Minor Strengths and no Significant Strengths, has several Minor Weaknesses
+p45:40|         and/or several Significant Weaknesses that demonstrate deficiency regarding the following bullets:
+p45:41|               ● The Proposer’s understanding of and approach to meeting the Project Goals.
+p45:42|               ● The Proposer’s understanding of and approach to meeting the stated requirements and objectives of this
+p45:43|                   scoring category.
+p45:44|  2
+p45:45|               ● The Proposer communicates a commitment to quality for all phases of the Project.
+p45:46|               ● The Proposer's qualifications.
+p45:47|         It is probable that if selected, the Proposer’s Weaknesses will have an adverse effect on the success of the
+p45:48|         Project.
+p45:49|         The Proposer demonstrates no Minor Strengths and no Significant Strengths, has several Minor Weaknesses
+p45:50|         and/or several Significant Weaknesses regarding the following bullets:
+p45:51|               ● The Proposer’s understanding of and approach to meeting the Project Goals.
+p45:52|               ● The Proposer’s understanding of and approach to meeting the stated requirements and objectives of this
+p45:53|                   scoring category.
+p45:54|  1
+p45:55|               ● The Proposer communicates a commitment to quality for all phases of the Project.
+p45:56|               ● The Proposer's qualifications.
+p45:57|         The response supports a strong expectation that if selected, the Proposer’s Weakness will negatively impact the
+p45:58|         pursuit of the Project Goals.
+p45:59|
+p45:60|                                                                                                                                45
+p46:1|                                                                                                                Appendix B
+p46:2|                                                                                          Final Request for Proposals 4/14/26
+p46:3|                                                                                                   Project No. NH 0505-053
+p46:4|                                                                                                US50B SHIFT Passing Lanes
+p46:5|
+p46:6|
+p46:7|                       COLORADO DEPARTMENT OF TRANSPORTATION
+p46:8|             FORM B-1: MAXIMUM COMPENSATION FOR CONSTRUCTION MANAGER
+p46:9|                        PRECONSTRUCTION SERVICES CERTIFICATION
+p46:10|
+p46:11|
+p46:12|Name of Proposer: ______________________________________________
+p46:13|Name of Project: US50 SHIFT Passing Lanes
+p46:14|Date: ________________
+p46:15|
+p46:16|The undersigned certifies its acceptance or rejection of the CDOT determined Maximum Compensation for
+p46:17|Construction Manager Preconstruction Services of $750,000 (RFP Section 1.20), established for the above project
+p46:18|by selecting either “Accept” or “Reject,” initialing next to the proposer’s section, and signing this certification:
+p46:19|
+p46:20|
+p46:21|______ Accept the Maximum Compensation for Construction Manager Preconstruction Services - _________ Initials
+p46:22|
+p46:23|OR
+p46:24|
+p46:25|______ Reject the Maximum Compensation for Construction Manager Preconstruction Services - _________ Initials
+p46:26|
+p46:27|
+p46:28|
+p46:29|By: ___________________________________ Print Name: __________________
+p46:30|(Signature)
+p46:31|
+p46:32|Title: __________________________________ Date: _______________________
+p46:33|
+p46:34|Signed and initialed certification of the project’s determined Maximum Compensation for Construction Manager
+p46:35|Preconstruction Services must be clearly established and included with the response to this Project’s Request for
+p46:36|Proposal.
+p46:37|
+p46:38|Certifying “Reject” of the Maximum Compensation for Construction Manager Preconstruction Services will cause
+p46:39|the corresponding Proposal to be considered non-responsive to the solicitation and the corresponding Proposal will
+p46:40|not be scored or further considered in this Project’s procurement.
+p46:41|
+p46:42|Failure to certify acceptance or rejection of the Maximum Compensation for Construction Manager
+p46:43|Preconstruction Services may cause the corresponding proposal to be considered non-responsive to the solicitation.
+p46:44|
+p46:45|
+p46:46|
+p46:47|
+p46:48|                                                                                                                          46
+p47:1|                                                                                                                Appendix B
+p47:2|                                                                                          Final Request for Proposals 4/14/26
+p47:3|                                                                                                   Project No. NH 0505-053
+p47:4|                                                                                                US50B SHIFT Passing Lanes
+p47:5|
+p47:6|
+p47:7|                        COLORADO DEPARTMENT OF TRANSPORTATION
+p47:8|                  FORM B-2: MANAGEMENT PRICE PERCENTAGE CERTIFICATION
+p47:9|                  CONSTRUCTION MANAGER/GENERAL CONTRACTOR SERVICES
+p47:10|
+p47:11|
+p47:12|
+p47:13|Name of Proposer: ______________________________________________
+p47:14|Name of Project: US50 SHIFT Passing Lanes
+p47:15|Date: ________________
+p47:16|
+p47:17|The undersigned certifies its acceptance or rejection of the CDOT determined Management Price Percentage
+p47:18|(MPP) of 10.5 percent, established for the above project by selecting either “Accept” or “Reject,” initialing next to
+p47:19|the proposer’s section, and signing this certification:
+p47:20|
+p47:21|
+p47:22|______ Accept the MPP - _________ Initials
+p47:23|
+p47:24|OR
+p47:25|
+p47:26|______ Reject the MPP - _________ Initials
+p47:27|
+p47:28|
+p47:29|
+p47:30|By: ___________________________________ Print Name: __________________
+p47:31|(Signature)
+p47:32|
+p47:33|Title: __________________________________ Date: _______________________
+p47:34|
+p47:35|Signed and initialed certification of the project’s determined MPP must be clearly established and included with
+p47:36|the response to this project’s Request for Proposal.
+p47:37|
+p47:38|Certifying “Reject” of the MPP will cause the corresponding Proposal to be considered non-responsive to the
+p47:39|solicitation and the corresponding Proposal will not be scored or further considered in this project’s procurement.
+p47:40|
+p47:41|In addition to submitting this certification, Proposers are also required to submit the information in
+p47:42|Appendix C (two-page maximum for Appendix C).
+p47:43|
+p47:44|Failure to certify acceptance or rejection of the MPP may cause the corresponding proposal to be considered non-
+p47:45|responsive to the solicitation.
+p47:46|
+p47:47|
+p47:48|
+p47:49|
+p47:50|                                                                                                                          47
+p48:1|                                                                                                                               Appendix C
+p48:2|                                                                                                         Final Request for Proposals 4/14/26
+p48:3|                                                                                                                  Project No. NH 0505-053
+p48:4|                                                                                                               US50B SHIFT Passing Lanes
+p48:5|
+p48:6|
+p48:7|                       APPENDIX C: CONSTRUCTION GENERAL CONDITIONS
+p48:8|            Costs NOT TO BE included in CM/GC Management Price                                Costs TO BE included in CM/GC
+p48:9|                                 Percentage                                                    Management Price Percentage
+p48:10|
+p48:11|                                                                                        Other indirect and non-reimbursable costs to
+p48:12|         Costs for the categories below will be negotiated and included in
+p48:13|Item                        the direct “Cost of the Work”
+p48:14|                                                                                        be included in the CM/GC price percentage
+p48:15|                                                                                                       are listed below
+p48:16|
+p48:17|E.1    Mobilization                                                                 Project Principal – all costs
+p48:18|
+p48:19|                                                                                    Project Manager relocation, housing, and subsistence
+p48:20|E.2    Project Manager
+p48:21|                                                                                    costs.
+p48:22|
+p48:23|                                                                                    Construction Manager/Superintendent relocation,
+p48:24|E.3    Construction Manager/Superintendent
+p48:25|                                                                                    housing, and subsistence costs.
+p48:26|
+p48:27|       All other on-site, construction management staff as approved by the          Additional CM/GC staff relocation, housing, and
+p48:28|E.4
+p48:29|       Agency                                                                       subsistence cost.
+p48:30|
+p48:31|       On-site administrative staff, including clerical and secretarial             Home, branch and regional office administrative
+p48:32|E.5
+p48:33|       staff                                                                        support staff and all related costs
+p48:34|
+p48:35|                                                                                    Home, branch and regional office safety support staff and
+p48:36|E.6    All project direct costs related to Safety
+p48:37|                                                                                    all related costs
+p48:38|
+p48:39|                                                                                    Home, branch and regional office quality control
+p48:40|E.7    All project direct costs related to Quality Control
+p48:41|                                                                                    support staff and all related costs
+p48:42|
+p48:43|       Project office costs for cleaning, set-up/demo, maintenance, security,
+p48:44|E.8                                                                                 Profit
+p48:45|       utilities, rent/lease, equipment, and furniture
+p48:46|
+p48:47|       Materials and equipment handling, including
+p48:48|E.9
+p48:49|       shipping/transport to site and storage costs
+p48:50|
+p48:51|E.10   Costs to co-locate with Agency staff
+p48:52|
+p48:53|E.11   Job site temporary toilet facilities and maintenance
+p48:54|
+p48:55|E.12   Partnering workshops
+p48:56|
+p48:57|E.13   Construction rental equipment
+p48:58|
+p48:59|E.14   Actual cost of permits
+p48:60|
+p48:61|       All project direct costs related to implementation of Agency-approved
+p48:62|E.15
+p48:63|       sustainable practices
+p48:64|
+p48:65|       All project direct costs related to implementation of Agency-
+p48:66|E.16
+p48:67|       approved DBE/ESB program
+p48:68|
+p48:69|       Construction equipment and vehicles at Proposer’s internal cost rate,
+p48:70|E.17
+p48:71|       including costs of maintenance and fuel
+p48:72|
+p48:73|       All costs related to cell phones, radios, fax machines, pagers,
+p48:74|E.18
+p48:75|       computers and software.
+p48:76|
+p48:77|E19    All costs of capital and interest; licenses and taxes required by law.
+p48:78|
+p48:79|       Miscellaneous project office costs, including but not limited to, drinking
+p48:80|E.20
+p48:81|       water, printing, reproduction, postage, delivery, and supplies
+p48:82|
+p48:83|
+p48:84|
+p48:85|                                                                                                                                                48
+p49:1|                                                                                                                Appendix D
+p49:2|                                                                                          Final Request for Proposals 4/14/26
+p49:3|                                                                                                   Project No. NH 0505-053
+p49:4|                                                                                                US50B SHIFT Passing Lanes
+p49:5|
+p49:6|             APPENDIX D: SAMPLE CONSTRUCTION MANAGER CONTRACT
+p49:7|https://www.codot.gov/business/alternativedelivery/assets/cm-contract-final-clean-current-final-template-with-edits-
+p49:8|from-blue-mesa-for-mg-from-liliana-9-19-24-1.pdf
+p49:9|
+p49:10|The contract is in review and anticipated to have non-substantive updates inclusive of clarifications on the Civil Rights
+p49:11|exhibit. An updated sample contract will be included at the time of advertising the Final RFP.
+p49:12|
+p49:13|
+p49:14|
+p49:15|
+p49:16|                                                                                                                            49

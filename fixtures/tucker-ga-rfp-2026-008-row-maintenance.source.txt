@@ -1,0 +1,1069 @@
+p1:1|             City of Tucker
+p1:2|
+p1:3|         Request for Proposal
+p1:4|             RFP 2026-008
+p1:5|
+p1:6|RIGHT OF WAY MAINTENANCE SERVICES
+p1:7|
+p1:8|
+p1:9|
+p1:10|
+p1:11|            BID MANUAL
+p1:12|
+p1:13|                 City of Tucker
+p1:14|         1975 Lakeside Parkway, Suite 350
+p1:15|              Tucker, Georgia 30084
+p2:1|                       City of Tucker Request for Proposal
+p2:2|                                  RFP 2026-008
+p2:3|                       Right of Way Maintenance Services
+p2:4|INVITATION: The City of Tucker is now accepting proposals for a qualified contractor to
+p2:5|provide right of way and public open space maintenance services throughout the City of Tucker
+p2:6|under the direction of the City’s Public Works Department. Proposals will be accepted until the
+p2:7|date and time listed below and will be awarded to the most responsible and responsive proposer
+p2:8|submitting the proposal which is deemed to be the most advantageous to the city. Addenda and
+p2:9|updates to this bid manual will be posted on the City of Tucker website http://tuckerga.gov/bids
+p2:10|or may be requested by emailing procurement@tuckerga.gov.
+p2:11|
+p2:12|                                  BID ACTIVITY SCHEDULE
+p2:13|
+p2:14|RFP Issued                                         February 24, 2026
+p2:15|Pre-Bid Conference                                 N/A
+p2:16|Deadline for Questions                             March 17, 2026, at 1:00pm EST
+p2:17|Responses to Questions Posted (Addenda)            March 20, 2026
+p2:18|Proposal Deadline                                  April 2, 2026, at 1:00pm EST
+p2:19|Scoring by Evaluation Committee                    April 3 - 10, 2026
+p2:20|Award at Council Meeting                           May 11, 2026 (Tentative)
+p2:21|
+p2:22|
+p2:23|SCOPE OF WORK: Refer to Exhibit A.
+p2:24|
+p2:25|PRE-PROPOSAL CONFERENCE: N/A
+p2:26|QUESTIONS: Submit all questions in writing to procurement@tuckerga.gov. Reference RFP 2026-
+p2:27|008 in the subject line of the email.
+p2:28|ADDENDA: Responses to the questions received will be by addenda and will be posted on the
+p2:29|City website www.tuckerga.gov/bids. The signed acknowledgement issued with each addendum
+p2:30|must be submitted with the proposal. It is the vendors’ responsibility to verify if any addenda were
+p2:31|created.
+p2:32|
+p2:33|SUBMITTAL REQUIREMENTS: Consultant shall submit RFP Response electronically to
+p2:34|procurement@tuckerga.gov so that it is received no later than April 2, 2026 at 1:00pm EST with
+p2:35|the subject line “Submittal: RFP 2026-008”. The email must contain the vendor’s contact
+p2:36|information. The submittal shall be two PDF files:
+p2:37|    1. The proposal shall be named “<Company Name>.RFP 2026-008.Bid Submittal.pdf”.
+p2:38|    2. The Cost Proposal shall be named “<Company Name>.RFP 2026-008.Cost Proposal.pdf”
+p2:39|The submittal email will be opened to confirm receipt of the submittal; however, the attached PDF
+p2:40|files will remain unopened until the public opening.
+p2:41|
+p2:42|                                            Page 2 of 17
+p3:1|PROPOSAL OPENING: All proposals received prior to the deadline will be opened publicly on
+p3:2|April 2, 2026 at 1:00pm EST at Tucker City Hall located at 1975 Lakeside Parkway, Suite 350,
+p3:3|Tucker GA. A listing of submittals received prior to the bid deadline will be posted on the City
+p3:4|website www.tuckerga.gov/bids following the opening of the proposals.
+p3:5|
+p3:6|
+p3:7|DOCUMENT SUBMITTAL REQUIREMENTS:
+p3:8|     1. Proposal, including understanding and approach, related experience and references,
+p3:9|        personnel qualifications.
+p3:10|     2. Equipment List (form provided)
+p3:11|     3. Cost Proposal (form provided)
+p3:12|     4. W-9 Form (form provided)
+p3:13|     5. Certificate of Insurance for Verification Purposes
+p3:14|     6. Equipment List (form provided)
+p3:15|     7. Notarized E-Verify Affidavit Form (form provided)
+p3:16|     8. Notarized Oath of Non-Collusion (form provided)
+p3:17|     9. Acknowledgement of Addendum issued with each Addendum.
+p3:18|     10. Contact Information Form (form provided)
+p3:19|
+p3:20|
+p3:21|All responses must be received electronically by the Bid Deadline. (Addenda will show any
+p3:22|schedule updates). No bids will be received orally, by phone, or by sealed paper documents. Only
+p3:23|electronic bids in accordance with submittal requirement instructions will be accepted. Late bids
+p3:24|will not be considered. Bids received after the bid deadline will be filed unopened. The City of
+p3:25|Tucker reserves the right to reject any and all bids or any part, to waive any formalities to make
+p3:26|an award and to re-advertise in the best interest of the City. The City reserves the right to consider
+p3:27|past performance in determining the responsibleness of bidders.
+p3:28|
+p3:29|
+p3:30|The City reserves the right to negotiate pricing with the top scoring bidder and may, in its
+p3:31|discretion, award a contract to the responsible and responsive proposer submitting the proposal
+p3:32|which is deemed to be the most advantageous to the City, price and other factors being considered,
+p3:33|as described in the selection criteria.
+p3:34|
+p3:35|
+p3:36|
+p3:37|
+p3:38|                                            Page 3 of 17
+p4:1|                               SCOPE OF WORK
+p4:2|                      City of Tucker Request for Proposal
+p4:3|                                 RFP 2026-008
+p4:4|                      Right of Way Maintenance Services
+p4:5|
+p4:6|INTRODUCTION
+p4:7|The City of Tucker (City) is seeking a qualified contractor to provide the Right of Way and
+p4:8|public open space maintenance services in accordance with terms outlined in this Request for
+p4:9|Proposal. Services shall include, but are not limited to, mowing, trimming, pruning, fallen tree
+p4:10|removal, debris removal, after hours carcass removal, graffiti removal and street sweeping.
+p4:11|The City intends to select one contractor through a qualification-based selection process and
+p4:12|intends to execute a one-year contract with three optional one-year extensions beginning July
+p4:13|1, 2026.
+p4:14|
+p4:15|A. GENERAL SCOPE OF WORK
+p4:16|1. The City of Tucker seeks to engage the services of a qualified contractor to provide right
+p4:17|   of way and public open spaces maintenance services throughout the City of Tucker under
+p4:18|   the direction of the City’s Public Works Department. Services shall include, but are not
+p4:19|   limited to, mowing, trimming, pruning, fallen tree removal, debris removal, after hours
+p4:20|   carcass removal, graffiti removal and street sweeping.
+p4:21|2. The contractor shall maintain established weekday business hours for the purpose of City
+p4:22|   business. City of Tucker holidays will be provided upon award of contract. The contractor
+p4:23|   shall notify Public Works of performing non-emergency work outside work outside of
+p4:24|   normal business hours.
+p4:25|3. For all work provided to the City of Tucker, the contractor(s) shall meet the following
+p4:26|   requirements:
+p4:27|       a. Comply with all OSHA and other applicable federal and state statutes, regulations
+p4:28|           and standards for workplace safety and all applicable laws regarding hazardous
+p4:29|           material.
+p4:30|       b. Complete work in accordance with the Georgia Department of Transportation
+p4:31|           Standard Specifications unless otherwise directed.
+p4:32|       c. Communicate with the Mayor, City Council and media services only through the
+p4:33|           Director of Public Works, unless otherwise authorized.
+p4:34|       d. Dispose of all excavated construction materials and other waste. Disposal shall be
+p4:35|           in accordance with all applicable laws.
+p4:36|       e. Maintain a current Utility Contractor license with the State of Georgia.
+p4:37|4. The Contractor(s) is expected to attract and retain highly qualified employees in the
+p4:38|   appropriate number to maintain the required level of service. Employees will be expected
+p4:39|   to maintain a professional appearance and be courteous in their interaction with the public.
+p4:40|
+p4:41|                                        Page 4 of 17
+p5:1|   The Contractor(s) shall maintain and implement documented training programs throughout
+p5:2|   the term of the contract to guarantee that the contractor’s employees maintain applicable
+p5:3|   certifications. Resumes for the project superintendent, road maintenance foreman, and
+p5:4|   stormwater foreman must be included in the response to this RFP.
+p5:5|
+p5:6|5. The contractor shall submit a monthly report no later than the 5th of each month to include,
+p5:7|   but not limited to, a highlight of major accomplishments, problems, trends and other
+p5:8|   pertinent information associated with the month activities. This report shall be delivered to
+p5:9|   the Public Works Director and any other specified city staff. The reporting will be in brief
+p5:10|   memo format and must include the completed and in progress work orders from the
+p5:11|   previous week. In addition, the report will include a daily accounting of the number of field
+p5:12|   personnel at each work order each day. The report will also include the number of hours
+p5:13|   spent at each work order each day. The report will include any equipment failures and/or
+p5:14|   lost production time due to equipment failure. The report will also include any employee
+p5:15|   training that occurred in the previous week. Reporting must be submitted for both road
+p5:16|   maintenance and stormwater maintenance crews.
+p5:17|
+p5:18|6. Basic equipment essential to the performance of customary work including safety
+p5:19|   equipment, communication devices, etc will be included in the monthly lump sum rate. All
+p5:20|   rates proposed for services shall include traffic control equipment, portable safety traffic
+p5:21|   signs, safety cones and barrels, barricades, two digital message boards, delineators, and
+p5:22|   arrow boards.
+p5:23|
+p5:24|7. The Contractor(s) should include in the proposal, a detailed list of equipment that will be
+p5:25|   utilized in the City of Tucker. The Contractor(s) shall be responsible for maintaining the
+p5:26|   equipment in satisfactory operating condition throughout the contract period. If equipment
+p5:27|   requires repair, the Contractor is responsible for renting or acquiring replacement
+p5:28|   equipment at their own expense to avoid delays or down time. Repair and maintenance of
+p5:29|   equipment shall occur outside of the normal 40-hour week assigned to addressing work
+p5:30|   orders. Significant equipment repairs that result in a reduction of a 40-hour production
+p5:31|   week will result in a proportional payment reduction. All fuel will be the Contractor’s
+p5:32|   responsibility. The Contractor(s) shall maintain and account for any information,
+p5:33|   equipment, and property, which the City provides to the Contractor for use during the
+p5:34|   period of performance.
+p5:35|
+p5:36|   Age and condition of equipment will be factored into contractor scoring for these services.
+p5:37|   The contractor shall be prepared to allow the city inspect the equipment and demonstrate
+p5:38|   its functionality prior to selection.
+p5:39|
+p5:40|   At least one member of each work crew must be equipped with a cell phone. The cell phone
+p5:41|
+p5:42|
+p5:43|                                        Page 5 of 17
+p6:1|     shall be capable of taking and sending digital pictures or a separate digital camera should
+p6:2|     be provided to each crew. Work crew supervisors must be provided with a computer with
+p6:3|     internet access for communication with the City’s work order management system.
+p6:4|
+p6:5|  8. Contractor shall provide automatic vehicle location (AVL) tracking devices to all vehicles
+p6:6|     associated with this scope. The contractor shall be responsible for general upkeep,
+p6:7|     protection, and operation of these devices to include but not limited to the insurance of
+p6:8|     continued operation during the times the vehicles are utilized for this scope. Contractor
+p6:9|     shall provide at a minimum AVL tracking that provides real-time data, and historical data
+p6:10|     to include but not limited to speed and idle time updated at an interval no more than 1
+p6:11|     minute. History of vehicle tracking must be maintained for at least one year. Contractor
+p6:12|     shall provide the director of public works or his designee, login access to this data at his
+p6:13|     discretion.
+p6:14|
+p6:15|  9. Raw materials used in the performance of the work will be either purchased directly by the
+p6:16|     City of Tucker or reimbursed as a pass-through cost with no markup. The City may elect
+p6:17|     to setup accounts with various suppliers for direct billing. The Contractor(s) will be
+p6:18|     responsible for loading and delivery of the material. The Contractor will also be responsible
+p6:19|     for estimating quantities, obtaining competitive pricing, arranging for delivery in a timely
+p6:20|     manner and providing for storage at the City maintenance facility. Whenever practical,
+p6:21|     arrangements shall be made for the City to pay for material directly. Reimbursement for
+p6:22|     materials will not include items that are incidental to the work such as work gloves and
+p6:23|     safety supplies.
+p6:24|
+p6:25|B. DETAILED SCOPE OF WORK
+p6:26|
+p6:27|   Maintenance activities of the contractor will include but are not limited to:
+p6:28|
+p6:29|  1. Provide a minimum of two (2) – 3-man crews and equipment to perform right of way
+p6:30|     maintenance as identified in the scope of work and in assigned work orders. Right of way
+p6:31|     personnel will be fully dedicated to right of way maintenance during the mowing season
+p6:32|     with supplemental staffing readily available to react to other maintenance calls mentioned
+p6:33|     in part of this proposal. Adequate personnel must be provided to meet safety requirements
+p6:34|     at all times. Some work will be necessary after hours call out and/ or weekend work. Crews
+p6:35|     must be available to respond to weather-related incidents and other emergencies on a 24-
+p6:36|     hour on-call basis with a 2-hour response time. Personnel must be sufficiently trained and
+p6:37|     a minimum of 12 hours per year per staff member is required. Documentation should be
+p6:38|     submitted to City staff upon completion.
+p6:39|  2. The right of way maintenance contractor will be responsible for maintaining the public
+p6:40|     right of way, primarily along arterial and collector streets, and other City owned open space
+p6:41|
+p6:42|
+p6:43|                                          Page 6 of 17
+p7:1|    in a manner consistent with industry standards. Maintenance will include routine mowing
+p7:2|    and cutting vegetation in designated areas, trash, debris and hazard removal as needed and
+p7:3|    response to weather incidents and other emergencies that affect public infrastructure.
+p7:4|3. The contractor must provide equipment and vehicles necessary to complete the tasks as
+p7:5|    described and within the timeframes specified. The equipment must be maintained in a
+p7:6|    clean and professional condition reflecting the City’s high standards. Regularly used
+p7:7|    maintenance trucks should be a full-size pickup truck or larger.
+p7:8|4. The contractor shall purchase and provide all materials, supplies, and labor necessary to
+p7:9|    fulfill the requirements of this bid. Any raw materials/supplies needed to complete work
+p7:10|    associated with this bid will be either purchased directly by the City of Tucker or
+p7:11|    reimbursed as a pass-through cost with no markup. The Contractor will be responsible for
+p7:12|    loading and delivery of the material. The Contractor will also be responsible for estimating
+p7:13|    quantities, obtaining pricing, and arranging for delivery in a timely manner. If storage is
+p7:14|    required, these materials shall be securely stored at the herein mentioned storage facility
+p7:15|    found in section C7 of this document. Reimbursement for materials will not include items
+p7:16|    that are incidental to the work such as gloves, safety supplies, etc.
+p7:17|5. Routing Right of Way Maintenance to the City’s arterial and collector streets to include:
+p7:18|        • Mowing Areas
+p7:19|        • Trimming/Pruning Areas
+p7:20|        • Landscaped Median Maintenance
+p7:21|        • Sidewalks
+p7:22|        • Curb and Gutter
+p7:23|        • All other Right of Way
+p7:24|     A map of expected areas of maintenance is attached as Scope of Work Exhibit A
+p7:25|6. During the growing season from April 1st to October 31st, the contractor will mow and trim
+p7:26|    vegetation in the areas designated bi-weekly (unless otherwise directed). Mowing heights
+p7:27|    shall be appropriate for species. In areas where species may be mixed/varied, the mowing
+p7:28|    height shall be no greater than 2-inches. Locations missed due to weather conditions shall
+p7:29|    be completed within five (5) days of original schedule.
+p7:30|7. Trash in these areas should be picked up before and after the mowing as necessary.
+p7:31|8. Trash must be bagged and disposed of properly at an off-site location.
+p7:32|9. Other debris such as fallen tree limbs, car parts etc. must be removed and disposed of
+p7:33|    properly.
+p7:34|10. Illegal signs in the right of way must be removed and provided to the City’s Code
+p7:35|    Enforcement Department.
+p7:36|11. Sidewalks and gutters should be kept clear of debris, leaves and vegetation.
+p7:37|12. Any unsafe conditions observed by contractor personnel will be reported to the City’s
+p7:38|    Public Works Department.
+p7:39|13. Apply mulch and pine straw to areas of exposed soil or landscape planting. Maintain these
+p7:40|    areas with herbicide for weed control.
+p7:41|
+p7:42|
+p7:43|                                        Page 7 of 17
+p8:1|       A map of expected locations is attached as Scope of Work Exhibit B. Other locations
+p8:2|          may be applied upon direction of City Staff.
+p8:3|  14. Perform extensive cut back of shrubs, trees, weeds, vines to maintain clear sight lines,
+p8:4|      vehicle and pedestrian accessibility, and overall maintained appearance.
+p8:5|  15. Remove fallen trees in any right of way areas as needed.
+p8:6|  16. Perform cleanup of fallen leaves from all right of way locations identified in the
+p8:7|      maintenance map during fall/winter season.
+p8:8|  17. Provide water to sensitive vegetation, as directed by City staff.
+p8:9|  18. Complete street sweeping based on the map attached as Scope of Work Exhibit C. Street
+p8:10|      sweeping shall occur monthly (total of 12 times per year).
+p8:11|
+p8:12|
+p8:13|  WORK ORDER GENERATED SERVICES
+p8:14|
+p8:15|     In addition to the routine right of way maintenance, the contractor will be required to
+p8:16|     complete various work order generated tasks at the direction of the Public Works staff.
+p8:17|     These tasks include but are not limited to removing roadway hazards such as debris and
+p8:18|     dead, diseased, hazardous or fallen trees, trimming vegetation to improve visibility at
+p8:19|     intersections or street sign locations, picking up trash and dead animal removal.
+p8:20|     Work orders will be disseminated to the contractor electronically through Public Works’
+p8:21|     Cityworks work order management software. Work orders will be assigned a priority by
+p8:22|     the Public Works staff. The contractor will be expected to monitor the status of work
+p8:23|     orders and complete them in a timely manner as follows:
+p8:24|         • Priority 1: Complete within 24 hours.
+p8:25|         • Priority 2: Complete within 7 days.
+p8:26|         • Priority 3: Complete within 21 days.
+p8:27|         • Priority 4: As directed.
+p8:28|
+p8:29|   Emergency Responses
+p8:30|
+p8:31|     The contractor will be required to maintain a point of contact for 24-hour, 7-day per week
+p8:32|     response to weather-related incidents and other types of emergencies. This responsibility
+p8:33|     will best be handled by the Crew Supervisor. The contractor must be able to have
+p8:34|     equipment and personnel mobilized in the City within 2 hours of notification of an incident.
+p8:35|     Costs for work after normal business hours will be paid on an hourly basis.
+p8:36|
+p8:37|
+p8:38|C. EQUIPMENT / PERSONNEL AND STORAGE SCOPE OF WORK
+p8:39|
+p8:40|  1. In addition to providing an adequate number of qualified personnel, the contractor will be
+p8:41|     responsible for the following:
+p8:42|     • Provide and maintain in satisfactory operational conditions all equipment necessary to
+p8:43|
+p8:44|                                         Page 8 of 17
+p9:1|         provide the required services.
+p9:2|     • All vehicles and fuel necessary to provide the required services.
+p9:3|     • All communication and computer devices and service necessary to be able to maintain
+p9:4|         around the clock accessibility and to be able to maintain access to the City’s internet-
+p9:5|         based work order system. Crews assigned to right of way work orders will be expected
+p9:6|         to be provided with a smart phone for interaction with the work order system.
+p9:7|     • Subcontractors may be utilized to fulfill the requirements of the scope outlined in this
+p9:8|         RFP. All subcontractors are expected to be held to the same standards as the selected
+p9:9|         contractor.
+p9:10|2.   City Provided Items
+p9:11|     • Magnetic City of Tucker logos for contractor vehicles.
+p9:12|     • In-office meeting site at the City of Tucker City Hall
+p9:13|     • Training on the City’s work order management system.
+p9:14|     • Materials and supplies other than fuel, equipment, office and personnel supplies. For
+p9:15|         example: gravel, straw, seeds, mulch etc.
+p9:16|3.   Daily Equipment - Expected to be onsite daily for use.
+p9:17|     • All necessary hand or power tools to complete identified Scope of Work
+p9:18|     • Site Equipment – Loader (ie. skid steer/equipped tractor), mowers, string trimmers,
+p9:19|         edgers, blowers, parking lot blowers, spreader/hopper, backpack sprayers, tree
+p9:20|         sprayer, utility side by side.
+p9:21|     • Pruning Equipment – chain saws, pole saws, hedge trimmers, hand pruners.
+p9:22|     • Facilities Equipment – sump pump, pipe snake, pressure washer, ladders, power
+p9:23|         drills, circular saw, drills, etc.
+p9:24|4.   Equipment Upon Request
+p9:25|     Expected to be onsite upon request within a reasonable amount of time (estimate only)
+p9:26|     • Aerator (40 hours annually)
+p9:27|     • Augers (40 hours)
+p9:28|     • Bush hog (80 hours)
+p9:29|     • Tiller (40 hours)
+p9:30|     • Chipper (200 hours)
+p9:31|     • F 450 equivalent dump truck (200 hours)
+p9:32|     • Mini Excavator (40 hours)
+p9:33|5.   Provide additional out of scope pricing in provided bid sheet.
+p9:34|6.   Winter Storm
+p9:35|     • In the event of a winter storm, the road maintenance contractor must provide at a
+p9:36|         minimum:
+p9:37|         • Two (2) four-wheel drive full size pick-up trucks
+p9:38|         • Two (2) snowplows
+p9:39|         • 2,000 Gallon Water Truck equipped to deploy brine solution.
+p9:40|         • One (1) tailgate mount type salt spreader
+p9:41|
+p9:42|
+p9:43|                                         Page 9 of 17
+p10:1|         • Two (2), 1 cubic yard salt spreader.
+p10:2|     • Provide supplemental crews to operate a combination of the mentioned equipment
+p10:3|         mentioned within the above section.
+p10:4|     • A copy of the planned route can be found on the attached Scope for Work Exhibit D.
+p10:5|         Tweaks may be made at the discretion of the Public Works Department.
+p10:6|  7. Storage Yard
+p10:7|     The City will provide a storage yard for public works use. The selected contractor shall
+p10:8|     be aware of the following:
+p10:9|     • The location shall be secured and protected with fencing and provide a safe work
+p10:10|         environment for Tucker Employees and contractors. Contractors are encouraged to
+p10:11|         add any additional security to their equipment as the City cannot be liable for any
+p10:12|         damages.
+p10:13|     • The site will provide a garage for local repairs and maintenance to equipment.
+p10:14|     • The contractor shall maintain a proper Hazardous Material Plan and maintain all
+p10:15|         required Manufacturer’s Safety Data Sheets (MSDA) forms on site.
+p10:16|     • Access shall be provided to the selected contractor
+p10:17|
+p10:18|D. RFP STANDARD INFORMATION
+p10:19|
+p10:20|   1. Authority
+p10:21|       This RFP is issued under the authority of the Purchasing Division of the City of Tucker.
+p10:22|       The RFP process is a procurement option allowing the award to be based on stated
+p10:23|       evaluation criteria. The RFP states the relative importance of all evaluation criteria. No
+p10:24|       other evaluation criteria, other than as outlined in the RFP, will be used.
+p10:25|   2. Offeror Competition
+p10:26|       The City encourages free and open competition among offerors. Whenever possible, the
+p10:27|       City will design specifications, proposals, and conditions to accomplish this objective,
+p10:28|       consistent with the necessity to satisfy the City’s need to procure technically sound, cost‐
+p10:29|       effective services and supplies.
+p10:30|
+p10:31|   3. Receipt of Proposals and Public Inspection
+p10:32|            (a) Public Information
+p10:33|      All information received in response to this RFP, including copyrighted material, is
+p10:34|      deemed public information and will be made available for public viewing and copying
+p10:35|      shortly after the time for receipt of Proposals has passed with the following four
+p10:36|      exceptions, as permitted by law: (1) bona fide trade secrets meeting confidentiality
+p10:37|      requirements that have been properly marked, separated and documented; (2) matters
+p10:38|      involving individual safety as determined by the City of Tucker (3) any company
+p10:39|      financial information requested by the City of Tucker to determine Contractor
+p10:40|
+p10:41|                                         Page 10 of 17
+p11:1|   responsibility, unless prior written consent has been given by the offeror; and (4) other
+p11:2|   constitutional protections.
+p11:3|
+p11:4|        (b) Procurement Officer Review of Proposals
+p11:5|   Upon opening the Proposals received in response to this RFP, the procurement officer in
+p11:6|   charge of the solicitation will review the Proposals and separate out any information that
+p11:7|   meets the referenced exceptions in Section 3.a. above, providing the following conditions
+p11:8|   have been met:
+p11:9|   •      Confidential information is clearly marked and separated from the rest of the
+p11:10|          Proposals.
+p11:11|   •      The Proposals do not contain confidential material in the cost or price section.
+p11:12|   •      An affidavit from an offeror’s legal counsel attesting to and explaining the
+p11:13|          validity of the trade secret claim is attached to each Proposal containing trade
+p11:14|          secrets.
+p11:15|   Information separated out under this process will be available for review only by the
+p11:16|   procurement officer, the evaluation committee members, and limited other designees.
+p11:17|   Offerors must be prepared to pay all legal costs and fees associated with defending a
+p11:18|   claim for confidentiality in the event of a “right to know” (open records) request from
+p11:19|   another party.
+p11:20|
+p11:21|4. Classification and Evaluation of Proposals
+p11:22|         (a) Determination of Responsive or Non‐responsive
+p11:23|   All Proposals will initially be classified as either “responsive” or “non‐responsive”.
+p11:24|   Proposals may be found non‐responsive any time during the evaluation process or
+p11:25|   contract negotiation if any of the required information is not provided; the submitted
+p11:26|   price is found to be excessive or inadequate as measured by criteria stated in the RFP; or
+p11:27|   the Proposals is not within the plans and specifications described and required in the
+p11:28|   RFP. If a Proposal is found to be non‐responsive, it will not be considered further.
+p11:29|
+p11:30|         (b) Determination of Responsibility
+p11:31|   The procurement officer will determine whether an offeror has met the standards of
+p11:32|   responsibility. Such a determination may be made at any time during the evaluation
+p11:33|   process and through contract negotiation if information surfaces that would result in a
+p11:34|   determination of non‐responsibility. If an offeror is found non‐responsible, the
+p11:35|   determination must be in writing, made a part of the procurement file, and mailed to the
+p11:36|   affected offeror.
+p11:37|
+p11:38|5. City’s Rights Reserved
+p11:39|
+p11:40|   Issuance of the RFP in no way constitutes a commitment by the City of Tucker to award
+p11:41|
+p11:42|                                     Page 11 of 17
+p12:1|      and execute a contract. Upon determination such actions would be in its best interest, the
+p12:2|      City, in its sole discretion, reserves the right to:
+p12:3|      • cancel or terminate this RFP;
+p12:4|      • reject any or all Proposals received in response to this RFP;
+p12:5|      • waive any undesirable, inconsequential, or inconsistent provisions of this RFP which
+p12:6|          would not have significant impact on any proposal;
+p12:7|      • not award if it is in the best interest of the City not to proceed with contract execution;
+p12:8|          or
+p12:9|      • if awarded, terminate any contract if the City determines adequate City funds are not
+p12:10|          available.
+p12:11|
+p12:12|   6. General Information
+p12:13|
+p12:14|      1. Only those firms or teams with the necessary resources and a commitment to
+p12:15|         complete all work according to the specifications in the Scope of Work should submit
+p12:16|         a Proposal.
+p12:17|      2. The City may select the best qualified contractor based on the information received
+p12:18|         from interested companies as a result of this solicitation.
+p12:19|      3. The City of Tucker reserves the right to cancel any and all Request for Proposals at
+p12:20|         any time when it is determined to be in the best interest of the City.
+p12:21|      4. The City of Tucker also reserves the right to increase, reduce, add or delete any item
+p12:22|         in this solicitation as deemed necessary.
+p12:23|      5. It is the responsibility of all companies interested in submitting proposals for this
+p12:24|         advertisement to routinely check the posting on the website for any revisions to this
+p12:25|         RFP.
+p12:26|      6. Incomplete submittals will not be considered. Late submittals will not be accepted.
+p12:27|
+p12:28|E. PROPOSAL SUBMISSION AND EVALUATION
+p12:29|
+p12:30|   1. Preparation of Proposal
+p12:31|
+p12:32|      Each Proposal should be prepared simply and economically, avoiding the use of
+p12:33|      elaborate promotional materials beyond those sufficient to provide a complete
+p12:34|      presentation. If supplemental materials are a necessary part of the technical Proposals,
+p12:35|      the Offeror should reference these materials in the technical Proposals, identifying the
+p12:36|      document(s) and citing the appropriate section and page(s) to be reviewed.
+p12:37|
+p12:38|   2. Submittal Requirements
+p12:39|
+p12:40|      Failure to meet these requirements will result in the Proposals being determined “non‐
+p12:41|
+p12:42|                                        Page 12 of 17
+p13:1|   responsive” and the entire submittal will be rejected. Unless otherwise specified, all
+p13:2|   requirements will count toward the page limit.
+p13:3|
+p13:4|   1. Submittals of company information and Proposals should be no more than fifteen
+p13:5|      (15) pages single‐sided, 8½” x 11” pages in length. The 15‐page limit does not
+p13:6|      include the cover page, tabs or title pages, and the required City forms. Any other
+p13:7|      supplemental information and pages outside the page limit will not be reviewed and
+p13:8|      will be considered as non‐responsive to the page limit requirement.
+p13:9|
+p13:10|   2. Provide firm name, address, telephone number, e‐mail address for the primary
+p13:11|      contact person, former firm names, official Georgia address (if applicable), and joint
+p13:12|      venture partner information (if applicable).
+p13:13|
+p13:14|   3. Describe the company’s understanding of the proposed services as described in the
+p13:15|      Scope of Work. Each proposer should include a summary of their proposed
+p13:16|      management plan. The management plan should describe the number of crews and
+p13:17|      seasonal personnel, if any, proposed to accomplish the required work.
+p13:18|
+p13:19|   4. Provide information on supervisory personnel to be assigned to this contract,
+p13:20|      including for the project superintendent, road maintenance foreman, and stormwater
+p13:21|      foreman The proposal should identify any applicable certifications held by key
+p13:22|      personnel who will perform the work. Provide copies of appropriate required
+p13:23|      licenses.
+p13:24|
+p13:25|   5. List and describe company experience in the past five years that best matches the
+p13:26|      Scope of Work. In addition, references, including name, address, telephone number
+p13:27|      and email address of a contact person for each job identified and described above
+p13:28|      should be included.
+p13:29|
+p13:30|   6. Submit the required forms provided as part of the bid package, which will not be
+p13:31|      counted toward the 15-page limit.
+p13:32|
+p13:33|3. Evaluation Process
+p13:34|
+p13:35|   All responsive Proposals will be evaluated based on stated evaluation criteria. In scoring
+p13:36|   against stated criteria, the City may consider such factors as accepted industry standards
+p13:37|   and a comparative evaluation of all other qualified RFP responses in terms of differing
+p13:38|   price, quality, and contractual factors. These scores will be used to determine the most
+p13:39|   advantageous offering to the City.
+p13:40|
+p13:41|   Selection and award will be based on the offeror’s Proposals and other items outlined in
+p13:42|                                    Page 13 of 17
+p14:1|   this RFP. Submitted responses may not include references to information located
+p14:2|   elsewhere, such as Internet websites or libraries, unless specifically requested.
+p14:3|   Information or materials presented by offerors outside the formal response or subsequent
+p14:4|   discussion/negotiation or “best and final offer,” if requested, will not be considered, will
+p14:5|   have no bearing on any award, and may result in the offeror being disqualified from
+p14:6|   further consideration.
+p14:7|
+p14:8|4. Selection Criteria
+p14:9|
+p14:10|   The Evaluation Committee will evaluate the quality and completeness of each proposal
+p14:11|   as it addresses each requirement of the RFP. The RFP carries a total weight of 100 points.
+p14:12|   Proposals will be evaluated and scored in categories. Each category is assigned a
+p14:13|   maximum point value. Firms will be evaluated and rated based on the criteria below:
+p14:14|
+p14:15|        Proposed Management Plan and Approach – 35 points
+p14:16|        The proposal shall outline the plan that the company will use to provide the most
+p14:17|        effective delivery of the requested services as outlined in the Scope of Work.
+p14:18|
+p14:19|        Qualifications and Similar Project Experience of the Company and Staff – 35
+p14:20|        Points
+p14:21|        The proposal must give a detailed report of related experiences that demonstrate
+p14:22|        the ability of the proposer to perform requested services as outlined in the Scope of
+p14:23|        Work. The proposal shall include sufficient information to indicate the abilities,
+p14:24|        qualifications, and experience of all persons who would be assigned to provide the
+p14:25|        required services.
+p14:26|
+p14:27|        Cost Proposal – 30 points
+p14:28|        Proposers shall provide lump sum costs for basic services per the Cost Proposal
+p14:29|        Form provided. Proposers shall also submit the Unit Cost Schedule per the form
+p14:30|        provided. The contract award will include an annual Not-to-Exceed amount to be
+p14:31|        determined by the City of Tucker based on the rates provided.
+p14:32|
+p14:33|5. Oral Presentations
+p14:34|
+p14:35|   The City reserves the right to invite Offerors to present their proposal to the Evaluation
+p14:36|   Team. Evaluation criteria for such presentations will be provided to offerors prior to
+p14:37|   presentations.
+p14:38|
+p14:39|6. City’s Right to Investigate and Reject
+p14:40|
+p14:41|   The City may make such investigations as deemed necessary to determine the ability of
+p14:42|
+p14:43|                                     Page 14 of 17
+p15:1|      the offeror to provide the supplies and/or perform the services specified.
+p15:2|
+p15:3|F. TERMS AND CONDITIONS
+p15:4|
+p15:5|   1. The City reserves the right to amend this RFP prior to the due date. All amendments and
+p15:6|      additional information will be posted to the DOAS/Georgia Procurement Registry, and
+p15:7|      also the City’s website at: www.tuckerga.gov/bids. Offerors are encouraged to check
+p15:8|      this website frequently.
+p15:9|
+p15:10|   2. A submitted Proposal may be withdrawn prior to the due date by a written request to the
+p15:11|      Procurement Manager. A request to withdraw a Proposals must be signed by an
+p15:12|      authorized individual.
+p15:13|
+p15:14|   3. No proposal may be withdrawn for a period of ninety (90) days after the time has been
+p15:15|      called on the date of the opening.
+p15:16|
+p15:17|   4. The cost for developing the Proposal is the sole responsibility of the Offeror. The City
+p15:18|      will not provide reimbursement for such costs.
+p15:19|
+p15:20|   5. If an Offeror has any existing client relationship that involves the City of Tucker, the
+p15:21|      Offeror must disclose each relationship.
+p15:22|
+p15:23|
+p15:24|   6. It is the policy of the City of Tucker that minority business enterprises shall have a fair
+p15:25|      and equal opportunity to participate in the City purchasing process. Therefore, the City
+p15:26|      of Tucker encourages all minority business enterprises to compete for, win, and receive
+p15:27|      contracts for goods, services, and construction. Also, the City encourages all companies
+p15:28|      to sub‐contract portions of any City contract to minority business enterprises. However,
+p15:29|      there is no DBE minimum goal for this project.
+p15:30|
+p15:31|
+p15:32|   7. The City of Tucker adheres to the guidelines set forth in the Americans with Disabilities
+p15:33|      Act. Offerors should contact the Issuing Officer at least one day in advance if they require
+p15:34|      special arrangements when attending the Offeror's Conference, if any. The Georgia Relay
+p15:35|      Center at 1‐800‐255‐0126 (TDD Only) or 1‐800‐255‐0135 (Voice) will relay messages,
+p15:36|      in strict confidence, for the speech and hearing impaired.
+p15:37|
+p15:38|
+p15:39|   8. The Contractor will comply with all City, State of Georgia, Title VI and Federal laws,
+p15:40|      rules, and regulations.
+p15:41|
+p15:42|
+p15:43|   9. This RFP expressly limits acceptance to the terms stated below. Any additional or different
+p15:44|
+p15:45|                                         Page 15 of 17
+p16:1|   terms proposed by Contractor and expressed in any form (acknowledgements,
+p16:2|   confirmations, invoices, catalogs, brochures, technical data sheets, etc.), whether before
+p16:3|   or after Contractor’s receipt of this contract, shall not be binding upon City. City’s silence
+p16:4|   or acceptance of the Materials shall not constitute consent to such additional or different
+p16:5|   terms.
+p16:6|
+p16:7|
+p16:8|10. Contractor shall be responsible for and shall indemnify and hold City harmless from any
+p16:9|    and all claims, demands, costs, damages and expenses of whatever nature (including,
+p16:10|    without limitation, attorney’s fees) relating to or arising from (a) Contractor’s breach of
+p16:11|    any of the representations and warranties contained herein; (b) Contractor’s failure to
+p16:12|    follow City’s specifications; (c) Contractor’s other breach of the terms hereof; or (d) any
+p16:13|    other act(s) or omissions(s) of Contractor, its employees, independent contractors,
+p16:14|    agents, and suppliers.
+p16:15|
+p16:16|
+p16:17|11. At City’s option, Contractor shall either issue an appropriate credit or undertake, at
+p16:18|    Contractor’s sole cost, corrections to materials made necessary by reason of Contractor’s
+p16:19|    failure to follow City’s specifications or Contractor’s other breach of the terms hereof. The
+p16:20|    remedies afforded by City in this paragraph are in addition to, not in lieu of, any other
+p16:21|    remedy herein or provided by law or equity.
+p16:22|
+p16:23|
+p16:24|12. Contractor shall maintain the following insurance:
+p16:25|
+p16:26|   •   Commercial General Liability coverage at their sole cost and expense with limits of
+p16:27|       not less than $3,000,000 in combined single limits for bodily injury and/or property
+p16:28|       damage per occurrence, and such policies shall name the City of Tucker as an
+p16:29|       additional named insured.
+p16:30|   • Statutory Workers Compensation and Employers Liability Insurance with limits of
+p16:31|       not less than $1,000,000, which insurance must contain a waiver of subrogation
+p16:32|       against the City of Tucker and its affiliates.
+p16:33|   • Commercial automobile liability insurance with limits of not less than $1,000,000
+p16:34|       combined single limit for bodily injury and/or property damage per occurrence, and
+p16:35|       such policies shall name the City of Tucker as an additional named insured.
+p16:36|   All insurance shall be provided by an insurer(s) acceptable to City, and except for
+p16:37|   worker’s compensation insurance, shall name the City as an additional insured; and shall
+p16:38|   provide for thirty (30) days prior notice of cancellation to City. Upon request, Contractor
+p16:39|   shall deliver to City a certificate or policy of insurance evidencing Contractor’s
+p16:40|   compliance with this paragraph. Contractor shall abide by all terms and conditions of the
+p16:41|   insurance and shall do nothing to impair or invalidate the coverage.
+p16:42|
+p16:43|
+p16:44|
+p16:45|                                      Page 16 of 17
+p17:1|13. Protection and Restoration of Property and Landscape:
+p17:2|
+p17:3|   •   The contractor shall be responsible for the preservation of all public and private
+p17:4|       property, crops, fish ponds, trees, monuments, highway signs and markers, fences,
+p17:5|       grassed and sodded areas, etc. along and adjacent to the highway, road or street, and
+p17:6|       shall use every precaution necessary to prevent damage or injury thereto, unless the
+p17:7|       removal, alteration, or destruction of such property is provided for under the contract.
+p17:8|
+p17:9|   •   When or where any direct or indirect damage or injury is done to public or private
+p17:10|       property by or on account of any act, omission, neglect or misconduct in the execution
+p17:11|       of the work, or in consequence of the non-execution thereof by the contractor, he
+p17:12|       shall restore, at his/her own expense, such property to a condition similar or equal to
+p17:13|       that existing before such damage or injury was done, by repairing, rebuilding or
+p17:14|       otherwise restoring as may be directed, or she/he shall make good such damage or
+p17:15|       injury in an acceptable manner. The contractor shall correct all disturbed areas before
+p17:16|       retainage will be released.
+p17:17|
+p17:18|   •   In the event the contractor (or subcontractors working for them) damage private
+p17:19|       property in the course of performing the Work, the contractor shall be responsible for
+p17:20|       making restitution. The contractor shall be responsible for communicating with
+p17:21|       property owner(s) directly with regard to all property damage claims. Contractor
+p17:22|       shall copy the City of Tucker on status of each claim until resolved.
+p17:23|
+p17:24|14. Contractor shall always be acting as an independent contractor and not be considered or
+p17:25|    deemed to be an agent, employee, joint venture or partner of City. Contractors shall have
+p17:26|    no authority to contract for or bind City in any manner.
+p17:27|
+p17:28|
+p17:29|15. Contractor may not assign this agreement or any of its rights or responsibilities
+p17:30|    hereunder, without City’s prior written consent.
+p17:31|
+p17:32|
+p17:33|16. Upon not less than two (2) days prior notice, City shall have the right to inspect and audit
+p17:34|    all records (including, without limitation, financial records) of Contractor which pertain
+p17:35|    to Contractor’s fulfillment of this agreement and charge therefore.
+p17:36|
+p17:37|
+p17:38|17. In the event of Contractor’s breach hereunder, City, in addition to the recovery of all
+p17:39|    monies and damages owed to City, shall be entitled to recover from Contractor the
+p17:40|    reasonable attorney’s fees and court costs incurred by City because of such breach.
+p17:41|
+p17:42|
+p17:43|
+p17:44|
+p17:45|                                      Page 17 of 17
+p18:1|SCOPE OF WORK
+p18:2|EXHIBIT A
+p19:1|SCOPE OF WORK
+p19:2|EXHIBIT B
+p20:1|SCOPE OF WORK
+p20:2|EXHIBIT C
+p21:1|              RFP 2026-008 RIGHT OF WAY MAINTENANCE SERVICES
+p21:2|
+p21:3|                                   COST PROPOSAL
+p21:4|                     Basic Right of Way Maintenance Services
+p21:5|                                                        Unit of
+p21:6|                                                                     July 2026 – June 2027
+p21:7| Service                                                Measure
+p21:8|
+p21:9| Afterhours Emergency Response- Section B               Hourly
+p21:10|                                                        Monthly
+p21:11| Right of Way Maintenance – Section B                   Lump Sum
+p21:12|                                                        Monthly
+p21:13| Equipment – Section C                                  Lump Sum
+p21:14|
+p21:15| Additional Equipment/Labor Cost (Out of Scope)         Unit Price       See Rate Sheet
+p21:16|
+p21:17|Effective July 1, 2027 and each year thereafter, for any annual renewals, the Base Hourly Rate
+p21:18|used for calculation of the Bill Rate shall be increased by the percentage of annual total
+p21:19|compensation increase for private industry workers reported in the most recent data for the
+p21:20|preceding 12 months in the Employment Cost Index published by the United State Bureau of Labor
+p21:21|Statistics. Provided, however, that no such increase shall exceed 3% regardless of the minimum
+p21:22|compensation increase for private industry workers for the preceding 12 months. This allowance
+p21:23|does not apply to equipment costs.
+p21:24|
+p21:25|
+p21:26|
+p21:27|
+p21:28|                                          Page 1 of 4
+p22:1|                RFP 2026-008 RIGHT OF WAY MAINTENANCE SERVICES
+p22:2|
+p22:3|                                    RATE SHEET
+p22:4|
+p22:5|                            Additional Equipment/Labor
+p22:6|                                 Unit Cost Schedule
+p22:7|
+p22:8|Description                          Daily Cost          Weekly Cost
+p22:9|2-man maintenance crew (including
+p22:10|equipment)
+p22:11|
+p22:12|Aerator (walk behind)
+p22:13|
+p22:14|Auger (skid steer)
+p22:15|
+p22:16|Auger (2 man)
+p22:17|
+p22:18|Auger (1 man)
+p22:19|
+p22:20|Bush Hog
+p22:21|
+p22:22|Tiller (rear tine)
+p22:23|
+p22:24|Tiller (light duty)
+p22:25|
+p22:26|Chipper 12"
+p22:27|
+p22:28|Chipper 6"
+p22:29|
+p22:30|Lawn Dethatcher
+p22:31|
+p22:32|Hydroseeder
+p22:33|
+p22:34|Sod Cutter
+p22:35|
+p22:36|Bed Edger
+p22:37|
+p22:38|Trencher (walk behind)
+p22:39|
+p22:40|Mini Backhoe
+p22:41|
+p22:42|Tractor (65-75 HP)
+p22:43|
+p22:44|Tractor (40-49HP)
+p22:45|
+p22:46|Box Scraper (Tractor)
+p22:47|
+p22:48|Rotary Cutter (Tractor)
+p22:49|
+p22:50|Landscape Rake (Tractor)
+p22:51|
+p22:52|Aerator (Tractor)
+p22:53|                                      Page 2 of 4
+p23:1|Description                               Daily Cost                 Weekly Cost
+p23:2|
+p23:3|Rotary Tiller (Tractor)
+p23:4|
+p23:5|Tow Behind Spreader (Tractor)
+p23:6|
+p23:7|Harley Rake (Tractor)
+p23:8|
+p23:9|Scissor Lift 10-13'
+p23:10|
+p23:11|Scissor Lift 14-19'
+p23:12|
+p23:13|Electric Sewer Snake
+p23:14|
+p23:15|Concrete Cutoff Saw
+p23:16|
+p23:17|Portable Gas Generator
+p23:18|
+p23:19|Plate Compactor
+p23:20|
+p23:21|Portable Abrasive Blaster
+p23:22|
+p23:23|Power Wheel Barrow
+p23:24|
+p23:25|Mulch/Straw Blower
+p23:26|
+p23:27|Utility Trailer (6x10')
+p23:28|
+p23:29|Traffic Barrels (25 count)
+p23:30|
+p23:31|
+p23:32|
+p23:33|
+p23:34|                                       RATE SHEET
+p23:35|
+p23:36|                                    Snow / Ice Removal
+p23:37|                                    Unit Cost Schedule
+p23:38|
+p23:39|               Description                          Units     Rate
+p23:40|               Additional 2-Man Crew with
+p23:41|                                                     Hourly
+p23:42|               4WD Truck, each
+p23:43|               Additional Snow Plow, each             Daily
+p23:44|
+p23:45|               Additional Tailgate Spreader, each     Daily
+p23:46|
+p23:47|               Additional Spreader, 1 cubic yard      Daily
+p23:48|               Per Diem (per 2-Man crew), if
+p23:49|               crew needs to remain in the City       Daily
+p23:50|               Overnight
+p23:51|
+p23:52|                                            Page 3 of 4
+p24:1|               RFP 2026-008 RIGHT OF WAY MAINTENANCE SERVICES
+p24:2|
+p24:3|
+p24:4|                                   Proposal Price Certification
+p24:5|
+p24:6|
+p24:7|In compliance with the attached specification, the undersigned understands the minimum scope
+p24:8|requirements of the City of Tucker for this project.
+p24:9|
+p24:10|
+p24:11|The undersigned offers and agrees that if this proposal is accepted by the Mayor and City
+p24:12|Council within one hundred twenty (90) days of the date of bid opening, that the undersigned
+p24:13|will furnish any or all of the deliverables and additional services offered, at the quoted price, to
+p24:14|the designated point(s) within the time specified.
+p24:15|
+p24:16|
+p24:17|DATE ______________________________________________________________________
+p24:18|
+p24:19|COMPANY__________________________________________________________________
+p24:20|
+p24:21|
+p24:22|AUTHORIZED SIGNATURE____________________________________________________
+p24:23|
+p24:24|
+p24:25|PRINT / TYPE NAME __________________________________________________________
+p24:26|
+p24:27|
+p24:28|CONTACT’S PHONE NUMBER __________________________________________________
+p24:29|
+p24:30|
+p24:31|CONTACT’S EMAIL ADDRESS __________________________________________________
+p24:32|
+p24:33|
+p24:34|
+p24:35|
+p24:36|                                             Page 4 of 4
+p26:1|          GEORGIA SECURITY AND IMMIGRATION COMPLIANCE ACT AFFIDAVIT
+p26:2|      GEORGIA E-Verify and Public Contracts: The Georgia E-Verify law requires contractors and all sub-contractors on
+p26:3|      Georgia public contract (contracts with a government agency) for the physical performance of services over $2,499 in
+p26:4|                               value to enroll in E-Verify, regardless of the number of employees.
+p26:5|
+p26:6|                         Contractor Name:
+p26:7|
+p26:8|
+p26:9|                 Solicitation/Bid number or
+p26:10|                                                   RFP 2026-008 Right of Way Maintenance Services
+p26:11|                         Project Description:
+p26:12|
+p26:13|
+p26:14|  By executing this affidavit, the undersigned contractor verifies its compliance with O.C.G.A. § 13-10-91, stating
+p26:15| affirmatively that the individual, entity or corporation which is engaged in the physical performance of services under a contract on
+p26:16| behalf of the City of Tucker, Georgia has registered with, is authorized to use and uses the federal work authorization program
+p26:17| commonly known as E-Verify, or any subsequent replacement program, in accordance with the applicable provisions and
+p26:18| deadlines established in O.C.G.A. § 13-10-91.
+p26:19|
+p26:20|
+p26:21|  Furthermore, the undersigned contractor will continue to use the federal work authorization program throughout the contract
+p26:22| period as required by O.C.G.A. § 13-10-91(b) and the undersigned contractor will contract for the physical performance of
+p26:23| services in satisfaction of such contract only with subcontractors who present and affidavit to the contractor with the information
+p26:24| required by O.C.G.A. § 13-10-91(b). Contractor hereby attests that its federal work authorization user identification number and
+p26:25| date of authorization are as follows:
+p26:26|
+p26:27|
+p26:28|
+p26:29|
+p26:30| Federal Work Authorization User Identification Number                               Date of Authorization
+p26:31| (EEV/E-Verify Company Identification Number)
+p26:32|
+p26:33|
+p26:34| Name of Contractor
+p26:35| I hereby declare under penalty of perjury that the
+p26:36| foregoing is true and correct
+p26:37|
+p26:38|
+p26:39|
+p26:40| Printed Name (of Authorized Officer or Agent of Contractor)                 Title (of Authorized Officer or Agent of Contractor)
+p26:41|
+p26:42|
+p26:43|
+p26:44| Signature (of Authorized Officer or Agent)                                   Date Signed
+p26:45|
+p26:46|
+p26:47| SUBSCRIBED AND SWORN BEFORE ME ON THIS THE
+p26:48|
+p26:49|
+p26:50|       DAY OF                                   , 20
+p26:51|
+p26:52|
+p26:53|                                                                        [NOTARY SEAL]
+p26:54| Notary Public
+p26:55|
+p26:56|
+p26:57| My Commission Expires:
+p26:58|
+p26:59|
+p26:60|
+p26:61|
+p26:62|REVISED 10.25.2022
+p27:1|                                OATH OF NON-COLLUSION
+p27:2|
+p27:3|
+p27:4|       COMES NOW, ______________________________________________ (“Contractor”),
+p27:5|                                 [name of Contractor]
+p27:6|
+p27:7|appearing by and through _______________________________________________________,
+p27:8|                              [name of individual with authority to bind Contractor]
+p27:9|
+p27:10|its _____________________________________ (“Individual And Representative Affiant”), and
+p27:11|                  [title]
+p27:12|
+p27:13|______________________________________________________________________________
+p27:14|
+p27:15|______________________________________________________________________________
+p27:16|
+p27:17|______________________________________________________________________________
+p27:18|
+p27:19|______________________________________________________________________________
+p27:20|                 [insert the names of all those required to give the oath]
+p27:21|
+p27:22|(collectively, “Individual Affiants”), and each of the Individual And Representative Affiant and
+p27:23|
+p27:24|Individual Affiants, after first being duly sworn, deposes and says that:
+p27:25|
+p27:26|   1. Contractor has not directly or indirectly violated subsection (d) of the Official Code of
+p27:27|
+p27:28|       Georgia Annotated Section 36-91-21, which provides as follows:
+p27:29|
+p27:30|               Whenever a public works construction contract for any governmental entity subject
+p27:31|               to the requirements of this chapter is to be let out by competitive sealed bid or
+p27:32|               proposal, no person, by himself or herself or otherwise, shall prevent or attempt to
+p27:33|               prevent competition in such bidding or proposals by any means whatever. No
+p27:34|               person who desires to procure such work for himself or herself or for another shall
+p27:35|               prevent or endeavor to prevent anyone from making a bid or proposal therefor by
+p27:36|               any means whatever, nor shall such person so desiring the work cause or induce
+p27:37|               another to withdraw a bid or proposal for the work.
+p27:38|
+p27:39|       Code Section 36-91-21(d) also applies to municipal street system contracts pursuant to
+p27:40|
+p27:41|       Official Code of Georgia Annotated Section 32-4-122.
+p27:42|
+p27:43|
+p27:44|   2. Individual And Representative Affiant is the officer of Contractor whose duty it is to make
+p27:45|
+p27:46|       the payment.
+p28:1|   3. If Contractor is a partnership, then Individual and Representative Affiant and Individual
+p28:2|
+p28:3|       Affiants together constitute all of the partners and any officer, agent or other person who
+p28:4|
+p28:5|       may have represented or acted for Contractor in bidding for or procuring the contract.
+p28:6|
+p28:7|
+p28:8|   4. If Contractor is a corporation, then Individual and Representative Affiant and Individual
+p28:9|
+p28:10|       Affiants together constitute all officers, agents, or other persons who may have acted for
+p28:11|
+p28:12|       or represented Contractor in bidding for or procuring the contract.
+p28:13|
+p28:14|
+p28:15|   Further affiants sayeth not.
+p28:16|
+p28:17|
+p28:18|This ____ day of ________________, 20___.
+p28:19|
+p28:20|
+p28:21|By: _________________________________________, individually and on behalf of Contractor
+p28:22|   [signature of Individual And Representative Affiant]
+p28:23|
+p28:24|Name: _____________________________                 Title: ______________________________
+p28:25|
+p28:26|
+p28:27|Individual Affiants’ signatures and names:
+p28:28|
+p28:29|___________________________________                 ___________________________________
+p28:30|Name:                                               Name:
+p28:31|
+p28:32|___________________________________                 ___________________________________
+p28:33|Name:                                               Name:
+p28:34|
+p28:35|___________________________________                 ___________________________________
+p28:36|Name:                                               Name:
+p28:37|
+p28:38|
+p28:39|Subscribed and Sworn before me on this
+p28:40|______ day of ________________, 20_____.
+p28:41|
+p28:42|________________________
+p28:43|NOTARY PUBLIC
+p28:44|My Commission Expires:
+p28:45|
+p28:46|_________________________________
+p29:1|                             Contact Information Form
+p29:2|
+p29:3|
+p29:4|Please fill out this form with the appropriate contact information for your company.
+p29:5|
+p29:6|
+p29:7|
+p29:8|Full Legal Name of Company:
+p29:9|
+p29:10|Date:
+p29:11|
+p29:12|Contractor Information:
+p29:13|
+p29:14|Primary Contact Person:
+p29:15|
+p29:16|Title:                                         Telephone Number:
+p29:17|
+p29:18|E-mail Address:
+p29:19|
+p29:20|
+p29:21|
+p29:22|Secondary Contact Person:
+p29:23|
+p29:24|Title:                                         Telephone Number:
+p29:25|
+p29:26|E-mail Address:
+p29:27|
+p29:28|Preferred Contact for Administration: (i.e. Document Processing) (Choose one)
+p29:29|
+p29:30|              ☐ Primary Contact                 ☐ Secondary Contact
+p29:31|
+p29:32|Address:
+p29:33|
+p29:34|City / State / Zip:
+p29:35|
+p29:36|
+p29:37|Mailing Address (If different than above):
+p29:38|
+p29:39|City / State / Zip:
+p29:40|
+p29:41|
+p29:42|
+p29:43|Federal Employee ID Number (FEIN):

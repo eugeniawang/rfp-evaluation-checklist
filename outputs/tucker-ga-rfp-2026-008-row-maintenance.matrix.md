@@ -1,0 +1,21 @@
+# Evaluation matrix: City of Tucker Request for Proposal [p2:1]
+
+Source text: `../fixtures/tucker-ga-rfp-2026-008-row-maintenance.source.txt` (page:line citations point into it).
+RFP's stated total: **100 [p14:11]**
+Sum of the Points column: **100** — reconciles: **yes**
+
+| # | RFP section | RFP criterion (their words) | Points | Input needed | Input data source | Evaluation criteria (what the scorer looks for) | Proposal section that answers it | Owner | Claude does | Human check | Status |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 4. Selection Criteria [p14:8] | Proposed Management Plan and Approach [p14:15] | 35 [p14:15] | Each proposer should include a summary of their proposed management plan. The management plan should describe the number of crews and seasonal personnel, if any, proposed to accomplish the required work. [p13:14-p13:17] |  | The proposal shall outline the plan that the company will use to provide the most effective delivery of the requested services as outlined in the Scope of Work. [p14:16-p14:17] | 3. Describe the company’s understanding of the proposed services as described in the Scope of Work. [p13:14-p13:15] |  | draft: write the response to this criterion from the inputs in Input needed, citing each one |  | open |
+| 2 | 4. Selection Criteria [p14:8] | Qualifications and Similar Project Experience of the Company and Staff [p14:19] | 35 [p14:19] | Provide information on supervisory personnel to be assigned to this contract, including for the project superintendent, road maintenance foreman, and stormwater foreman The proposal should identify any applicable certifications held by key personnel who will perform the work. Provide copies of appropriate required licenses. [p13:19-p13:23] |  | The proposal must give a detailed report of related experiences that demonstrate the ability of the proposer to perform requested services as outlined in the Scope of Work. The proposal shall include sufficient information to indicate the abilities, qualifications, and experience of all persons who would be assigned to provide the required services. [p14:21-p14:25] | 5. List and describe company experience in the past five years that best matches the Scope of Work. [p13:25-p13:26] |  | draft: write the response to this criterion from the inputs in Input needed, citing each one |  | open |
+| 3 | 4. Selection Criteria [p14:8] | Cost Proposal [p14:27] | 30 [p14:27] | Proposers shall provide lump sum costs for basic services per the Cost Proposal Form provided. Proposers shall also submit the Unit Cost Schedule per the form provided. [p14:28-p14:30] |  | The contract award will include an annual Not-to-Exceed amount to be determined by the City of Tucker based on the rates provided. [p14:30-p14:31] | 6. Submit the required forms provided as part of the bid package, which will not be counted toward the 15-page limit. [p13:30-p13:31] |  | assemble: fill the RFP's own form from figures a person supplies; no prose |  | open |
+
+**TOTAL** points: 100
+
+## Could not map
+- Age and condition of equipment will be factored into contractor scoring for these services. [p5:36] — a scoring factor stated in the scope of work with no points and no criterion of its own; a person decides which row it feeds
+- In scoring against stated criteria, the City may consider such factors as accepted industry standards and a comparative evaluation of all other qualified RFP responses in terms of differing price, quality, and contractual factors. [p13:35-p13:38] — applies to every row; carries no points of its own
+- The City reserves the right to invite Offerors to present their proposal to the Evaluation Team. Evaluation criteria for such presentations will be provided to offerors prior to presentations. [p14:35-p14:37] — a possible later stage whose criteria and points are not in this RFP
+
+## Human columns still empty
+Input data source, Owner and Human check are never filled by the translator. 3 row(s) need a person.

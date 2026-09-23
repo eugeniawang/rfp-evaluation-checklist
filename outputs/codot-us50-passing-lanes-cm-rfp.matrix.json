@@ -1,0 +1,102 @@
+{
+  "rfp": {"text": "US50B SHIFT Passing Lanes", "cite": "p32:3"},
+  "source": "../fixtures/codot-us50-passing-lanes-cm-rfp.source.txt",
+  "stated_total": {
+    "stages": [
+      {"name": "Proposal", "value": 60, "cite": "p32:8"},
+      {"name": "Interview", "value": 40, "cite": "p38:8"}
+    ],
+    "combined": {"text": "The Proposers Technical Score and their Interview Score will be summed and tabulated which will be referred to as their “Total Score”", "cite": "p24:11-p24:12"}
+  },
+  "rows": [
+    {
+      "stage": "Proposal",
+      "section": {"text": "3.1. EVALUATION CRITERIA FOR PROPOSALS (60 Points Possible)", "cite": "p32:8"},
+      "criterion": {"text": "A. CM Project Management Team", "cite": "p32:9"},
+      "points": {"value": 10, "cite": "p32:9"},
+      "input_needed": {"text": "Provide job descriptions, responsibilities, and authority; o Provide a list of the concurrent projects, responsibilities, and commitments that each may have for the duration of the Project; o Current home office location; o Qualifications and past construction experience relevant to this Project, in addition to length of time performing those job duties;", "cite": "p32:16-p32:21"},
+      "input_source": "",
+      "evaluation_criteria": {"text": "Composition and Commitment of the CM Project Management Team", "cite": "p32:10"},
+      "answering_section": {"text": "Provide a graphic showing the CM’s organizational chart, complete with working titles for the team for the preconstruction phase.", "cite": "p35:14-p35:15"},
+      "owner": "",
+      "claude_does": "draft: write the response to this criterion from the inputs in Input needed, citing each one",
+      "human_check": "",
+      "status": "open"
+    },
+    {
+      "stage": "Proposal",
+      "section": {"text": "3.1. EVALUATION CRITERIA FOR PROPOSALS (60 Points Possible)", "cite": "p32:8"},
+      "criterion": {"text": "B. Contractor Capability", "cite": "p35:28"},
+      "points": {"value": 10, "cite": "p35:28"},
+      "input_needed": {"text": "Provide three or more relevant projects/programs that demonstrate the Proposer’s ability to be successful on this Project. For each listed project or experience, include the name of the owner, any architect/engineer references, and the contract information", "cite": "p35:35-p35:37"},
+      "input_source": "",
+      "evaluation_criteria": {"text": "Prior Project Experience/Performance/References", "cite": "p35:32"},
+      "answering_section": {"text": "Provide a summary of the Proposer’s previous project experience relevant to the general scope and construction value of work for this Project.", "cite": "p35:33-p35:34"},
+      "owner": "",
+      "claude_does": "draft: write the response to this criterion from the inputs in Input needed, citing each one",
+      "human_check": "",
+      "status": "open"
+    },
+    {
+      "stage": "Proposal",
+      "section": {"text": "3.1. EVALUATION CRITERIA FOR PROPOSALS (60 Points Possible)", "cite": "p32:8"},
+      "criterion": {"text": "C. Strategic Project Approach", "cite": "p36:20"},
+      "points": {"value": 20, "cite": "p36:20"},
+      "input_needed": {"text": "Describe the Proposer’s practical innovative ideas specific to the Project in detail.", "cite": "p37:24"},
+      "input_source": "",
+      "evaluation_criteria": {"text": "Identify how the Proposer will manage schedule, budget, and incorporation of innovation.", "cite": "p36:23-p36:24"},
+      "answering_section": {"text": "Provide a narrative that describes the Proposer’s project specific plan and approach to meeting the Project Goals.", "cite": "p36:22-p36:23"},
+      "owner": "",
+      "claude_does": "draft: write the response to this criterion from the inputs in Input needed, citing each one",
+      "human_check": "",
+      "status": "open"
+    },
+    {
+      "stage": "Proposal",
+      "section": {"text": "3.1. EVALUATION CRITERIA FOR PROPOSALS (60 Points Possible)", "cite": "p32:8"},
+      "criterion": {"text": "D. Approach to Risk, Schedule, and Pricing", "cite": "p37:27"},
+      "points": {"value": 20, "cite": "p37:27"},
+      "input_needed": {"text": "Identify and describe the top five risks the Proposer has identified on the Project and what are the preliminary plans to manage those risks.", "cite": "p37:33-p37:34"},
+      "input_source": "",
+      "evaluation_criteria": {"text": "Describe the techniques and tools that the Proposer will use to quantify the risk, establish a risk pool, and participate in management of the risk pools and contingencies.", "cite": "p37:31-p37:32"},
+      "answering_section": {"text": "Define the key steps to risk management that the Proposer will employ. Describe how those steps will be applied to both the preconstruction and construction process.", "cite": "p37:29-p37:30"},
+      "owner": "",
+      "claude_does": "draft: write the response to this criterion from the inputs in Input needed, citing each one",
+      "human_check": "",
+      "status": "open"
+    },
+    {
+      "stage": "Interview",
+      "section": {"text": "3.2 EVALUATION CRITERIA FOR INTERVIEWS (40 Points Possible)", "cite": "p38:8"},
+      "criterion": {"text": "A. Short Presentation", "cite": "p38:12"},
+      "points": {"value": 15, "cite": "p38:12"},
+      "input_needed": {"text": "Summarize the Proposal and describe the Proposer’s innovative ideas and unique resources (20 Minutes).", "cite": "p38:13-p38:14"},
+      "input_source": "",
+      "evaluation_criteria": {"text": "The interview presentation and question/answer scoring will be based on the following criteria: ● Project Understanding and goals, ● Project Approach, ● Project Innovation, ● Team Collaboration ● Communication Skills, and ● Understanding of CM/GC Project Delivery Method.", "cite": "p38:28-p38:34"},
+      "answering_section": "not in source",
+      "owner": "",
+      "claude_does": "prepare: build the interview or presentation material from the submitted proposal; scored live, not in writing",
+      "human_check": "",
+      "status": "open"
+    },
+    {
+      "stage": "Interview",
+      "section": {"text": "3.2 EVALUATION CRITERIA FOR INTERVIEWS (40 Points Possible)", "cite": "p38:8"},
+      "criterion": {"text": "B. Question and Answer Session with the Selection Panel", "cite": "p38:19"},
+      "points": {"value": 25, "cite": "p38:19"},
+      "input_needed": {"text": "The questions asked by the Selection Panel in this session will be the same for each Proposer. The Proposer will be allocated 60 total minutes for this session.", "cite": "p38:20-p38:21"},
+      "input_source": "",
+      "evaluation_criteria": {"text": "The interview presentation and question/answer scoring will be based on the following criteria: ● Project Understanding and goals, ● Project Approach, ● Project Innovation, ● Team Collaboration ● Communication Skills, and ● Understanding of CM/GC Project Delivery Method.", "cite": "p38:28-p38:34"},
+      "answering_section": "not in source",
+      "owner": "",
+      "claude_does": "prepare: build the interview or presentation material from the submitted proposal; scored live, not in writing",
+      "human_check": "",
+      "status": "open"
+    }
+  ],
+  "could_not_map": [
+    {"text": "Selection Panel scoring values will be only numbers in whole, half, or quarter-number increments (i.e. 2.25, 3.50, 4.00.). Scoring of the Proposal and Interview will be based on the Evaluation Assessment Guidelines as set forth in the table below.", "cite": "p44:18-p44:20", "why": "the scoring method (a 1 to 5 scale in Appendix B) applies to every row; it carries no points of its own"},
+    {"text": "Certifying “Reject” of the Maximum Compensation for Construction Manager Preconstruction Services will cause the corresponding Proposal to be considered non-responsive to the solicitation and the corresponding Proposal will not be scored or further considered in this Project’s procurement.", "cite": "p46:38-p46:40", "why": "a pass/fail responsiveness gate (Form B-1), not a scored criterion"},
+    {"text": "Provide a narrative of the Proposer’s largest foreseen safety risks for the Project and describe the safety programs, processes, and initiatives that the Proposer currently has in place to help manage/mitigate/or eliminate the safety risks.", "cite": "p35:21-p35:23", "why": "Safety Record and Performance sits under criterion A with no points of its own; a person confirms it is scored inside A's 10"}
+  ]
+}

@@ -1,0 +1,874 @@
+p1:1|                      City of Tucker
+p1:2|
+p1:3|
+p1:4|                 Request for Proposal
+p1:5|                   RFP 2026-016
+p1:6|
+p1:7|
+p1:8|Construction, Engineering and Inspection (CEI) Services
+p1:9|for SR 410/US 78 @ CR 9476/MOUNTAIN IND BLVD
+p1:10| ROADWAY IMPROVEMENT PROJECT PI 0017399
+p1:11|
+p1:12|
+p1:13|
+p1:14|
+p1:15|                         City of Tucker
+p1:16|                 1975 Lakeside Parkway, Suite 350
+p1:17|                      Tucker, Georgia 30234
+p2:1|                 City of Tucker Request for Proposal 2026-016
+p2:2|       CEI Services for SR 410/US 78 @ CR 9476/MOUNTAIN IND BLVD
+p2:3|              ROADWAY IMPROVEMENT PROJECT PI 0017399
+p2:4|
+p2:5|
+p2:6|The City of Tucker, Georgia requests a quote for Construction Engineering and Inspection Services,
+p2:7|including Materials Testing in accordance with GDOT Standards and Specifications for the
+p2:8|referenced project. The selected firm shall work closely with the selected contractor and City of
+p2:9|Tucker Staff to deliver a successful project.
+p2:10|
+p2:11|
+p2:12|                               BID ACTIVITY SCHEDULE
+p2:13|RFP Issued                                 June 16, 2026
+p2:14|Pre-Bid Conference                         NA
+p2:15|Deadline for Questions                     June 25, 2026, at 1:00pm EST
+p2:16|Responses to Questions Posted (Addenda)    June 29, 2026
+p2:17|Proposal Deadline                          July 9, 2026, at 1:00pm EST
+p2:18|Scoring by Evaluation Committee            July 10-17, 2026
+p2:19|Award at Council Meeting                   August 10, 2026 (Tentative)
+p2:20|
+p2:21|SCOPE OF WORK: Refer to Exhibit A.
+p2:22|
+p2:23|PRE-PROPOSAL CONFERENCE: There will be no pre-bid conference for this solicitation.
+p2:24|
+p2:25|QUESTIONS: Submit all questions in writing to procurement@tuckerga.gov. Reference RFP
+p2:26|2026-016 in the subject line of the email.
+p2:27|
+p2:28|ADDENDA: Responses to the questions received will be by addenda and will be posted on the
+p2:29|City website www.tuckerga.gov/bids. The signed acknowledgement issued with each addendum
+p2:30|must be submitted with the proposal. It is the responsibility of the proposer to verify if any addenda
+p2:31|were created.
+p2:32|
+p2:33|SUBMITTAL REQUIREMENTS: Contractor shall submit RFP Response electronically to
+p2:34|procurement@tuckerga.gov so that it is received no later than July 9, 2026 at 1:00pm EST with
+p2:35|the subject line “Submittal: RFP 2026-016”. The submittal shall be two PDF files:
+p2:36|   • The proposal shall be named “<Company Name>.RFP 2026-016.Bid Submittal.pdf”.
+p2:37|   • The Cost Proposal shall be named “<Company Name>.RFP 2026-016.Cost Proposal.pdf”
+p2:38|The submittal email will be opened to confirm receipt of the submittal; however, the attached PDF
+p2:39|files will remain unopened until the public opening.
+p2:40|
+p2:41|PROPOSAL OPENING: All proposals received prior to the deadline will be opened publicly on
+p2:42|July 9, 2026 at 1:00pm EST at Tucker City all located at 1975 Lakeside Parkway, Suite 350,
+p2:43|Tucker GA. A listing of submittals received prior to the bid deadline will be posted on the City
+p2:44|website www.tuckerga.gov/bids following the opening of the proposals.
+p2:45|
+p2:46|
+p2:47|
+p2:48|
+p2:49|                                             Page 2 of 15
+p3:1|                 City of Tucker Request for Proposal 2026-016
+p3:2|       CEI Services for SR 410/US 78 @ CR 9476/MOUNTAIN IND BLVD
+p3:3|              ROADWAY IMPROVEMENT PROJECT PI 0017399
+p3:4|DOCUMENT SUBMITTAL REQUIREMENTS:
+p3:5|   1. Proposal for services, including the qualifications of staff that will be assigned to the
+p3:6|       project and references.
+p3:7|   2. Proposal Price Certification (form provided)
+p3:8|   3. Cost Proposal (submit as separate file)
+p3:9|   4. Proposed List of Subcontractors (form provided)
+p3:10|   5. GDOT Qualifications Checklist (form provided)
+p3:11|   6. GDOT Certifications/Letters
+p3:12|   7. W-9 (form provided)
+p3:13|   8. Certificate of Current Insurance for Verification Purposes
+p3:14|   9. Notarized Contractor E-Verify Affidavit (form provided)
+p3:15|   10. Oath of Non-Collusion (form provided)
+p3:16|   11. Contact Information (form provided)
+p3:17|
+p3:18|All responses must be received electronically by the Bid Deadline. (Addenda will show any
+p3:19|schedule updates). No bids will be received orally, by phone, or by sealed paper documents. Only
+p3:20|electronic bids in accordance with submittal requirement instructions will be accepted. Late bids
+p3:21|will not be considered. Bids received after the bid deadline will be filed unopened. The City of
+p3:22|Tucker reserves the right to reject any and all bids or any part, to waive any formalities to make
+p3:23|an award and to re-advertise in the best interest of the City. The City reserves the right to consider
+p3:24|past performance in determining the responsibleness of bidders.
+p3:25|
+p3:26|The City reserves the right to negotiate pricing with the top scoring bidder and may, in its
+p3:27|discretion, award a contract to the responsible and responsive proposer submitting the proposal
+p3:28|which is deemed to be the most advantageous to the City, price and other factors being
+p3:29|considered, as described in the selection criteria.
+p3:30|
+p3:31|
+p3:32|
+p3:33|
+p3:34|                                            Page 3 of 15
+p4:1|                 City of Tucker Request for Proposal 2026-016
+p4:2|       CEI Services for SR 410/US 78 @ CR 9476/MOUNTAIN IND BLVD
+p4:3|              ROADWAY IMPROVEMENT PROJECT PI 0017399
+p4:4|
+p4:5|
+p4:6|                                       Scope of Work
+p4:7|PURPOSE, INTENT, AND PROJECT DESCRIPTION
+p4:8|
+p4:9|The City of Tucker, Georgia requests a quote for Construction Engineering and Inspection Services,
+p4:10|including Materials Testing in accordance with GDOT Standards and Specifications for the
+p4:11|referenced project. The firm selected shall work closely with the selected contractor and City of
+p4:12|Tucker Staff to deliver a successful project.
+p4:13|
+p4:14|BACKGROUND
+p4:15|
+p4:16|The construction contract has not yet been awarded; however, the bids have been reviewed, and
+p4:17|the City intends to award a construction contract in the amount of $8,378,788.82. The construction
+p4:18|contract is tentatively scheduled for award on August 10, 2026. The Notice to Proceed date will
+p4:19|be determined at a later time. Once construction begins, the project is anticipated to have a duration
+p4:20|of approximately 548 calendar days.
+p4:21|This project is funded by City of Tucker capital project budget and grant funding from the Georgia
+p4:22|Department of Transportation (GDOT).
+p4:23|
+p4:24|PROJECT OBJECTIVES (include but are not limited to)
+p4:25|
+p4:26|      •   Provide services which are required for contract administration, construction
+p4:27|          inspection, documentation, maintenance of project records and general contract
+p4:28|          compliance for the project and appropriate with the requirements of GDOT’s Plan
+p4:29|          Development Process, GDOT Construction Manual and Local Administered Projects
+p4:30|          (LAP). Such requirements include, but are not limited:
+p4:31|                • Labor Interviews, DBE Goal Compliance Review
+p4:32|                • Record Keeping including Daily Reports
+p4:33|                • Preconstruction Conference
+p4:34|                • Quality Assurance
+p4:35|                • RFI/Submittal Coordination
+p4:36|                • Aid with Audit (if necessary)
+p4:37|                • Pay Application Review including contract modifications (as needed)
+p4:38|                • Environmental Compliance
+p4:39|                • Schedule Management
+p4:40|                • Aid with Utility Coordination
+p4:41|                • Final Acceptance/Closing Conference Coordination
+p4:42|                • Will City staff be responsible for the warranty walk for landscaping and
+p4:43|                    other items covered?
+p4:44|                • Erosion Control Reports
+p4:45|                • Traffic Control Reports (if required)
+p4:46|
+p4:47|      •   Provide a project manager to coordinate all activities and serve as the contact with the
+p4:48|          City Staff, provide a PE/Engineer who shall oversee inspections, and shall propose
+p4:49|                                             Page 4 of 15
+p5:1|                 City of Tucker Request for Proposal 2026-016
+p5:2|       CEI Services for SR 410/US 78 @ CR 9476/MOUNTAIN IND BLVD
+p5:3|              ROADWAY IMPROVEMENT PROJECT PI 0017399
+p5:4|         additional recommended personnel. It is expected for the CEI contractor project
+p5:5|         manager(s) to be on-site through the substantial completion inspection and to be
+p5:6|         available by phone during project construction hours.
+p5:7|      • Become familiar with the construction plans and other contract documents for the
+p5:8|         project, as well as the Contractors proposed schedule of operations.
+p5:9|      • Furnish all materials, equipment, supplies, transportation and incidentals to perform
+p5:10|         CEI services.
+p5:11|      • Observe the Contractor’s work to determine the progress and quality of work, identify
+p5:12|         discrepancies, report significant discrepancies to City staff and direct the Contractor to
+p5:13|         correct such discrepancies.
+p5:14|      • Monitor contractor timeliness in preparing submittal packages and RFIs for review to
+p5:15|         Atlas Technical Consultants, the engineer of record, for review.
+p5:16|      • Utilize effective control procedures to assure the construction of the project is
+p5:17|         performed in conformity with the plans, specifications and contract provisions.
+p5:18|      • Notify City staff and the Engineer of Record of any unanticipated project conditions.
+p5:19|      • Propose projected on-site inspections and costs for testing and inspection. Facilitate
+p5:20|         such testing and materials samplings and reject the Contractor’s work and materials not
+p5:21|         meeting the Specifications and/or Special provisions as stated in the plans,
+p5:22|         specifications and construction contract. A sub-contractor may be utilized. Actual
+p5:23|         costs will be dictated by actual billed hours.
+p5:24|      • Analyze contractor claims for changes and aid in negotiation of prices, as necessary.
+p5:25|      • Work with the City to provide status updates to the community as needed and maintain
+p5:26|         a record of such community interactions and provide copies to the City as required.
+p5:27|      • Facilitate a bi-weekly in-person meeting with Construction Company and City staff to
+p5:28|         update project status and to answer any questions that may arise. Meetings with the
+p5:29|         City’s Capital Projects Manager may be requested.
+p5:30|      • Review the contractor’s Schedule of Values (SOV) and review / approve Payment
+p5:31|         Applications from the contractor.
+p5:32|      • Maintain diaries, logs and records consistent with GDOT PDP Process including
+p5:33|         digital file structure. Will these go directly to Finance or will PW need to approve to
+p5:34|         be put in system to be provided to City of Tucker Public Works Staff.
+p5:35|      • Assist with utility coordination as needed.
+p5:36|      • Manage final punch list field review.
+p5:37|      • Work with the contractor to deliver one copy of the “as-built” or “record” plan to the
+p5:38|         City upon completion of the project.
+p5:39|•   The Contract Documents including but not limited to the scope of work, plans, and
+p5:40|    specifications.
+p5:41|•   City of Tucker ordinances and regulations.
+p5:42|•   OSHA standards and guidelines.
+p5:43|•   Any other applicable codes, laws and regulations including but not limited to Section 45- 10-
+p5:44|    20 through 45-10-28 of the Official Code of Georgia Annotated, Title VI of the Civil Rights
+p5:45|    Act, Drug-Free Workplace Act, and all applicable requirements of the Americans with
+p5:46|    Disabilities Act of 1990.
+p5:47|
+p5:48|The contractor will be responsible for providing all labor, materials, and equipment necessary to
+p5:49|perform the work. This is a lump sum priced project. No change order will be issued for unforeseen
+p5:50|                                           Page 5 of 15
+p6:1|                 City of Tucker Request for Proposal 2026-016
+p6:2|       CEI Services for SR 410/US 78 @ CR 9476/MOUNTAIN IND BLVD
+p6:3|              ROADWAY IMPROVEMENT PROJECT PI 0017399
+p6:4|schedule delays.
+p6:5|
+p6:6|The contractor is responsible for inspecting the jobsite prior to submitting a quote. No change
+p6:7|orders will be issued for differing site conditions.
+p6:8|
+p6:9|SPECIAL CONDITIONS
+p6:10|
+p6:11|   1. The selected firm shall be GDOT prequalified in work class 8.01 The selected firm or
+p6:12|      subcontractor shall be GDOT prequalified or registered in work classes 6.04(a) and
+p6:13|      6.04(b).
+p6:14|   2. The selected firm shall have recent (within the past 24-month) construction inspection
+p6:15|      experience within Dekalb County on a similar project. Please provide previous
+p6:16|      experience in proposal.
+p6:17|   3. Daily records, reports, and pictures shall be provided to the City on a weekly basis.
+p6:18|   4. A weekly report shall be provided to the City of Tucker staff by 10:00AM every Friday.
+p6:19|   5. The City will provide a meeting space at City Hall as needed. Coordination with City
+p6:20|      staff is required.
+p6:21|   6. The selected firm shall furnish all personnel, technology, and equipment required to
+p6:22|      deliver the intent of this solicitation and in compliance with all GDOT processes and
+p6:23|      procedures.
+p6:24|
+p6:25|
+p6:26|PLANS / DRAWINGS
+p6:27|
+p6:28|Design plans prepared for the City of Tucker by Atlas Technical Consultants may be accessed
+p6:29|from the ITB 2026-013 solicitation documents on the City of Tucker website.
+p6:30|www.tuckerga.gov/bids.
+p6:31|
+p6:32|
+p6:33|
+p6:34|               ********************End of Scope of Work********************
+p6:35|
+p6:36|
+p6:37|
+p6:38|
+p6:39|                                         Page 6 of 15
+p7:1|              City of Tucker Request for Proposal 2026-016
+p7:2|    CEI Services for SR 410/US 78 @ CR 9476/MOUNTAIN IND BLVD
+p7:3|           ROADWAY IMPROVEMENT PROJECT PI 0017399
+p7:4|
+p7:5|
+p7:6|
+p7:7|RFP STANDARD INFORMATION
+p7:8|
+p7:9|   1. Authority
+p7:10|      This RFP is issued under the authority of the Purchasing Division of the City of Tucker.
+p7:11|      The RFP process is a procurement option allowing the award to be based on stated
+p7:12|      evaluation criteria. The RFP states the relative importance of all evaluation criteria. No
+p7:13|      other evaluation criteria, other than as outlined in the RFP, will be used.
+p7:14|   2. Offeror Competition
+p7:15|
+p7:16|      The City encourages free and open competition among offerors. Whenever possible, the
+p7:17|      City will design specifications, proposals, and conditions to accomplish this objective,
+p7:18|      consistent with the necessity to satisfy the City’s need to procure technically sound, cost‐
+p7:19|      effective services and supplies.
+p7:20|
+p7:21|   3. Receipt of Proposals and Public Inspection
+p7:22|
+p7:23|           (a) Public Information
+p7:24|
+p7:25|      All information received in response to this RFP, including copyrighted material, is
+p7:26|      deemed public information and will be made available for public viewing and copying
+p7:27|      shortly after the time for receipt of Proposals has passed with the following four
+p7:28|      exceptions: (1) bona fide trade secrets meeting confidentiality requirements that have
+p7:29|      been properly marked, separated and documented; (2) matters involving individual safety
+p7:30|      as determined by the City of Tucker (3) any company financial information requested by
+p7:31|      the City of Tucker to determine Contractor responsibility, unless prior written consent
+p7:32|      has been given by the offeror; and (4) other constitutional protections.
+p7:33|
+p7:34|           (b) Procurement Officer Review of Proposals
+p7:35|
+p7:36|      Upon opening the Proposals received in response to this RFP, the procurement officer in
+p7:37|      charge of the solicitation will review the Proposals and separate out any information that
+p7:38|      meets the referenced exceptions in Section 3.a. above, providing the following conditions
+p7:39|      have been met:
+p7:40|      •      Confidential information is clearly marked and separated from the rest of the
+p7:41|             Proposals.
+p7:42|      •      The Proposals do not contain confidential material in the cost or price section.
+p7:43|      •      An affidavit from an offeror’s legal counsel attesting to and explaining the
+p7:44|
+p7:45|                                         Page 7 of 15
+p8:1|           City of Tucker Request for Proposal 2026-016
+p8:2| CEI Services for SR 410/US 78 @ CR 9476/MOUNTAIN IND BLVD
+p8:3|        ROADWAY IMPROVEMENT PROJECT PI 0017399
+p8:4|          validity of the trade secret claim is attached to each Proposal containing trade
+p8:5|          secrets.
+p8:6|   Information separated out under this process will be available for review only by the
+p8:7|   procurement officer, the evaluation committee members, and limited other designees.
+p8:8|   Offerors must be prepared to pay all legal costs and fees associated with defending a
+p8:9|   claim for confidentiality in the event of a “right to know” (open records) request from
+p8:10|   another party.
+p8:11|
+p8:12|4. Classification and Evaluation of Proposals
+p8:13|
+p8:14|        (a) Determination of Responsive or Non‐responsive
+p8:15|
+p8:16|   All Proposals will initially be classified as either “responsive” or “non‐responsive”.
+p8:17|   Proposals may be found non‐responsive any time during the evaluation process or
+p8:18|   contract negotiation if any of the required information is not provided; the submitted
+p8:19|   price is found to be excessive or inadequate as measured by criteria stated in the RFP; or
+p8:20|   the Proposals is not within the plans and specifications described and required in the
+p8:21|   RFP. If a Proposal is found to be non‐responsive, it will not be considered further.
+p8:22|
+p8:23|        (b) Determination of Responsibility
+p8:24|
+p8:25|   The procurement officer will determine whether an offeror has met the standards of
+p8:26|   responsibility. Such a determination may be made at any time during the evaluation
+p8:27|   process and through contract negotiation if information surfaces that would result in a
+p8:28|   determination of non‐responsibility. If an offeror is found non‐responsible, the
+p8:29|   determination must be in writing, made a part of the procurement file, and mailed to the
+p8:30|   affected offeror.
+p8:31|
+p8:32|5. City’s Rights Reserved
+p8:33|
+p8:34|   Issuance of the RFP in no way constitutes a commitment by the City of Tucker to award
+p8:35|   and execute a contract. Upon determination such actions would be in its best interest, the
+p8:36|   City, in its sole discretion, reserves the right to:
+p8:37|   • cancel or terminate this RFP;
+p8:38|   • reject any or all Proposals received in response to this RFP;
+p8:39|   • waive any undesirable, inconsequential, or inconsistent provisions of this RFP which
+p8:40|       would not have significant impact on any proposal;
+p8:41|   • not award if it is in the best interest of the City not to proceed with contract execution;
+p8:42|       or
+p8:43|   • if awarded, terminate any contract if the City determines adequate City funds are not
+p8:44|       available.
+p8:45|                                      Page 8 of 15
+p9:1|              City of Tucker Request for Proposal 2026-016
+p9:2|    CEI Services for SR 410/US 78 @ CR 9476/MOUNTAIN IND BLVD
+p9:3|           ROADWAY IMPROVEMENT PROJECT PI 0017399
+p9:4|
+p9:5|
+p9:6|
+p9:7|   6. General Information
+p9:8|
+p9:9|      1. Only those firms or teams with the necessary resources and a commitment to
+p9:10|         complete all work on schedule should submit a Proposal.
+p9:11|
+p9:12|      2. The City may select the best qualified contractor based on the information received
+p9:13|         from interested firms as a result of this solicitation.
+p9:14|
+p9:15|      3. City of Tucker reserves the right to cancel any and all Request for Proposals at any
+p9:16|         time when it is determined to be in the best interest of the City.
+p9:17|
+p9:18|      4. City of Tucker also reserves the right to increase, reduce, add or delete any item in
+p9:19|         this solicitation as deemed necessary.
+p9:20|
+p9:21|      5. It is the responsibility of all firms interested in submitting proposals for this
+p9:22|         advertisement to routinely check the posting on the website for any revisions to this
+p9:23|         RFP.
+p9:24|
+p9:25|      6. Incomplete submittals will not be considered. Late submittals will not be accepted.
+p9:26|
+p9:27|PROPOSAL SUBMISSION AND EVALUATION
+p9:28|
+p9:29|   1. Preparation of Proposal
+p9:30|
+p9:31|      Each Proposal should be prepared simply and economically, avoiding the use of elaborate
+p9:32|      promotional materials beyond those sufficient to provide a complete presentation. If
+p9:33|      supplemental materials are a necessary part of the technical Proposals, the Offeror should
+p9:34|      reference these materials in the technical Proposals, identifying the document(s) and
+p9:35|      citing the appropriate section and page(s) to be reviewed.
+p9:36|
+p9:37|   2. Submittal Requirements
+p9:38|
+p9:39|      Failure to meet these requirements will result in the Proposals being determined “non‐
+p9:40|      responsive” and the entire submittal will be rejected. Unless otherwise specified, all
+p9:41|      requirements will count toward the page limit.
+p9:42|
+p9:43|      1. Submittals of firm information and Proposals should be no more than ten (10) pages
+p9:44|         single‐sided, 8½” x 11” pages in length. The 10‐page limit does not include the cover
+p9:45|         page, tabs or title pages, and the required City forms. Any other supplemental
+p9:46|                                        Page 9 of 15
+p10:1|           City of Tucker Request for Proposal 2026-016
+p10:2| CEI Services for SR 410/US 78 @ CR 9476/MOUNTAIN IND BLVD
+p10:3|        ROADWAY IMPROVEMENT PROJECT PI 0017399
+p10:4|      information and pages outside the page limit will not be reviewed and will be
+p10:5|      considered as non‐responsive to the page limit requirement.
+p10:6|
+p10:7|   2. Provide firm name, address, telephone number, e‐mail address for the primary
+p10:8|      contact person, former firm names, official Georgia address (if applicable), and joint
+p10:9|      venture partner information (if applicable). If the firm has branch offices, state which
+p10:10|      office will perform most of the work.
+p10:11|
+p10:12|   3. In table format, provide a brief description of CEI services or related projects
+p10:13|      completed within the last three (3) years. Include the name of the project owner,
+p10:14|      contact name and email or phone number.
+p10:15|
+p10:16|   4. Provide an Organizational Chart of key personnel.
+p10:17|
+p10:18|   5. Provide the resumes of key personnel who will perform the work. Contractors shall
+p10:19|      clearly indicate the designated staff that will act as the primary point of contact with
+p10:20|      the City. Personnel information should include professional registrations, years of
+p10:21|      experience, years with firm, and description of responsibilities associated with no
+p10:22|      more than two (2) specific previous projects performed by the individual. Show all
+p10:23|      licenses and certifications of key personnel including registered professional
+p10:24|      engineer, land surveyor, and landscape architect.
+p10:25|
+p10:26|   6. The contractor may provide no more than three (3) additional references in addition
+p10:27|      to the related project experience provided in item 3 above.
+p10:28|
+p10:29|   7. The contractor shall submit the required forms provided as part of the bid package,
+p10:30|      which will not be counted toward the 10-page limit.
+p10:31|
+p10:32|3. Evaluation Process
+p10:33|
+p10:34|   All responsive Proposals will be evaluated based on stated evaluation criteria. In scoring
+p10:35|   against stated criteria, the City may consider such factors as accepted industry standards
+p10:36|   and a comparative evaluation of all other qualified RFP responses in terms of differing
+p10:37|   price, quality, and contractual factors. These scores will be used to determine the most
+p10:38|   advantageous offering to the City.
+p10:39|
+p10:40|   Selection and award will be based on the offeror’s Proposals and other items outlined in
+p10:41|   this RFP. Submitted responses may not include references to information located
+p10:42|   elsewhere, such as Internet websites or libraries, unless specifically requested.
+p10:43|   Information or materials presented by offerors outside the formal response or subsequent
+p10:44|   discussion/negotiation or “best and final offer,” if requested, will not be considered, will
+p10:45|                                     Page 10 of 15
+p11:1|              City of Tucker Request for Proposal 2026-016
+p11:2|    CEI Services for SR 410/US 78 @ CR 9476/MOUNTAIN IND BLVD
+p11:3|           ROADWAY IMPROVEMENT PROJECT PI 0017399
+p11:4|      have no bearing on any award, and may result in the offeror being disqualified from
+p11:5|      further consideration.
+p11:6|
+p11:7|   4. Selection Criteria
+p11:8|
+p11:9|      The Evaluation Committee will evaluate the quality and completeness of each proposal
+p11:10|      as it addresses each requirement of the RFP. The RFP carries a total weight of 100 points.
+p11:11|      Proposals will be evaluated and scored in categories. Each category is assigned a
+p11:12|      maximum point value. Firms will be evaluated and rated based on the criteria below:
+p11:13|
+p11:14|            Staff Experience - 40 points
+p11:15|
+p11:16|            Firm Qualifications and Similar Project Experience – 25 Points
+p11:17|
+p11:18|            Cost Proposal – 35 points
+p11:19|            Proposers shall provide not to exceed amounts for Engineering services and for
+p11:20|            Testing services. Proposers should submit clearly defined staff rates and estimated
+p11:21|            number of hours for proposed assigned staff.
+p11:22|
+p11:23|   5. Oral Presentations
+p11:24|
+p11:25|      The City reserves the right to invite Offerors to present their proposal to the Technical
+p11:26|      Evaluation Team. Evaluation criteria for such presentations will be provided to offerors
+p11:27|      prior to presentations.
+p11:28|
+p11:29|   6. City’s Right to Investigate and Reject
+p11:30|
+p11:31|      The City may make such investigations as deemed necessary to determine the ability of
+p11:32|      the offeror to provide the supplies and/or perform the services specified.
+p11:33|
+p11:34|TERMS AND CONDITIONS
+p11:35|
+p11:36|   1. The City reserves the right to amend this RFP prior to the due date. All amendments and
+p11:37|      additional information will be posted to the DOAS/Georgia Procurement Registry, and
+p11:38|      also the City’s website at: www.tuckerga.gov/bids. Offerors are encouraged to check
+p11:39|      this website frequently.
+p11:40|
+p11:41|   2. A submitted Proposal may be withdrawn prior to the due date by written request emailed
+p11:42|      to the Procurement Manager at procurement@tuckerga.gov. A request to withdraw a
+p11:43|      Proposals must be signed by an authorized individual.
+p11:44|
+p11:45|                                       Page 11 of 15
+p12:1|           City of Tucker Request for Proposal 2026-016
+p12:2| CEI Services for SR 410/US 78 @ CR 9476/MOUNTAIN IND BLVD
+p12:3|        ROADWAY IMPROVEMENT PROJECT PI 0017399
+p12:4|3. The cost for developing the Proposal is the sole responsibility of the Offeror. The City
+p12:5|   will not provide reimbursement for such costs.
+p12:6|
+p12:7|4. If an Offeror has any existing client relationship that involves the City of Tucker, the
+p12:8|   Offeror must disclose each relationship.
+p12:9|
+p12:10|5. It is the policy of the City of Tucker that minority business enterprises shall have a fair
+p12:11|   and equal opportunity to participate in the City purchasing process. Therefore, the City
+p12:12|   of Tucker encourages all minority business enterprises to compete for, win, and receive
+p12:13|   contracts for goods, services, and construction. Also, the City encourages all companies
+p12:14|   to sub‐contract portions of any City contract to minority business enterprises. However,
+p12:15|   there is no DBE minimum goal for this project.
+p12:16|
+p12:17|6. The City of Tucker adheres to the guidelines set forth in the Americans with Disabilities
+p12:18|   Act. Offerors should contact the Issuing Officer at least one day in advance if they require
+p12:19|   special arrangements when attending the Offeror's Conference, if any. The Georgia Relay
+p12:20|   Center at 1‐800‐255‐0126 (TDD Only) or 1‐800‐255‐0135 (Voice) will relay messages,
+p12:21|   in strict confidence, for the speech and hearing impaired.
+p12:22|
+p12:23|7. The Contractor will comply with all City, State of Georgia, Title VI and Federal laws,
+p12:24|   rules, and regulations.
+p12:25|
+p12:26|8. This RFP expressly limits acceptance to the terms stated below. Any additional or different
+p12:27|   terms proposed by Contractor and expressed in any form (acknowledgements,
+p12:28|   confirmations, invoices, catalogs, brochures, technical data sheets, etc.), whether before
+p12:29|   or after Contractor’s receipt of this contract, shall not be binding upon City. City’s silence
+p12:30|   or acceptance of the Materials shall not constitute consent to such additional or different
+p12:31|   terms.
+p12:32|
+p12:33|9. Contractor shall be responsible for and shall indemnify and hold City harmless from any
+p12:34|   and all claims, demands, costs, damages and expenses of whatever nature (including,
+p12:35|   without limitation, attorney’s fees) relating to or arising from (a) Contractor’s breach of
+p12:36|   any of the representations and warranties contained herein; (b) Contractor’s failure to
+p12:37|   follow City’s specifications; (c) Contractor’s other breach of the terms hereof; or (d) any
+p12:38|   other act(s) or omissions(s) of Contractor, its employees, independent contractors,
+p12:39|   agents, and suppliers.
+p12:40|
+p12:41|10. At City’s option, Contractor shall either issue an appropriate credit or undertake, at
+p12:42|    Contractor’s sole cost, corrections to materials made necessary by reason of Contractor’s
+p12:43|    failure to follow City’s specifications or Contractor’s other breach of the terms hereof. The
+p12:44|    remedies afforded by City in this paragraph are in addition to, not in lieu of, any other
+p12:45|
+p12:46|                                      Page 12 of 15
+p13:1|           City of Tucker Request for Proposal 2026-016
+p13:2| CEI Services for SR 410/US 78 @ CR 9476/MOUNTAIN IND BLVD
+p13:3|        ROADWAY IMPROVEMENT PROJECT PI 0017399
+p13:4|   remedy herein or provided by law or equity.
+p13:5|
+p13:6|11. Contractor shall, at its own cost and expense, obtain and maintain worker’s
+p13:7|    compensation, general commercial liability and commercial automobile insurance
+p13:8|    covering the period of the project. The minimum limit for Worker’s Compensation
+p13:9|    insurance shall be the statutory limit for such insurance and must contain a waiver of
+p13:10|    subrogation against the City of Tucker. The minimum limits for commercial general
+p13:11|    liability, which must include personal liability coverage, shall be $1,000,000 per person
+p13:12|    and $2,000,000.00 per occurrence for bodily injury and $500,000 per occurrence for
+p13:13|    property damage and shall name the City of Tucker as an additional named insured. The
+p13:14|    automobile liability insurance shall have limits of not less than $1,000,000 combined
+p13:15|    single limit for bodily injury and/or property damage per occurrence, and such policies
+p13:16|    shall name the City of Tucker as an additional named insured. In addition to above
+p13:17|    general coverage, contractor shall maintain Professional Liability Insurance with limits of
+p13:18|    $2,000,000 per occurrence and aggregate. All insurance shall be obtained from a
+p13:19|    responsible insurance company legally licensed and authorized to transact business in the
+p13:20|    state of Georgia and shall provide for thirty (30) days prior notice of cancellation to City.
+p13:21|    Upon request, Contractor shall deliver to City a certificate or policy of insurance
+p13:22|    evidencing Contractor’s compliance with this paragraph. Contractor shall abide by all
+p13:23|    terms and conditions of the insurance and shall do nothing to impair or invalidate the
+p13:24|    coverage.
+p13:25|
+p13:26|12. Contractor shall at all times be acting as an independent contractor and not be considered
+p13:27|    or deemed to be an agent, employee, joint venture or partner of City. Contractor shall
+p13:28|    have no authority to contract for or bind City in any manner.
+p13:29|
+p13:30|13. Contractor may not assign this agreement or any of its rights or responsibilities
+p13:31|    hereunder, without City’s prior written consent.
+p13:32|
+p13:33|14. Upon not less than two (2) days prior notice, City shall have the right to inspect and audit
+p13:34|    all records (including, without limitation, financial records) of Contractor which pertain
+p13:35|    to Contractor’s fulfillment of this agreement and charge therefore.
+p13:36|
+p13:37|15. In the event of Contractor’s breach hereunder, City, in addition to the recovery of all
+p13:38|    monies and damages owed to City, shall be entitled to recover from Contractor the
+p13:39|    reasonable attorney’s fees and court costs incurred by City as a result of such breach.
+p13:40|
+p13:41|16. Miscellaneous
+p13:42|
+p13:43|   (a) No remedy of City shall be exclusive of any other remedy herein or provided by law
+p13:44|   as equity, but each shall be cumulative. (b) City’s failure or forbearance to enforce any
+p13:45|
+p13:46|                                      Page 13 of 15
+p14:1|          City of Tucker Request for Proposal 2026-016
+p14:2|CEI Services for SR 410/US 78 @ CR 9476/MOUNTAIN IND BLVD
+p14:3|       ROADWAY IMPROVEMENT PROJECT PI 0017399
+p14:4| termhereof shall not be deemed to be a waiver of such right or claim, or any right of claim
+p14:5| hereunder. Moreover, City’s waiver of any term hereof shall not operate or be construed
+p14:6| as a waiver of any subsequent breaches of the same or any other term. (c) If any of the
+p14:7| terms hereof shall be determined to be invalid or unenforceable, the remaining terms shall
+p14:8| remain in full force and effect. (d) The terms contained in this contract constitute the
+p14:9| entire agreement between City and Contractor and supersedes all other oral or written
+p14:10| Proposals, purchase orders, invoices, agreements and communications between City and
+p14:11| Contractor relating to the subject matter hereof. (e) No term of this agreement may be
+p14:12| modified or waived except by an instrument in writing signed by an authorized
+p14:13| representative of the party against which enforcement of such modification or waiver is
+p14:14| sought. (f) This agreement and all disputes arising hereunder shall be governed by and
+p14:15| construed in accordance with the laws of the State of Georgia.
+p14:16|
+p14:17|
+p14:18|
+p14:19|
+p14:20|                                   Page 14 of 15
+p15:1|                                 Request For Proposal 2026-016
+p15:2|        CEI Services for SR 410/US 78 @ CR 9476/MOUNTAIN IND BLVD ROADWAY
+p15:3|                            IMPROVEMENT PROJECT PI 0017399
+p15:4|
+p15:5|
+p15:6|
+p15:7|                                          Proposal Price Certification
+p15:8|
+p15:9|In compliance with the attached specification, the undersigned understands the minimum scope requirements of
+p15:10|the City of Tucker for this project.
+p15:11|
+p15:12|The undersigned offers and agrees that if this proposal is accepted by the Mayor and City Council within one
+p15:13|hundred twenty (120) days of the date receipt of quote, that the undersigned will furnish any or all of the
+p15:14|deliverables and additional services offered, at the quoted price, to the designated point(s) within the time
+p15:15|specified.
+p15:16|
+p15:17|DATE_________________
+p15:18|
+p15:19|COMPANY__________________________________________________________________
+p15:20|
+p15:21|AUTHORIZED SIGNATURE____________________________________________________
+p15:22|
+p15:23|PRINT / TYPE NAME __________________________________________________________
+p15:24|
+p15:25|CONTACT’S EMAIL ADDRESS __________________________________________________
+p15:26|
+p15:27|
+p15:28|
+p15:29|
+p15:30|                                                   Page 15 of 15
+p16:1|               PROPOSED SUBCONTRACTORS FORM: RFP 2026-016
+p16:2|Please complete this form and return as part of your bid package when it is submitted.
+p16:3|If no subcontractors are proposed, please indicate “N/A”.
+p16:4|
+p16:5|
+p16:6|Name of Proposer
+p16:7|
+p16:8|
+p16:9|
+p16:10| 1. Subcontractor Name: _____________________________________________________
+p16:11|
+p16:12| % of Bid Amount: __________________________________________________________
+p16:13|
+p16:14| Description of Work provided and GDOT Area Class (if applicable):
+p16:15|
+p16:16| ________________________________________________________________________
+p16:17|
+p16:18| 2. Subcontractor Name: _____________________________________________________
+p16:19|
+p16:20| % of Bid Amount: __________________________________________________________
+p16:21|
+p16:22| Description of Work provided and GDOT Area Class (if applicable):
+p16:23|
+p16:24| ________________________________________________________________________
+p16:25|
+p16:26| 3. Subcontractor Name: _____________________________________________________
+p16:27|
+p16:28| % of Bid Amount: __________________________________________________________
+p16:29|
+p16:30| Description of Work provided and GDOT Area Class (if applicable):
+p16:31|
+p16:32| ________________________________________________________________________
+p16:33|
+p16:34|
+p16:35|
+p16:36|                               Duplicate if needed.
+p17:1| Construction, Engineering and Inspection (CEI) Services for SR 410/US 78 @ CR
+p17:2| 9476/MOUNTAIN IND BLVD ROADWAY IMPROVEMENT PROJECT PI
+p17:3|                                    0017399
+p17:4|
+p17:5|
+p17:6|  GDOT Work Class for which the Proposer can meet Qualification Requirements
+p17:7|
+p17:8|
+p17:9|Company Name:
+p17:10|
+p17:11|
+p17:12|
+p17:13|Indicate which Work Class your firm or proposed subconsultant/subcontractor has qualified with
+p17:14|GDOT
+p17:15|Select all that apply.
+p17:16|
+p17:17|
+p17:18|
+p17:19|                                                            PRIME
+p17:20|                                                                            SUB-CONTRACTOR
+p17:21|                                                          CONSULTANT
+p17:22|
+p17:23|                                                         Pre-                 Pre-
+p17:24|                                                                 Registered           Registered
+p17:25|    WORK CLASS                                         Qualified            Qualified
+p17:26|
+p17:27|                                                                                        
+p17:28|8.01 - CONSTRUCTION ENGINEERING
+p17:29|
+p17:30|6.04(a) - LABORATORY TESTING OF ROADWAY                                                 
+p17:31|CONSTRUCTION MATERIALS
+p17:32|
+p17:33|6.04(b) - FIELD TESTING OF ROADWAY                                                      
+p17:34|CONTRUCTION MATERIALS
+p17:35|
+p17:36|Please include qualification / registration credentials in submittal.
+p19:1|          GEORGIA SECURITY AND IMMIGRATION COMPLIANCE ACT AFFIDAVIT
+p19:2|      GEORGIA E-Verify and Public Contracts: The Georgia E-Verify law requires contractors and all sub-contractors on
+p19:3|      Georgia public contract (contracts with a government agency) for the physical performance of services over $2,499 in
+p19:4|                               value to enroll in E-Verify, regardless of the number of employees.
+p19:5|
+p19:6|                         Contractor Name:
+p19:7|
+p19:8|
+p19:9|                 Solicitation/Bid number or
+p19:10|                         Project Description:
+p19:11|
+p19:12|
+p19:13|  By executing this affidavit, the undersigned contractor verifies its compliance with O.C.G.A. § 13-10-91, stating
+p19:14| affirmatively that the individual, entity or corporation which is engaged in the physical performance of services under a contract on
+p19:15| behalf of the City of Tucker, Georgia has registered with, is authorized to use and uses the federal work authorization program
+p19:16| commonly known as E-Verify, or any subsequent replacement program, in accordance with the applicable provisions and
+p19:17| deadlines established in O.C.G.A. § 13-10-91.
+p19:18|
+p19:19|
+p19:20|  Furthermore, the undersigned contractor will continue to use the federal work authorization program throughout the contract
+p19:21| period as required by O.C.G.A. § 13-10-91(b) and the undersigned contractor will contract for the physical performance of
+p19:22| services in satisfaction of such contract only with subcontractors who present and affidavit to the contractor with the information
+p19:23| required by O.C.G.A. § 13-10-91(b). Contractor hereby attests that its federal work authorization user identification number and
+p19:24| date of authorization are as follows:
+p19:25|
+p19:26|
+p19:27|
+p19:28|
+p19:29| Federal Work Authorization User Identification Number                               Date of Authorization
+p19:30| (EEV/E-Verify Company Identification Number)
+p19:31|
+p19:32|
+p19:33| Name of Contractor
+p19:34| I hereby declare under penalty of perjury that the
+p19:35| foregoing is true and correct
+p19:36|
+p19:37|
+p19:38|
+p19:39| Printed Name (of Authorized Officer or Agent of Contractor)                 Title (of Authorized Officer or Agent of Contractor)
+p19:40|
+p19:41|
+p19:42|
+p19:43| Signature (of Authorized Officer or Agent)                                   Date Signed
+p19:44|
+p19:45|
+p19:46| SUBSCRIBED AND SWORN BEFORE ME ON THIS THE
+p19:47|
+p19:48|
+p19:49|       DAY OF                                   , 20
+p19:50|
+p19:51|
+p19:52|                                                                        [NOTARY SEAL]
+p19:53| Notary Public
+p19:54|
+p19:55|
+p19:56| My Commission Expires:
+p19:57|
+p19:58|
+p19:59|
+p19:60|
+p19:61|REVISED 10.25.2022
+p20:1|                                OATH OF NON-COLLUSION
+p20:2|
+p20:3|
+p20:4|       COMES NOW, ______________________________________________ (“Consultant”),
+p20:5|                                 [name of Consultant]
+p20:6|
+p20:7|appearing by and through _______________________________________________________,
+p20:8|                              [name of individual with authority to bind Consultant]
+p20:9|
+p20:10|its _____________________________________ (“Individual And Representative Affiant”), and
+p20:11|                  [title]
+p20:12|
+p20:13|______________________________________________________________________________
+p20:14|
+p20:15|______________________________________________________________________________
+p20:16|
+p20:17|______________________________________________________________________________
+p20:18|
+p20:19|______________________________________________________________________________
+p20:20|                 [insert the names of all those required to give the oath]
+p20:21|
+p20:22|(collectively, “Individual Affiants”), and each of the Individual And Representative Affiant and
+p20:23|
+p20:24|Individual Affiants, after first being duly sworn, deposes and says that:
+p20:25|
+p20:26|   1. Consultant has not directly or indirectly violated subsection (d) of the Official Code of
+p20:27|
+p20:28|       Georgia Annotated Section 36-91-21, which provides as follows:
+p20:29|
+p20:30|               Whenever a public works construction contract for any governmental entity subject
+p20:31|               to the requirements of this chapter is to be let out by competitive sealed bid or
+p20:32|               proposal, no person, by himself or herself or otherwise, shall prevent or attempt to
+p20:33|               prevent competition in such bidding or proposals by any means whatever. No
+p20:34|               person who desires to procure such work for himself or herself or for another shall
+p20:35|               prevent or endeavor to prevent anyone from making a bid or proposal therefor by
+p20:36|               any means whatever, nor shall such person so desiring the work cause or induce
+p20:37|               another to withdraw a bid or proposal for the work.
+p20:38|
+p20:39|       Code Section 36-91-21(d) also applies to municipal street system contracts pursuant to
+p20:40|
+p20:41|       Official Code of Georgia Annotated Section 32-4-122.
+p20:42|
+p20:43|
+p20:44|   2. Individual And Representative Affiant is the officer of Consultant whose duty it is to make
+p20:45|
+p20:46|       the payment.
+p21:1|   3. If Consultant is a partnership, then Individual and Representative Affiant and Individual
+p21:2|
+p21:3|       Affiants together constitute all of the partners and any officer, agent or other person who
+p21:4|
+p21:5|       may have represented or acted for Consultant in bidding for or procuring the contract.
+p21:6|
+p21:7|
+p21:8|   4. If Consultant is a corporation, then Individual and Representative Affiant and Individual
+p21:9|
+p21:10|       Affiants together constitute all officers, agents, or other persons who may have acted for
+p21:11|
+p21:12|       or represented Consultant in bidding for or procuring the contract.
+p21:13|
+p21:14|
+p21:15|   Further affiants sayeth not.
+p21:16|
+p21:17|
+p21:18|This ____ day of ________________, 20___.
+p21:19|
+p21:20|
+p21:21|By: _________________________________________, individually and on behalf of Consultant
+p21:22|   [signature of Individual And Representative Affiant]
+p21:23|
+p21:24|Name: _____________________________                 Title: ______________________________
+p21:25|
+p21:26|
+p21:27|Individual Affiants’ signatures and names:
+p21:28|
+p21:29|___________________________________                 ___________________________________
+p21:30|Name:                                               Name:
+p21:31|
+p21:32|___________________________________                 ___________________________________
+p21:33|Name:                                               Name:
+p21:34|
+p21:35|___________________________________                 ___________________________________
+p21:36|Name:                                               Name:
+p21:37|
+p21:38|
+p21:39|Subscribed and Sworn before me on this
+p21:40|______ day of ________________, 20_____.
+p21:41|
+p21:42|________________________
+p21:43|NOTARY PUBLIC
+p21:44|My Commission Expires:
+p21:45|
+p21:46|_________________________________
+p22:1|                             Contact Information Form
+p22:2|
+p22:3|
+p22:4|Please fill out this form with the appropriate contact information for your company.
+p22:5|
+p22:6|
+p22:7|
+p22:8|Full Legal Name of Company:
+p22:9|
+p22:10|Date:
+p22:11|
+p22:12|Contractor Information:
+p22:13|
+p22:14|Primary Contact Person:
+p22:15|
+p22:16|Title:                                         Telephone Number:
+p22:17|
+p22:18|E-mail Address:
+p22:19|
+p22:20|
+p22:21|
+p22:22|Secondary Contact Person:
+p22:23|
+p22:24|Title:                                         Telephone Number:
+p22:25|
+p22:26|E-mail Address:
+p22:27|
+p22:28|Preferred Contact for Administration: (i.e. Document Processing) (Choose one)
+p22:29|
+p22:30|              ☐ Primary Contact                 ☐ Secondary Contact
+p22:31|
+p22:32|Address:
+p22:33|
+p22:34|City / State / Zip:
+p22:35|
+p22:36|
+p22:37|Mailing Address (If different than above):
+p22:38|
+p22:39|City / State / Zip:
+p22:40|
+p22:41|
+p22:42|
+p22:43|Federal Employee ID Number (FEIN):
