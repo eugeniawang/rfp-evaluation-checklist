@@ -1,7 +1,7 @@
 ---
 title: Examples: the contract holding on three real RFPs
 created: 2026-09-23 00:40
-last_updated: 2026-09-23 01:05
+last_updated: 2026-09-23 00:49
 owner: Gina Wang
 status: active
 ---

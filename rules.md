@@ -1,7 +1,7 @@
 ---
 title: Rules: how an RFP becomes an evaluation matrix
 created: 2026-09-23 00:36
-last_updated: 2026-09-23 01:05
+last_updated: 2026-09-23 00:49
 owner: Gina Wang
 status: active
 ---
