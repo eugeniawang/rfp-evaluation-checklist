@@ -1,7 +1,7 @@
 ---
 title: Rules: how an RFP becomes an evaluation matrix
 created: 2026-09-23 00:36
-last_updated: 2026-09-23 00:36
+last_updated: 2026-09-23 01:05
 owner: Gina Wang
 status: active
 ---
@@ -39,13 +39,13 @@ An RFP that scores in stages (a written proposal worth 60, an interview worth 40
 | `claude_does` | One of three fixed phrases (schema §claude_does), chosen by the kind of response the RFP asks for: prose (draft), a form (assemble), or a live session (prepare) | none; it is a label, not a fact |
 | `human_check` | **Human.** Always empty | none |
 | `status` | Always `open` | none |
-| `could_not_map` | Every scoring-related sentence in the source that did not become a row, with why | the lines |
+| `could_not_map` | Every scoring sentence in the source that did not become a row, with one of six fixed reasons | the lines |
 
 ## 3. Verbatim means verbatim
 
 The text in a sourced cell must be a substring of the cited lines after whitespace is collapsed. Nothing else changes: not the quotation marks, not an en dash, not a stray capital, not a missing full stop in the original. If the RFP misspells a word, the matrix misspells it too. A cell that reads better than the RFP has been edited, and an edited cell fails the check.
 
-A citation may span consecutive lines (`p13:14-p13:17`) so a sentence broken across lines can be quoted whole. It may not span more than 60 lines; if the words are that far apart, they are two citations.
+A citation may span consecutive lines on one page (`p13:14-p13:17`) so a sentence broken across lines can be quoted whole. It may not cross a page and may not span more than 12 lines; if the words are that far apart, they are two citations, or the cell is `not in source`. A points citation spans at most 2 lines, so the number found is the one printed beside the criterion and not one from nearby text. The match is whole-word: a quotation that starts or ends in the middle of a word fails.
 
 ## 4. When a field has no source, say so
 
@@ -64,14 +64,14 @@ The value is the exact phrase `not in source`. Not blank, not "n/a", not a best 
 Sum the Points column. It must equal the stated total (or each stage's total). If it does not:
 
 - Do not change a row.
-- Set `stop` to one sentence saying what the RFP states, what the rows sum to, and where the gap is.
+- Set `stop` to the fixed phrase `points do not reconcile to the stated total`. The renderer prints the stated total and the sum beside it; nothing is typed by hand.
 - Hand it over. This is a conversation with the proposal manager, not a rounding decision.
 
-If the RFP publishes no scoring table at all, the matrix has zero rows, `stated_total` is `not in source`, and `stop` says so. That is a complete, valid output.
+If the RFP publishes no scoring table at all, the matrix has zero rows, `stated_total` is `not in source`, and `stop` is `no scoring table published`. That is a complete, valid output.
 
 ## 7. Nothing that matters gets dropped
 
-Before finishing, search the source for every sentence containing `point`, `score`, `scoring`, `evaluat`, `weight`, `criteria`, `factor`, `rank`, `short list`, `non-responsive`, `pass/fail`. Each one either sits in a row or appears under `could_not_map` with a citation and a reason. Typical reasons: it applies to all rows and has no points of its own; it is a pass/fail gate rather than a scored item; it is a later stage whose criteria are not in this document; it is a submittal item the RFP never ties to a criterion.
+Before finishing, search the source for every sentence that assigns points, states a total, names something the owner will score or factor in, or removes a proposal from scoring (non-responsive, pass/fail, short list). Each one either sits in a row or appears under `could_not_map` with a citation and one of the six fixed reasons in `reference/schema.md`. Sentences that merely mention evaluation without assigning, scoring, or gating anything ("the RFP states the relative importance of all evaluation criteria") are not scoring content and are left alone.
 
 ## 8. What never goes in
 
@@ -88,4 +88,4 @@ python3 tools/check_matrix.py outputs/<rfp>.matrix.json
 python3 tools/write_matrix.py outputs/<rfp>.matrix.json
 ```
 
-The first refuses any cell whose text is not at its citation, any points figure not printed at its citation, any filled human column, any sum that does not reconcile without a `stop`. The second renders only a matrix the first accepted. A matrix that has not passed the checker is a draft, not an output.
+The first refuses any cell whose text is not at its citation as whole words, any points figure not printed on its one or two cited lines, any citation that crosses a page or runs past 12 lines, any key the contract does not name, any filled human column, any free text in `stop` or `why`, any row out of the RFP's order, and any sum that does not reconcile without a `stop`. The second renders only a matrix the first accepted. A matrix that has not passed the checker is a draft, not an output.

@@ -87,8 +87,10 @@ class SeenToFail(unittest.TestCase):
 
     def test_sum_mismatch_with_stop_is_valid(self):
         self.m["rows"].pop()
-        self.m["stop"] = "RFP states 100 points; rows sum to 65; the Cost Proposal row is missing."
+        self.m["stop"] = "points do not reconcile to the stated total"
         self.assertEqual(problems(self.m), [])
+        _, total = check_matrix.check(self.m, OUT)
+        self.assertFalse(check_matrix.reconciles(self.m, total))
 
     def test_blank_instead_of_not_in_source_fails(self):
         self.m["rows"][2]["answering_section"] = {"text": "", "cite": "p11:18"}
@@ -100,14 +102,74 @@ class SeenToFail(unittest.TestCase):
 
     def test_could_not_map_needs_why_and_citation(self):
         self.m["could_not_map"][0]["why"] = ""
-        self.assertTrue(any("needs a why" in x for x in problems(self.m)))
+        self.assertTrue(any("why: not one of the fixed reasons" in x for x in problems(self.m)))
         self.m["could_not_map"][0]["text"] = "something the RFP never said"
         self.assertTrue(any("could_not_map 1" in x and "not verbatim" in x for x in problems(self.m)))
 
     def test_no_scoring_table_is_a_valid_stop(self):
         m = {"rfp": self.m["rfp"], "source": self.m["source"], "stated_total": "not in source",
-             "rows": [], "could_not_map": [], "stop": "The RFP publishes no scoring table."}
+             "rows": [], "could_not_map": [], "stop": "no scoring table published"}
         self.assertEqual(problems(m), [])
+
+    # --- the holes two reviewers found in the first version, each now closed ---
+
+    def test_fragment_that_ends_mid_word_fails(self):
+        self.m["rows"][0]["criterion"]["text"] = "Staff Exper"  # source: "Staff Experience - 40 points"
+        self.assertTrue(any("whole words" in x for x in problems(self.m)))
+
+    def test_points_from_a_neighbouring_line_fail(self):
+        # 35 is printed at p11:18 (Cost Proposal); a wide citation must not let row 1 claim it
+        self.m["rows"][0]["points"] = {"value": 35, "cite": "p11:14-p11:18"}
+        self.assertTrue(any("spans 5 lines; the limit is 2" in x for x in problems(self.m)))
+
+    def test_points_from_the_rfp_number_fail(self):
+        self.m["rows"][0]["points"] = {"value": 2026, "cite": "p11:1-p11:14"}
+        self.assertTrue(any("row 1 points" in x for x in problems(self.m)))
+
+    def test_citation_across_pages_fails(self):
+        self.m["rows"][0]["input_needed"]["cite"] = "p10:20-p11:2"
+        self.assertTrue(any("crosses a page" in x for x in problems(self.m)))
+
+    def test_citation_wider_than_twelve_lines_fails(self):
+        self.m["rows"][0]["input_needed"]["cite"] = "p10:1-p10:24"
+        self.assertTrue(any("spans 24 lines; the limit is 12" in x for x in problems(self.m)))
+
+    def test_unknown_row_key_fails(self):
+        self.m["rows"][0]["notes"] = "award expected July 2026"
+        self.assertTrue(any("unknown key(s) ['notes']" in x for x in problems(self.m)))
+
+    def test_unknown_top_level_key_fails(self):
+        self.m["summary"] = "three criteria, cost is 35%"
+        self.assertTrue(any("unknown top-level key" in x for x in problems(self.m)))
+
+    def test_free_text_why_fails(self):
+        self.m["could_not_map"][0]["why"] = "probably not important"
+        self.assertTrue(any("why: not one of the fixed reasons" in x for x in problems(self.m)))
+
+    def test_free_text_stop_fails(self):
+        self.m["rows"].pop()
+        self.m["stop"] = "RFP states 100; rows sum to 65; award expected July."
+        self.assertTrue(any("stop: not one of the fixed states" in x for x in problems(self.m)))
+
+    def test_missing_could_not_map_fails(self):
+        del self.m["could_not_map"]
+        self.assertTrue(any("missing top-level key could_not_map" in x for x in problems(self.m)))
+
+    def test_missing_human_column_fails(self):
+        del self.m["rows"][0]["owner"]
+        self.assertTrue(any("row 1: missing field owner" in x for x in problems(self.m)))
+
+    def test_stage_on_flat_matrix_fails(self):
+        self.m["rows"][0]["stage"] = "Proposal"
+        self.assertTrue(any("'stage' is only allowed" in x for x in problems(self.m)))
+
+    def test_rows_out_of_rfp_order_fail(self):
+        self.m["rows"].reverse()
+        self.assertTrue(any("rows follow the RFP's order" in x for x in problems(self.m)))
+
+    def test_sourced_field_with_extra_key_fails(self):
+        self.m["rows"][0]["criterion"]["note"] = "the big one"
+        self.assertTrue(any("row 1 criterion: must be" in x for x in problems(self.m)))
 
 
 class Staged(unittest.TestCase):
@@ -146,6 +208,14 @@ class CommandLine(unittest.TestCase):
             r = subprocess.run([sys.executable, ROOT / "tools/extract.py", src], capture_output=True, text=True)
             self.assertEqual(r.returncode, 0, r.stderr)
             self.assertEqual(src.with_suffix(".source.txt").read_text(), "p1:1|Selection Criteria\np1:2|Cost - 30 points\n")
+
+    def test_extract_drops_the_trailing_form_feed_page(self):
+        sys.path.insert(0, str(ROOT / "tools"))
+        import extract
+        self.assertEqual(len(extract.split_pages("one\n\x0ctwo\n\x0c")), 2)
+        self.assertEqual(len(extract.split_pages("one\n\x0ctwo\n")), 2)
+        self.assertEqual(extract.number(extract.split_pages("a\nb\n\x0cc\n\x0c")),
+                         ["p1:1|a", "p1:2|b", "p2:1|c"])
 
     def test_extract_refuses_empty(self):
         with tempfile.TemporaryDirectory() as d:

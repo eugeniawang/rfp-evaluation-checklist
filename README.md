@@ -24,14 +24,14 @@ outputs/            the three matrices (JSON, Markdown, CSV, XLSX)
 tools/extract.py    PDF or text → numbered source text (p<page>:<line>| on every line)
 tools/check_matrix.py   the gate: every claim in the matrix must be found in the source
 tools/write_matrix.py   renders a matrix the gate accepted
-tests/              20 tests, including the ones that prove the gate can fail
+tests/              35 tests, 26 of them proving the gate refuses a specific kind of bad matrix
 ```
 
 ## Use it
 
 **1. Attach the folder to a Claude project** (Claude.ai Projects, or Claude Code with this directory open). `identity.md` and `rules.md` make Claude the translator.
 
-**2. Extract the RFP.** Python 3.9+ and poppler (`brew install poppler` / `apt install poppler-utils`) for PDFs.
+**2. Extract the RFP.** Python 3.9+ and poppler (`brew install poppler` / `apt install poppler-utils`) for PDFs. `openpyxl` (`pip install openpyxl`) only if you want the XLSX rendering; without it you get Markdown and CSV and a note.
 
 ```
 python3 tools/extract.py fixtures/your-rfp.pdf
@@ -52,7 +52,7 @@ python3 tools/check_matrix.py outputs/your-rfp.matrix.json
 python3 tools/write_matrix.py outputs/your-rfp.matrix.json
 ```
 
-`PASS` means every criterion, every points figure, every input sentence and every "could not map" entry was found, verbatim, at the line it cites, and the points reconcile. `FAIL` names each cell that was not. The renderer refuses a matrix the checker rejects, so nothing unverified becomes a spreadsheet.
+`PASS` means every criterion, every points figure, every input sentence and every "could not map" entry was found, verbatim and as whole words, on the one page it cites, that the points figure is printed on its own cited line, that no key exists outside the contract, that rows are in the RFP's order, and that the points reconcile. `FAIL` names each cell that was not. The renderer refuses a matrix the checker rejects, so nothing unverified becomes a spreadsheet.
 
 **Try it on the shipped fixtures right now:**
 
@@ -69,11 +69,11 @@ The twelve columns, always in this order:
 
 Six of them come from the RFP and carry a `[p<page>:<line>]` citation. Three (Input data source, Owner, Human check) are the firm's knowledge and are always empty on hand-over; the Markdown ends with a count of rows waiting on a person. `Claude does` is one of three fixed phrases. `Status` is `open`.
 
-A cell with nothing in the RFP to cite says `not in source`. A matrix whose points do not add up to the RFP's stated total carries a one-sentence `stop` instead of an adjusted row. An RFP with no published scoring produces a valid matrix with zero rows and a `stop`.
+A cell with nothing in the RFP to cite says `not in source`. A matrix whose points do not add up to the RFP's stated total carries the fixed stop state `points do not reconcile to the stated total` instead of an adjusted row, and the rendering prints both numbers. An RFP with no published scoring produces a valid matrix with zero rows and the stop state `no scoring table published`.
 
 ## Why the checker is the point
 
-The failure that makes RFP tooling untrustworthy is a criterion that reads well and is not what the RFP said. The scorer is reading their own words; a paraphrase loses the match, and a points figure remembered from a similar RFP loses the pursuit. So the contract is mechanical: text must be a whitespace-normalized substring of the cited lines, numbers must appear as numbers on the cited lines, and the tests in `tests/test_matrix.py` prove the checker fails on a paraphrase, a respelled word, an invented figure, a wrong citation, a filled human column, and an unreconciled sum. A gate that cannot fail is not a gate.
+The failure that makes RFP tooling untrustworthy is a criterion that reads well and is not what the RFP said. The scorer is reading their own words; a paraphrase loses the match, and a points figure remembered from a similar RFP loses the pursuit. So the contract is mechanical: text must be a whole-word, whitespace-normalized run of the cited lines on one page, numbers must be printed on their one or two cited lines, every key must be a contract key, every explanation is a fixed phrase rather than free text, and the tests in `tests/test_matrix.py` prove the checker fails on a paraphrase, a respelled word, a mid-word fragment, an invented figure, a figure borrowed from a neighbouring line, a wrong or cross-page citation, an extra key, free text in `stop` or `why`, reordered rows, a filled human column, and an unreconciled sum. A gate that cannot fail is not a gate. Two independent adversarial reviews of the first version found the substring and in-range-number holes; this version closes them and ships the tests that would have caught them.
 
 ## Fixtures
 

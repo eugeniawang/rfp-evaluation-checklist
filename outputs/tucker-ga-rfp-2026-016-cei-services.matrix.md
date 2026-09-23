@@ -13,9 +13,10 @@ Sum of the Points column: **100** — reconciles: **yes**
 **TOTAL** points: 100
 
 ## Could not map
-- In scoring against stated criteria, the City may consider such factors as accepted industry standards and a comparative evaluation of all other qualified RFP responses in terms of differing price, quality, and contractual factors. [p10:34-p10:37] — applies to every row; carries no points of its own
-- The City reserves the right to invite Offerors to present their proposal to the Technical Evaluation Team. Evaluation criteria for such presentations will be provided to offerors prior to presentations. [p11:25-p11:27] — a possible later stage whose criteria and points are not in this RFP
-- The contractor may provide no more than three (3) additional references in addition to the related project experience provided in item 3 above. [p10:26-p10:27] — a submittal item the RFP does not tie to a scored criterion; a person decides which row it feeds
+- In scoring against stated criteria, the City may consider such factors as accepted industry standards and a comparative evaluation of all other qualified RFP responses in terms of differing price, quality, and contractual factors. [p10:34-p10:37] — applies to every row; no points of its own
+- The City reserves the right to invite Offerors to present their proposal to the Technical Evaluation Team. Evaluation criteria for such presentations will be provided to offerors prior to presentations. [p11:25-p11:27] — later stage whose criteria and points are not in this document
+- The contractor may provide no more than three (3) additional references in addition to the related project experience provided in item 3 above. [p10:26-p10:27] — submittal item the RFP does not tie to a scored criterion
+- Proposals may be found non‐responsive any time during the evaluation process or contract negotiation if any of the required information is not provided; the submitted price is found to be excessive or inadequate as measured by criteria stated in the RFP; or [p8:17-p8:19] — pass/fail gate that removes a proposal from scoring; not a scored criterion
 
 ## Human columns still empty
 Input data source, Owner and Human check are never filled by the translator. 3 row(s) need a person.

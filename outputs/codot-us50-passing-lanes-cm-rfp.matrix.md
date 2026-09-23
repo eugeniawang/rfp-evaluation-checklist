@@ -2,7 +2,7 @@
 
 Source text: `../fixtures/codot-us50-passing-lanes-cm-rfp.source.txt` (page:line citations point into it).
 RFP's stated totals, by stage: **Proposal 60** [p32:8]; **Interview 40** [p38:8]
-Combined: The Proposers Technical Score and their Interview Score will be summed and tabulated which will be referred to as their “Total Score” [p24:11-p24:12]
+Combined: The Proposers Technical Score and their Interview Score will be summed and tabulated which will be referred to as their “Total Score”, [p24:11-p24:12]
 Sum of the Points column: **100** — reconciles: **yes**
 
 | # | RFP section | RFP criterion (their words) | Points | Input needed | Input data source | Evaluation criteria (what the scorer looks for) | Proposal section that answers it | Owner | Claude does | Human check | Status |
@@ -17,9 +17,10 @@ Sum of the Points column: **100** — reconciles: **yes**
 **TOTAL** points: 100
 
 ## Could not map
-- Selection Panel scoring values will be only numbers in whole, half, or quarter-number increments (i.e. 2.25, 3.50, 4.00.). Scoring of the Proposal and Interview will be based on the Evaluation Assessment Guidelines as set forth in the table below. [p44:18-p44:20] — the scoring method (a 1 to 5 scale in Appendix B) applies to every row; it carries no points of its own
-- Certifying “Reject” of the Maximum Compensation for Construction Manager Preconstruction Services will cause the corresponding Proposal to be considered non-responsive to the solicitation and the corresponding Proposal will not be scored or further considered in this Project’s procurement. [p46:38-p46:40] — a pass/fail responsiveness gate (Form B-1), not a scored criterion
-- Provide a narrative of the Proposer’s largest foreseen safety risks for the Project and describe the safety programs, processes, and initiatives that the Proposer currently has in place to help manage/mitigate/or eliminate the safety risks. [p35:21-p35:23] — Safety Record and Performance sits under criterion A with no points of its own; a person confirms it is scored inside A's 10
+- Selection Panel scoring values will be only numbers in whole, half, or quarter-number increments (i.e. 2.25, 3.50, 4.00.). Scoring of the Proposal and Interview will be based on the Evaluation Assessment Guidelines as set forth in the table below. [p44:18-p44:20] — scoring method that applies to every row; no points of its own
+- Certifying “Reject” of the Maximum Compensation for Construction Manager Preconstruction Services will cause the corresponding Proposal to be considered non-responsive to the solicitation and the corresponding Proposal will not be scored or further considered in this Project’s procurement. [p46:38-p46:40] — pass/fail gate that removes a proposal from scoring; not a scored criterion
+- Provide a narrative of the Proposer’s largest foreseen safety risks for the Project and describe the safety programs, processes, and initiatives that the Proposer currently has in place to help manage/mitigate/or eliminate the safety risks. [p35:21-p35:23] — sits inside a scored criterion with no points of its own
+- Multiple proposals from a single Proposer will be considered non-responsive and will not be evaluated or scored. [p24:16-p24:17] — pass/fail gate that removes a proposal from scoring; not a scored criterion
 
 ## Human columns still empty
 Input data source, Owner and Human check are never filled by the translator. 6 row(s) need a person.

@@ -1,42 +1,102 @@
 {
-  "rfp": {"text": "City of Tucker Request for Proposal", "cite": "p2:1"},
+  "rfp": {
+    "text": "RFP 2026-008",
+    "cite": "p1:4"
+  },
   "source": "../fixtures/tucker-ga-rfp-2026-008-row-maintenance.source.txt",
-  "stated_total": {"value": 100, "cite": "p14:11"},
+  "stated_total": {
+    "value": 100,
+    "cite": "p14:11"
+  },
   "rows": [
     {
-      "section": {"text": "4. Selection Criteria", "cite": "p14:8"},
-      "criterion": {"text": "Proposed Management Plan and Approach", "cite": "p14:15"},
-      "points": {"value": 35, "cite": "p14:15"},
-      "input_needed": {"text": "Each proposer should include a summary of their proposed management plan. The management plan should describe the number of crews and seasonal personnel, if any, proposed to accomplish the required work.", "cite": "p13:14-p13:17"},
+      "section": {
+        "text": "4. Selection Criteria",
+        "cite": "p14:8"
+      },
+      "criterion": {
+        "text": "Proposed Management Plan and Approach",
+        "cite": "p14:15"
+      },
+      "points": {
+        "value": 35,
+        "cite": "p14:15"
+      },
+      "input_needed": {
+        "text": "Each proposer should include a summary of their proposed management plan. The management plan should describe the number of crews and seasonal personnel, if any, proposed to accomplish the required work.",
+        "cite": "p13:14-p13:17"
+      },
       "input_source": "",
-      "evaluation_criteria": {"text": "The proposal shall outline the plan that the company will use to provide the most effective delivery of the requested services as outlined in the Scope of Work.", "cite": "p14:16-p14:17"},
-      "answering_section": {"text": "3. Describe the company’s understanding of the proposed services as described in the Scope of Work.", "cite": "p13:14-p13:15"},
+      "evaluation_criteria": {
+        "text": "The proposal shall outline the plan that the company will use to provide the most effective delivery of the requested services as outlined in the Scope of Work.",
+        "cite": "p14:16-p14:17"
+      },
+      "answering_section": {
+        "text": "3. Describe the company’s understanding of the proposed services as described in the Scope of Work.",
+        "cite": "p13:14-p13:15"
+      },
       "owner": "",
       "claude_does": "draft: write the response to this criterion from the inputs in Input needed, citing each one",
       "human_check": "",
       "status": "open"
     },
     {
-      "section": {"text": "4. Selection Criteria", "cite": "p14:8"},
-      "criterion": {"text": "Qualifications and Similar Project Experience of the Company and Staff", "cite": "p14:19"},
-      "points": {"value": 35, "cite": "p14:19"},
-      "input_needed": {"text": "Provide information on supervisory personnel to be assigned to this contract, including for the project superintendent, road maintenance foreman, and stormwater foreman The proposal should identify any applicable certifications held by key personnel who will perform the work. Provide copies of appropriate required licenses.", "cite": "p13:19-p13:23"},
+      "section": {
+        "text": "4. Selection Criteria",
+        "cite": "p14:8"
+      },
+      "criterion": {
+        "text": "Qualifications and Similar Project Experience of the Company and Staff",
+        "cite": "p14:19"
+      },
+      "points": {
+        "value": 35,
+        "cite": "p14:19"
+      },
+      "input_needed": {
+        "text": "Provide information on supervisory personnel to be assigned to this contract, including for the project superintendent, road maintenance foreman, and stormwater foreman The proposal should identify any applicable certifications held by key personnel who will perform the work. Provide copies of appropriate required licenses.",
+        "cite": "p13:19-p13:23"
+      },
       "input_source": "",
-      "evaluation_criteria": {"text": "The proposal must give a detailed report of related experiences that demonstrate the ability of the proposer to perform requested services as outlined in the Scope of Work. The proposal shall include sufficient information to indicate the abilities, qualifications, and experience of all persons who would be assigned to provide the required services.", "cite": "p14:21-p14:25"},
-      "answering_section": {"text": "5. List and describe company experience in the past five years that best matches the Scope of Work.", "cite": "p13:25-p13:26"},
+      "evaluation_criteria": {
+        "text": "The proposal must give a detailed report of related experiences that demonstrate the ability of the proposer to perform requested services as outlined in the Scope of Work. The proposal shall include sufficient information to indicate the abilities, qualifications, and experience of all persons who would be assigned to provide the required services.",
+        "cite": "p14:21-p14:25"
+      },
+      "answering_section": {
+        "text": "5. List and describe company experience in the past five years that best matches the Scope of Work.",
+        "cite": "p13:25-p13:26"
+      },
       "owner": "",
       "claude_does": "draft: write the response to this criterion from the inputs in Input needed, citing each one",
       "human_check": "",
       "status": "open"
     },
     {
-      "section": {"text": "4. Selection Criteria", "cite": "p14:8"},
-      "criterion": {"text": "Cost Proposal", "cite": "p14:27"},
-      "points": {"value": 30, "cite": "p14:27"},
-      "input_needed": {"text": "Proposers shall provide lump sum costs for basic services per the Cost Proposal Form provided. Proposers shall also submit the Unit Cost Schedule per the form provided.", "cite": "p14:28-p14:30"},
+      "section": {
+        "text": "4. Selection Criteria",
+        "cite": "p14:8"
+      },
+      "criterion": {
+        "text": "Cost Proposal",
+        "cite": "p14:27"
+      },
+      "points": {
+        "value": 30,
+        "cite": "p14:27"
+      },
+      "input_needed": {
+        "text": "Proposers shall provide lump sum costs for basic services per the Cost Proposal Form provided. Proposers shall also submit the Unit Cost Schedule per the form provided.",
+        "cite": "p14:28-p14:30"
+      },
       "input_source": "",
-      "evaluation_criteria": {"text": "The contract award will include an annual Not-to-Exceed amount to be determined by the City of Tucker based on the rates provided.", "cite": "p14:30-p14:31"},
-      "answering_section": {"text": "6. Submit the required forms provided as part of the bid package, which will not be counted toward the 15-page limit.", "cite": "p13:30-p13:31"},
+      "evaluation_criteria": {
+        "text": "The contract award will include an annual Not-to-Exceed amount to be determined by the City of Tucker based on the rates provided.",
+        "cite": "p14:30-p14:31"
+      },
+      "answering_section": {
+        "text": "6. Submit the required forms provided as part of the bid package, which will not be counted toward the 15-page limit.",
+        "cite": "p13:30-p13:31"
+      },
       "owner": "",
       "claude_does": "assemble: fill the RFP's own form from figures a person supplies; no prose",
       "human_check": "",
@@ -44,8 +104,20 @@
     }
   ],
   "could_not_map": [
-    {"text": "Age and condition of equipment will be factored into contractor scoring for these services.", "cite": "p5:36", "why": "a scoring factor stated in the scope of work with no points and no criterion of its own; a person decides which row it feeds"},
-    {"text": "In scoring against stated criteria, the City may consider such factors as accepted industry standards and a comparative evaluation of all other qualified RFP responses in terms of differing price, quality, and contractual factors.", "cite": "p13:35-p13:38", "why": "applies to every row; carries no points of its own"},
-    {"text": "The City reserves the right to invite Offerors to present their proposal to the Evaluation Team. Evaluation criteria for such presentations will be provided to offerors prior to presentations.", "cite": "p14:35-p14:37", "why": "a possible later stage whose criteria and points are not in this RFP"}
+    {
+      "text": "Age and condition of equipment will be factored into contractor scoring for these services.",
+      "cite": "p5:36",
+      "why": "submittal item the RFP does not tie to a scored criterion"
+    },
+    {
+      "text": "In scoring against stated criteria, the City may consider such factors as accepted industry standards and a comparative evaluation of all other qualified RFP responses in terms of differing price, quality, and contractual factors.",
+      "cite": "p13:35-p13:38",
+      "why": "applies to every row; no points of its own"
+    },
+    {
+      "text": "The City reserves the right to invite Offerors to present their proposal to the Evaluation Team. Evaluation criteria for such presentations will be provided to offerors prior to presentations.",
+      "cite": "p14:35-p14:37",
+      "why": "later stage whose criteria and points are not in this document"
+    }
   ]
 }

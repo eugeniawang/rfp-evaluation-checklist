@@ -1,4 +1,4 @@
-# Evaluation matrix: City of Tucker Request for Proposal [p2:1]
+# Evaluation matrix: RFP 2026-008 [p1:4]
 
 Source text: `../fixtures/tucker-ga-rfp-2026-008-row-maintenance.source.txt` (page:line citations point into it).
 RFP's stated total: **100 [p14:11]**
@@ -13,9 +13,9 @@ Sum of the Points column: **100** — reconciles: **yes**
 **TOTAL** points: 100
 
 ## Could not map
-- Age and condition of equipment will be factored into contractor scoring for these services. [p5:36] — a scoring factor stated in the scope of work with no points and no criterion of its own; a person decides which row it feeds
-- In scoring against stated criteria, the City may consider such factors as accepted industry standards and a comparative evaluation of all other qualified RFP responses in terms of differing price, quality, and contractual factors. [p13:35-p13:38] — applies to every row; carries no points of its own
-- The City reserves the right to invite Offerors to present their proposal to the Evaluation Team. Evaluation criteria for such presentations will be provided to offerors prior to presentations. [p14:35-p14:37] — a possible later stage whose criteria and points are not in this RFP
+- Age and condition of equipment will be factored into contractor scoring for these services. [p5:36] — submittal item the RFP does not tie to a scored criterion
+- In scoring against stated criteria, the City may consider such factors as accepted industry standards and a comparative evaluation of all other qualified RFP responses in terms of differing price, quality, and contractual factors. [p13:35-p13:38] — applies to every row; no points of its own
+- The City reserves the right to invite Offerors to present their proposal to the Evaluation Team. Evaluation criteria for such presentations will be provided to offerors prior to presentations. [p14:35-p14:37] — later stage whose criteria and points are not in this document
 
 ## Human columns still empty
 Input data source, Owner and Human check are never filled by the translator. 3 row(s) need a person.

@@ -1,7 +1,7 @@
 ---
 title: Examples: the contract holding on three real RFPs
 created: 2026-09-23 00:40
-last_updated: 2026-09-23 00:40
+last_updated: 2026-09-23 01:05
 owner: Gina Wang
 status: active
 ---
@@ -12,7 +12,7 @@ Three public RFPs went in; three matrices with the same twelve columns came out.
 
 ## Example 1: a short city RFP with a clean 100-point table
 
-**Input:** City of Tucker, Georgia, RFP 2026-016, Construction Engineering and Inspection services. 23 pages. `fixtures/tucker-ga-rfp-2026-016-cei-services.source.txt`.
+**Input:** City of Tucker, Georgia, RFP 2026-016, Construction Engineering and Inspection services. 22 pages. `fixtures/tucker-ga-rfp-2026-016-cei-services.source.txt`.
 
 The scoring section, as extracted:
 
@@ -48,13 +48,13 @@ p10:22|      more than two (2) specific previous projects performed by the indiv
 | 2 | Firm Qualifications and Similar Project Experience [p11:16] | 25 [p11:16] | In table format, provide a brief description of CEI services or related projects completed within the last three (3) years. Include the name of the project owner, contact name and email or phone number. [p10:12-p10:14] | 3. In table format, provide a brief description of CEI services or related projects [p10:12] | draft |
 | 3 | Cost Proposal [p11:18] | 35 [p11:18] | Proposers shall provide not to exceed amounts for Engineering services and for Testing services. Proposers should submit clearly defined staff rates and estimated number of hours for proposed assigned staff. [p11:19-p11:21] | not in source | assemble |
 
-(Input data source, Owner, Human check: empty on all three rows. Status: open.)
+(Input data source, Owner, Human check: empty on all three rows. Status: open. `Claude does` is abbreviated to its first word in these tables; the JSON carries the full fixed phrase.)
 
-**What the contract did here:** row 3 has no proposal section because the RFP never names one for cost, so the cell says `not in source` rather than borrowing "Cost Proposal Form" from another RFP. The en dash in row 2's criterion is the RFP's en dash; the checker would fail a hyphen. Three sentences about scoring did not become rows and are listed under "Could not map": the comparative-evaluation sentence that applies to every row, the oral-presentation clause whose criteria are not in this document, and the three-additional-references item the RFP never ties to a criterion.
+**What the contract did here:** row 3 has no proposal section because the RFP never names one for cost, so the cell says `not in source` rather than borrowing "Cost Proposal Form" from another RFP. The en dash in row 2's criterion is the RFP's en dash; the checker would fail a hyphen. Four sentences about scoring did not become rows and are listed under "Could not map", each with one of the six fixed reasons: the comparative-evaluation sentence that applies to every row, the oral-presentation clause whose criteria are not in this document, the three-additional-references item the RFP never ties to a criterion, and the non-responsive clause that removes a proposal from scoring.
 
 ## Example 2: a two-stage state DOT RFP with sub-criteria
 
-**Input:** Colorado Department of Transportation, US 50 Passing Lanes, Construction Manager services, Final RFP 4/14/26. 50 pages. `fixtures/codot-us50-passing-lanes-cm-rfp.source.txt`.
+**Input:** Colorado Department of Transportation, US 50 Passing Lanes, Construction Manager services, Final RFP 4/14/26. 49 pages. `fixtures/codot-us50-passing-lanes-cm-rfp.source.txt`.
 
 There is no sentence stating a grand total. The RFP scores a written proposal out of 60 and an interview out of 40, and says elsewhere that the two are summed:
 
@@ -85,11 +85,11 @@ p24:12|and tabulated which will be referred to as their “Total Score”, The P
 
 Proposal stage: 60 stated [p32:8], 60 summed. Interview stage: 40 stated [p38:8], 40 summed.
 
-**What the contract did here:** the interview rows get `prepare` rather than `draft`, and `not in source` for the answering section, because nothing written answers a live session. The 1-to-5 scoring scale in Appendix B, the Form B-1 pass/fail gate, and the Safety Record narrative that sits inside criterion A without its own points are all under "Could not map" with a reason each, so a proposal manager sees them and decides, rather than discovering them at Gate 1.
+**What the contract did here:** the interview rows get `prepare` rather than `draft`, and `not in source` for the answering section, because nothing written answers a live session. The 1-to-5 scoring scale in Appendix B (score bands 5, 4, 3, 2, 1 at p45:14 through p45:54), the Form B-1 pass/fail gate, the multiple-proposals non-responsive clause, and the Safety Record narrative that sits inside criterion A without its own points are all under "Could not map" with a fixed reason each, so a proposal manager sees them and decides, rather than discovering them at Gate 1.
 
 ## Example 3: same issuer, different shape
 
-**Input:** City of Tucker RFP 2026-008, Right-of-Way Maintenance. 30 pages. Same city as Example 1, a different service, a different scoring split (35 / 35 / 30), and the criteria carry descriptive sentences this time:
+**Input:** City of Tucker RFP 2026-008, Right-of-Way Maintenance. 29 pages. Same city as Example 1, a different service, a different scoring split (35 / 35 / 30), and the criteria carry descriptive sentences this time:
 
 ```
 p14:15|        Proposed Management Plan and Approach – 35 points
@@ -105,5 +105,5 @@ p14:27|        Cost Proposal – 30 points
 ## The bar, checked
 
 - **Same shape across inputs:** `tests/test_matrix.py::test_same_shape_across_inputs` asserts every row in every shipped matrix has exactly the twelve keys.
-- **Every fact traces:** `python3 tools/check_matrix.py outputs/<any>.matrix.json` exits 0 on all three, and exits 1 when a test paraphrases a criterion, respells a word, invents a points figure, or fills a human column.
+- **Every fact traces:** `python3 tools/check_matrix.py outputs/<any>.matrix.json` exits 0 on all three, and exits 1 when a test paraphrases a criterion, respells a word, quotes a fragment that ends mid-word, invents a points figure, points at a number on a neighbouring line, cites across a page, adds a key the contract does not name, writes free text into `stop` or `why`, reorders rows, or fills a human column.
 - **Missing is marked, not filled:** three `not in source` cells across the three outputs, each where the RFP is silent.

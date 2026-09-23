@@ -1,7 +1,7 @@
 ---
 title: The contract: the evaluation matrix, field by field
 created: 2026-09-23 00:36
-last_updated: 2026-09-23 00:36
+last_updated: 2026-09-23 01:05
 owner: Gina Wang
 status: active
 ---
@@ -16,7 +16,8 @@ Every fact taken from the RFP carries a citation into the numbered source text t
 
 - `p11:14` means page 11, line 14 of `<rfp>.source.txt`.
 - `p13:14-p13:17` means lines 14 through 17 of page 13, joined with single spaces.
-- A range may not exceed 60 lines.
+- A range stays on one page and covers at most 12 lines. A points citation covers at most 2.
+- The quoted text must occur in the cited lines as whole words: starting and ending at a space or at the edge, whitespace collapsed, nothing else changed.
 
 A **sourced field** is an object `{"text": "<verbatim>", "cite": "<citation>"}` (or `{"value": <number>, "cite": ...}` for points), or the exact string `"not in source"`.
 
@@ -30,8 +31,10 @@ A **human field** is the empty string `""`. Always.
 | `source` | string | Path to the `.source.txt` the citations point into, relative to the matrix file |
 | `stated_total` | sourced number, **or** `{"stages": [{"name", "value", "cite"}...], "combined": sourced?}`, or `"not in source"` | The total the RFP says it scores out of. Staged scoring lists each stage's total with its own citation; `combined` is the sentence that says the stages are added, if the RFP has one |
 | `rows` | list | One object per scored item, in the RFP's order (fields below) |
-| `could_not_map` | list of `{"text", "cite", "why"}` | Scoring-related sentences that did not become a row, each verbatim, cited, and explained |
-| `stop` | string, optional | Present only when the matrix cannot reconcile or the RFP publishes no scoring. One sentence. Its presence is the stop state |
+| `could_not_map` | list of `{"text", "cite", "why"}` | Scoring sentences that did not become a row, each verbatim, cited, with `why` from the six fixed reasons below. The list is required; empty is fine |
+| `stop` | enum, optional | `points do not reconcile to the stated total` or `no scoring table published`. Its presence is the stop state |
+
+No other key may exist at the top level or in a row. The checker rejects unknown keys, so there is nowhere in the file for free text that is not a cited quotation or a fixed phrase.
 
 ## The twelve columns (each row)
 
@@ -62,9 +65,22 @@ The column names the kind of downstream job, not a fact about the RFP, so it is 
 
 Any other string fails the check.
 
+### `could_not_map[].why`, the six fixed reasons
+
+- `applies to every row; no points of its own`
+- `scoring method that applies to every row; no points of its own`
+- `pass/fail gate that removes a proposal from scoring; not a scored criterion`
+- `later stage whose criteria and points are not in this document`
+- `submittal item the RFP does not tie to a scored criterion`
+- `sits inside a scored criterion with no points of its own`
+
+## Row order
+
+Rows follow the RFP's order: each row's `criterion` citation must come later in the source than the previous row's. The checker enforces it.
+
 ## The stop state
 
-The matrix is complete and valid when `stop` is set, even with zero rows. The checker does not demand reconciliation when `stop` is present; it demands that `stop` be present whenever the sum and the stated total disagree. A reader opens `stop`, reads one sentence, and knows the translator refused to guess.
+The matrix is complete and valid when `stop` is set, even with zero rows. The checker does not demand reconciliation when `stop` is `points do not reconcile to the stated total`; it demands that phrase whenever the sum and the stated total disagree, and `no scoring table published` whenever `stated_total` is `not in source`. The renderer prints the stated total and the sum beside the stop, so the reader sees the gap without anyone typing a number.
 
 ## Rendered forms
 
@@ -74,11 +90,12 @@ The matrix is complete and valid when `stop` is set, even with zero rows. The ch
 
 ## What the checker proves (exit 0)
 
-1. Every citation parses and exists in the source.
-2. Every sourced text is a whitespace-normalized substring of its cited lines.
-3. Every points value appears as a number at its citation.
-4. Every human column is empty; `claude_does` is one of the three phrases; `status` is `open`.
-5. The Points column reconciles to the stated total (per stage if staged), or `stop` is set.
-6. Every `could_not_map` entry is cited, verbatim, and has a `why`.
+1. Every citation parses, exists in the source, stays on one page, and covers at most 12 lines (2 for points).
+2. Every sourced text is a whole-word, whitespace-normalized run of its cited lines.
+3. Every points value appears as a number on its cited line(s).
+4. Every key is a contract key. Every human column is present and empty; `claude_does` is one of the three phrases; `status` is `open`; `stop` and every `why` are fixed phrases.
+5. Rows are in the RFP's order.
+6. The Points column reconciles to the stated total (per stage if staged), or `stop` says which stop state applies.
+7. Every `could_not_map` entry is cited and verbatim.
 
 Exit 1 names every failure. One failure is enough to refuse the matrix.

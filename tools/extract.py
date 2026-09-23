@@ -23,7 +23,16 @@ def pdf_pages(path: pathlib.Path) -> list[str]:
         sys.exit("pdftotext not found; install poppler (brew install poppler)")
     out = subprocess.run(["pdftotext", "-layout", str(path), "-"],
                          capture_output=True, text=True, check=True).stdout
-    return out.split("\f")
+    return split_pages(out)
+
+
+def split_pages(text: str) -> list[str]:
+    """pdftotext ends every page, including the last, with a form feed, so a plain split
+    leaves one empty page at the end. Drop it; it is a terminator, not a page."""
+    pages = text.split("\f")
+    if pages and pages[-1].strip() == "":
+        pages.pop()
+    return pages
 
 
 def number(pages: list[str]) -> list[str]:
