@@ -13,12 +13,15 @@ import csv
 import html as htmllib
 import json
 import pathlib
+import re
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from check_matrix import COLUMNS, check, coverage_stats, load_source, reconciles, stated_label  # noqa: E402
 
 EMPTY = "not in source"
+DOESNT_SAY = "The RFP doesn't say"
+CITE_RE = re.compile(r"^p(\d+):(\d+)(?:-p(\d+):(\d+))?$")
 HUMAN_KEYS = ("status", "input_source", "lead", "reviewer")  # Ruling 18:25: claude_does is gone
 # The nine columns, in COLUMNS order (Ruling 18:25). `section` is not a column: it renders as
 # a group heading above the rows that share it (see section_groups()).
@@ -42,10 +45,46 @@ def cell(v):
     return str(v)
 
 
-def row_cells(i, r):
+def plain_cite(c):
+    """'p14:15' -> 'Page 14, line 15'; 'p13:14-p13:17' -> 'Page 13, lines 14-17' (Ruling 18:22)."""
+    m = CITE_RE.match(c or "")
+    if not m:
+        return c or ""
+    p1, l1, p2, l2 = m.groups()
+    if not p2 or l2 == l1:
+        return f"Page {p1}, line {l1}"
+    return f"Page {p1}, lines {l1}-{l2}"
+
+
+def cell_plain(v):
+    """Like cell(), but for the plain-language md/csv rendering: "not in source" reads as
+    "The RFP doesn't say" (the JSON value is untouched), and citations read as "Page N, line M"."""
+    if v is None or v == "":
+        return ""
+    if v == EMPTY:
+        return DOESNT_SAY
+    if isinstance(v, list):
+        return " · ".join(cell_plain(part) for part in v)
+    if isinstance(v, dict):
+        t = v.get("text", v.get("value", ""))
+        c = v.get("cite", "")
+        return f"{t} [{plain_cite(c)}]" if c else str(t)
+    return str(v)
+
+
+def plain_title(v):
+    """The RFP's title text alone, no citation — for use in a heading."""
+    if v is None or v == "" or v == EMPTY:
+        return DOESNT_SAY
+    first = v[0] if isinstance(v, list) else v
+    return first.get("text", first.get("value", "")) if isinstance(first, dict) else str(first)
+
+
+def row_cells(i, r, plain=False):
     """The nine column cells. The row number isn't its own column (Ruling 18:25): it's
     folded into the criterion cell as a leading 'N. '."""
-    cells = [cell(r.get(k, "")) for k in COLUMNS]
+    render = cell_plain if plain else cell
+    cells = [render(r.get(k, "")) for k in COLUMNS]
     ci = COLUMNS.index("criterion")
     cells[ci] = f"{i}. {cells[ci]}" if cells[ci] else f"{i}."
     return cells
@@ -56,6 +95,17 @@ def section_groups(m):
     groups = []
     for i, r in enumerate(m["rows"], start=1):
         label = cell(r.get("section", ""))
+        if groups and groups[-1][0] == label:
+            groups[-1][1].append((i, r))
+        else:
+            groups.append((label, [(i, r)]))
+    return groups
+
+
+def section_groups_plain(m):
+    groups = []
+    for i, r in enumerate(m["rows"], start=1):
+        label = cell_plain(r.get("section", ""))
         if groups and groups[-1][0] == label:
             groups[-1][1].append((i, r))
         else:
@@ -94,37 +144,65 @@ def coverage_line(cov):
             f"could-not-map {counts['could_not_map']}, reviewed {counts['reviewed']})")
 
 
-def to_markdown(m, cov):
-    out = []
-    out.append(f"# Evaluation matrix: {cell(m['rfp'])}")
-    out.append("")
-    out.append(f"Source text: `{m['source']}` (page:line citations point into it).")
+def plain_facts(m, cov):
+    """Ruling 18:22/coordinator 18:35: the plain header facts for md/csv, adapted from
+    SCRATCH/COPY-plain-language.md where it doesn't conflict with a later ruling."""
     st = m["stated_total"]
+    lines = []
     if isinstance(st, dict) and "stages" in st:
-        out.append("RFP's stated totals, by stage: " + "; ".join(
-            f"**{s['name']} {s['value']}** [{s['cite']}]" for s in st["stages"]))
+        sums = stage_sums(m)
+        for s in st["stages"]:
+            got = sums.get(s["name"], 0)
+            got = int(got) if got == int(got) else got
+            match = "Yes" if got == s["value"] else "No"
+            lines.append(f"{s['name']} stage — the RFP says it scores out of {s['value']}. "
+                        f"The items below add up to {got}. Do they match? {match}")
         if st.get("combined"):
-            out.append(f"Combined: {cell(st['combined'])}")
-        line = stage_reconcile_line(m)
-        if line:
-            out.append(f"Per-stage reconcile: {line}")
+            lines.append(f"How the stages combine: {cell_plain(st['combined'])}")
+    elif isinstance(st, dict):
+        val = st.get("value")
+        got = m["_sum"]
+        match = "Yes" if val == got else "No"
+        lines.append(f"The RFP says it scores out of {val}. The items below add up to {got}. Do they match? {match}")
+    elif m.get("stop") == "no total stated; rows are the RFP's own maximums":
+        lines.append("The RFP doesn't state one grand total — it lists each item's own maximum instead. "
+                     f"The items below add up to {m['_sum']}.")
     else:
-        out.append(f"RFP's stated total: **{cell(st)}**")
-    out.append(f"Sum of the Points column: **{m['_sum']}** — reconciles: **{'yes' if m['_reconciles'] else 'NO'}**")
-    out.append(coverage_line(cov))
+        lines.append("The RFP doesn't publish a scoring table for this document.")
+    n_hits, counts = cov
+    lines.append(f"We checked {n_hits} line(s) in the RFP that talk about scoring or being disqualified. "
+                f"Every one is accounted for below — as a scored item ({counts['rows']}), a disqualifying rule "
+                f"({counts['disqualifiers']}), something we flagged but couldn't place ({counts['could_not_map']}), "
+                f"or something we read and set aside ({counts['reviewed']}).")
+    return lines
+
+
+def to_markdown(m, cov):
+    title = plain_title(m["rfp"])
+    out = []
+    out.append(f"# RFP Evaluation Criteria Checklist: {title}")
+    out.append("")
+    out.append(f"This checklist shows how **{title}** will be scored. It's built from the RFP itself "
+               "— not a summary of it.")
+    out.append("")
+    for line in plain_facts(m, cov):
+        out.append(f"- {line}")
+    out.append("")
+    out.append(f"Read from: `{m['source']}`. Citations like \"Page 14, line 15\" point into that file.")
     if m.get("stop"):
         out.append("")
         out.append(f"## STOP: {m['stop']}")
     out.append("")
     out.append("## Part 1: Scored criteria")
-    for label, group in section_groups(m):
+    for label, group in section_groups_plain(m):
         out.append("")
         out.append(f"### From the RFP section: {label}" if label else "### (no RFP section named)")
         out.append("")
         out.append("| " + " | ".join(HDR) + " |")
         out.append("|" + "---|" * len(HDR))
         for i, r in group:
-            out.append("| " + " | ".join(c.replace("|", "\\|").replace("\n", " ") for c in row_cells(i, r)) + " |")
+            cells = row_cells(i, r, plain=True)
+            out.append("| " + " | ".join(c.replace("|", "\\|").replace("\n", " ") for c in cells) + " |")
     out.append("")
     out.append("**TOTAL** points: " + str(m["_sum"]))
     out.append("")
@@ -132,14 +210,14 @@ def to_markdown(m, cov):
                f"({len(m['disqualifiers'])})")
     if m["disqualifiers"]:
         for d in m["disqualifiers"]:
-            out.append(f"- {d['text']} [{d['cite']}] — {d['kind']}")
+            out.append(f"- {d['text']} [{plain_cite(d['cite'])}] — {d['kind']}")
     else:
         out.append("- nothing: the source states no disqualifying conditions")
     out.append("")
-    out.append("## Part 3: Could not map")
+    out.append("## Part 3: Other things the RFP says about scoring")
     if m.get("could_not_map"):
         for c in m["could_not_map"]:
-            out.append(f"- {c['text']} [{c['cite']}] — {c['why']}")
+            out.append(f"- {c['text']} [{plain_cite(c['cite'])}] — {c['why']}")
     else:
         out.append("- nothing: every scoring sentence found in the source is in a row above")
     out.append("")
@@ -149,15 +227,25 @@ def to_markdown(m, cov):
     return "\n".join(out) + "\n"
 
 
-def to_csv(m, path):
+def to_csv(m, path, cov):
     n = len(HDR)
+    title = plain_title(m["rfp"])
     with open(path, "w", newline="") as f:
         w = csv.writer(f)
-        for label, group in section_groups(m):
+        w.writerow([f"RFP Evaluation Criteria Checklist: {title}"] + [""] * (n - 1))
+        w.writerow([f"This checklist shows how {title} will be scored. It's built from the RFP itself "
+                    "— not a summary of it."] + [""] * (n - 1))
+        for line in plain_facts(m, cov):
+            w.writerow([line] + [""] * (n - 1))
+        w.writerow([f"Read from: {m['source']}"] + [""] * (n - 1))
+        if m.get("stop"):
+            w.writerow([f"STOP: {m['stop']}"] + [""] * (n - 1))
+        w.writerow([""] * n)
+        for label, group in section_groups_plain(m):
             w.writerow([f"From the RFP section: {label}" if label else "(no RFP section named)"] + [""] * (n - 1))
             w.writerow(HDR)
             for i, r in group:
-                w.writerow(row_cells(i, r))
+                w.writerow(row_cells(i, r, plain=True))
             w.writerow([""] * n)
         total_row = [""] * n
         total_row[COLUMNS.index("criterion")] = "TOTAL"
@@ -647,7 +735,7 @@ def main():
     src = load_source(src_path)
     base = str(p)[:-len(".json")] if p.name.endswith(".json") else str(p)
     pathlib.Path(base + ".md").write_text(to_markdown(m, cov))
-    to_csv(m, base + ".csv")
+    to_csv(m, base + ".csv", cov)
     to_xlsx(m, base + ".xlsx")
     pathlib.Path(base + ".html").write_text(to_html(m, cov, src, src_path))
     print(f"wrote {base}.md .csv .xlsx .html — {len(m['rows'])} rows, {total} points, "
