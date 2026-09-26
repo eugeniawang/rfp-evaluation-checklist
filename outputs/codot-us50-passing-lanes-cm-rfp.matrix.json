@@ -37,21 +37,48 @@
         "value": 10,
         "cite": "p32:9"
       },
-      "input_needed": {
-        "text": "Provide job descriptions, responsibilities, and authority; o Provide a list of the concurrent projects, responsibilities, and commitments that each may have for the duration of the Project; o Current home office location; o Qualifications and past construction experience relevant to this Project, in addition to length of time performing those job duties;",
-        "cite": "p32:16-p32:21"
-      },
+      "input_needed": [
+        {
+          "text": "● Provide a description of the composition of the team’s Project Key Personnel. If the Proposer team is a Joint Venture or association, indicate specific responsibilities of each party to the Joint Venture.",
+          "cite": "p32:11-p32:13"
+        },
+        {
+          "text": "● Provide, identify, and discuss the qualifications of the Key Personnel and include the following:",
+          "cite": "p32:14-p32:15"
+        },
+        {
+          "text": "o Provide job descriptions, responsibilities, and authority; o Provide a list of the concurrent projects, responsibilities, and commitments that each may have for the duration of the Project; o Current home office location; o Qualifications and past construction experience relevant to this Project, in addition to length of time performing those job duties;",
+          "cite": "p32:16-p32:21"
+        },
+        {
+          "text": "o Unique skills or knowledge each may possess related to the Project; o Length of time of overall experience pertinent to the scope of this project and length of time with the current firm for each; o Experience on similar projects as a team; and o Provide resumes and two current references for the Key Personnel in an appendix to the Proposal. References will be considered current if the party’s name, current position/title, and position/title held at the time for which the recommendation is being sought are provided; telephone numbers must be current as of the proposal due date.",
+          "cite": "p32:22-p32:29"
+        },
+        {
+          "text": "● Provide a graphic showing the CM’s organizational chart, complete with working titles for the team for the preconstruction phase. Provide an explanation of any variation to the anticipated Key Personnel time commitments stated above.",
+          "cite": "p35:14-p35:16"
+        },
+        {
+          "text": "● Provide a narrative describing succession planning for team stability and planning for any member of the project team that may leave.",
+          "cite": "p35:17-p35:18"
+        },
+        {
+          "text": "● Provide a narrative of the Proposer’s largest foreseen safety risks for the Project and describe the safety programs, processes, and initiatives that the Proposer currently has in place to help manage/mitigate/or eliminate the safety risks.",
+          "cite": "p35:21-p35:23"
+        },
+        {
+          "text": "● Provide the following information for each entity involved, covering the last 4 years (2021- 2025). o Experience Modification Rates (EMR) o OSHA Reportable Incident Statistics",
+          "cite": "p35:24-p35:27"
+        }
+      ],
       "input_source": "",
       "evaluation_criteria": {
         "text": "Composition and Commitment of the CM Project Management Team",
         "cite": "p32:10"
       },
-      "answering_section": {
-        "text": "Provide a graphic showing the CM’s organizational chart, complete with working titles for the team for the preconstruction phase.",
-        "cite": "p35:14-p35:15"
-      },
+      "answering_section": "not in source",
       "owner": "",
-      "claude_does": "draft: write the response to this criterion from the inputs in Input needed, citing each one",
+      "claude_does": "",
       "human_check": "",
       "status": "open"
     },
@@ -69,21 +96,32 @@
         "value": 10,
         "cite": "p35:28"
       },
-      "input_needed": {
-        "text": "Provide three or more relevant projects/programs that demonstrate the Proposer’s ability to be successful on this Project. For each listed project or experience, include the name of the owner, any architect/engineer references, and the contract information",
-        "cite": "p35:35-p35:37"
-      },
+      "input_needed": [
+        {
+          "text": "● Provide a summary of the Proposer’s previous project experience relevant to the general scope and construction value of work for this Project.",
+          "cite": "p35:33-p35:34"
+        },
+        {
+          "text": "● Provide three or more relevant projects/programs that demonstrate the Proposer’s ability to be successful on this Project. For each listed project or experience, include the name of the owner, any architect/engineer references, and the contract information CDOT may at its",
+          "cite": "p35:35-p35:37"
+        },
+        {
+          "text": "Provide at a minimum: o The project/contract name, o Project delivery method, o Description of services provided,",
+          "cite": "p35:39-p35:42"
+        },
+        {
+          "text": "o Overall construction cost of the project, as applicable, including the initial contract/construction value and value at final acceptance. Please provide reasoning for any differential, o Description of project schedule performance, including initial schedule, and reasons for schedule change, o Coordination with stakeholders, if any, o Key personnel assigned or in-house staff and their level of involvement, o Senior Leadership assigned and their commitment in time to the overall success of the project, as well as their commitment to the success of the Owner’s Program, o Major subcontractors and primary subcontracts used in the performance of the contract, and o Project Reference(s). All references submitted shall be current for relevant projects.",
+          "cite": "p36:5-p36:16"
+        }
+      ],
       "input_source": "",
       "evaluation_criteria": {
         "text": "Prior Project Experience/Performance/References",
         "cite": "p35:32"
       },
-      "answering_section": {
-        "text": "Provide a summary of the Proposer’s previous project experience relevant to the general scope and construction value of work for this Project.",
-        "cite": "p35:33-p35:34"
-      },
+      "answering_section": "not in source",
       "owner": "",
-      "claude_does": "draft: write the response to this criterion from the inputs in Input needed, citing each one",
+      "claude_does": "",
       "human_check": "",
       "status": "open"
     },
@@ -101,21 +139,45 @@
         "value": 20,
         "cite": "p36:20"
       },
-      "input_needed": {
-        "text": "Describe the Proposer’s practical innovative ideas specific to the Project in detail.",
-        "cite": "p37:24"
-      },
+      "input_needed": [
+        {
+          "text": "Provide a narrative that describes the Proposer’s project specific plan and approach to meeting the Project Goals. Identify how the Proposer will manage schedule, budget, and incorporation of innovation.",
+          "cite": "p36:22-p36:24"
+        },
+        {
+          "text": "Describe the Proposer’s role and responsibility in refinement of the design, quality of the design, accuracy of the scope, and ensuring efficiency of the execution of delivery for the Project. Specifically, the Proposer shall address: ● Grant Alignment & Milestone Management, Site Selection & Optimization",
+          "cite": "p36:27-p36:32"
+        },
+        {
+          "text": "Describe the Proposer’s strategy for project management for the Project that would encourage building a culture of success and collaboration. Highlight how the Proposer will manage preconstruction milestones, quality control during preconstruction, project resources, and environmental resources. The narrative should specifically address the \"Categorical Exclusion\" (CatEx) strategy and how the Proposer will identify site-specific stipulations (endangered species, historic ditches, noise, etc.) early to avoid design restarts. Describe how the Proposer will partner with CDOT, and the designer, to ensure that every dollar invested into the preconstruction phase of the Project adds value to the Project.",
+          "cite": "p36:33-p36:42"
+        },
+        {
+          "text": "Describe the Proposer’s project specific plan and approach to construction project management for the Project. Describe how the Proposer is uniquely skilled to manage the challenges of the Project. Highlight the strategy to meeting construction milestones,",
+          "cite": "p36:44-p36:46"
+        },
+        {
+          "text": "project sequencing, early action opportunities, critical scope elements, stakeholder coordination, and market conditions. In addition, please provide specific details regarding:",
+          "cite": "p37:5-p37:7"
+        },
+        {
+          "text": "● Corridor Logistics & Phasing ● Freight & Agricultural Vehicle Access ● Phasing and Packaging Strategy Describe the Proposer’s project specific plan and approach to scope management, self- performance, subcontractor management, and management of Civil Rights compliance. Describe the Proposer’s plan and approach to environmental management for the Project. Address how the Proposer will manage construction activities around the irrigation season and avoid impacts to irrigation ditches and wetlands.",
+          "cite": "p37:8-p37:16"
+        },
+        {
+          "text": "Describe the Proposer’s plan and approach for incident response. Include how your team will remain agile to coordinate, adapt, complement, and contribute to the Incident Command’s direction, if required. Due to the long emergency detour routes on the US 50 corridor, specifically describe the communication plan for rapid incident clearance to prevent corridor-wide delays.",
+          "cite": "p37:18-p37:22"
+        },
+        {
+          "text": "Describe the Proposer’s practical innovative ideas specific to the Project in detail.",
+          "cite": "p37:24"
+        }
+      ],
       "input_source": "",
-      "evaluation_criteria": {
-        "text": "Identify how the Proposer will manage schedule, budget, and incorporation of innovation.",
-        "cite": "p36:23-p36:24"
-      },
-      "answering_section": {
-        "text": "Provide a narrative that describes the Proposer’s project specific plan and approach to meeting the Project Goals.",
-        "cite": "p36:22-p36:23"
-      },
+      "evaluation_criteria": "not in source",
+      "answering_section": "not in source",
       "owner": "",
-      "claude_does": "draft: write the response to this criterion from the inputs in Input needed, citing each one",
+      "claude_does": "",
       "human_check": "",
       "status": "open"
     },
@@ -133,21 +195,41 @@
         "value": 20,
         "cite": "p37:27"
       },
-      "input_needed": {
-        "text": "Identify and describe the top five risks the Proposer has identified on the Project and what are the preliminary plans to manage those risks.",
-        "cite": "p37:33-p37:34"
-      },
+      "input_needed": [
+        {
+          "text": "Define the key steps to risk management that the Proposer will employ. Describe how those steps will be applied to both the preconstruction and construction process.",
+          "cite": "p37:29-p37:30"
+        },
+        {
+          "text": "Describe the techniques and tools that the Proposer will use to quantify the risk, establish a risk pool, and participate in management of the risk pools and contingencies.",
+          "cite": "p37:31-p37:32"
+        },
+        {
+          "text": "Identify and describe the top five risks the Proposer has identified on the Project and what are the preliminary plans to manage those risks. Be specific on how the Proposer will prioritize those risks and manage them.",
+          "cite": "p37:33-p37:35"
+        },
+        {
+          "text": "Describe the Proposer’s plan and approach to managing the construction schedule in such a way as to minimize impacts to the traveling public, encourage efficient execution, inform the preconstruction process, manage the critical path, incorporate innovation, and provide reasonable float.",
+          "cite": "p37:37-p37:40"
+        },
+        {
+          "text": "Describe the Proposer’s approach to Transparency and Accountability in the Cost Model. Describe how the Proposer will contribute to the pursuit of the project goals and provide easy to interpret deliverables using standard agreed upon terms and inputs.",
+          "cite": "p37:42-p37:44"
+        },
+        {
+          "text": "Describe how the Proposer’s cost model will incorporate the variables that affect project costs, innovation, essential inputs needed, coordination with the Owner and their",
+          "cite": "p37:45-p37:46"
+        },
+        {
+          "text": "Independent Cost Estimator, and be reliable over multiple construction seasons.",
+          "cite": "p38:5"
+        }
+      ],
       "input_source": "",
-      "evaluation_criteria": {
-        "text": "Describe the techniques and tools that the Proposer will use to quantify the risk, establish a risk pool, and participate in management of the risk pools and contingencies.",
-        "cite": "p37:31-p37:32"
-      },
-      "answering_section": {
-        "text": "Define the key steps to risk management that the Proposer will employ. Describe how those steps will be applied to both the preconstruction and construction process.",
-        "cite": "p37:29-p37:30"
-      },
+      "evaluation_criteria": "not in source",
+      "answering_section": "not in source",
       "owner": "",
-      "claude_does": "draft: write the response to this criterion from the inputs in Input needed, citing each one",
+      "claude_does": "",
       "human_check": "",
       "status": "open"
     },
@@ -176,7 +258,7 @@
       },
       "answering_section": "not in source",
       "owner": "",
-      "claude_does": "prepare: build the interview or presentation material from the submitted proposal; scored live, not in writing",
+      "claude_does": "",
       "human_check": "",
       "status": "open"
     },
@@ -205,9 +287,81 @@
       },
       "answering_section": "not in source",
       "owner": "",
-      "claude_does": "prepare: build the interview or presentation material from the submitted proposal; scored live, not in writing",
+      "claude_does": "",
       "human_check": "",
       "status": "open"
+    }
+  ],
+  "disqualifiers": [
+    {
+      "text": "No Person or business entity prior to Proposal submission, that was engaged by the State of Colorado in the preparation of this Request for Proposal, that had access to procurement sensitive information related to this Request for Proposal including but not limited to Requirements, Statements of Work, or Evaluation Criteria will be eligible to directly submit or participate in the submittal of a proposal for this initiative.",
+      "cite": "p20:31-p20:35",
+      "kind": "explicit disqualification"
+    },
+    {
+      "text": "No firm that is ineligible for State contracts may be part of any Proposer Team.",
+      "cite": "p20:42-p20:43",
+      "kind": "explicit disqualification"
+    },
+    {
+      "text": "Multiple proposals from a single Proposer will be considered non-responsive and will not be evaluated or scored.",
+      "cite": "p24:16-p24:17",
+      "kind": "non-responsive or non-responsible determination"
+    },
+    {
+      "text": "Any proposal received by CDOT after the time specified in Section 2.3 of this RFP shall be deemed non-responsive and shall not be evaluated or scored.",
+      "cite": "p24:24-p24:25",
+      "kind": "late submittal"
+    },
+    {
+      "text": "CDOT reserves the right to reject any or all Proposals.",
+      "cite": "p25:30",
+      "kind": "owner reserves the right to reject"
+    },
+    {
+      "text": "Proposals that do not meet the Minimum Proposal Requirements listed in Section 2.2 of this RFP will be deemed non-responsive and will not be evaluated, evaluation will be ceased upon discovery of non-responsive determination and will not be scored.",
+      "cite": "p25:30-p25:33",
+      "kind": "non-responsive or non-responsible determination"
+    },
+    {
+      "text": "Any proposal received without a corresponding LOI will be determined by CDOT to be non-responsive. The corresponding non-responsive proposal will not be evaluated or scored and will not continue in the procurement process.",
+      "cite": "p26:9-p26:11",
+      "kind": "incomplete submittal or missing required item"
+    },
+    {
+      "text": "Failure to meet these dates will result in the Proposal being considered non-responsive.",
+      "cite": "p27:7-p27:8",
+      "kind": "late submittal"
+    },
+    {
+      "text": "The MPPC will be evaluated for responsiveness. If the MPPC is determined by CDOT to be non- responsive, the corresponding Proposal will also be determined by CDOT to be non-responsive. The corresponding non-responsive Proposal will not be evaluated or scored and will not continue in the procurement process.",
+      "cite": "p29:23-p29:26",
+      "kind": "missing or incorrect required form"
+    },
+    {
+      "text": "Supplemental information will only be considered in the scoring if clearly referenced in the Proposer’s responses to SECTION 3 – PROPOSAL CONTENT AND EVALUATION CRITERIA",
+      "cite": "p30:36-p30:38",
+      "kind": "page, format, or delivery rule"
+    },
+    {
+      "text": "Certifying “Reject” of the Maximum Compensation for Construction Manager Preconstruction Services will cause the corresponding Proposal to be considered non-responsive to the solicitation and the corresponding Proposal will not be scored or further considered in this Project’s procurement.",
+      "cite": "p46:38-p46:40",
+      "kind": "missing or incorrect required form"
+    },
+    {
+      "text": "Failure to certify acceptance or rejection of the Maximum Compensation for Construction Manager Preconstruction Services may cause the corresponding proposal to be considered non-responsive to the solicitation.",
+      "cite": "p46:42-p46:43",
+      "kind": "missing or incorrect required form"
+    },
+    {
+      "text": "Certifying “Reject” of the MPP will cause the corresponding Proposal to be considered non-responsive to the solicitation and the corresponding Proposal will not be scored or further considered in this project’s procurement.",
+      "cite": "p47:38-p47:39",
+      "kind": "missing or incorrect required form"
+    },
+    {
+      "text": "Failure to certify acceptance or rejection of the MPP may cause the corresponding proposal to be considered non- responsive to the solicitation.",
+      "cite": "p47:44-p47:45",
+      "kind": "missing or incorrect required form"
     }
   ],
   "could_not_map": [
@@ -215,21 +369,156 @@
       "text": "Selection Panel scoring values will be only numbers in whole, half, or quarter-number increments (i.e. 2.25, 3.50, 4.00.). Scoring of the Proposal and Interview will be based on the Evaluation Assessment Guidelines as set forth in the table below.",
       "cite": "p44:18-p44:20",
       "why": "scoring method that applies to every row; no points of its own"
+    }
+  ],
+  "reviewed": [
+    {
+      "cite": "p2:43-p2:45",
+      "why": "table of contents or index entry"
     },
     {
-      "text": "Certifying “Reject” of the Maximum Compensation for Construction Manager Preconstruction Services will cause the corresponding Proposal to be considered non-responsive to the solicitation and the corresponding Proposal will not be scored or further considered in this Project’s procurement.",
-      "cite": "p46:38-p46:40",
-      "why": "pass/fail gate that removes a proposal from scoring; not a scored criterion"
+      "cite": "p5:40-p5:41",
+      "why": "not about how proposals are evaluated or rejected"
     },
     {
-      "text": "Provide a narrative of the Proposer’s largest foreseen safety risks for the Project and describe the safety programs, processes, and initiatives that the Proposer currently has in place to help manage/mitigate/or eliminate the safety risks.",
-      "cite": "p35:21-p35:23",
-      "why": "sits inside a scored criterion with no points of its own"
+      "cite": "p6:12",
+      "why": "not about how proposals are evaluated or rejected"
     },
     {
-      "text": "Multiple proposals from a single Proposer will be considered non-responsive and will not be evaluated or scored.",
-      "cite": "p24:16-p24:17",
-      "why": "pass/fail gate that removes a proposal from scoring; not a scored criterion"
+      "cite": "p9:7",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p10:5-p10:7",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p13:29-p13:34",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p19:24-p19:26",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p22:16",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p24:13-p24:14",
+      "why": "repeats a sentence already cited"
+    },
+    {
+      "cite": "p26:30",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p28:35",
+      "why": "repeats a sentence already cited"
+    },
+    {
+      "cite": "p28:40",
+      "why": "repeats a sentence already cited"
+    },
+    {
+      "cite": "p29:5",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p29:14",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p30:20",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p31:5-p31:7",
+      "why": "repeats a sentence already cited"
+    },
+    {
+      "cite": "p31:16-p31:17",
+      "why": "repeats a sentence already cited"
+    },
+    {
+      "cite": "p31:20",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p31:22-p31:23",
+      "why": "repeats a sentence already cited"
+    },
+    {
+      "cite": "p32:7",
+      "why": "repeats a sentence already cited"
+    },
+    {
+      "cite": "p33:9-p33:20",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p33:29-p33:39",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p34:8-p34:18",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p34:26-p34:27",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p38:9",
+      "why": "repeats a sentence already cited"
+    },
+    {
+      "cite": "p38:22",
+      "why": "repeats a sentence already cited"
+    },
+    {
+      "cite": "p42:32",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p44:8-p44:16",
+      "why": "repeats a sentence already cited"
+    },
+    {
+      "cite": "p45:7-p45:14",
+      "why": "repeats a sentence already cited"
+    },
+    {
+      "cite": "p45:23-p45:33",
+      "why": "repeats a sentence already cited"
+    },
+    {
+      "cite": "p45:43-p45:53",
+      "why": "repeats a sentence already cited"
+    },
+    {
+      "cite": "p46:16",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p46:18",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p46:25",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p47:17",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p47:18",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p47:26",
+      "why": "not about how proposals are evaluated or rejected"
     }
   ]
 }
