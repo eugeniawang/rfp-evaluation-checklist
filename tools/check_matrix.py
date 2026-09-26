@@ -16,10 +16,10 @@ What it proves (reference/schema.md is the contract it enforces):
      most 2 lines, so the number is the one beside the criterion and not one from nearby text.
   4. Rows are in the RFP's order: each criterion is cited later in the source than the last.
   5. The Points column sums to the stated total (per stage when staged), or `stop` names why.
-  6. Every key is a known key. The human columns (input_source, owner, human_check) and
-     `claude_does` are present and empty. `status` and every `could_not_map[].why` come from
-     closed vocabularies, so no free text exists anywhere in the matrix that is not a cited
-     quotation.
+  6. Every key is a known key. The four human columns (status, input_source, lead, reviewer)
+     are present and always empty on hand-over. Every `kind` and `could_not_map[].why` come
+     from closed vocabularies, so no free text exists anywhere in the matrix that is not a
+     cited quotation.
   7. A field with nothing to cite says exactly "not in source".
   8. `answering_section` never holds an instruction: a part beginning with an imperative verb
      (Provide, Describe, Identify, ...) is refused. Name a section/item/form, or say
@@ -40,13 +40,16 @@ import pathlib
 import re
 import sys
 
-COLUMNS = ["#", "section", "criterion", "points", "input_needed", "input_source",
-           "evaluation_criteria", "answering_section", "owner", "claude_does",
-           "human_check", "status"]
+# The nine real columns (Ruling 18:25). `section` is a tenth per-row field — still sourced
+# and cited — but it is not a table column: it renders as a group heading above the rows that
+# share it. `#` is a render-time row index, folded into the criterion cell; it is not a key.
+COLUMNS = ["status", "criterion", "points", "input_needed", "input_source",
+           "evaluation_criteria", "answering_section", "lead", "reviewer"]
+ROW_FIELDS = ["section"] + COLUMNS  # every real key a row dict may carry (plus optional "stage")
 SOURCED = ["section", "criterion", "points", "input_needed", "evaluation_criteria", "answering_section"]
 MULTI_OK = {"section", "input_needed", "evaluation_criteria", "answering_section"}  # not criterion, not points
-HUMAN = ["input_source", "owner", "human_check", "claude_does"]  # always "" on hand-over
-ROW_KEYS = set(COLUMNS[1:]) | {"stage"}
+HUMAN = ["status", "input_source", "lead", "reviewer"]  # always "" on hand-over
+ROW_KEYS = set(ROW_FIELDS) | {"stage"}
 TOP_KEYS = {"rfp", "source", "stated_total", "rows", "disqualifiers", "could_not_map", "reviewed", "stop"}
 REQUIRED_TOP = ("rfp", "source", "stated_total", "rows", "disqualifiers", "could_not_map", "reviewed")
 EMPTY = "not in source"
@@ -58,6 +61,7 @@ WHY = {
     "later stage whose criteria and points are not in this document",
     "submittal item the RFP does not tie to a scored criterion",
     "sits inside a scored criterion with no points of its own",
+    "named criterion with no points printed",
 }
 KIND = {
     "late submittal",
@@ -83,6 +87,7 @@ IMPERATIVE_VERBS = {
 STOP = {
     "points do not reconcile to the stated total",
     "no scoring table published",
+    "no total stated; rows are the RFP's own maximums",
 }
 CITE = re.compile(r"^p(\d+):(\d+)(?:-p(\d+):(\d+))?$")
 NUMBER = re.compile(r"(?<![\d.])\d+(?:\.\d+)?(?![\d.])")
@@ -96,6 +101,9 @@ TRIGGER_PATTERNS = [
     r"\bscor(e|ed|es|ing)\b",
     r"\bevaluation criteria\b",
     r"\bpass/fail\b",
+    r"\bnot scored\b",
+    r"\bmaximum\b",
+    r"\bmax\.?\s*\d",
     # gates
     r"non-?responsive",
     r"non-?responsib",
@@ -108,6 +116,16 @@ TRIGGER_PATTERNS = [
     r"\bprequalif",
 ]
 TRIGGER_RE = re.compile("|".join(TRIGGER_PATTERNS), re.IGNORECASE)
+
+# The coverage scan only: some sources set headings/emphasis with Unicode hyphen variants
+# (e.g. U+2011 non-breaking hyphen) instead of ASCII "-", which silently defeats `non-?responsive`
+# and friends. Normalize to ASCII "-" before matching triggers. Never used for verbatim/whole-word
+# text matching — a citation's quoted text still must match the source's actual characters.
+HYPHEN_VARIANTS = str.maketrans({chr(c): "-" for c in range(0x2010, 0x2016)} | {0x2212: "-"})
+
+
+def normalize_hyphens(s: str) -> str:
+    return s.translate(HYPHEN_VARIANTS)
 
 
 def norm(s: str) -> str:
@@ -261,7 +279,7 @@ def check_answering_section(where, v, problems):
 
 
 def check_coverage(m: dict, src: dict, problems: list):
-    hits = [key for key in src["order"] if TRIGGER_RE.search(src["lines"][key])]
+    hits = [key for key in src["order"] if TRIGGER_RE.search(normalize_hyphens(src["lines"][key]))]
     buckets = {
         "rows": collect_cites(m.get("rfp")) + collect_cites(m.get("stated_total")) + collect_cites(m.get("rows", [])),
         "disqualifiers": collect_cites(m.get("disqualifiers", [])),
@@ -339,8 +357,9 @@ def check(m: dict, base: pathlib.Path):
             continue
         extra = set(r) - ROW_KEYS
         if extra:
-            problems.append(f"row {i}: unknown key(s) {sorted(extra)}; nothing may exist outside the twelve columns")
-        for k in COLUMNS[1:]:
+            problems.append(f"row {i}: unknown key(s) {sorted(extra)}; nothing may exist outside the nine "
+                            f"columns plus section and stage")
+        for k in ROW_FIELDS:
             if k not in r:
                 problems.append(f"row {i}: missing field {k}")
         if stages is not None:
@@ -360,9 +379,7 @@ def check(m: dict, base: pathlib.Path):
                 stage_sum[r["stage"]] = stage_sum.get(r["stage"], 0) + p["value"]
         for k in HUMAN:
             if k in r and r[k] != "":
-                problems.append(f"row {i} {k}: must be empty (filled downstream), translator wrote {r[k]!r}")
-        if r.get("status") != "open":
-            problems.append(f"row {i} status: must be 'open'")
+                problems.append(f"row {i} {k}: human column must be empty, translator wrote {r[k]!r}")
         pos = cite_pos(src, r.get("criterion"))
         if pos is not None:
             if pos <= last_pos:
@@ -422,10 +439,17 @@ def check(m: dict, base: pathlib.Path):
             problems.append(f"points sum to {total:g} but the RFP states {st.get('value')}; "
                             f"set stop to 'points do not reconcile to the stated total' rather than adjusting a row")
     elif st == EMPTY:
-        if stop != "no scoring table published":
-            problems.append("stated_total is not in source; stop must be 'no scoring table published'")
-        if m["rows"]:
-            problems.append("no stated total in source but the matrix has rows with points")
+        if stop == "no total stated; rows are the RFP's own maximums":
+            if not m["rows"]:
+                problems.append("stop 'no total stated; rows are the RFP's own maximums' is set but the "
+                                f"matrix has no rows")
+        elif stop == "no scoring table published":
+            if m["rows"]:
+                problems.append("no stated total in source but the matrix has rows with points")
+        else:
+            problems.append("stated_total is not in source; stop must be 'no scoring table published' "
+                            "(no rows) or \"no total stated; rows are the RFP's own maximums\" (rows carry "
+                            "their own printed maximums)")
 
     # Coverage runs last, over the whole (already-parsed-enough) matrix and the loaded source.
     check_coverage(m, src, problems)

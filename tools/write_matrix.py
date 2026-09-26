@@ -19,10 +19,13 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from check_matrix import COLUMNS, check, coverage_stats, load_source, reconciles, stated_label  # noqa: E402
 
 EMPTY = "not in source"
-HUMAN_KEYS = ("input_source", "owner", "human_check", "claude_does")
-HDR = ["#", "RFP section", "RFP criterion (their words)", "Points", "Input needed",
-       "Input data source", "Evaluation criteria (what the scorer looks for)",
-       "Proposal section that answers it", "Owner", "Claude does", "Human check", "Status"]
+HUMAN_KEYS = ("status", "input_source", "lead", "reviewer")  # Ruling 18:25: claude_does is gone
+# The nine columns, in COLUMNS order (Ruling 18:25). `section` is not a column: it renders as
+# a group heading above the rows that share it (see section_groups()).
+HDR = ["Status", "What the RFP will score (their exact words)", "Points for this item",
+       "What the RFP asks you to provide", "Where your team will get it",
+       "What the scorer will look for", "Where it goes in your proposal",
+       "Lead for this section", "Reviewer for this section"]
 
 
 def cell(v):
@@ -40,7 +43,24 @@ def cell(v):
 
 
 def row_cells(i, r):
-    return [str(i)] + [cell(r.get(k, "")) for k in COLUMNS[1:]]
+    """The nine column cells. The row number isn't its own column (Ruling 18:25): it's
+    folded into the criterion cell as a leading 'N. '."""
+    cells = [cell(r.get(k, "")) for k in COLUMNS]
+    ci = COLUMNS.index("criterion")
+    cells[ci] = f"{i}. {cells[ci]}" if cells[ci] else f"{i}."
+    return cells
+
+
+def section_groups(m):
+    """Rows grouped by consecutive runs of the same rendered `section` cell, RFP order kept."""
+    groups = []
+    for i, r in enumerate(m["rows"], start=1):
+        label = cell(r.get("section", ""))
+        if groups and groups[-1][0] == label:
+            groups[-1][1].append((i, r))
+        else:
+            groups.append((label, [(i, r)]))
+    return groups
 
 
 def stage_sums(m):
@@ -97,11 +117,14 @@ def to_markdown(m, cov):
         out.append(f"## STOP: {m['stop']}")
     out.append("")
     out.append("## Part 1: Scored criteria")
-    out.append("")
-    out.append("| " + " | ".join(HDR) + " |")
-    out.append("|" + "---|" * len(HDR))
-    for i, r in enumerate(m["rows"], start=1):
-        out.append("| " + " | ".join(c.replace("|", "\\|").replace("\n", " ") for c in row_cells(i, r)) + " |")
+    for label, group in section_groups(m):
+        out.append("")
+        out.append(f"### From the RFP section: {label}" if label else "### (no RFP section named)")
+        out.append("")
+        out.append("| " + " | ".join(HDR) + " |")
+        out.append("|" + "---|" * len(HDR))
+        for i, r in group:
+            out.append("| " + " | ".join(c.replace("|", "\\|").replace("\n", " ") for c in row_cells(i, r)) + " |")
     out.append("")
     out.append("**TOTAL** points: " + str(m["_sum"]))
     out.append("")
@@ -121,19 +144,25 @@ def to_markdown(m, cov):
         out.append("- nothing: every scoring sentence found in the source is in a row above")
     out.append("")
     out.append("## Human columns still empty")
-    out.append("Input data source, Owner, Human check and Claude does are never filled by the translator. "
-               f"{len(m['rows'])} row(s) need a person.")
+    out.append("Status, Where your team will get it, Lead for this section and Reviewer for this section "
+               f"are never filled by the translator. {len(m['rows'])} row(s) need a person.")
     return "\n".join(out) + "\n"
 
 
 def to_csv(m, path):
-    hdr = ["#"] + COLUMNS[1:]
+    n = len(HDR)
     with open(path, "w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(hdr)
-        for i, r in enumerate(m["rows"], start=1):
-            w.writerow(row_cells(i, r))
-        w.writerow(["", "", "TOTAL", m["_sum"]] + [""] * 8)
+        for label, group in section_groups(m):
+            w.writerow([f"From the RFP section: {label}" if label else "(no RFP section named)"] + [""] * (n - 1))
+            w.writerow(HDR)
+            for i, r in group:
+                w.writerow(row_cells(i, r))
+            w.writerow([""] * n)
+        total_row = [""] * n
+        total_row[COLUMNS.index("criterion")] = "TOTAL"
+        total_row[COLUMNS.index("points")] = m["_sum"]
+        w.writerow(total_row)
 
 
 def to_xlsx(m, path):
@@ -143,33 +172,56 @@ def to_xlsx(m, path):
     except ImportError:
         print("openpyxl not installed; XLSX skipped (pip install openpyxl)")
         return
+    n = len(HDR)  # 9
+    pts_col = COLUMNS.index("points") + 1   # 1-indexed spreadsheet column for "points"
+    crit_col = COLUMNS.index("criterion") + 1
+    last_col_letter = openpyxl.utils.get_column_letter(n)
     wb = openpyxl.Workbook()
     ws = wb.active
     ws.title = "Evaluation Matrix"
     ws["A1"] = f"Evaluation matrix — {cell(m['rfp'])} — stated total {stated_label(m['stated_total'])} — sum {m['_sum']}"
     ws["A1"].font = Font(bold=True, size=12)
-    ws.merge_cells("A1:L1")
-    for c, h in enumerate(HDR, start=1):
-        x = ws.cell(row=2, column=c, value=h)
-        x.font = Font(bold=True, color="FFFFFF")
-        x.fill = PatternFill("solid", fgColor="1F3A5F")
-        x.alignment = Alignment(wrap_text=True, vertical="center", horizontal="center")
-    for i, r in enumerate(m["rows"], start=1):
-        vals = row_cells(i, r)
-        for c, v in enumerate(vals, start=1):
-            if c == 4 and isinstance(r.get("points"), dict) and isinstance(r["points"].get("value"), (int, float)):
-                v = r["points"]["value"]
-            x = ws.cell(row=i + 2, column=c, value=v)
-            x.alignment = Alignment(wrap_text=True, vertical="top",
-                                    horizontal="center" if c in (1, 4, 12) else "left")
-    tr = len(m["rows"]) + 3
-    ws.cell(row=tr, column=3, value="TOTAL").font = Font(bold=True)
-    ws.cell(row=tr, column=4, value=f"=SUM(D3:D{tr - 1})").font = Font(bold=True)
-    widths = {"A": 5, "B": 24, "C": 44, "D": 9, "E": 52, "F": 20, "G": 52, "H": 34, "I": 14, "J": 36, "K": 20, "L": 10}
-    for col, w in widths.items():
-        ws.column_dimensions[col].width = w
-    ws.freeze_panes = "C3"
-    ws.auto_filter.ref = f"A2:L{tr - 1}"
+    ws.merge_cells(f"A1:{last_col_letter}1")
+    row = 3
+    header_rows = []  # rows that get the header fill/font (repeated per section)
+    point_cells = []  # (row, col) of numeric points values, for the SUM formula
+    for label, group in section_groups(m):
+        ws.cell(row=row, column=1, value=f"From the RFP section: {label}" if label else "(no RFP section named)")
+        ws.cell(row=row, column=1).font = Font(bold=True, italic=True)
+        ws.merge_cells(start_row=row, start_column=1, end_row=row, end_column=n)
+        row += 1
+        header_rows.append(row)
+        for c, h in enumerate(HDR, start=1):
+            ws.cell(row=row, column=c, value=h)
+        row += 1
+        for i, r in group:
+            vals = row_cells(i, r)
+            for c, v in enumerate(vals, start=1):
+                if c == pts_col and isinstance(r.get("points"), dict) and isinstance(r["points"].get("value"), (int, float)):
+                    v = r["points"]["value"]
+                    point_cells.append((row, c))
+                x = ws.cell(row=row, column=c, value=v)
+                x.alignment = Alignment(wrap_text=True, vertical="top",
+                                        horizontal="center" if c == pts_col else "left")
+            row += 1
+    for hr in header_rows:
+        for c in range(1, n + 1):
+            x = ws.cell(row=hr, column=c)
+            x.font = Font(bold=True, color="FFFFFF")
+            x.fill = PatternFill("solid", fgColor="1F3A5F")
+            x.alignment = Alignment(wrap_text=True, vertical="center", horizontal="center")
+    tr = row + 1
+    ws.cell(row=tr, column=crit_col, value="TOTAL").font = Font(bold=True)
+    pts_letter = openpyxl.utils.get_column_letter(pts_col)
+    if point_cells:
+        formula = "=" + "+".join(f"{pts_letter}{r}" for r, _ in point_cells)
+    else:
+        formula = 0
+    ws.cell(row=tr, column=pts_col, value=formula).font = Font(bold=True)
+    widths = {1: 10, 2: 44, 3: 9, 4: 46, 5: 24, 6: 46, 7: 30, 8: 16, 9: 18}
+    for c, w in widths.items():
+        ws.column_dimensions[openpyxl.utils.get_column_letter(c)].width = w
+    ws.freeze_panes = "B4"
     wb.save(path)
 
 

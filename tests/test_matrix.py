@@ -36,8 +36,12 @@ class ShippedMatricesPass(unittest.TestCase):
                 self.assertEqual(problems(load(p)), [])
 
     def test_shipped_matrices_reconcile(self):
+        # A matrix with a valid `stop` is complete without reconciling (that's the point of
+        # `stop`) — only a matrix with no stop is required to reconcile.
         for p in sorted(OUT.glob("*.matrix.json")):
             m = load(p)
+            if m.get("stop"):
+                continue
             _, total = check_matrix.check(m, OUT)
             self.assertTrue(check_matrix.reconciles(m, total), p.name)
 
@@ -49,7 +53,7 @@ class ShippedMatricesPass(unittest.TestCase):
                 if keys is None:
                     keys = k
                 self.assertEqual(k, keys, f"{p.name}: row shape drifted")
-        self.assertEqual(keys, set(check_matrix.COLUMNS[1:]))
+        self.assertEqual(keys, set(check_matrix.ROW_FIELDS))
 
 
 class SeenToFail(unittest.TestCase):
@@ -78,15 +82,25 @@ class SeenToFail(unittest.TestCase):
         self.assertTrue(any("not in the source" in x for x in problems(self.m)))
 
     def test_filled_human_column_fails(self):
-        self.m["rows"][0]["owner"] = "Proposal manager"
+        self.m["rows"][0]["lead"] = "Proposal manager"
         self.assertTrue(any("human column must be empty" in x for x in problems(self.m)))
+
+    def test_filled_status_fails(self):
+        self.m["rows"][0]["status"] = "open"
+        self.assertTrue(any("status" in x and "human column must be empty" in x for x in problems(self.m)))
 
     def test_sum_mismatch_without_stop_fails(self):
         self.m["rows"].pop()  # drop Cost Proposal, 35 points
         self.assertTrue(any("points sum to 65" in x for x in problems(self.m)))
 
     def test_sum_mismatch_with_stop_is_valid(self):
-        self.m["rows"].pop()
+        dropped = self.m["rows"].pop()  # drop Cost Proposal, 35 points
+        # dropping the row can't drop its criterion sentence from the source: it has to move
+        # to could_not_map so the coverage check still finds it accounted for.
+        self.m["could_not_map"].append({
+            "text": dropped["criterion"]["text"], "cite": dropped["criterion"]["cite"],
+            "why": "sits inside a scored criterion with no points of its own",
+        })
         self.m["stop"] = "points do not reconcile to the stated total"
         self.assertEqual(problems(self.m), [])
         _, total = check_matrix.check(self.m, OUT)
@@ -96,10 +110,6 @@ class SeenToFail(unittest.TestCase):
         self.m["rows"][2]["answering_section"] = {"text": "", "cite": "p11:18"}
         self.assertTrue(any("empty text" in x for x in problems(self.m)))
 
-    def test_free_text_claude_does_fails(self):
-        self.m["rows"][0]["claude_does"] = "write something great"
-        self.assertTrue(any("claude_does" in x for x in problems(self.m)))
-
     def test_could_not_map_needs_why_and_citation(self):
         self.m["could_not_map"][0]["why"] = ""
         self.assertTrue(any("why: not one of the fixed reasons" in x for x in problems(self.m)))
@@ -107,9 +117,16 @@ class SeenToFail(unittest.TestCase):
         self.assertTrue(any("could_not_map 1" in x and "not verbatim" in x for x in problems(self.m)))
 
     def test_no_scoring_table_is_a_valid_stop(self):
-        m = {"rfp": self.m["rfp"], "source": self.m["source"], "stated_total": "not in source",
-             "rows": [], "could_not_map": [], "stop": "no scoring table published"}
-        self.assertEqual(problems(m), [])
+        # A real "no scoring table" RFP still has to pass the coverage check, so this can't
+        # borrow the full tucker016 source (which is full of gate language elsewhere in the
+        # document); it gets its own trigger-free stand-in source instead.
+        with tempfile.TemporaryDirectory() as d:
+            src_path = pathlib.Path(d) / "no-scoring.source.txt"
+            src_path.write_text("p1:1|Request for Qualifications\np1:2|This is a qualifications-based selection.\n")
+            m = {"rfp": {"text": "Request for Qualifications", "cite": "p1:1"}, "source": str(src_path),
+                 "stated_total": "not in source", "rows": [], "disqualifiers": [], "could_not_map": [],
+                 "reviewed": [], "stop": "no scoring table published"}
+            self.assertEqual(check_matrix.check(m, pathlib.Path(d))[0], [])
 
     # --- the holes two reviewers found in the first version, each now closed ---
 
@@ -126,12 +143,17 @@ class SeenToFail(unittest.TestCase):
         self.m["rows"][0]["points"] = {"value": 2026, "cite": "p11:1-p11:14"}
         self.assertTrue(any("row 1 points" in x for x in problems(self.m)))
 
+    @staticmethod
+    def _first_part(v):
+        """input_needed etc. may now be a single {text,cite} object or a list of them."""
+        return v[0] if isinstance(v, list) else v
+
     def test_citation_across_pages_fails(self):
-        self.m["rows"][0]["input_needed"]["cite"] = "p10:20-p11:2"
+        self._first_part(self.m["rows"][0]["input_needed"])["cite"] = "p10:20-p11:2"
         self.assertTrue(any("crosses a page" in x for x in problems(self.m)))
 
     def test_citation_wider_than_twelve_lines_fails(self):
-        self.m["rows"][0]["input_needed"]["cite"] = "p10:1-p10:24"
+        self._first_part(self.m["rows"][0]["input_needed"])["cite"] = "p10:1-p10:24"
         self.assertTrue(any("spans 24 lines; the limit is 12" in x for x in problems(self.m)))
 
     def test_unknown_row_key_fails(self):
@@ -156,8 +178,10 @@ class SeenToFail(unittest.TestCase):
         self.assertTrue(any("missing top-level key could_not_map" in x for x in problems(self.m)))
 
     def test_missing_human_column_fails(self):
-        del self.m["rows"][0]["owner"]
-        self.assertTrue(any("row 1: missing field owner" in x for x in problems(self.m)))
+        # "status" is a human column under both the pre- and post-Ruling-18:25 schema, so this
+        # doesn't depend on whether outputs/ has been migrated to lead/reviewer yet.
+        del self.m["rows"][0]["status"]
+        self.assertTrue(any("row 1: missing field status" in x for x in problems(self.m)))
 
     def test_stage_on_flat_matrix_fails(self):
         self.m["rows"][0]["stage"] = "Proposal"
@@ -224,6 +248,190 @@ class CommandLine(unittest.TestCase):
             r = subprocess.run([sys.executable, ROOT / "tools/extract.py", src], capture_output=True, text=True)
             self.assertNotEqual(r.returncode, 0)
             self.assertIn("no text found", r.stderr + r.stdout)
+
+
+# ---------------------------------------------------------------------------------------
+# v2 additions. These build their own tiny fixture (a source file + matrix, in a temp
+# dir) rather than reusing outputs/, so they don't race with the matrix workers rebuilding
+# those files to v2 in parallel, and don't depend on outputs/ already being v2-valid.
+# ---------------------------------------------------------------------------------------
+
+MINI_SOURCE_LINES = [
+    "Sample RFP No. 2026-001",                                              # p1:1
+    "Evaluation Criteria",                                                  # p1:2
+    "Staff Qualifications - 50 points",                                     # p1:3
+    "Provide resumes of key staff.",                                        # p1:4
+    "Proposal Section 3, Key Personnel",                                    # p1:5
+    "Total points possible: 50",                                            # p1:6
+    "Late submittals will not be considered.",                              # p1:7
+    "See Table of Contents item 4.2 for Evaluation Criteria details.",      # p1:8
+    "Provide the organizational chart for review.",                        # p1:9
+    "Note: A < B applies here.",                                            # p1:10
+]
+
+
+def write_mini_source(d: pathlib.Path) -> pathlib.Path:
+    p = d / "mini.source.txt"
+    p.write_text("\n".join(f"p1:{i}|{t}" for i, t in enumerate(MINI_SOURCE_LINES, start=1)) + "\n")
+    return p
+
+
+def mini_matrix(src_path) -> dict:
+    return {
+        "rfp": {"text": "Sample RFP No. 2026-001", "cite": "p1:1"},
+        "source": str(src_path),
+        "stated_total": {"value": 50, "cite": "p1:6"},
+        "rows": [
+            {
+                "section": {"text": "Evaluation Criteria", "cite": "p1:2"},
+                "criterion": {"text": "Staff Qualifications - 50 points", "cite": "p1:3"},
+                "points": {"value": 50, "cite": "p1:3"},
+                "input_needed": {"text": "Provide resumes of key staff.", "cite": "p1:4"},
+                "input_source": "",
+                "evaluation_criteria": {"text": "Staff Qualifications - 50 points", "cite": "p1:3"},
+                "answering_section": {"text": "Proposal Section 3, Key Personnel", "cite": "p1:5"},
+                "lead": "",
+                "reviewer": "",
+                "status": "",
+            }
+        ],
+        "disqualifiers": [
+            {"text": "Late submittals will not be considered.", "cite": "p1:7", "kind": "late submittal"},
+        ],
+        "could_not_map": [
+            {"text": "Note: A < B applies here.", "cite": "p1:10",
+             "why": "sits inside a scored criterion with no points of its own"},
+        ],
+        "reviewed": [
+            {"cite": "p1:8", "why": "table of contents or index entry"},
+        ],
+    }
+
+
+class V2Additions(unittest.TestCase):
+    """The five new refusal cases the spec asks for, plus proof the good baseline passes."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.tmp = tempfile.TemporaryDirectory()
+        cls.dir = pathlib.Path(cls.tmp.name)
+        cls.src_path = write_mini_source(cls.dir)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.tmp.cleanup()
+
+    def base(self):
+        return mini_matrix(self.src_path)
+
+    def problems(self, m):
+        return check_matrix.check(m, self.dir)[0]
+
+    def test_good_baseline_passes(self):
+        probs, total = check_matrix.check(self.base(), self.dir)
+        self.assertEqual(probs, [])
+        self.assertEqual(total, 50)
+
+    def test_disqualifier_bad_kind_fails(self):
+        m = self.base()
+        m["disqualifiers"][0]["kind"] = "just seemed important"
+        self.assertTrue(any("kind: not one of the fixed phrases" in x for x in self.problems(m)))
+
+    def test_unaccounted_coverage_hit_fails(self):
+        m = self.base()
+        m["reviewed"] = []  # p1:8 ("...Evaluation Criteria details.") is now cited nowhere
+        probs = self.problems(m)
+        self.assertTrue(any(x.startswith("COVERAGE: p1:8") for x in probs), probs)
+
+    def test_imperative_answering_section_fails(self):
+        m = self.base()
+        m["rows"][0]["answering_section"] = {
+            "text": "Provide the organizational chart for review.", "cite": "p1:9",
+        }
+        probs = self.problems(m)
+        self.assertTrue(any("imperative verb" in x for x in probs), probs)
+
+    def test_filled_status_fails(self):
+        m = self.base()
+        m["rows"][0]["status"] = "open"
+        probs = self.problems(m)
+        self.assertTrue(any("status" in x and "must be empty" in x for x in probs), probs)
+
+    def test_claude_does_key_is_rejected(self):
+        # Ruling 18:25 removed claude_does from the schema entirely.
+        m = self.base()
+        m["rows"][0]["claude_does"] = ""
+        probs = self.problems(m)
+        self.assertTrue(any("claude_does" in x and "unknown key" in x for x in probs), probs)
+
+    def test_multi_part_cell_with_one_bad_part_fails(self):
+        m = self.base()
+        m["rows"][0]["input_needed"] = [
+            {"text": "Provide resumes of key staff.", "cite": "p1:4"},
+            {"text": "Something the RFP never said", "cite": "p1:4"},
+        ]
+        probs = self.problems(m)
+        self.assertTrue(any("part 2" in x and "not verbatim" in x for x in probs), probs)
+
+    def test_good_multi_part_cell_passes(self):
+        m = self.base()
+        m["rows"][0]["input_needed"] = [{"text": "Provide resumes of key staff.", "cite": "p1:4"}]
+        self.assertEqual(self.problems(m), [])
+
+
+class CoverageUnicodeHyphens(unittest.TestCase):
+    """Correction 18:17: a Unicode hyphen (U+2011 here) must not defeat `non-?responsive`."""
+
+    def test_unicode_hyphen_gate_line_is_still_a_coverage_hit(self):
+        with tempfile.TemporaryDirectory() as d:
+            tmp = pathlib.Path(d)
+            src = tmp / "src.txt"
+            # U+2011 (non-breaking hyphen) in "non‑responsive" — an ASCII-only scan misses it.
+            src.write_text(
+                "p1:1|Sample RFP\n"
+                "p1:2|A proposal found non‑responsive will not be scored.\n"
+            )
+            m = {
+                "rfp": {"text": "Sample RFP", "cite": "p1:1"}, "source": str(src),
+                "stated_total": "not in source", "rows": [], "disqualifiers": [], "could_not_map": [],
+                "reviewed": [], "stop": "no scoring table published",
+            }
+            probs = check_matrix.check(m, tmp)[0]
+            self.assertTrue(any(x.startswith("COVERAGE: p1:2") for x in probs), probs)
+            # accounting for it (any bucket) clears the failure
+            m["reviewed"] = [{"cite": "p1:2", "why": "not about how proposals are evaluated or rejected"}]
+            self.assertEqual(check_matrix.check(m, tmp)[0], [])
+
+
+class HTMLSmoke(unittest.TestCase):
+    """write_matrix.py must actually write the .html, and it must escape source text."""
+
+    def test_html_written_with_every_citation_and_escaped_html(self):
+        with tempfile.TemporaryDirectory() as d:
+            tmp = pathlib.Path(d)
+            src_path = write_mini_source(tmp)
+            m = mini_matrix(src_path)
+            matrix_path = tmp / "mini.matrix.json"
+            matrix_path.write_text(json.dumps(m))
+            r = subprocess.run([sys.executable, ROOT / "tools/write_matrix.py", matrix_path],
+                               capture_output=True, text=True)
+            self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+            html_path = tmp / "mini.matrix.html"
+            self.assertTrue(html_path.exists())
+            content = html_path.read_text()
+            # every citation that actually appears in a rendered part (rfp, stated_total,
+            # the row's sourced cells, the disqualifier, the could_not_map entry). The
+            # `reviewed` list (p1:8) is bookkeeping for the coverage check, not something
+            # Part 1/2/3 renders, so it is not expected to appear here.
+            for cite in ("p1:1", "p1:2", "p1:3", "p1:4", "p1:5", "p1:6", "p1:7", "p1:10"):
+                self.assertIn(cite, content)
+            # the could_not_map entry's text contains a literal "<" from the source; the
+            # rendered <li> must carry it escaped, never as a raw, unescaped tag. (The
+            # embedded JSON source blob inside <script> legitimately contains the raw "<" —
+            # that's JS/JSON string data, not markup, and is only escaped when the sidebar
+            # JS writes it into the DOM at click time — so the check is scoped to the <li>.)
+            self.assertIn("<li>Note: A &lt; B applies here.", content)
+            self.assertNotIn("<li>Note: A < B applies here.", content)
 
 
 if __name__ == "__main__":
