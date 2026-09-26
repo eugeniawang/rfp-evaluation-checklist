@@ -3,70 +3,310 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RFP Evaluation Criteria Checklist</title>
-<meta name="description" content="Turn a public-sector RFP into a checklist of how you'll be scored and what gets you thrown out, every line linked to the page it came from.">
+<title>RFP Evaluation Checklist</title>
+<meta name="description" content="Turn any public-sector RFP into a checklist of how you'll be scored and what gets you thrown out, with every line linked to its source.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RFP Evaluation Checklist">
+<meta property="og:description" content="Turn any public-sector RFP into a checklist of how you'll be scored and what gets you thrown out, with every line linked to its source.">
+<meta property="og:url" content="https://eugeniawang.github.io/rfp-evaluation-checklist/">
+<meta property="og:image" content="https://eugeniawang.github.io/rfp-evaluation-checklist/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta property="og:image:alt" content="The RFP Evaluation Checklist demo page for City of Tucker RFP 2026-008, with orange citation chips beside every fact.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RFP Evaluation Checklist">
+<meta name="twitter:description" content="Turn any public-sector RFP into a checklist of how you'll be scored and what gets you thrown out, with every line linked to its source.">
+<meta name="twitter:image" content="https://eugeniawang.github.io/rfp-evaluation-checklist/img/og-card.png">
 <style>
-:root{--paper:#f5f3ef;--sheet:#fffefb;--ink:#1e2422;--pencil:#5a615e;--rule:#ddd8cf;--accent:#0e5a55;--accent-soft:#e3eeeb;--gate:#9b2226;--gate-soft:#f7e4e2;--orange:#b85a0c;--chip-bg:#fde5cc}
-@media (prefers-color-scheme:dark){:root{--paper:#161a19;--sheet:#1e2322;--ink:#ecebe7;--pencil:#a9afac;--rule:#343a38;--accent:#5cc2b6;--accent-soft:#1f3431;--gate:#f08a8a;--gate-soft:#3a2323;--orange:#f3a35c;--chip-bg:#4a3322}}
+:root{
+  --paper:#f5f3ef;--sheet:#fffefb;--ink:#1e2422;--pencil:#5a615e;--rule:#ddd8cf;
+  --teal:#0e5a55;--teal-soft:#e3eeeb;--grid:rgba(14,90,85,.07);
+  --chip-bg:#fde5cc;--chip-fg:#873b04;--orange:#b85a0c;--nis-bg:#ebeae6;
+  --gate:#a3262d;--gate-soft:#fbecec;--mark:#ffe27a;--mark-ink:#1e2422;
+  --ok:#1d6b3a;--bad:#a3262d;--term:#1e2422;--term-ink:#e7e5df;
+  --head:"DIN Alternate","DIN Next",Bahnschrift,"D-DIN","Barlow Semi Condensed","Roboto Condensed","Arial Narrow",sans-serif;
+  --body:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#121614;--sheet:#1a1f1d;--ink:#e7e5df;--pencil:#a3a69f;--rule:#2f3632;
+  --teal:#5cc2b3;--teal-soft:#1d302d;--grid:rgba(92,194,179,.06);
+  --chip-bg:#45290f;--chip-fg:#ffc996;--orange:#f0a060;--nis-bg:#2e3130;
+  --gate:#f08a8a;--gate-soft:#2c1b1d;--mark:#6b5710;--mark-ink:#fff6d6;
+  --ok:#6fcf8f;--bad:#f08a8a;--term:#0c0f0e;--term-ink:#e7e5df;
+}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif}
-main{max-width:860px;margin:0 auto;padding:48px 16px 64px}
-.eyebrow{color:var(--pencil);font-size:14px;letter-spacing:.04em;text-transform:uppercase;margin:0 0 8px}
-h1{font-size:clamp(30px,5vw,44px);line-height:1.12;margin:0 0 16px}
-.lede{font-size:19px;color:var(--pencil);max-width:640px;margin:0 0 28px}
-.btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:48px}
-.btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid var(--accent)}
-.btn.primary{background:var(--accent);color:var(--sheet)}
-.btn.ghost{color:var(--accent);background:transparent}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-bottom:48px}
-.card{background:var(--sheet);border:1px solid var(--rule);border-top:4px solid var(--accent);border-radius:10px;padding:18px}
-.card.gate{border-top-color:var(--gate)}
-.card.src{border-top-color:var(--orange)}
-.card h2{font-size:18px;margin:0 0 6px}
-.card p{margin:0;color:var(--pencil);font-size:15.5px}
-.chip{display:inline-block;background:var(--chip-bg);color:var(--orange);border-radius:6px;padding:1px 7px;font-size:13px;font-weight:600;white-space:nowrap}
-h2.sec{font-size:22px;margin:0 0 12px}
-ol.steps{padding-left:22px;margin:0 0 40px}
-ol.steps li{margin-bottom:10px}
-code{background:var(--accent-soft);padding:1px 6px;border-radius:5px;font-size:15px}
-ul.demos{list-style:none;padding:0;margin:0 0 40px}
-ul.demos li{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:14px 16px;margin-bottom:10px}
-ul.demos a{color:var(--accent);font-weight:600}
-footer{color:var(--pencil);font-size:14px;border-top:1px solid var(--rule);padding-top:16px}
-footer a{color:var(--accent)}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--body)}
+img{max-width:100%;display:block;height:auto}
+a{color:var(--teal)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+@media (min-width:720px){.wrap{padding:0 32px}}
+h1,h2,h3{font-family:var(--head);font-weight:700;letter-spacing:-.005em;line-height:1.1;margin:0}
+h2{font-size:clamp(28px,4vw,40px);margin-bottom:18px}
+h3{font-size:22px;margin-bottom:8px}
+p{margin:0 0 14px}
+.measure{max-width:62ch}
+section{padding:60px 0}
+@media (min-width:900px){section{padding:84px 0}}
+
+/* chips, copied in spirit from the demo so they read as the same thing */
+.chip{display:inline-block;background:var(--chip-bg);color:var(--chip-fg);border-radius:4px;padding:1px 7px;font:600 .8em/1.5 var(--body);white-space:nowrap;vertical-align:.08em}
+.nis{display:inline-block;background:var(--nis-bg);color:var(--pencil);border:1px dashed var(--pencil);border-radius:4px;padding:0 6px;font:600 .8em/1.5 var(--body);white-space:nowrap}
+
+/* hero: the demo's grid paper */
+.hero{padding:64px 0 0;background-color:var(--paper);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px;border-bottom:1px solid var(--rule)}
+@media (min-width:900px){.hero{padding-top:96px}}
+.hero h1{font-size:clamp(44px,8.4vw,88px);line-height:.95;letter-spacing:-.02em;max-width:14ch;color:var(--teal)}
+.promise{font-size:clamp(19px,2.2vw,23px);line-height:1.45;max-width:36ch;margin:26px 0 30px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:6px;font-weight:650;font-size:17px;text-decoration:none;border:2px solid var(--teal)}
+.btn.primary{background:var(--teal);color:var(--sheet)}
+.btn.primary:hover{filter:brightness(1.12)}
+.btn.ghost{color:var(--teal);background:var(--sheet)}
+.btn.ghost:hover{background:var(--teal-soft)}
+.fine{color:var(--pencil);font-size:15px;margin:18px 0 0}
+.hero-shot{margin-top:52px;margin-bottom:-1px}
+@media (min-width:1000px){
+  .hero{padding-top:80px}
+  .hero-top{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:end}
+  .hero-top .promise{margin-top:0}
+  .hero-shot{margin-top:56px}
+}
+
+/* browser frame */
+.frame{background:var(--sheet);border:1px solid var(--rule);border-radius:10px 10px 0 0;overflow:hidden;box-shadow:0 30px 60px -30px rgba(30,36,34,.35)}
+.frame.full{border-radius:10px}
+.bar{display:flex;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid var(--rule);background:var(--paper)}
+.bar i{width:10px;height:10px;border-radius:50%;background:var(--rule);flex:none}
+.url{flex:1;min-width:0;font:13px/1.6 var(--mono);color:var(--pencil);background:var(--sheet);border:1px solid var(--rule);border-radius:5px;padding:2px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.frame a{display:block}
+figcaption{color:var(--pencil);font-size:15px;margin-top:12px}
+
+/* problem */
+.split{display:grid;gap:40px}
+@media (min-width:900px){.split{grid-template-columns:1.15fr .85fr;gap:64px;align-items:start}}
+.evidence{background:var(--sheet);border:1px solid var(--rule);border-left:5px solid var(--gate);border-radius:6px;padding:22px 22px 18px}
+.evidence h3{color:var(--gate);font-size:20px;margin-bottom:14px}
+.evidence ul{list-style:none;margin:0;padding:0}
+.evidence li{padding:10px 0;border-top:1px solid var(--rule)}
+.evidence li:first-child{border-top:0;padding-top:0}
+.evidence .src{color:var(--pencil);font-size:14px;margin:14px 0 0}
+
+/* what it does */
+.does{background:var(--sheet);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.three{display:grid;gap:32px;margin:40px 0 56px}
+@media (min-width:820px){.three{grid-template-columns:repeat(3,1fr);gap:40px}}
+.three > div{border-top:4px solid var(--teal);padding-top:18px}
+.three > div.gate{border-top-color:var(--gate)}
+.three > div.src{border-top-color:var(--orange)}
+.three p{color:var(--pencil);margin:0}
+.three strong{color:var(--ink);font-weight:600}
+
+/* honest */
+.honest-grid{display:grid;gap:28px;margin-top:36px}
+@media (min-width:960px){.honest-grid{grid-template-columns:1fr 1fr;gap:32px}}
+.panel{border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:var(--sheet)}
+.panel-h{font-size:14px;color:var(--pencil);padding:10px 14px;border-bottom:1px solid var(--rule);background:var(--paper)}
+.lines{margin:0;padding:10px 0;font:14px/1.7 var(--mono);overflow-x:auto}
+.ln{display:grid;grid-template-columns:3.2em 1fr;padding:0 14px 0 0;white-space:pre-wrap}
+.ln b{font-weight:400;color:var(--pencil);text-align:right;padding-right:14px}
+.ln.hl{background:var(--mark);color:var(--mark-ink)}
+.ln.hl b{color:var(--mark-ink);font-weight:700}
+.quote{padding:14px;border-top:1px solid var(--rule);font-size:16px}
+.term{background:var(--term);color:var(--term-ink);border-radius:8px;padding:16px 18px;font:13.5px/1.65 var(--mono);overflow-x:auto;margin:0 0 12px;white-space:pre-wrap;word-break:break-word}
+.term .ok{color:#6fcf8f;font-weight:700}
+.term .bad{color:#f08a8a;font-weight:700}
+.term .cmd{color:#a3a69f}
+.step-label{font-size:15px;color:var(--pencil);margin:0 0 8px}
+.step-label + .term{margin-bottom:22px}
+.step-label em{font-style:normal;background:var(--gate-soft);color:var(--gate);padding:0 4px;border-radius:3px}
+
+/* how to use */
+.use{background:var(--sheet);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.two{display:grid;gap:40px;margin-top:36px}
+.two > div,.split > *,.honest-grid > *,ol.cli li > div{min-width:0}
+@media (min-width:880px){.two{grid-template-columns:1fr 1fr;gap:56px}}
+.say{font:600 22px/1.4 var(--mono);background:var(--teal-soft);color:var(--ink);border-left:4px solid var(--teal);padding:14px 18px;border-radius:0 6px 6px 0;margin:6px 0 14px}
+ol.cli{margin:0;padding:0;list-style:none;counter-reset:s}
+ol.cli li{counter-increment:s;display:grid;grid-template-columns:28px 1fr;gap:4px 10px;margin-bottom:16px}
+ol.cli li::before{content:counter(s);font:700 15px/28px var(--head);width:28px;height:28px;text-align:center;border-radius:50%;background:var(--teal);color:var(--sheet)}
+ol.cli p{margin:2px 0 6px}
+ol.cli code,.inline{font:12.5px/1.6 var(--mono);background:var(--paper);border:1px solid var(--rule);border-radius:5px;padding:6px 10px;display:block;white-space:pre-wrap;overflow-wrap:anywhere}
+.inline{display:inline;padding:1px 5px;white-space:normal}
+.muted{color:var(--pencil)}
+
+/* demos */
+.demos{list-style:none;margin:32px 0 0;padding:0;border-top:1px solid var(--rule)}
+.demos li{border-bottom:1px solid var(--rule)}
+.demos a{display:grid;gap:4px 24px;padding:22px 4px;text-decoration:none;color:var(--ink)}
+@media (min-width:760px){.demos a{grid-template-columns:1.1fr 1.3fr 1fr;align-items:baseline}}
+.demos a:hover{background:var(--sheet)}
+.demos .who{color:var(--pencil);font-size:15px}
+.demos .what{font-family:var(--head);font-size:23px;line-height:1.2;color:var(--teal);font-weight:700}
+.demos .how{color:var(--pencil);font-size:15px}
+.demos a:hover .what{text-decoration:underline;text-underline-offset:4px}
+
+footer{padding:40px 0 56px;border-top:1px solid var(--rule);color:var(--pencil);font-size:15px}
+footer .row{display:flex;flex-wrap:wrap;gap:8px 28px;align-items:baseline;justify-content:space-between}
+footer strong{color:var(--ink);font-family:var(--head);font-size:20px}
+footer p{margin:6px 0 0}
+@media (prefers-reduced-motion:no-preference){.btn{transition:background .15s,filter .15s}}
 </style>
 </head>
 <body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+    <h1>RFP Evaluation Checklist</h1>
+    <div class="hero-copy">
+    <p class="promise">Turn any public-sector RFP into a checklist of how you'll be scored and what gets you thrown out, with every line linked to its source.</p>
+    <div class="btns">
+      <a class="btn primary" href="demo/tucker-2026-008.html">See the live demo</a>
+      <a class="btn ghost" href="https://github.com/eugeniawang/rfp-evaluation-checklist">View on GitHub</a>
+    </div>
+    <p class="fine">Open source, MIT license. Tested on RFPs from multiple cities across the U.S.</p>
+    </div>
+    </div>
+    <figure class="hero-shot" style="margin-left:0;margin-right:0">
+      <div class="frame">
+        <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="url">eugeniawang.github.io/rfp-evaluation-checklist/demo/tucker-2026-008.html</span></div>
+        <a href="demo/tucker-2026-008.html" aria-label="Open the live demo"><img src="img/demo-overview.png" width="2160" height="1350" alt="The checklist built from City of Tucker RFP 2026-008: issuer, project, RFP number and due date, each with an orange page-and-line chip; the stated total of 100 points matched against the items' sum; and 12 rules that can throw a proposal out."></a>
+      </div>
+    </figure>
+  </div>
+</header>
+
 <main>
-<p class="eyebrow">Built for Clief Notes weekly competition #13, The Translator</p>
-<h1>RFP Evaluation Criteria Checklist</h1>
-<p class="lede">Give Claude a public-sector RFP. Get back a checklist of how the agency will score you and what gets a proposal thrown out, in the RFP's own words, with every line linked to the page and line it came from.</p>
-<div class="btns">
-<a class="btn primary" href="demo/tucker-2026-008.html">Try the demo</a>
-<a class="btn ghost" href="https://github.com/eugeniawang/rfp-evaluation-checklist">Get the folder on GitHub</a>
-</div>
+  <section>
+    <div class="wrap split">
+      <div>
+        <h2>The afternoon an RFP drops</h2>
+        <div class="measure">
+          <p>Someone on the proposal team opens a long PDF and starts a spreadsheet by hand: every item the agency will score, its points, what it asks for, what the scorer will look for.</p>
+          <p>Then they hunt through the fine print for the rules that throw a proposal out before anyone scores it. Turned in late. A required form missing. One page over the limit.</p>
+          <p>Two small slips cost the most. A criterion paraphrased in the spreadsheet stops matching the words the scorer is holding. A disqualifier nobody copied over sinks the bid, no matter how good the rest of it is.</p>
+        </div>
+      </div>
+      <aside class="evidence" aria-label="Example disqualifiers from a real RFP">
+        <h3>Three ways to be out before scoring</h3>
+        <ul>
+          <li>Late bids will not be considered. <span class="chip">Page 3, lines 23–24</span></li>
+          <li>Bids received after the bid deadline will be filed unopened. <span class="chip">Page 3, line 24</span></li>
+          <li>Late submittals will not be accepted. <span class="chip">Page 12, line 26</span></li>
+        </ul>
+        <p class="src">Quoted from City of Tucker, GA, RFP 2026-008. Page 3 and page 12 say it twice, nine pages apart.</p>
+      </aside>
+    </div>
+  </section>
 
-<div class="grid">
-<div class="card"><h2>How you'll be scored</h2><p>Every item the RFP scores, its points, what to provide, and what the scorer looks for. Quoted, never paraphrased.</p></div>
-<div class="card gate"><h2>What gets you thrown out</h2><p>Every rule that can disqualify a proposal before anyone scores it: late, missing a form, over the page limit, non-responsive.</p></div>
-<div class="card src"><h2>Every line clickable</h2><p>Click a box like <span class="chip">Page 14, line 15</span> to see the exact words in the RFP. Where the RFP is silent, the cell says <code>not in source</code>.</p></div>
-</div>
+  <section class="does">
+    <div class="wrap">
+      <h2>What you get back</h2>
+      <p class="measure muted">One page per RFP, in the RFP's own words. The headings and labels are ours; every quote is theirs.</p>
+      <div class="three">
+        <div>
+          <h3>How you'll be scored</h3>
+          <p>Every item the RFP scores, <strong>its points, what it asks you to provide, and what the scorer looks for</strong>, grouped under the RFP's own headings. The points are added up and checked against the total the RFP states.</p>
+        </div>
+        <div class="gate">
+          <h3>What gets you thrown out</h3>
+          <p>Every sentence that rejects or disqualifies a proposal, sorted by kind: late, missing something required, broke a page limit. <strong>This is the part that fails silently</strong> when it's built by hand, because nobody notices a line that isn't there.</p>
+        </div>
+        <div class="src">
+          <h3>Every line links to its source</h3>
+          <p>Click a chip like <span class="chip">Page 14, line 15</span> to open that RFP page with the words highlighted. Where the RFP says nothing, the cell reads <span class="nis">not in source</span> instead of a guess.</p>
+        </div>
+      </div>
+      <figure style="margin:0">
+        <div class="frame full">
+          <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span class="url">eugeniawang.github.io/rfp-evaluation-checklist/demo/tucker-2026-008.html#part2</span></div>
+          <a href="demo/tucker-2026-008.html#part2" aria-label="Open the disqualifiers in the live demo"><img src="img/demo-source-sidebar.png" width="2160" height="1350" loading="lazy" alt="The What gets you thrown out tab, with Turned in late expanded. Clicking the chip Page 3, lines 23–24 has opened the RFP's page 3 in a sidebar, with those two lines highlighted in yellow."></a>
+        </div>
+        <figcaption>Clicking <span class="chip">Page 3, lines 23–24</span> opens page 3 of the RFP with those lines highlighted.</figcaption>
+      </figure>
+    </div>
+  </section>
 
-<h2 class="sec">How to use it</h2>
-<ol class="steps">
-<li><strong>Claude Code:</strong> open the folder, put the RFP PDF in it, and say <code>Translate rfp.pdf.</code></li>
-<li><strong>claude.ai Projects:</strong> add the folder's files to a project with code execution turned on, attach the RFP, and ask for the translation.</li>
-<li><strong>Command line:</strong> the steps are in the README: extract, check, render.</li>
-</ol>
+  <section>
+    <div class="wrap">
+      <h2>How it's kept honest</h2>
+      <div class="measure">
+        <p>A checker re-reads every quote against the RFP and refuses the output if one word isn't at its citation, or if any scoring or disqualifying line was left out. The page is only built from a checklist the checker passed.</p>
+      </div>
+      <div class="honest-grid">
+        <div class="panel">
+          <div class="panel-h">The RFP, page 3, as the checker reads it</div>
+          <div class="lines" role="img" aria-label="RFP page 3, lines 21 to 25, with lines 23 and 24 highlighted">
+            <div class="ln"><b>21</b>All responses must be received electronically by the Bid Deadline. (Addenda will show any</div>
+            <div class="ln"><b>22</b>schedule updates). No bids will be received orally, by phone, or by sealed paper documents. Only</div>
+            <div class="ln hl"><b>23</b>electronic bids in accordance with submittal requirement instructions will be accepted. Late bids</div>
+            <div class="ln hl"><b>24</b>will not be considered. Bids received after the bid deadline will be filed unopened. The City of</div>
+            <div class="ln"><b>25</b>Tucker reserves the right to reject any and all bids or any part, to waive any formalities to make</div>
+          </div>
+          <div class="quote">Checklist line: Late bids will not be considered. <span class="chip">Page 3, lines 23–24</span></div>
+        </div>
+        <div>
+          <p class="step-label">The shipped checklist passes:</p>
+<pre class="term"><span class="cmd">$ python3 tools/check_matrix.py outputs/tucker-ga-rfp-2026-008-row-maintenance.matrix.json</span>
+<span class="ok">PASS</span> 3 rows, every cited claim found in the source; points 100 vs stated 100 (reconciles); coverage 30 trigger line(s) accounted for</pre>
+          <p class="step-label">Change one word, <em>considered</em> to <em>reviewed</em>, and it refuses:</p>
+<pre class="term"><span class="bad">FAIL</span> 1 problem(s)
+  - disqualifiers 1: text is not verbatim (whole words) at p3:23-p3:24: 'Late bids will not be reviewed.'</pre>
+          <p class="muted" style="font-size:15px">Real output from the repo's checker, trimmed to fit. The tests prove it also refuses a respelled word, a figure borrowed from the next line, a wrong page, and a disqualifier nobody accounted for.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<h2 class="sec">Demos</h2>
-<ul class="demos">
-<li><a href="demo/tucker-2026-008.html">City of Tucker, GA: Right of Way Maintenance Services (RFP 2026-008)</a></li>
-<li><a href="demo/tucker-2026-016.html">City of Tucker, GA: CEI services (RFP 2026-016)</a></li>
-<li><a href="demo/cdot-us50.html">Colorado DOT: US50B passing lanes, CM/GC (two stages: proposal and interview)</a></li>
-</ul>
+  <section class="use">
+    <div class="wrap">
+      <h2>How to use it</h2>
+      <div class="two">
+        <div>
+          <h3>In Claude Code</h3>
+          <p>Open the folder, put the RFP PDF in it, and say:</p>
+          <p class="say">Translate rfp.pdf.</p>
+          <p class="muted">Claude extracts the text, writes the checklist, runs the checker, and renders it. The rules it follows are in <span class="inline">identity.md</span> and <span class="inline">rules.md</span>.</p>
+        </div>
+        <div>
+          <h3>From the command line</h3>
+          <p class="muted">Python 3.9+ and poppler for PDFs. Full steps are in the <a href="https://github.com/eugeniawang/rfp-evaluation-checklist#use-it">README</a>.</p>
+          <ol class="cli">
+            <li><div><p>Turn the PDF into numbered source text.</p><code>python3 tools/extract.py fixtures/your-rfp.pdf</code></div></li>
+            <li><div><p>Ask Claude to translate the source text into a checklist.</p></div></li>
+            <li><div><p>Check it against the RFP.</p><code>python3 tools/check_matrix.py outputs/your-rfp.matrix.json</code></div></li>
+            <li><div><p>Render it as Markdown, CSV, Excel and HTML.</p><code>python3 tools/write_matrix.py outputs/your-rfp.matrix.json</code></div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>A checker re-reads every quote and refuses the checklist if one word isn't at its citation, or if a scoring or disqualifying line in the RFP was left out. <a href="https://github.com/eugeniawang/rfp-evaluation-checklist">Source on GitHub</a>.</footer>
+  <section>
+    <div class="wrap">
+      <h2>More demos</h2>
+      <p class="measure muted">Three public RFPs, each turned into a checklist and passed by the checker.</p>
+      <ul class="demos">
+        <li><a href="demo/tucker-2026-008.html"><span class="who">City of Tucker, GA<br>RFP 2026-008</span><span class="what">Right-of-Way Maintenance Services</span><span class="how">100 points across three criteria, and 12 rules that can throw a proposal out</span></a></li>
+        <li><a href="demo/tucker-2026-016.html"><span class="who">City of Tucker, GA<br>RFP 2026-016</span><span class="what">Construction, Engineering and Inspection (CEI) Services</span><span class="how">100 points across three criteria</span></a></li>
+        <li><a href="demo/cdot-us50.html"><span class="who">Colorado Department of Transportation</span><span class="what">US 50 Passing Lanes, Construction Manager services</span><span class="how">A 60-point proposal and a 40-point interview, with sub-criteria</span></a></li>
+      </ul>
+    </div>
+  </section>
 </main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <strong>Built by Gina Wang</strong>
+      <a href="https://github.com/eugeniawang/rfp-evaluation-checklist">github.com/eugeniawang/rfp-evaluation-checklist</a>
+    </div>
+    <p>Built for Clief Notes weekly competition #13, The Translator. MIT license; the RFPs are public government documents.</p>
+  </div>
+</footer>
 </body>
 </html>
