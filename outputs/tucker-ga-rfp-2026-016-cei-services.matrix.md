@@ -1,7 +1,7 @@
 # RFP Evaluation Criteria Checklist: City of Tucker · Construction, Engineering and Inspection (CEI) Services
 
 RFP City of Tucker Request for Proposal 2026-016  
-Proposals due: received no later than July 9, 2026 at 1:00pm EST [Page 2, line 34]
+Proposal due date: July 9, 2026 at 1:00pm EST [Page 2, line 34]
 
 This checklist shows how **City of Tucker · Construction, Engineering and Inspection (CEI) Services** will be scored. It's built from the RFP itself — not a summary of it.
 

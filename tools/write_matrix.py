@@ -199,7 +199,7 @@ def to_markdown(m, cov):
     out.append(f"# RFP Evaluation Criteria Checklist: {big_title}")
     out.append("")
     out.append(f"RFP {rfp_no}  ")
-    out.append(f"Proposals due: {due_cell}")
+    out.append(f"Proposal due date: {due_cell}")
     out.append("")
     out.append(f"This checklist shows how **{big_title}** will be scored. It's built from the RFP itself "
                "— not a summary of it.")
@@ -253,7 +253,7 @@ def to_csv(m, path, cov):
         w = csv.writer(f)
         w.writerow([f"RFP Evaluation Criteria Checklist: {big_title}"] + [""] * (n - 1))
         w.writerow([f"RFP {rfp_no}"] + [""] * (n - 1))
-        w.writerow([f"Proposals due: {due_cell}"] + [""] * (n - 1))
+        w.writerow([f"Proposal due date: {due_cell}"] + [""] * (n - 1))
         w.writerow([f"This checklist shows how {big_title} will be scored. It's built from the RFP itself "
                     "— not a summary of it."] + [""] * (n - 1))
         for line in plain_facts(m, cov):
@@ -732,7 +732,7 @@ def to_html(m, cov, src, src_path=None):
         title_html = esc(rfp_text) or nis_html()
         title_chips = " ".join(chip_html(part_text(p)[1]) for p in parts_of(m["rfp"]))
         rfp_line = ""
-    due_line = f'<p class="due">Proposals due: {cited(due)}</p>' if "due" in m else ""
+    due_line = f'<p class="due">Proposal due date: {cited(due)}</p>' if "due" in m else ""
     # Sample chips in the explainer boxes are real: they open the first criterion's citation.
     first_cite = ""
     for r in rows:

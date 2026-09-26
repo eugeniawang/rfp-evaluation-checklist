@@ -33,7 +33,7 @@ Some RFPs list criteria as independent maximums (25/25/30/10/5/5) with no senten
 | `rfp` | The RFP's own number, from a page header or the cover | the line it is printed on |
 | `issuer` | The public owner's name, as printed (e.g. "City of Tucker") | the line it is printed on |
 | `title` | The project or solicitation name, as printed (e.g. "Right-of-Way Maintenance") | the line it is printed on |
-| `due` | The sentence or phrase stating when proposals are due | that sentence |
+| `due` | Only the date and time proposals are due, quoted exactly as printed (e.g. `April 2, 2026, at 1:00pm EST`), without the RFP's own label such as "Proposal Deadline" | the line it is printed on |
 | `stated_total` | The sentence that states the total ("carries a total weight of 100 points", "60 Points Possible") | that sentence |
 | `section` | The heading of the RFP section that holds the scoring table. Not a column — it renders once, as a heading above the rows that share it | the heading line |
 | `criterion` | The criterion **verbatim** as the RFP names it. Not shortened, not re-cased, not re-spelled | the line(s) it appears on |

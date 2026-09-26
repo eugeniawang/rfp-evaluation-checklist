@@ -1,7 +1,7 @@
 # RFP Evaluation Criteria Checklist: Colorado Department of Transportation · US50B SHIFT Passing Lanes
 
 RFP US50B SHIFT Passing Lanes  
-Proposals due: Proposal Submission Deadline                                                      5/15/26       2:00 p.m. [Page 27, line 20]
+Proposal due date: 5/15/26 2:00 p.m. [Page 27, line 20]
 
 This checklist shows how **Colorado Department of Transportation · US50B SHIFT Passing Lanes** will be scored. It's built from the RFP itself — not a summary of it.
 

@@ -1,7 +1,7 @@
 # RFP Evaluation Criteria Checklist: City of Tucker · Right of Way Maintenance Services
 
 RFP RFP 2026-008  
-Proposals due: Proposal Deadline                                  April 2, 2026, at 1:00pm EST [Page 2, line 18]
+Proposal due date: April 2, 2026, at 1:00pm EST [Page 2, line 18]
 
 This checklist shows how **City of Tucker · Right of Way Maintenance Services** will be scored. It's built from the RFP itself — not a summary of it.
 
