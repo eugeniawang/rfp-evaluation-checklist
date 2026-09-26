@@ -108,3 +108,5 @@ python3 tools/write_matrix.py outputs/<rfp>.matrix.json
 ```
 
 The first refuses any cell whose text is not at its citation as whole words, any points figure not printed on its one or two cited lines, any citation that crosses a page or runs past 12 lines, any key the contract does not name, any filled human column, any free text in `stop`, `kind`, or `why`, any row out of the RFP's order, any `answering_section` that starts with an imperative verb, any sum that does not reconcile without a `stop`, and any scoring/gate line in the source that nothing in the matrix accounts for (the coverage check). The second renders only a matrix the first accepted. A matrix that has not passed the checker is a draft, not an output.
+
+Leave no helper scripts behind: write only the files under `outputs/` named in this rule. A one-off `build_<rfp>.py` or similar left in the folder root is not part of the contract, confuses the next person reading the repo, and does not get committed.

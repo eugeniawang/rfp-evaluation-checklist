@@ -591,22 +591,33 @@ def grouped(rows):
     return out
 
 
-def disq_groups_html(disq):
-    if not disq:
-        return '<p class="empty-note">The RFP states no rules that throw a proposal out before scoring.</p>'
+CHEVRON = ('<svg class="chev" viewBox="0 0 24 24" aria-hidden="true">'
+           '<path d="M8 4 L16 12 L8 20"/></svg>')
+
+
+def collapsible_groups(items, key, label_map, accent, empty_html):
+    """Collapsed-by-default groups of quoted lines, groups in order of first appearance and
+    lines in RFP order. Part 2 groups by kind (accent 'gate'), Part 3 by reason ('note')."""
+    if not items:
+        return empty_html
     order, groups = [], {}
-    for d in disq:
-        if d["kind"] not in groups:
-            order.append(d["kind"])
-            groups[d["kind"]] = []
-        groups[d["kind"]].append(d)
+    for it in items:
+        if it[key] not in groups:
+            order.append(it[key])
+            groups[it[key]] = []
+        groups[it[key]].append(it)
     out = []
     for k in order:
-        items = "".join(f'<li><span class="quote">{esc(d["text"])}</span> {chip_html(d["cite"])}</li>'
-                        for d in groups[k])
-        out.append(f'<div class="gate-group"><h3>{esc(KIND_LABEL.get(k, k))}<span class="n">{len(groups[k])}</span></h3>'
-                   f'<ol>{items}</ol></div>')
+        lis = "".join(f'<li>{esc(it["text"])} {chip_html(it["cite"])}</li>' for it in groups[k])
+        out.append(f'<details class="grp {accent}"><summary>{CHEVRON}'
+                   f'<span class="grp-name">{esc(label_map.get(k, k))}</span>'
+                   f'<span class="grp-n">{len(groups[k])}</span></summary><ol>{lis}</ol></details>')
     return "".join(out)
+
+
+def disq_groups_html(disq):
+    return collapsible_groups(disq, "kind", KIND_LABEL, "gate",
+                              '<p class="empty-note">The RFP states no rules that throw a proposal out before scoring.</p>')
 
 
 def pdf_name(m, src_path):
@@ -683,13 +694,15 @@ def to_html(m, cov, src, src_path=None):
         f'<span class="kind">{esc(KIND_LABEL.get(d["kind"], d["kind"]))}</span></li>' for d in m["disqualifiers"]
     ) or '<li class="empty-note">The RFP states no rules that throw a proposal out before scoring.</li>'
 
+    cnm_empty = '<p class="empty-note">Nothing: every line about scoring is in one of the two parts above.</p>'
+    cnm = collapsible_groups(m["could_not_map"], "why", WHY_LABEL, "note", cnm_empty)
     if m["could_not_map"]:
-        cnm = '<ul class="cnm">' + "".join(
-            f'<li>{esc(c["text"])} {chip_html(c["cite"])}'
-            f'<span class="why">{esc(WHY_LABEL.get(c["why"], c["why"]))}</span></li>'
-            for c in m["could_not_map"]) + "</ul>"
+        cnm_flat = '<ol class="flat">' + "".join(
+            f'<li>{esc(c["text"])} {chip_html(c["cite"])} '
+            f'<span class="kind">{esc(WHY_LABEL.get(c["why"], c["why"]))}</span></li>'
+            for c in m["could_not_map"]) + "</ol>"
     else:
-        cnm = '<p class="empty-note">Nothing: every line about scoring is in one of the two parts above.</p>'
+        cnm_flat = cnm_empty
 
     pages = {}
     for (page, line) in src["order"]:
@@ -707,13 +720,17 @@ def to_html(m, cov, src, src_path=None):
     rfp_text = plain(m["rfp"])
     if parts_of(issuer) or parts_of(rtitle):
         title = " · ".join(x for x in (plain(issuer), plain(rtitle)) if x) or rfp_text
-        title_html = (f'<span class="t-issuer">{cited(issuer)}</span><span class="t-dot" aria-hidden="true"> · </span>'
-                      f'<span class="t-name">{cited(rtitle)}</span>')
+        issuer_line = f'<p class="issuer">{cited(issuer)}</p>'
+        t_parts = parts_of(rtitle)
+        title_html = (" ".join(esc(part_text(p)[0]) for p in t_parts) or esc(plain(issuer)))
+        title_chips = " ".join(chip_html(part_text(p)[1]) for p in t_parts) if t_parts else nis_html()
         rfp_prefix = "" if rfp_text.strip().upper().startswith("RFP") else "RFP "
         rfp_line = f'<p class="rfpno">{rfp_prefix}{cited(m["rfp"])}</p>' if parts_of(m["rfp"]) else ""
     else:
         title = rfp_text or EMPTY
-        title_html = cited(m["rfp"])
+        issuer_line = ""
+        title_html = esc(rfp_text) or nis_html()
+        title_chips = " ".join(chip_html(part_text(p)[1]) for p in parts_of(m["rfp"]))
         rfp_line = ""
     due_line = f'<p class="due">Proposals due: {cited(due)}</p>' if "due" in m else ""
     # Sample chips in the explainer boxes are real: they open the first criterion's citation.
@@ -738,6 +755,9 @@ def to_html(m, cov, src, src_path=None):
         "TITLE": esc(title),
         "TITLE_HTML": title_html,
         "RFP_LINE": rfp_line,
+        "ISSUER_LINE": issuer_line,
+        "TITLE_CHIPS": title_chips,
+        "CNM_FLAT": cnm_flat,
         "SAMPLE_CHIP": sample_chip,
         "DUE_LINE": due_line,
         "PDF": esc(pdf_name(m, src_path or m["source"])),

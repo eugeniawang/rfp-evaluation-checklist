@@ -6,11 +6,13 @@
 <title>RFP Evaluation Criteria Checklist: Colorado Department of Transportation · US50B SHIFT Passing Lanes</title>
 <style>
   :root {
-    --paper: #f3f6f9; --sheet: #ffffff; --ink: #1b2230; --pencil: #566072; --rule: #d6dde6;
-    --blue: #17427a; --blue-soft: #eceff3; --hatch: rgba(86, 96, 114, .16); --grid: rgba(23, 66, 122, .07);
-    --gate: #a3262d; --gate-soft: #fbeeee; --mark: #ffe27a; --mark-ink: #1b2230;
+    --paper: #f5f3ef; --sheet: #fffefb; --ink: #1e2422; --pencil: #5a615e; --rule: #ddd8cf;
+    --blue: #0e5a55; --blue-soft: #e3eeeb; --hatch: rgba(90, 97, 94, .16); --grid: rgba(14, 90, 85, .06);
+    --note: #6b5a42; --note-soft: #f1ebe1; --orange: #b85a0c; --tip-bg: #fdf2e6;
+    --chip-bg: #fde5cc; --chip-fg: #873b04; --chip-hover: #f8c48e;
+    --gate: #a3262d; --gate-soft: #fbecec; --mark: #ffe27a; --mark-ink: #1e2422;
     --ok: #1d6b3a; --bad: #a3262d;
-    --c0: #2f6fd6; --c1: #178f82; --c2: #b87a12; --c3: #7457cf; --c4: #3895bf; --c5: #4d8a2c; --c6: #b8467b; --c7: #5d7183;
+    --c0: #1f7a6e; --c1: #a8761f; --c2: #7a5aa6; --c3: #357f9e; --c4: #56812d; --c5: #ad4668; --c6: #7f6f52; --c7: #4d6a78;
     --head: "DIN Alternate", "DIN Next", Bahnschrift, "D-DIN", "Barlow Semi Condensed", "Roboto Condensed", "Arial Narrow", sans-serif;
     --body: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, "Helvetica Neue", Arial, sans-serif;
     --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
@@ -18,11 +20,13 @@
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --paper: #0d141d; --sheet: #141d29; --ink: #e5ebf2; --pencil: #9aa7b7; --rule: #2a3748;
-      --blue: #8db8ff; --blue-soft: #232d3b; --hatch: rgba(154, 167, 183, .16); --grid: rgba(141, 184, 255, .07);
-      --gate: #f08a8a; --gate-soft: #2a1a1f; --mark: #6b5710; --mark-ink: #fff6d6;
+      --paper: #121614; --sheet: #1a1f1d; --ink: #e7e5df; --pencil: #a3a69f; --rule: #2f3632;
+      --blue: #5cc2b3; --blue-soft: #1d302d; --hatch: rgba(163, 166, 159, .16); --grid: rgba(92, 194, 179, .06);
+      --note: #cdbb9f; --note-soft: #28251f; --orange: #f0a060; --tip-bg: #2a2117;
+      --chip-bg: #45290f; --chip-fg: #ffc996; --chip-hover: #633b16;
+      --gate: #f08a8a; --gate-soft: #2c1b1d; --mark: #6b5710; --mark-ink: #fff6d6;
       --ok: #6fcf8f; --bad: #f08a8a;
-      --c0: #6b9cf0; --c1: #3fbfae; --c2: #e0a640; --c3: #a08cf0; --c4: #62bde3; --c5: #7fbf5a; --c6: #e47aac; --c7: #93a6b8;
+      --c0: #4fb3a4; --c1: #deae52; --c2: #b39ae0; --c3: #6fbcdc; --c4: #92c261; --c5: #e3809f; --c6: #c4b391; --c7: #8fb0c0;
       color-scheme: dark;
     }
   }
@@ -40,10 +44,13 @@
     background-size: 24px 24px; }
   .headgrid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 12px 48px; align-items: end; }
   @media (max-width: 1000px) { .headgrid { grid-template-columns: 1fr; } }
-  h1 { font: 700 clamp(28px, 4vw, 44px)/1.05 var(--head); letter-spacing: -.01em; margin: 0; color: var(--blue); max-width: 30ch; }
-  h1 .kicker { display: block; font: 500 15px/1.4 var(--body); color: var(--pencil); letter-spacing: 0; margin-bottom: 8px; }
-  .t-dot { color: var(--pencil); font-weight: 400; }
-  h1 .chip { vertical-align: 8px; font-size: 11px; }
+  h1 { font: 700 24px/1.25 var(--head); letter-spacing: 0; margin: 4px 0 0; color: var(--blue); max-width: 46ch; overflow-wrap: anywhere; }
+  h1.clamp { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .kicker { margin: 0 0 8px; font: 500 14px/1.4 var(--body); color: var(--pencil); }
+  .issuer { margin: 0; font: 600 16px/1.35 var(--body); color: var(--ink); }
+  .titlemeta { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; margin-top: 6px; }
+  .moretitle { border: 1px solid var(--rule); background: var(--sheet); border-radius: 5px; padding: 2px 10px; font-size: 12.5px; cursor: pointer; color: var(--blue); }
+  .moretitle:hover { border-color: var(--blue); }
   .rfpno { margin: 12px 0 0; font: 700 19px/1.3 var(--head); color: var(--ink); }
   .due { margin: 6px 0 0; font: 600 17px/1.35 var(--body); color: var(--ink); }
   .due .chip, .rfpno .chip { vertical-align: 2px; }
@@ -63,16 +70,16 @@
   .box ul { margin: 0; padding-left: 18px; }
   .box li { margin: 3px 0; }
   .leftcol { display: grid; gap: 16px; align-content: start; }
-  .tip { background: var(--blue-soft); border: 1px solid var(--rule); border-left: 4px solid var(--c2); border-radius: 6px; padding: 16px 18px 26px; font-size: 15px; }
+  .tip { background: var(--tip-bg); border: 1px solid var(--rule); border-left: 4px solid var(--orange); border-radius: 6px; padding: 16px 18px 26px; font-size: 15px; }
   .tip p { margin: 0; line-height: 2.1; }
-  .tip-label { display: inline-block; font: 700 12px/1.6 var(--body); color: var(--sheet); background: var(--c2); border-radius: 3px; padding: 0 7px; margin-right: 4px; vertical-align: 1px; }
+  .tip-label { display: inline-block; font: 700 12px/1.6 var(--body); color: var(--sheet); background: var(--orange); border-radius: 3px; padding: 0 7px; margin-right: 4px; vertical-align: 1px; }
   .ring { position: relative; display: inline-block; padding: 0 6px; margin: 0 4px; }
   .ring .chip { position: relative; z-index: 1; font-size: 12.5px; }
   .ring-svg { position: absolute; left: -10px; top: -9px; width: calc(100% + 20px); height: calc(100% + 18px); overflow: visible; pointer-events: none; }
-  .ring-svg path { fill: none; stroke: var(--c2); stroke-width: 2.4; stroke-linecap: round; vector-effect: non-scaling-stroke; }
-  .tryit { position: absolute; right: -58px; bottom: -22px; font: italic 600 13px/1 var(--body); color: var(--c2); white-space: nowrap; display: inline-flex; align-items: flex-end; gap: 2px; pointer-events: none; }
+  .ring-svg path { fill: none; stroke: var(--orange); stroke-width: 2.4; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+  .tryit { position: absolute; right: -58px; bottom: -22px; font: italic 600 13px/1 var(--body); color: var(--orange); white-space: nowrap; display: inline-flex; align-items: flex-end; gap: 2px; pointer-events: none; }
   .tryit svg { width: 22px; height: 17px; overflow: visible; }
-  .tryit svg path { fill: none; stroke: var(--c2); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .tryit svg path { fill: none; stroke: var(--orange); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
   .tablenote { margin: 0 0 10px; color: var(--pencil); font-size: 13.5px; }
   .sb-file { margin: 0; padding: 6px 18px; font-size: 12.5px; color: var(--pencil); border-bottom: 1px solid var(--rule); }
   .foot code { font: 12px var(--mono); overflow-wrap: anywhere; }
@@ -95,7 +102,7 @@
     display: flex; align-items: center; justify-content: flex-start; overflow: hidden; text-decoration: none;
     font: 700 20px/1 var(--head); }
   .seg:hover { filter: brightness(1.08); }
-  @media (prefers-color-scheme: dark) { .seg { color: #0d141d; } }
+  @media (prefers-color-scheme: dark) { .seg { color: #121614; } }
   .legend { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 28px; font-size: 13.5px; }
   .legend li { display: flex; gap: 8px; align-items: baseline; min-width: 0; }
   .legend .sw { width: 12px; height: 12px; border-radius: 2px; background: var(--c); transform: translateY(1px); }
@@ -113,7 +120,11 @@
   .tab .n { color: var(--pencil); font-weight: 600; }
   .tab:hover { background: var(--blue-soft); color: var(--blue); border-bottom-color: var(--rule); }
   .tab.active { color: var(--blue); border-bottom-color: var(--blue); background: var(--blue-soft); }
-  .tab.active .n { color: var(--blue); }
+  .tab.active .n { color: inherit; }
+  .tab[data-tab="part2"]:hover { background: var(--gate-soft); color: var(--gate); }
+  .tab[data-tab="part2"].active { color: var(--gate); border-bottom-color: var(--gate); background: var(--gate-soft); }
+  .tab[data-tab="part3"]:hover { background: var(--note-soft); color: var(--note); }
+  .tab[data-tab="part3"].active { color: var(--note); border-bottom-color: var(--note); background: var(--note-soft); }
   .viewas { display: flex; align-items: center; gap: 10px; margin: 0 0 20px; }
   .viewas-label { font-weight: 600; font-size: 14px; }
   .seg-toggle { display: inline-flex; border: 1.5px solid var(--blue); border-radius: 7px; overflow: hidden; background: var(--sheet); }
@@ -161,30 +172,32 @@
   .slot b { display: block; font-weight: 600; color: var(--ink); font-size: 12.5px; }
 
   /* chips and pills */
-  .chip { display: inline-flex; align-items: center; gap: 4px; background: var(--blue-soft); color: var(--blue); border: 1px solid transparent;
+  .chip { display: inline-flex; align-items: center; gap: 4px; background: var(--chip-bg); color: var(--chip-fg); border: 1px solid transparent;
     border-radius: 4px; padding: 0 6px; font: 600 11.5px/1.7 var(--body); font-variant-numeric: tabular-nums; cursor: pointer; white-space: nowrap; vertical-align: 1px; }
-  .chip:hover { border-color: var(--blue); }
+  .chip:hover { background: var(--chip-hover); border-color: var(--chip-fg); }
     .nis { display: inline-block; border: 1px dashed var(--pencil); color: var(--pencil); border-radius: 4px; padding: 0 7px; font-size: 12px; line-height: 1.7; font-style: normal; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
   .nis small { display: block; font-size: 10.5px; line-height: 1.3; padding-bottom: 2px; font-style: normal; opacity: .85; }
   .nis:has(small) { display: inline-block; vertical-align: middle; text-align: left; }
 
   /* disqualifiers */
-  .gates { columns: 2 460px; column-gap: 16px; }
-  .gates .gate-group { break-inside: avoid; margin: 0 0 16px; display: inline-block; width: 100%; }
-  .gate-intro { column-span: all; }
-  .gate-group { background: var(--sheet); border: 1px solid var(--rule); border-left: 5px solid var(--gate); border-radius: 6px; padding: 14px 20px 10px; }
-  .gate-group h3 { font: 700 17px/1.25 var(--head); margin: 0 0 4px; color: var(--gate); display: flex; gap: 10px; align-items: baseline; }
-  .gate-group h3 .n { font: 600 12.5px var(--body); color: var(--pencil); }
-  .gate-group ol { margin: 0; padding: 0; list-style: none; }
-  .gate-group li { padding: 9px 0; border-top: 1px solid var(--rule); max-width: 90ch; }
-  .gate-group li:first-child { border-top: 0; }
-  .gate-intro { margin: -6px 0 16px; color: var(--pencil); font-size: 13.5px; }
-
-  /* could not map */
-  .cnm { list-style: none; margin: 0; padding: 0; background: var(--sheet); border: 1px solid var(--rule); border-radius: 6px; }
-  .cnm li { padding: 12px 20px; border-top: 1px solid var(--rule); }
-  .cnm li:first-child { border-top: 0; }
-  .why { display: block; font-size: 12.5px; color: var(--pencil); margin-top: 4px; }
+  .grp-tools { display: flex; gap: 8px; margin: 0 0 12px; }
+  .grp-tools button { border: 1px solid var(--rule); background: var(--sheet); border-radius: 6px; padding: 5px 12px; font-size: 13px; cursor: pointer; }
+  .grp-tools button:hover { border-color: var(--ink); }
+  .gate-intro { margin: -6px 0 14px; color: var(--pencil); font-size: 13.5px; }
+  .grp { --acc: var(--blue); --acc-soft: var(--blue-soft); background: var(--sheet); border: 1px solid var(--rule); border-left: 5px solid var(--acc); border-radius: 6px; margin: 0 0 10px; }
+  .grp.gate { --acc: var(--gate); --acc-soft: var(--gate-soft); }
+  .grp.note { --acc: var(--note); --acc-soft: var(--note-soft); }
+  .grp > summary { list-style: none; display: flex; align-items: center; gap: 12px; padding: 10px 16px 10px 10px; cursor: pointer; color: var(--acc); border-radius: 0 6px 6px 0; }
+  .grp > summary::-webkit-details-marker { display: none; }
+  .grp > summary:hover { background: var(--acc-soft); }
+  .grp-name { font: 700 18px/1.25 var(--head); }
+  .grp-n { margin-left: auto; font: 700 14px/1.2 var(--body); background: var(--acc-soft); color: var(--acc); border-radius: 999px; padding: 3px 11px; }
+  .chev { width: 28px; height: 28px; flex: none; transition: transform .15s ease; }
+  .chev path { fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  .grp[open] > summary .chev { transform: rotate(90deg); }
+  .grp ol { list-style: none; margin: 0; padding: 0 18px 8px 50px; }
+  .grp li { padding: 9px 8px; border-top: 1px solid var(--rule); max-width: 92ch; border-radius: 4px; }
+  .grp li:hover { background: var(--acc-soft); }
 
   /* table view */
   .tablewrap { overflow-x: auto; background: var(--sheet); border: 1px solid var(--rule); border-radius: 6px; }
@@ -250,12 +263,14 @@
       border-radius: 14px 14px 0 0; transform: translateY(102%); box-shadow: 0 -12px 32px rgba(10, 16, 26, .2); }
     #sidebar.open { transform: none; }
   }
-  @media (prefers-reduced-motion: reduce) { #sidebar, #scrim { transition: none; } }
+  @media (prefers-reduced-motion: reduce) { #sidebar, #scrim, .chev { transition: none; } }
   @media print {
     body { background: #fff; color: #000; font-size: 11px; }
     .tabbar, .viewas, #sidebar, #scrim { display: none !important; }
     .sheet-head { background: none; padding: 0 0 12px; }
-    .card, .gate-group { break-inside: avoid; }
+    .card, .grp li { break-inside: avoid; }
+    .grp-tools, .moretitle { display: none !important; }
+    h1.clamp { -webkit-line-clamp: unset; display: block; }
     .chip { border: 0; padding: 0; background: none; color: #333; }
     .tablewrap { overflow: visible; border: 0; }
     table { min-width: 0; font-size: 9px; }
@@ -279,7 +294,10 @@
   <div class="wrap">
     <div class="headgrid">
     <div>
-      <h1><span class="kicker">RFP Evaluation Criteria Checklist</span><span class="t-issuer">Colorado Department of Transportation <button type="button" class="chip" data-cite="p1:26" title="p1:26">Page 1, line 26</button></span><span class="t-dot" aria-hidden="true"> · </span><span class="t-name">US50B SHIFT Passing Lanes <button type="button" class="chip" data-cite="p1:9" title="p1:9">Page 1, line 9</button></span></h1>
+      <p class="kicker">RFP Evaluation Criteria Checklist</p>
+      <p class="issuer">Colorado Department of Transportation <button type="button" class="chip" data-cite="p1:26" title="p1:26">Page 1, line 26</button></p>
+      <h1 id="rfpTitle" class="clamp">US50B SHIFT Passing Lanes</h1>
+      <div class="titlemeta"><button type="button" class="chip" data-cite="p1:9" title="p1:9">Page 1, line 9</button><button type="button" class="moretitle" hidden aria-controls="rfpTitle" aria-expanded="false">Show full title</button></div>
       <p class="rfpno">RFP US50B SHIFT Passing Lanes <button type="button" class="chip" data-cite="p32:3" title="p32:3">Page 32, line 3</button></p>
       <p class="due">Proposals due: Proposal Submission Deadline                                                      5/15/26       2:00 p.m. <button type="button" class="chip" data-cite="p27:20" title="p27:20">Page 27, line 20</button></p>
       <p class="srcfile">Read from: <strong>codot-us50-passing-lanes-cm-rfp.pdf</strong></p>
@@ -299,14 +317,14 @@
         <p>This page shows how <strong>Colorado Department of Transportation · US50B SHIFT Passing Lanes</strong> will be scored. It's built from <strong>codot-us50-passing-lanes-cm-rfp.pdf</strong>, the actual RFP document, not a summary of it. The RFP says proposals are scored out of <strong>60 (Proposal) + 40 (Interview)</strong> points, and the items below add up to <strong>100</strong>. This RFP scores in stages. Each stage's own total is shown next to that stage's items below. Below that, you'll find <strong>6</strong> things that earn points, <strong>14</strong> rules that can get a proposal thrown out before scoring even starts, and <strong>1</strong> other things the RFP says about scoring that aren't tied to a specific scored item.</p>
       </section>
       <aside class="tip">
-        <p><span class="tip-label">Tip:</span> Click on grey boxes like this <span class="ring"><button type="button" class="chip" data-cite="p32:9" title="p32:9">Page 32, line 9</button><svg class="ring-svg" viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M18 34 C 16 14, 70 5, 112 7 C 160 9, 194 18, 190 34 C 186 52, 120 57, 80 55 C 40 53, 8 46, 14 28 C 18 18, 34 12, 50 10"/></svg><span class="tryit" aria-hidden="true"><svg viewBox="0 0 40 30"><path d="M36 26 C 30 10, 18 4, 6 6 M6 6 L 13 2 M6 6 L 11 12"/></svg>try it</span></span> to see the exact words from the RFP.</p>
+        <p><span class="tip-label">Tip:</span> Click on orange boxes like this <span class="ring"><button type="button" class="chip" data-cite="p32:9" title="p32:9">Page 32, line 9</button><svg class="ring-svg" viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M18 34 C 16 14, 70 5, 112 7 C 160 9, 194 18, 190 34 C 186 52, 120 57, 80 55 C 40 53, 8 46, 14 28 C 18 18, 34 12, 50 10"/></svg><span class="tryit" aria-hidden="true"><svg viewBox="0 0 40 30"><path d="M36 26 C 30 10, 18 4, 6 6 M6 6 L 13 2 M6 6 L 11 12"/></svg>try it</span></span> to see the exact words from the RFP.</p>
       </aside>
       </div>
       <section class="box">
         <h2>How to read this page</h2>
         <ul>
           <li><b>This page has three parts:</b> <i>How you'll be scored</i> (the points table), <i>What gets you thrown out</i> (rules that can disqualify a proposal no matter how good it is), and <i>Other things the RFP says about scoring</i> (RFP sentences about scoring that aren't tied to a specific scored item). Use the tabs below to jump between them.</li>
-          <li><b>A grey box like <button type="button" class="chip" data-cite="p32:9" title="p32:9">Page 32, line 9</button> is a button.</b> Click it to see the exact words in the RFP, highlighted, so you can check our work against the real document.</li>
+          <li><b>An orange box like <button type="button" class="chip" data-cite="p32:9" title="p32:9">Page 32, line 9</button> is a button.</b> Click it to see the exact words in the RFP, highlighted, so you can check our work against the real document.</li>
           <li><b><span class="nis">not in source</span> means the RFP is silent on that point.</b> We never guess or fill it in for you.</li>
           <li><b>The blank, striped boxes are for your team.</b> We don't know who at your firm owns what, so those are left empty on purpose for someone to fill in.</li>
           <li><b>Every quote on this page is copied from the RFP and linked to its page and line.</b> The headings and labels are ours. We don't judge your bid, rank your chances, or suggest a strategy.</li>
@@ -346,13 +364,17 @@
   <section class="part" id="part2">
     <div class="part-head"><span class="partno">Part 2</span><h2>What gets you thrown out (14)</h2></div>
     <p class="gate-intro">Rules in the RFP that can remove a proposal before scoring. <span class="v-cards">Grouped by kind of rule, in the order each kind first appears; the Table view lists them in RFP order.</span></p>
-    <div class="v-cards gates"><div class="gate-group"><h3>The RFP says this specifically disqualifies a proposal<span class="n">2</span></h3><ol><li><span class="quote">No Person or business entity prior to Proposal submission, that was engaged by the State of Colorado in the preparation of this Request for Proposal, that had access to procurement sensitive information related to this Request for Proposal including but not limited to Requirements, Statements of Work, or Evaluation Criteria will be eligible to directly submit or participate in the submittal of a proposal for this initiative.</span> <button type="button" class="chip" data-cite="p20:31-p20:35" title="p20:31-p20:35">Page 20, lines 31–35</button></li><li><span class="quote">No firm that is ineligible for State contracts may be part of any Proposer Team.</span> <button type="button" class="chip" data-cite="p20:42-p20:43" title="p20:42-p20:43">Page 20, lines 42–43</button></li></ol></div><div class="gate-group"><h3>Doesn&#x27;t meet the agency&#x27;s requirements<span class="n">2</span></h3><ol><li><span class="quote">Multiple proposals from a single Proposer will be considered non-responsive and will not be evaluated or scored.</span> <button type="button" class="chip" data-cite="p24:16-p24:17" title="p24:16-p24:17">Page 24, lines 16–17</button></li><li><span class="quote">Proposals that do not meet the Minimum Proposal Requirements listed in Section 2.2 of this RFP will be deemed non-responsive and will not be evaluated, evaluation will be ceased upon discovery of non-responsive determination and will not be scored.</span> <button type="button" class="chip" data-cite="p25:30-p25:33" title="p25:30-p25:33">Page 25, lines 30–33</button></li></ol></div><div class="gate-group"><h3>Turned in late<span class="n">2</span></h3><ol><li><span class="quote">Any proposal received by CDOT after the time specified in Section 2.3 of this RFP shall be deemed non-responsive and shall not be evaluated or scored.</span> <button type="button" class="chip" data-cite="p24:24-p24:25" title="p24:24-p24:25">Page 24, lines 24–25</button></li><li><span class="quote">Failure to meet these dates will result in the Proposal being considered non-responsive.</span> <button type="button" class="chip" data-cite="p27:7-p27:8" title="p27:7-p27:8">Page 27, lines 7–8</button></li></ol></div><div class="gate-group"><h3>The agency keeps the right to reject proposals<span class="n">1</span></h3><ol><li><span class="quote">CDOT reserves the right to reject any or all Proposals.</span> <button type="button" class="chip" data-cite="p25:30" title="p25:30">Page 25, line 30</button></li></ol></div><div class="gate-group"><h3>Missing something required<span class="n">1</span></h3><ol><li><span class="quote">Any proposal received without a corresponding LOI will be determined by CDOT to be non-responsive. The corresponding non-responsive proposal will not be evaluated or scored and will not continue in the procurement process.</span> <button type="button" class="chip" data-cite="p26:9-p26:11" title="p26:9-p26:11">Page 26, lines 9–11</button></li></ol></div><div class="gate-group"><h3>Missing or wrong required form<span class="n">5</span></h3><ol><li><span class="quote">The MPPC will be evaluated for responsiveness. If the MPPC is determined by CDOT to be non- responsive, the corresponding Proposal will also be determined by CDOT to be non-responsive. The corresponding non-responsive Proposal will not be evaluated or scored and will not continue in the procurement process.</span> <button type="button" class="chip" data-cite="p29:23-p29:26" title="p29:23-p29:26">Page 29, lines 23–26</button></li><li><span class="quote">Certifying “Reject” of the Maximum Compensation for Construction Manager Preconstruction Services will cause the corresponding Proposal to be considered non-responsive to the solicitation and the corresponding Proposal will not be scored or further considered in this Project’s procurement.</span> <button type="button" class="chip" data-cite="p46:38-p46:40" title="p46:38-p46:40">Page 46, lines 38–40</button></li><li><span class="quote">Failure to certify acceptance or rejection of the Maximum Compensation for Construction Manager Preconstruction Services may cause the corresponding proposal to be considered non-responsive to the solicitation.</span> <button type="button" class="chip" data-cite="p46:42-p46:43" title="p46:42-p46:43">Page 46, lines 42–43</button></li><li><span class="quote">Certifying “Reject” of the MPP will cause the corresponding Proposal to be considered non-responsive to the solicitation and the corresponding Proposal will not be scored or further considered in this project’s procurement.</span> <button type="button" class="chip" data-cite="p47:38-p47:39" title="p47:38-p47:39">Page 47, lines 38–39</button></li><li><span class="quote">Failure to certify acceptance or rejection of the MPP may cause the corresponding proposal to be considered non- responsive to the solicitation.</span> <button type="button" class="chip" data-cite="p47:44-p47:45" title="p47:44-p47:45">Page 47, lines 44–45</button></li></ol></div><div class="gate-group"><h3>Broke a formatting or delivery rule (like a page limit)<span class="n">1</span></h3><ol><li><span class="quote">Supplemental information will only be considered in the scoring if clearly referenced in the Proposer’s responses to SECTION 3 – PROPOSAL CONTENT AND EVALUATION CRITERIA</span> <button type="button" class="chip" data-cite="p30:36-p30:38" title="p30:36-p30:38">Page 30, lines 36–38</button></li></ol></div></div>
+    <div class="grp-tools v-cards"><button type="button" data-open="part2">Expand all</button><button type="button" data-close="part2">Collapse all</button></div>
+    <div class="v-cards"><details class="grp gate"><summary><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4 L16 12 L8 20"/></svg><span class="grp-name">The RFP says this specifically disqualifies a proposal</span><span class="grp-n">2</span></summary><ol><li>No Person or business entity prior to Proposal submission, that was engaged by the State of Colorado in the preparation of this Request for Proposal, that had access to procurement sensitive information related to this Request for Proposal including but not limited to Requirements, Statements of Work, or Evaluation Criteria will be eligible to directly submit or participate in the submittal of a proposal for this initiative. <button type="button" class="chip" data-cite="p20:31-p20:35" title="p20:31-p20:35">Page 20, lines 31–35</button></li><li>No firm that is ineligible for State contracts may be part of any Proposer Team. <button type="button" class="chip" data-cite="p20:42-p20:43" title="p20:42-p20:43">Page 20, lines 42–43</button></li></ol></details><details class="grp gate"><summary><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4 L16 12 L8 20"/></svg><span class="grp-name">Doesn&#x27;t meet the agency&#x27;s requirements</span><span class="grp-n">2</span></summary><ol><li>Multiple proposals from a single Proposer will be considered non-responsive and will not be evaluated or scored. <button type="button" class="chip" data-cite="p24:16-p24:17" title="p24:16-p24:17">Page 24, lines 16–17</button></li><li>Proposals that do not meet the Minimum Proposal Requirements listed in Section 2.2 of this RFP will be deemed non-responsive and will not be evaluated, evaluation will be ceased upon discovery of non-responsive determination and will not be scored. <button type="button" class="chip" data-cite="p25:30-p25:33" title="p25:30-p25:33">Page 25, lines 30–33</button></li></ol></details><details class="grp gate"><summary><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4 L16 12 L8 20"/></svg><span class="grp-name">Turned in late</span><span class="grp-n">2</span></summary><ol><li>Any proposal received by CDOT after the time specified in Section 2.3 of this RFP shall be deemed non-responsive and shall not be evaluated or scored. <button type="button" class="chip" data-cite="p24:24-p24:25" title="p24:24-p24:25">Page 24, lines 24–25</button></li><li>Failure to meet these dates will result in the Proposal being considered non-responsive. <button type="button" class="chip" data-cite="p27:7-p27:8" title="p27:7-p27:8">Page 27, lines 7–8</button></li></ol></details><details class="grp gate"><summary><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4 L16 12 L8 20"/></svg><span class="grp-name">The agency keeps the right to reject proposals</span><span class="grp-n">1</span></summary><ol><li>CDOT reserves the right to reject any or all Proposals. <button type="button" class="chip" data-cite="p25:30" title="p25:30">Page 25, line 30</button></li></ol></details><details class="grp gate"><summary><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4 L16 12 L8 20"/></svg><span class="grp-name">Missing something required</span><span class="grp-n">1</span></summary><ol><li>Any proposal received without a corresponding LOI will be determined by CDOT to be non-responsive. The corresponding non-responsive proposal will not be evaluated or scored and will not continue in the procurement process. <button type="button" class="chip" data-cite="p26:9-p26:11" title="p26:9-p26:11">Page 26, lines 9–11</button></li></ol></details><details class="grp gate"><summary><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4 L16 12 L8 20"/></svg><span class="grp-name">Missing or wrong required form</span><span class="grp-n">5</span></summary><ol><li>The MPPC will be evaluated for responsiveness. If the MPPC is determined by CDOT to be non- responsive, the corresponding Proposal will also be determined by CDOT to be non-responsive. The corresponding non-responsive Proposal will not be evaluated or scored and will not continue in the procurement process. <button type="button" class="chip" data-cite="p29:23-p29:26" title="p29:23-p29:26">Page 29, lines 23–26</button></li><li>Certifying “Reject” of the Maximum Compensation for Construction Manager Preconstruction Services will cause the corresponding Proposal to be considered non-responsive to the solicitation and the corresponding Proposal will not be scored or further considered in this Project’s procurement. <button type="button" class="chip" data-cite="p46:38-p46:40" title="p46:38-p46:40">Page 46, lines 38–40</button></li><li>Failure to certify acceptance or rejection of the Maximum Compensation for Construction Manager Preconstruction Services may cause the corresponding proposal to be considered non-responsive to the solicitation. <button type="button" class="chip" data-cite="p46:42-p46:43" title="p46:42-p46:43">Page 46, lines 42–43</button></li><li>Certifying “Reject” of the MPP will cause the corresponding Proposal to be considered non-responsive to the solicitation and the corresponding Proposal will not be scored or further considered in this project’s procurement. <button type="button" class="chip" data-cite="p47:38-p47:39" title="p47:38-p47:39">Page 47, lines 38–39</button></li><li>Failure to certify acceptance or rejection of the MPP may cause the corresponding proposal to be considered non- responsive to the solicitation. <button type="button" class="chip" data-cite="p47:44-p47:45" title="p47:44-p47:45">Page 47, lines 44–45</button></li></ol></details><details class="grp gate"><summary><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4 L16 12 L8 20"/></svg><span class="grp-name">Broke a formatting or delivery rule (like a page limit)</span><span class="grp-n">1</span></summary><ol><li>Supplemental information will only be considered in the scoring if clearly referenced in the Proposer’s responses to SECTION 3 – PROPOSAL CONTENT AND EVALUATION CRITERIA <button type="button" class="chip" data-cite="p30:36-p30:38" title="p30:36-p30:38">Page 30, lines 36–38</button></li></ol></details></div>
     <div class="v-table"><ol class="flat"><li><span class="quote">No Person or business entity prior to Proposal submission, that was engaged by the State of Colorado in the preparation of this Request for Proposal, that had access to procurement sensitive information related to this Request for Proposal including but not limited to Requirements, Statements of Work, or Evaluation Criteria will be eligible to directly submit or participate in the submittal of a proposal for this initiative.</span> <button type="button" class="chip" data-cite="p20:31-p20:35" title="p20:31-p20:35">Page 20, lines 31–35</button> <span class="kind">The RFP says this specifically disqualifies a proposal</span></li><li><span class="quote">No firm that is ineligible for State contracts may be part of any Proposer Team.</span> <button type="button" class="chip" data-cite="p20:42-p20:43" title="p20:42-p20:43">Page 20, lines 42–43</button> <span class="kind">The RFP says this specifically disqualifies a proposal</span></li><li><span class="quote">Multiple proposals from a single Proposer will be considered non-responsive and will not be evaluated or scored.</span> <button type="button" class="chip" data-cite="p24:16-p24:17" title="p24:16-p24:17">Page 24, lines 16–17</button> <span class="kind">Doesn&#x27;t meet the agency&#x27;s requirements</span></li><li><span class="quote">Any proposal received by CDOT after the time specified in Section 2.3 of this RFP shall be deemed non-responsive and shall not be evaluated or scored.</span> <button type="button" class="chip" data-cite="p24:24-p24:25" title="p24:24-p24:25">Page 24, lines 24–25</button> <span class="kind">Turned in late</span></li><li><span class="quote">CDOT reserves the right to reject any or all Proposals.</span> <button type="button" class="chip" data-cite="p25:30" title="p25:30">Page 25, line 30</button> <span class="kind">The agency keeps the right to reject proposals</span></li><li><span class="quote">Proposals that do not meet the Minimum Proposal Requirements listed in Section 2.2 of this RFP will be deemed non-responsive and will not be evaluated, evaluation will be ceased upon discovery of non-responsive determination and will not be scored.</span> <button type="button" class="chip" data-cite="p25:30-p25:33" title="p25:30-p25:33">Page 25, lines 30–33</button> <span class="kind">Doesn&#x27;t meet the agency&#x27;s requirements</span></li><li><span class="quote">Any proposal received without a corresponding LOI will be determined by CDOT to be non-responsive. The corresponding non-responsive proposal will not be evaluated or scored and will not continue in the procurement process.</span> <button type="button" class="chip" data-cite="p26:9-p26:11" title="p26:9-p26:11">Page 26, lines 9–11</button> <span class="kind">Missing something required</span></li><li><span class="quote">Failure to meet these dates will result in the Proposal being considered non-responsive.</span> <button type="button" class="chip" data-cite="p27:7-p27:8" title="p27:7-p27:8">Page 27, lines 7–8</button> <span class="kind">Turned in late</span></li><li><span class="quote">The MPPC will be evaluated for responsiveness. If the MPPC is determined by CDOT to be non- responsive, the corresponding Proposal will also be determined by CDOT to be non-responsive. The corresponding non-responsive Proposal will not be evaluated or scored and will not continue in the procurement process.</span> <button type="button" class="chip" data-cite="p29:23-p29:26" title="p29:23-p29:26">Page 29, lines 23–26</button> <span class="kind">Missing or wrong required form</span></li><li><span class="quote">Supplemental information will only be considered in the scoring if clearly referenced in the Proposer’s responses to SECTION 3 – PROPOSAL CONTENT AND EVALUATION CRITERIA</span> <button type="button" class="chip" data-cite="p30:36-p30:38" title="p30:36-p30:38">Page 30, lines 36–38</button> <span class="kind">Broke a formatting or delivery rule (like a page limit)</span></li><li><span class="quote">Certifying “Reject” of the Maximum Compensation for Construction Manager Preconstruction Services will cause the corresponding Proposal to be considered non-responsive to the solicitation and the corresponding Proposal will not be scored or further considered in this Project’s procurement.</span> <button type="button" class="chip" data-cite="p46:38-p46:40" title="p46:38-p46:40">Page 46, lines 38–40</button> <span class="kind">Missing or wrong required form</span></li><li><span class="quote">Failure to certify acceptance or rejection of the Maximum Compensation for Construction Manager Preconstruction Services may cause the corresponding proposal to be considered non-responsive to the solicitation.</span> <button type="button" class="chip" data-cite="p46:42-p46:43" title="p46:42-p46:43">Page 46, lines 42–43</button> <span class="kind">Missing or wrong required form</span></li><li><span class="quote">Certifying “Reject” of the MPP will cause the corresponding Proposal to be considered non-responsive to the solicitation and the corresponding Proposal will not be scored or further considered in this project’s procurement.</span> <button type="button" class="chip" data-cite="p47:38-p47:39" title="p47:38-p47:39">Page 47, lines 38–39</button> <span class="kind">Missing or wrong required form</span></li><li><span class="quote">Failure to certify acceptance or rejection of the MPP may cause the corresponding proposal to be considered non- responsive to the solicitation.</span> <button type="button" class="chip" data-cite="p47:44-p47:45" title="p47:44-p47:45">Page 47, lines 44–45</button> <span class="kind">Missing or wrong required form</span></li></ol></div>
   </section>
 
   <section class="part" id="part3">
     <div class="part-head"><span class="partno">Part 3</span><h2>Other things the RFP says about scoring (1)</h2></div>
-    <ul class="cnm"><li>Selection Panel scoring values will be only numbers in whole, half, or quarter-number increments (i.e. 2.25, 3.50, 4.00.). Scoring of the Proposal and Interview will be based on the Evaluation Assessment Guidelines as set forth in the table below. <button type="button" class="chip" data-cite="p44:18-p44:20" title="p44:18-p44:20">Page 44, lines 18–20</button><span class="why">Explains how scoring works overall, not a separate scored item</span></li></ul>
+    <p class="gate-intro">Lines about scoring that aren't tied to a specific scored item. <span class="v-cards">Grouped by reason, in the order each reason first appears; the Table view lists them in RFP order.</span></p>
+    <div class="grp-tools v-cards"><button type="button" data-open="part3">Expand all</button><button type="button" data-close="part3">Collapse all</button></div>
+    <div class="v-cards"><details class="grp note"><summary><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4 L16 12 L8 20"/></svg><span class="grp-name">Explains how scoring works overall, not a separate scored item</span><span class="grp-n">1</span></summary><ol><li>Selection Panel scoring values will be only numbers in whole, half, or quarter-number increments (i.e. 2.25, 3.50, 4.00.). Scoring of the Proposal and Interview will be based on the Evaluation Assessment Guidelines as set forth in the table below. <button type="button" class="chip" data-cite="p44:18-p44:20" title="p44:18-p44:20">Page 44, lines 18–20</button></li></ol></details></div>
+    <div class="v-table"><ol class="flat"><li>Selection Panel scoring values will be only numbers in whole, half, or quarter-number increments (i.e. 2.25, 3.50, 4.00.). Scoring of the Proposal and Interview will be based on the Evaluation Assessment Guidelines as set forth in the table below. <button type="button" class="chip" data-cite="p44:18-p44:20" title="p44:18-p44:20">Page 44, lines 18–20</button> <span class="kind">Explains how scoring works overall, not a separate scored item</span></li></ol></div>
   </section>
 
   <p class="foot">Boxes your team still needs to fill in: 24 of them.<br><small>Numbered text the checklist was checked against: <code>../fixtures/codot-us50-passing-lanes-cm-rfp.source.txt</code></small></p>
@@ -416,6 +438,19 @@ const SOURCE = {"1": [[1, "         Final Request for Proposals (RFP)"], [2, ""]
     if (chip) { openSidebar(chip.getAttribute('data-cite'), chip); return; }
     var tb = e.target.closest('.tab');
     if (tb) { setActive(tb.getAttribute('data-tab')); clickedUntil = Date.now() + 700; setTimeout(pick, 750); return; }
+    var gb = e.target.closest('.grp-tools button');
+    if (gb) {
+      var part = gb.getAttribute('data-open') || gb.getAttribute('data-close');
+      var open = gb.hasAttribute('data-open');
+      Array.prototype.forEach.call(document.querySelectorAll('#' + part + ' details.grp'), function (d) { d.open = open; });
+      return;
+    }
+    var mt = e.target.closest('.moretitle');
+    if (mt) {
+      var h = document.getElementById('rfpTitle'); var clamped = h.classList.toggle('clamp');
+      mt.textContent = clamped ? 'Show full title' : 'Show less'; mt.setAttribute('aria-expanded', clamped ? 'false' : 'true');
+      return;
+    }
     var vb = e.target.closest('.seg-toggle button');
     if (vb) { setView(vb.getAttribute('data-view')); return; }
     if (e.target.id === 'closeSidebar' || e.target === scrim) closeSidebar();
@@ -458,6 +493,13 @@ const SOURCE = {"1": [[1, "         Final Request for Proposals (RFP)"], [2, ""]
     sections.forEach(function (s) { io.observe(s); });
   } else { setActive('top'); }
   setActive('top');
+  (function () {
+    var h = document.getElementById('rfpTitle'), b = document.querySelector('.moretitle');
+    if (h && b && h.scrollHeight > h.clientHeight + 2) b.hidden = false;
+  })();
+  window.addEventListener('beforeprint', function () {
+    Array.prototype.forEach.call(document.querySelectorAll('details.grp'), function (d) { d.open = true; });
+  });
 })();
 </script>
 </body>
