@@ -27,7 +27,10 @@ A **human field** is the empty string `""`. Always.
 
 | Key | Type | Meaning |
 |---|---|---|
-| `rfp` | sourced | The RFP's title or number, as printed |
+| `rfp` | sourced | The RFP's number, as printed |
+| `issuer` | sourced | The public owner, as printed (e.g. "City of Tucker") |
+| `title` | sourced | The project or solicitation name, as printed (e.g. "Right-of-Way Maintenance") |
+| `due` | sourced | The proposal due date/time sentence or phrase, as printed |
 | `source` | string | Path to the `.source.txt` the citations point into, relative to the matrix file |
 | `stated_total` | sourced number, **or** `{"stages": [{"name", "value", "cite"}...], "combined": sourced?}`, or `"not in source"` | The total the RFP says it scores out of. Staged scoring lists each stage's total with its own citation; `combined` is the sentence that says the stages are added, if the RFP has one |
 | `rows` | list | One object per scored item, in the RFP's order (fields below) |
@@ -119,10 +122,12 @@ Every line that matches has to fall inside at least one citation somewhere in th
 
 ## Rendered forms
 
-- **Markdown** (`.matrix.md`): header with the RFP, stated total (or per-stage reconcile line), sum, reconcile verdict, and the coverage summary line; Part 1 (rows, grouped under their RFP-section heading, nine columns, citation after every sourced cell); a TOTAL line; Part 2 disqualifiers with a count; Part 3 could-not-map; a count of rows waiting on a person.
-- **CSV** (`.matrix.csv`): the same nine columns and section groupings as the Markdown, citations inline, a TOTAL row.
-- **XLSX** (`.matrix.xlsx`): one sheet, a repeated section-heading row above each group, Points as numbers with a live `=SUM(...)` TOTAL. A fresh workbook; no firm's template.
-- **HTML** (`.matrix.html`): one self-contained file (inline CSS/JS, no network) embedding the full numbered source text, with a citation sidebar — clicking a citation opens the cited source page with the lines highlighted. Owned by the design worker; see `tools/matrix_template.html`.
+Every rendering leads with who/what/when (Ruling 18:49): `<issuer> · <title>` as the big title, `RFP <number>` beneath it (the `rfp` field), and "Proposals due: `<due>`" with its own citation. Part 3 is titled "Other things the RFP says about scoring" everywhere (Ruling 18:33) — the JSON key stays `could_not_map`.
+
+- **Markdown** (`.matrix.md`): the who/what/when header, a "What this is" line, plain header facts ("The RFP says it scores out of N", "The items below add up to N", "Do they match? Yes/No", per stage where staged, plus a plain coverage-accounted-for sentence); Part 1 (rows, grouped under their RFP-section heading, nine columns, citation after every sourced cell); a TOTAL line; Part 2 disqualifiers with a count; Part 3; a count of rows waiting on a person. Citations render as "Page N, line M" (or "Page N, lines M-L"). A literal `not in source` cell renders as `not in source (the RFP doesn't say)` — the plain-English gloss is appended, the JSON phrase itself is never hidden.
+- **CSV** (`.matrix.csv`): the same header facts, nine columns and section groupings as the Markdown, citations inline as "Page N, line M". A literal `not in source` cell renders as the bare string `not in source` — no gloss, so the column stays machine-parseable.
+- **XLSX** (`.matrix.xlsx`): one sheet, a repeated section-heading row above each group, Points as numbers with a live `=SUM(...)` TOTAL. Citations stay in the `p<page>:<line>` form and `not in source` renders as the bare string, unchanged — this is the technical rendering, not the plain-language one. A fresh workbook; no firm's template.
+- **HTML** (`.matrix.html`): one self-contained file (inline CSS/JS, no network) embedding the full numbered source text, with a citation sidebar — clicking a citation opens the cited source page with the lines highlighted. Also carries the who/what/when header. Owned by the design worker; see `tools/matrix_template.html`.
 
 ## What the checker proves (exit 0)
 

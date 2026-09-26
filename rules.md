@@ -30,7 +30,10 @@ Some RFPs list criteria as independent maximums (25/25/30/10/5/5) with no senten
 
 | Field | Comes from | Citation |
 |---|---|---|
-| `rfp` | The RFP's own title or number, from a page header or the cover | the line it is printed on |
+| `rfp` | The RFP's own number, from a page header or the cover | the line it is printed on |
+| `issuer` | The public owner's name, as printed (e.g. "City of Tucker") | the line it is printed on |
+| `title` | The project or solicitation name, as printed (e.g. "Right-of-Way Maintenance") | the line it is printed on |
+| `due` | The sentence or phrase stating when proposals are due | that sentence |
 | `stated_total` | The sentence that states the total ("carries a total weight of 100 points", "60 Points Possible") | that sentence |
 | `section` | The heading of the RFP section that holds the scoring table. Not a column — it renders once, as a heading above the rows that share it | the heading line |
 | `criterion` | The criterion **verbatim** as the RFP names it. Not shortened, not re-cased, not re-spelled | the line(s) it appears on |
@@ -94,7 +97,7 @@ Before finishing, search the source for every sentence that assigns points, stat
 - A criterion reworded "the way it is usually written".
 - A section name borrowed from the last RFP you saw.
 - An `answering_section` guessed from a general submittal section the RFP never tied to this specific criterion — see rule 2.
-- A date, a deadline, a contact, a page limit, or anything else not asked for by the nine columns, even when it is true and useful. The matrix is not the place for it.
+- A date, a deadline, a contact, a page limit, or anything else not asked for by the nine columns or the who/what/when fields, even when it is true and useful. The matrix is not the place for it. The one exception is the proposal due date itself, which belongs in the top-level `due` field, cited like every other fact — not a deadline for questions, not an award date, not a contract start date.
 - Anything about the firm: names, systems, past proposals. Those are the human columns' business.
 
 ## 9. Prove it before handing over

@@ -179,12 +179,29 @@ def plain_facts(m, cov):
     return lines
 
 
+def who_what_when(m, note):
+    """Ruling 18:49: '<issuer> · <title>' as the big title, 'RFP <number>' beneath, and the
+    due-date fact. Falls back to the `rfp` field alone if issuer/title are both not in source."""
+    issuer = plain_title(m.get("issuer", EMPTY))
+    proj = plain_title(m.get("title", EMPTY))
+    rfp_no = plain_title(m.get("rfp", EMPTY))
+    due_cell = cell_plain(m.get("due", EMPTY), note)
+    if issuer != EMPTY or proj != EMPTY:
+        big_title = " · ".join(x for x in (issuer, proj) if x != EMPTY)
+    else:
+        big_title = rfp_no
+    return big_title, rfp_no, due_cell
+
+
 def to_markdown(m, cov):
-    title = plain_title(m["rfp"])
+    big_title, rfp_no, due_cell = who_what_when(m, note=True)
     out = []
-    out.append(f"# RFP Evaluation Criteria Checklist: {title}")
+    out.append(f"# RFP Evaluation Criteria Checklist: {big_title}")
     out.append("")
-    out.append(f"This checklist shows how **{title}** will be scored. It's built from the RFP itself "
+    out.append(f"RFP {rfp_no}  ")
+    out.append(f"Proposals due: {due_cell}")
+    out.append("")
+    out.append(f"This checklist shows how **{big_title}** will be scored. It's built from the RFP itself "
                "— not a summary of it.")
     out.append("")
     for line in plain_facts(m, cov):
@@ -231,11 +248,13 @@ def to_markdown(m, cov):
 
 def to_csv(m, path, cov):
     n = len(HDR)
-    title = plain_title(m["rfp"])
+    big_title, rfp_no, due_cell = who_what_when(m, note=False)
     with open(path, "w", newline="") as f:
         w = csv.writer(f)
-        w.writerow([f"RFP Evaluation Criteria Checklist: {title}"] + [""] * (n - 1))
-        w.writerow([f"This checklist shows how {title} will be scored. It's built from the RFP itself "
+        w.writerow([f"RFP Evaluation Criteria Checklist: {big_title}"] + [""] * (n - 1))
+        w.writerow([f"RFP {rfp_no}"] + [""] * (n - 1))
+        w.writerow([f"Proposals due: {due_cell}"] + [""] * (n - 1))
+        w.writerow([f"This checklist shows how {big_title} will be scored. It's built from the RFP itself "
                     "— not a summary of it."] + [""] * (n - 1))
         for line in plain_facts(m, cov):
             w.writerow([line] + [""] * (n - 1))

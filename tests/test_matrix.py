@@ -123,7 +123,9 @@ class SeenToFail(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             src_path = pathlib.Path(d) / "no-scoring.source.txt"
             src_path.write_text("p1:1|Request for Qualifications\np1:2|This is a qualifications-based selection.\n")
-            m = {"rfp": {"text": "Request for Qualifications", "cite": "p1:1"}, "source": str(src_path),
+            m = {"rfp": {"text": "Request for Qualifications", "cite": "p1:1"},
+                 "issuer": "not in source", "title": "not in source", "due": "not in source",
+                 "source": str(src_path),
                  "stated_total": "not in source", "rows": [], "disqualifiers": [], "could_not_map": [],
                  "reviewed": [], "stop": "no scoring table published"}
             self.assertEqual(check_matrix.check(m, pathlib.Path(d))[0], [])
@@ -267,6 +269,9 @@ MINI_SOURCE_LINES = [
     "See Table of Contents item 4.2 for Evaluation Criteria details.",      # p1:8
     "Provide the organizational chart for review.",                        # p1:9
     "Note: A < B applies here.",                                            # p1:10
+    "Issued by the City of Sample.",                                        # p1:11
+    "Project: Sample Roofing Replacement",                                  # p1:12
+    "Proposals are due by 5:00 PM on October 1, 2026.",                     # p1:13
 ]
 
 
@@ -279,6 +284,9 @@ def write_mini_source(d: pathlib.Path) -> pathlib.Path:
 def mini_matrix(src_path) -> dict:
     return {
         "rfp": {"text": "Sample RFP No. 2026-001", "cite": "p1:1"},
+        "issuer": {"text": "City of Sample.", "cite": "p1:11"},
+        "title": {"text": "Sample Roofing Replacement", "cite": "p1:12"},
+        "due": {"text": "5:00 PM on October 1, 2026.", "cite": "p1:13"},
         "source": str(src_path),
         "stated_total": {"value": 50, "cite": "p1:6"},
         "rows": [
@@ -392,7 +400,9 @@ class CoverageUnicodeHyphens(unittest.TestCase):
                 "p1:2|A proposal found non‑responsive will not be scored.\n"
             )
             m = {
-                "rfp": {"text": "Sample RFP", "cite": "p1:1"}, "source": str(src),
+                "rfp": {"text": "Sample RFP", "cite": "p1:1"},
+                "issuer": "not in source", "title": "not in source", "due": "not in source",
+                "source": str(src),
                 "stated_total": "not in source", "rows": [], "disqualifiers": [], "could_not_map": [],
                 "reviewed": [], "stop": "no scoring table published",
             }
@@ -432,6 +442,40 @@ class HTMLSmoke(unittest.TestCase):
             # JS writes it into the DOM at click time — so the check is scoped to the <li>.)
             self.assertIn("<li>Note: A &lt; B applies here.", content)
             self.assertNotIn("<li>Note: A < B applies here.", content)
+
+
+class NotInSourceLiteral(unittest.TestCase):
+    """Audit fix: the brief says the output literally says "not in source". Every rendering
+    must carry that exact string when the JSON has it; md alone adds a plain-English gloss."""
+
+    def test_literal_string_in_every_rendering(self):
+        with tempfile.TemporaryDirectory() as d:
+            tmp = pathlib.Path(d)
+            src_path = write_mini_source(tmp)
+            m = mini_matrix(src_path)
+            m["rows"][0]["evaluation_criteria"] = "not in source"
+            matrix_path = tmp / "mini.matrix.json"
+            matrix_path.write_text(json.dumps(m))
+            r = subprocess.run([sys.executable, ROOT / "tools/write_matrix.py", matrix_path],
+                               capture_output=True, text=True)
+            self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+
+            md = (tmp / "mini.matrix.md").read_text()
+            self.assertIn("not in source (the RFP doesn't say)", md)
+
+            csv_text = (tmp / "mini.matrix.csv").read_text()
+            self.assertIn("not in source", csv_text)
+            self.assertNotIn("not in source (the RFP doesn't say)", csv_text)
+
+            import openpyxl
+            wb = openpyxl.load_workbook(tmp / "mini.matrix.xlsx")
+            ws = wb.active
+            values = [c.value for row in ws.iter_rows() for c in row]
+            self.assertIn("not in source", values)
+            self.assertNotIn("not in source (the RFP doesn't say)", values)
+
+            html = (tmp / "mini.matrix.html").read_text()
+            self.assertIn("not in source", html)
 
 
 if __name__ == "__main__":

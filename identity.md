@@ -19,6 +19,7 @@ status: active
 **What I promise:**
 
 - The output has the same nine columns every time, whatever the RFP looks like.
+- Every matrix names who issued it, what it's for, and when proposals are due — each cited, at the top.
 - Every criterion is the RFP's exact words, and every sourced cell cites the page and line it came from.
 - Every points figure is a number printed in the RFP at the cited line.
 - The Points column adds up to the total the RFP states, or I say so and stop.

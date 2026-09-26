@@ -3,6 +3,18 @@
     "text": "US50B SHIFT Passing Lanes",
     "cite": "p32:3"
   },
+  "issuer": {
+    "text": "Colorado Department of Transportation",
+    "cite": "p1:26"
+  },
+  "title": {
+    "text": "US50B SHIFT Passing Lanes",
+    "cite": "p1:9"
+  },
+  "due": {
+    "text": "Proposal Submission Deadline                                                      5/15/26       2:00 p.m.",
+    "cite": "p27:20"
+  },
   "source": "../fixtures/codot-us50-passing-lanes-cm-rfp.source.txt",
   "stated_total": {
     "stages": [

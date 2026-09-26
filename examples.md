@@ -10,6 +10,8 @@ status: active
 
 Three public RFPs went in; three matrices with the same nine columns came out. Each pair below shows an excerpt of the numbered source beside the rows it produced, so a reader can put a finger on the input line and the output cell at the same time. The full inputs are in `fixtures/`, the full outputs in `outputs/`, and every one passes `tools/check_matrix.py`.
 
+Every matrix also carries who, what, and when at the top (`issuer`, `title`, `due` — Ruling 18:49), each sourced and cited like any other fact. Example 1's: `issuer` "City of Tucker" [Page 1, line 1], `title` "Construction, Engineering and Inspection (CEI) Services" [Page 1, line 8], `due` "received no later than July 9, 2026 at 1:00pm EST" [Page 2, line 34]. The rendered header reads "City of Tucker · Construction, Engineering and Inspection (CEI) Services" as the big title, "RFP City of Tucker Request for Proposal 2026-016" (the `rfp` field, verbatim as printed) beneath it, and "Proposals due: received no later than July 9, 2026 at 1:00pm EST" with its own citation.
+
 ## Example 1: a short city RFP with a clean 100-point table
 
 **Input:** City of Tucker, Georgia, RFP 2026-016, Construction Engineering and Inspection services. 22 pages. `fixtures/tucker-ga-rfp-2026-016-cei-services.source.txt`.
@@ -35,7 +37,7 @@ p11:18|            Cost Proposal – 35 points
 
 (Status, Input data source, Lead, Reviewer: empty on all three rows.)
 
-**What the contract did here:** row 1's `input_needed` is two citation parts from two different pages (the primary-contact sentence on page 10, then the qualifications/EMR/OSHA asks on the same page and on page 35), joined with " · " — a single ≤12-line, one-page passage was never long enough to hold the whole ask. The en dash in row 2's criterion is the RFP's en dash; the checker would fail a hyphen. Seventeen sentences that remove, reject, or gate a proposal — late bids, GDOT prequalification, non-responsive and non-responsible determinations, the page-limit rule, the City's reservation of rights, the safety-record EMR/OSHA ask folded into the row instead — sit under Part 2: Disqualifiers, each tagged with one of the nine fixed kinds. What's left under Part 3, "Other things the RFP says about scoring," is five sentences that don't gate anything: the Organizational Chart and additional-references items the RFP never ties to a scored criterion, the comparative-evaluation and category-scoring sentences that apply to every row, and the oral-presentation clause whose criteria belong to a later stage.
+**What the contract did here:** rows 1 and 2's `input_needed` are each two citation parts, joined with " · ", because the ask splits across a gap the checker's 12-line/one-page span can't bridge in one citation: row 1 splits the primary-contact sentence [Page 10, lines 18-20] from the personnel-background sentence right after it [Page 10, lines 20-24]; row 2 splits the CEI-experience sentence [Page 10, lines 12-14] from a DeKalb County experience requirement four pages earlier [Page 6, lines 14-16]. All three rows share one `evaluation_criteria` sentence [Page 11, lines 9-10], since the RFP gives no criterion-specific one here. Row 3's proposal section comes from a numbered item on page 3, not from the scoring section itself. Seventeen sentences that remove, reject, or gate a proposal — late bids, GDOT prequalification, non-responsive and non-responsible determinations, the page-limit rule, the City's reservation of rights — sit under Part 2: Disqualifiers, each tagged with one of the nine fixed kinds. What's left under Part 3, "Other things the RFP says about scoring," is five sentences that don't gate anything: the Organizational Chart item [Page 10, line 16] and the additional-references item [Page 10, lines 26-27], neither tied to a scored criterion; the comparative-evaluation sentence that applies to every row [Page 10, lines 34-37]; the category-scoring sentence [Page 11, lines 11-12]; and the oral-presentation clause whose criteria belong to a later stage [Page 11, lines 25-27].
 
 ## Example 2: a two-stage state DOT RFP with sub-criteria
 
@@ -53,17 +55,17 @@ p38:8 |3.2       EVALUATION CRITERIA FOR INTERVIEWS (40 Points Possible)
 p38:12|      A. Short Presentation (15 Points)
 p38:19|      B. Question and Answer Session with the Selection Panel (25 Points)
 p24:11|preconstruction CM services. The Proposers Technical Score and their Interview Score will be summed
-p24:12|and tabulated which will be referred to as their "Total Score",
+p24:12|and tabulated which will be referred to as their “Total Score”,
 ```
 
-Nowhere does Section 2.9 (Proposal Submittal) tie an individual Section 3.1 criterion to a numbered submittal item or form — the whole of Section 3 is one undifferentiated narrative — so every Proposal-stage row's `answering_section` is `not in source` ("The RFP doesn't say" in the rendering), never a repurposed "Provide/Describe/Identify" sentence. Criterion D spreads its ask across three named sub-parts and a page break:
+Nowhere does Section 2.9 (Proposal Submittal) tie an individual Section 3.1 criterion to a numbered submittal item or form — the whole of Section 3 is one undifferentiated narrative — so every Proposal-stage row's `answering_section` is `not in source` (rendered `not in source (the RFP doesn't say)`), never a repurposed "Provide/Describe/Identify" sentence. Criterion D spreads its ask across three named sub-parts and a page break:
 
 ```
 p37:36|           Schedule Approach
-p37:37|           Describe the Proposer's plan and approach to managing the construction schedule in such
+p37:37|           Describe the Proposer’s plan and approach to managing the construction schedule in such
 p37:41|           Cost Model Approach
-p37:42|           Describe the Proposer's approach to Transparency and Accountability in the Cost Model.
-p37:45|           Describe how the Proposer's cost model will incorporate the variables that affect project
+p37:42|           Describe the Proposer’s approach to Transparency and Accountability in the Cost Model.
+p37:45|           Describe how the Proposer’s cost model will incorporate the variables that affect project
 p38:5 |                 Independent Cost Estimator, and be reliable over multiple construction seasons.
 ```
 
@@ -71,12 +73,12 @@ p38:5 |                 Independent Cost Estimator, and be reliable over multipl
 
 | Stage | What the RFP will score (their exact words) | Points for this item | What the scorer will look for | Where it goes in your proposal |
 |---|---|---|---|---|
-| Proposal | A. CM Project Management Team [Page 32, line 9] | 10 [Page 32, line 9] | Composition and Commitment of the CM Project Management Team [Page 32, line 10] | The RFP doesn't say |
-| Proposal | B. Contractor Capability [Page 35, line 28] | 10 [Page 35, line 28] | Prior Project Experience/Performance/References [Page 35, line 32] | The RFP doesn't say |
-| Proposal | C. Strategic Project Approach [Page 36, line 20] | 20 [Page 36, line 20] | The RFP doesn't say | The RFP doesn't say |
-| Proposal | D. Approach to Risk, Schedule, and Pricing [Page 37, line 27] | 20 [Page 37, line 27] | The RFP doesn't say | The RFP doesn't say |
-| Interview | A. Short Presentation [Page 38, line 12] | 15 [Page 38, line 12] | The interview presentation and question/answer scoring will be based on the following criteria… [Page 38, lines 28-34] | The RFP doesn't say |
-| Interview | B. Question and Answer Session with the Selection Panel [Page 38, line 19] | 25 [Page 38, line 19] | (same, [Page 38, lines 28-34]) | The RFP doesn't say |
+| Proposal | A. CM Project Management Team [Page 32, line 9] | 10 [Page 32, line 9] | Composition and Commitment of the CM Project Management Team [Page 32, line 10] | not in source (the RFP doesn't say) |
+| Proposal | B. Contractor Capability [Page 35, line 28] | 10 [Page 35, line 28] | Prior Project Experience/Performance/References [Page 35, line 32] | not in source (the RFP doesn't say) |
+| Proposal | C. Strategic Project Approach [Page 36, line 20] | 20 [Page 36, line 20] | not in source (the RFP doesn't say) | not in source (the RFP doesn't say) |
+| Proposal | D. Approach to Risk, Schedule, and Pricing [Page 37, line 27] | 20 [Page 37, line 27] | not in source (the RFP doesn't say) | not in source (the RFP doesn't say) |
+| Interview | A. Short Presentation [Page 38, line 12] | 15 [Page 38, line 12] | The interview presentation and question/answer scoring will be based on the following criteria… [Page 38, lines 28-34] | not in source (the RFP doesn't say) |
+| Interview | B. Question and Answer Session with the Selection Panel [Page 38, line 19] | 25 [Page 38, line 19] | (same, [Page 38, lines 28-34]) | not in source (the RFP doesn't say) |
 
 Row 4's `input_needed` is seven citation parts — Risk Approach, Schedule Approach, and Cost Model Approach, in the RFP's order — because no single ≤12-line, one-page passage holds all three. The last two parts are the sentence split by the page break shown above (`p37:45-p37:46` then `p38:5`).
 
@@ -95,7 +97,7 @@ p14:20|        Points
 p14:27|        Cost Proposal – 30 points
 ```
 
-**Output** (`outputs/tucker-ga-rfp-2026-008-row-maintenance.matrix.md`): three rows, the same nine columns as Example 1, grouped under "4. Selection Criteria" [Page 14, line 8], sum 100 against stated 100 [Page 14, line 11], do they match: yes. Row 1's evaluation criteria is the RFP's own sentence [Page 14, lines 16-17] instead of the general one, because this RFP supplies one, and its `answering_section` is `not in source` — the RFP never names a section for it. Row 2's criterion breaks across two source lines ("– 35" then "Points"); the criterion cell cites Page 14, line 19 and the checker finds the words there. Row 3 is the one row with a real proposal section, "Cost Proposal (form provided)" [Page 3, line 11], sitting beside a scoring sentence — "In scoring against stated criteria, the City may consider such factors as accepted industry standards…" [Page 13, lines 35-38] — reused as `evaluation_criteria` because this RFP gives no criterion-specific sentence for cost.
+**Output** (`outputs/tucker-ga-rfp-2026-008-row-maintenance.matrix.md`): three rows, the same nine columns as Example 1, grouped under "4. Selection Criteria" [Page 14, line 8], sum 100 against stated 100 [Page 14, line 11], do they match: yes. Row 1's evaluation criteria is the RFP's own sentence [Page 14, lines 16-17] instead of the general one, because this RFP supplies one, and its `answering_section` is `not in source` — the RFP never names a section for it. Row 2's `evaluation_criteria` is the RFP's own five-line description of what the report must demonstrate [Page 14, lines 21-25]; its `answering_section` is `not in source` too, for the same reason as row 1. Row 3 is the one row with a real proposal section, "Cost Proposal (form provided)" [Page 3, line 11], sitting beside a scoring sentence — "In scoring against stated criteria, the City may consider such factors as accepted industry standards…" [Page 13, lines 35-38] — reused as `evaluation_criteria` because this RFP gives no criterion-specific sentence for cost.
 
 Twelve gate sentences — late bids, the City's reservation of rights, non-responsive and non-responsible determinations, incomplete and late submittals, the page-limit rule, and the "outside the formal response" disqualification — sit under Part 2: Disqualifiers. Part 3, "Other things the RFP says about scoring," carries three sentences: "Age and condition of equipment will be factored into contractor scoring for these services" [Page 5, line 36], which carries no points and no criterion; the category-scoring sentence [Page 14, lines 12-13]; and the oral-presentation clause whose criteria belong to a later stage.
 
@@ -103,4 +105,4 @@ Twelve gate sentences — late bids, the City's reservation of rights, non-respo
 
 - **Same shape across inputs:** `tests/test_matrix.py::test_same_shape_across_inputs` asserts every row in every shipped matrix has exactly the same set of real keys (the nine columns plus `section` and, where staged, `stage`).
 - **Every fact traces:** `python3 tools/check_matrix.py outputs/<any>.matrix.json` exits 0 on all three, and exits 1 when a test paraphrases a criterion, respells a word, quotes a fragment that ends mid-word, invents a points figure, points at a number on a neighbouring line, cites across a page, adds a key the contract does not name (including a retired `claude_does`, `owner`, or `human_check`), writes free text into `stop`, `why`, or a disqualifier's `kind`, reorders rows, fills a human column (`status`, `input_source`, `lead`, or `reviewer`), gives `answering_section` a part that opens with an imperative verb, breaks a multi-part cell's second part, or leaves a coverage trigger line — including one hidden behind a Unicode hyphen — uncited and unreviewed.
-- **Missing is marked, not filled:** `not in source` (rendered "The RFP doesn't say") appears wherever the RFP is silent — most visibly the CDOT Proposal rows' `answering_section`, since that RFP never ties a criterion to a numbered submittal item.
+- **Missing is marked, not filled:** the literal JSON string `not in source` appears wherever the RFP is silent, in every rendering; the Markdown adds the plain-English gloss " (the RFP doesn't say)" after it, the CSV and XLSX leave it bare. Most visible in the CDOT Proposal rows' `answering_section`, since that RFP never ties a criterion to a numbered submittal item.

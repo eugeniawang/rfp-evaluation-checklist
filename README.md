@@ -65,6 +65,8 @@ python3 -m unittest discover tests
 
 ## What comes back
 
+Every matrix leads with who, what, and when: the issuing public owner (`issuer`), the project or solicitation name (`title`), and the proposal due date (`due`) — each cited like any other fact, alongside the RFP's own number (`rfp`). The rendered header reads "`<issuer>` · `<title>`" as the big title, "RFP `<number>`" beneath it, and "Proposals due: `<due>`".
+
 The nine columns, always in this order:
 
 Status · What the RFP will score (their exact words) · Points for this item · What the RFP asks you to provide · Where your team will get it · What the scorer will look for · Where it goes in your proposal · Lead for this section · Reviewer for this section

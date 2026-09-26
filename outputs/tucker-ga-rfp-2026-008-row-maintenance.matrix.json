@@ -3,6 +3,18 @@
     "text": "RFP 2026-008",
     "cite": "p1:4"
   },
+  "issuer": {
+    "text": "City of Tucker",
+    "cite": "p1:1"
+  },
+  "title": {
+    "text": "Right of Way Maintenance Services",
+    "cite": "p2:3"
+  },
+  "due": {
+    "text": "Proposal Deadline                                  April 2, 2026, at 1:00pm EST",
+    "cite": "p2:18"
+  },
   "source": "../fixtures/tucker-ga-rfp-2026-008-row-maintenance.source.txt",
   "stated_total": {
     "value": 100,

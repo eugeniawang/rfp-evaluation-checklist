@@ -29,6 +29,8 @@ What it proves (reference/schema.md is the contract it enforces):
   10. Coverage: every source line that matches a scoring or gating trigger pattern is cited
       somewhere in the matrix (a row, a disqualifier, a could_not_map entry, or a `reviewed`
       entry) — nothing that looks like scoring or a gate is silently dropped.
+  11. `issuer`, `title` and `due` (Ruling 18:49: who, what, when) are required top-level sourced
+      fields, checked like `rfp` — verbatim, cited, or "not in source".
 
 Exit 0 = every claim in the matrix was found in the input, and every line that looked like it
 mattered was accounted for. Exit 1 = at least one was not, and each one is named.
@@ -50,8 +52,11 @@ SOURCED = ["section", "criterion", "points", "input_needed", "evaluation_criteri
 MULTI_OK = {"section", "input_needed", "evaluation_criteria", "answering_section"}  # not criterion, not points
 HUMAN = ["status", "input_source", "lead", "reviewer"]  # always "" on hand-over
 ROW_KEYS = set(ROW_FIELDS) | {"stage"}
-TOP_KEYS = {"rfp", "source", "stated_total", "rows", "disqualifiers", "could_not_map", "reviewed", "stop"}
-REQUIRED_TOP = ("rfp", "source", "stated_total", "rows", "disqualifiers", "could_not_map", "reviewed")
+TOP_KEYS = {"rfp", "issuer", "title", "due", "source", "stated_total", "rows",
+            "disqualifiers", "could_not_map", "reviewed", "stop"}
+REQUIRED_TOP = ("rfp", "issuer", "title", "due", "source", "stated_total", "rows",
+                "disqualifiers", "could_not_map", "reviewed")
+TOP_SOURCED = ("rfp", "issuer", "title", "due")  # who/what/when at the top; each may be multi-part
 EMPTY = "not in source"
 MAX_SPAN = 12          # lines one citation may cover, on one page
 MAX_POINTS_SPAN = 2    # lines a points citation may cover
@@ -281,7 +286,9 @@ def check_answering_section(where, v, problems):
 def check_coverage(m: dict, src: dict, problems: list):
     hits = [key for key in src["order"] if TRIGGER_RE.search(normalize_hyphens(src["lines"][key]))]
     buckets = {
-        "rows": collect_cites(m.get("rfp")) + collect_cites(m.get("stated_total")) + collect_cites(m.get("rows", [])),
+        "rows": collect_cites(m.get("rfp")) + collect_cites(m.get("issuer")) + collect_cites(m.get("title"))
+                + collect_cites(m.get("due")) + collect_cites(m.get("stated_total"))
+                + collect_cites(m.get("rows", [])),
         "disqualifiers": collect_cites(m.get("disqualifiers", [])),
         "could_not_map": collect_cites(m.get("could_not_map", [])),
         "reviewed": collect_cites(m.get("reviewed", [])),
@@ -332,7 +339,8 @@ def check(m: dict, base: pathlib.Path):
         return [f"source text not found: {m['source']}"], 0
     src = load_source(src_path)
 
-    check_field(src, "rfp", m["rfp"], problems, multi=True)
+    for k in TOP_SOURCED:
+        check_field(src, k, m[k], problems, multi=True)
     st = m["stated_total"]
     stages = None
     if isinstance(st, dict) and "stages" in st:

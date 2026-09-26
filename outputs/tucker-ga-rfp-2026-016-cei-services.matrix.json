@@ -3,6 +3,18 @@
     "text": "City of Tucker Request for Proposal 2026-016",
     "cite": "p11:1"
   },
+  "issuer": {
+    "text": "City of Tucker",
+    "cite": "p1:1"
+  },
+  "title": {
+    "text": "Construction, Engineering and Inspection (CEI) Services",
+    "cite": "p1:8"
+  },
+  "due": {
+    "text": "received no later than July 9, 2026 at 1:00pm EST",
+    "cite": "p2:34"
+  },
   "source": "../fixtures/tucker-ga-rfp-2026-016-cei-services.source.txt",
   "stated_total": {
     "value": 100,
