@@ -6,7 +6,9 @@
 What it proves (reference/schema.md is the contract it enforces):
 
   1. Every sourced field carries a citation p<page>:<line> or p<page>:<line>-p<page>:<line>,
-     on ONE page, spanning at most 12 lines, and that place exists in the source.
+     on ONE page, spanning at most 12 lines, and that place exists in the source. A sourced
+     text field (not `criterion` or `points`) may instead be a list of 1-10 such objects, for
+     an ask spread across several passages; each part is checked independently.
   2. The field's text is a whole-word, verbatim run of the cited lines (whitespace collapsed,
      nothing else changed). A paraphrase fails. A respelling fails. A fragment that starts or
      ends mid-word fails.
@@ -14,13 +16,22 @@ What it proves (reference/schema.md is the contract it enforces):
      most 2 lines, so the number is the one beside the criterion and not one from nearby text.
   4. Rows are in the RFP's order: each criterion is cited later in the source than the last.
   5. The Points column sums to the stated total (per stage when staged), or `stop` names why.
-  6. Every key is a known key. The human columns (input_source, owner, human_check) are present
-     and empty. `claude_does`, `status`, `stop` and every `could_not_map[].why` come from closed
-     vocabularies, so no free text exists anywhere in the matrix that is not a cited quotation.
+  6. Every key is a known key. The human columns (input_source, owner, human_check) and
+     `claude_does` are present and empty. `status` and every `could_not_map[].why` come from
+     closed vocabularies, so no free text exists anywhere in the matrix that is not a cited
+     quotation.
   7. A field with nothing to cite says exactly "not in source".
+  8. `answering_section` never holds an instruction: a part beginning with an imperative verb
+     (Provide, Describe, Identify, ...) is refused. Name a section/item/form, or say
+     "not in source".
+  9. Part 2 `disqualifiers`: every entry is verbatim and cited, and its `kind` is one of the
+     nine fixed phrases.
+  10. Coverage: every source line that matches a scoring or gating trigger pattern is cited
+      somewhere in the matrix (a row, a disqualifier, a could_not_map entry, or a `reviewed`
+      entry) — nothing that looks like scoring or a gate is silently dropped.
 
-Exit 0 = every claim in the matrix was found in the input. Exit 1 = at least one was not, and
-each one is named.
+Exit 0 = every claim in the matrix was found in the input, and every line that looked like it
+mattered was accounted for. Exit 1 = at least one was not, and each one is named.
 
 Standard library only.
 """
@@ -33,24 +44,41 @@ COLUMNS = ["#", "section", "criterion", "points", "input_needed", "input_source"
            "evaluation_criteria", "answering_section", "owner", "claude_does",
            "human_check", "status"]
 SOURCED = ["section", "criterion", "points", "input_needed", "evaluation_criteria", "answering_section"]
-HUMAN = ["input_source", "owner", "human_check"]
+MULTI_OK = {"section", "input_needed", "evaluation_criteria", "answering_section"}  # not criterion, not points
+HUMAN = ["input_source", "owner", "human_check", "claude_does"]  # always "" on hand-over
 ROW_KEYS = set(COLUMNS[1:]) | {"stage"}
-TOP_KEYS = {"rfp", "source", "stated_total", "rows", "could_not_map", "stop"}
+TOP_KEYS = {"rfp", "source", "stated_total", "rows", "disqualifiers", "could_not_map", "reviewed", "stop"}
+REQUIRED_TOP = ("rfp", "source", "stated_total", "rows", "disqualifiers", "could_not_map", "reviewed")
 EMPTY = "not in source"
 MAX_SPAN = 12          # lines one citation may cover, on one page
 MAX_POINTS_SPAN = 2    # lines a points citation may cover
-CLAUDE_DOES = {
-    "draft: write the response to this criterion from the inputs in Input needed, citing each one",
-    "assemble: fill the RFP's own form from figures a person supplies; no prose",
-    "prepare: build the interview or presentation material from the submitted proposal; scored live, not in writing",
-}
 WHY = {
     "applies to every row; no points of its own",
     "scoring method that applies to every row; no points of its own",
-    "pass/fail gate that removes a proposal from scoring; not a scored criterion",
     "later stage whose criteria and points are not in this document",
     "submittal item the RFP does not tie to a scored criterion",
     "sits inside a scored criterion with no points of its own",
+}
+KIND = {
+    "late submittal",
+    "incomplete submittal or missing required item",
+    "missing or incorrect required form",
+    "prequalification, license, or registration required",
+    "page, format, or delivery rule",
+    "non-responsive or non-responsible determination",
+    "explicit disqualification",
+    "owner reserves the right to reject",
+    "other gate stated in the source",
+}
+REVIEWED_WHY = {
+    "not about how proposals are evaluated or rejected",
+    "repeats a sentence already cited",
+    "table of contents or index entry",
+    "scoring of a different procurement or contract phase",
+}
+IMPERATIVE_VERBS = {
+    "Provide", "Describe", "Identify", "Define", "Summarize", "Include", "List", "Explain",
+    "Submit", "Discuss", "Demonstrate", "Outline", "Detail", "Present", "Show", "Indicate",
 }
 STOP = {
     "points do not reconcile to the stated total",
@@ -58,6 +86,28 @@ STOP = {
 }
 CITE = re.compile(r"^p(\d+):(\d+)(?:-p(\d+):(\d+))?$")
 NUMBER = re.compile(r"(?<![\d.])\d+(?:\.\d+)?(?![\d.])")
+
+TRIGGER_PATTERNS = [
+    # scoring
+    r"\b\d+\s*(points?|pts\.?)\b",
+    r"\b\d+\s*%",
+    r"\bpoints possible\b",
+    r"\bweight(ed|ing)?\b",
+    r"\bscor(e|ed|es|ing)\b",
+    r"\bevaluation criteria\b",
+    r"\bpass/fail\b",
+    # gates
+    r"non-?responsive",
+    r"non-?responsib",
+    r"disqualif",
+    r"\breject",
+    r"will not be (considered|evaluated|scored|accepted|opened|reviewed)",
+    r"shall not be (considered|evaluated|scored|accepted|opened|reviewed)",
+    r"\bmandatory\b",
+    r"\blate (proposals?|submittals?|bids?|responses?)\b",
+    r"\bprequalif",
+]
+TRIGGER_RE = re.compile("|".join(TRIGGER_PATTERNS), re.IGNORECASE)
 
 
 def norm(s: str) -> str:
@@ -95,6 +145,38 @@ def cited_text(src: dict, cite: str, max_span: int = MAX_SPAN):
     return " ".join(src["lines"][k] for k in src["order"][i:j + 1]), None
 
 
+def citation_lines(src: dict, cite):
+    """The (page, line) keys a valid citation covers, or None if it doesn't parse/exist."""
+    if not isinstance(cite, str):
+        return None
+    m = CITE.match(cite)
+    if not m:
+        return None
+    a = (int(m.group(1)), int(m.group(2)))
+    b = (int(m.group(3)), int(m.group(4))) if m.group(3) else a
+    if a not in src["lines"] or b not in src["lines"] or a[0] != b[0]:
+        return None
+    i, j = src["pos"][a], src["pos"][b]
+    if j < i:
+        return None
+    return src["order"][i:j + 1]
+
+
+def collect_cites(node):
+    """Every 'cite' string anywhere under node, walked generically (dicts and lists)."""
+    out = []
+    if isinstance(node, dict):
+        c = node.get("cite")
+        if isinstance(c, str):
+            out.append(c)
+        for v in node.values():
+            out.extend(collect_cites(v))
+    elif isinstance(node, list):
+        for item in node:
+            out.extend(collect_cites(item))
+    return out
+
+
 def whole_word_in(needle: str, hay: str) -> bool:
     """needle occurs in hay starting and ending at word boundaries (whitespace or edge)."""
     n, h = norm(needle), norm(hay)
@@ -113,35 +195,104 @@ def whole_word_in(needle: str, hay: str) -> bool:
         start = k + 1
 
 
-def check_field(src, where, v, problems, numeric=False):
-    if v == EMPTY:
-        return
+def check_one(src, where, v, problems, numeric=False):
     if not isinstance(v, dict) or "cite" not in v or set(v) - {"text", "value", "cite"}:
         problems.append(f"{where}: must be {{text|value, cite}} or the phrase {EMPTY!r}")
-        return
+        return None
     text, err = cited_text(src, v.get("cite"), MAX_POINTS_SPAN if numeric else MAX_SPAN)
     if err:
         problems.append(f"{where}: {err}")
-        return
+        return None
     if numeric:
         val = v.get("value")
         if not isinstance(val, (int, float)) or isinstance(val, bool):
             problems.append(f"{where}: value must be a number, got {val!r}")
-            return
+            return None
         if float(val) not in [float(n) for n in NUMBER.findall(text)]:
             problems.append(f"{where}: {val} does not appear as a number at {v['cite']} ({norm(text)[:80]!r})")
-        return
+        return None
     t = v.get("text", "")
     if not isinstance(t, str) or not t.strip():
         problems.append(f"{where}: empty text; use {EMPTY!r} if the RFP has nothing")
-        return
+        return None
     if not whole_word_in(t, text):
         problems.append(f"{where}: text is not verbatim (whole words) at {v['cite']}: {norm(t)[:90]!r}")
+        return None
+    return t
+
+
+def check_field(src, where, v, problems, numeric=False, multi=False):
+    """Returns the list of verified text part(s), or None (EMPTY / invalid)."""
+    if v == EMPTY:
+        return None
+    if multi and isinstance(v, list):
+        if not (1 <= len(v) <= 10):
+            problems.append(f"{where}: multi-part list must have 1 to 10 parts")
+            return None
+        out = []
+        for idx, part in enumerate(v, start=1):
+            t = check_one(src, f"{where} part {idx}", part, problems, numeric=numeric)
+            if t is not None:
+                out.append(t)
+        return out or None
+    t = check_one(src, where, v, problems, numeric=numeric)
+    return [t] if t is not None else None
 
 
 def cite_pos(src, v):
     m = CITE.match(v.get("cite", "")) if isinstance(v, dict) else None
     return src["pos"].get((int(m.group(1)), int(m.group(2)))) if m else None
+
+
+def imperative_violation(text: str):
+    m = re.match(r"([A-Za-z]+)", text.strip())
+    return m and m.group(1) in IMPERATIVE_VERBS
+
+
+def check_answering_section(where, v, problems):
+    parts = v if isinstance(v, list) else ([v] if v != EMPTY else [])
+    for idx, part in enumerate(parts, start=1):
+        if isinstance(part, dict) and isinstance(part.get("text"), str):
+            if imperative_violation(part["text"]):
+                label = where + (f" part {idx}" if isinstance(v, list) else "")
+                first = part["text"].strip().split()[0] if part["text"].strip() else ""
+                problems.append(f"{label}: begins with an imperative verb ({first!r}); "
+                                f"name a section/item/form, or use {EMPTY!r}")
+
+
+def check_coverage(m: dict, src: dict, problems: list):
+    hits = [key for key in src["order"] if TRIGGER_RE.search(src["lines"][key])]
+    buckets = {
+        "rows": collect_cites(m.get("rfp")) + collect_cites(m.get("stated_total")) + collect_cites(m.get("rows", [])),
+        "disqualifiers": collect_cites(m.get("disqualifiers", [])),
+        "could_not_map": collect_cites(m.get("could_not_map", [])),
+        "reviewed": collect_cites(m.get("reviewed", [])),
+    }
+    covered_by = {name: set() for name in buckets}
+    for name, cites in buckets.items():
+        for c in cites:
+            lines = citation_lines(src, c)
+            if lines:
+                covered_by[name].update(lines)
+    covered_all = set()
+    for s in covered_by.values():
+        covered_all |= s
+    for (page, line) in hits:
+        if (page, line) not in covered_all:
+            problems.append(f"COVERAGE: p{page}:{line} not cited or reviewed: {src['lines'][(page, line)]}")
+    counts = {name: sum(1 for h in hits if h in covered_by[name]) for name in buckets}
+    return hits, counts
+
+
+def coverage_stats(m: dict, base: pathlib.Path):
+    """Recomputes coverage for rendering. Only meaningful once check() reports no problems."""
+    src_path = pathlib.Path(m["source"])
+    if not src_path.is_absolute():
+        src_path = base / src_path
+    src = load_source(src_path)
+    problems = []
+    hits, counts = check_coverage(m, src, problems)
+    return len(hits), counts
 
 
 def check(m: dict, base: pathlib.Path):
@@ -151,7 +302,7 @@ def check(m: dict, base: pathlib.Path):
     extra = set(m) - TOP_KEYS
     if extra:
         problems.append(f"unknown top-level key(s) {sorted(extra)}; nothing may exist outside the contract")
-    for k in ("rfp", "source", "stated_total", "rows", "could_not_map"):
+    for k in REQUIRED_TOP:
         if k not in m:
             problems.append(f"missing top-level key {k}")
     if problems:
@@ -163,7 +314,7 @@ def check(m: dict, base: pathlib.Path):
         return [f"source text not found: {m['source']}"], 0
     src = load_source(src_path)
 
-    check_field(src, "rfp", m["rfp"], problems)
+    check_field(src, "rfp", m["rfp"], problems, multi=True)
     st = m["stated_total"]
     stages = None
     if isinstance(st, dict) and "stages" in st:
@@ -199,7 +350,9 @@ def check(m: dict, base: pathlib.Path):
             problems.append(f"row {i}: 'stage' is only allowed when stated_total is staged")
         for k in SOURCED:
             if k in r:
-                check_field(src, f"row {i} {k}", r[k], problems, numeric=(k == "points"))
+                check_field(src, f"row {i} {k}", r[k], problems, numeric=(k == "points"), multi=(k in MULTI_OK))
+        if "answering_section" in r:
+            check_answering_section(f"row {i} answering_section", r["answering_section"], problems)
         p = r.get("points")
         if isinstance(p, dict) and isinstance(p.get("value"), (int, float)):
             total += p["value"]
@@ -207,9 +360,7 @@ def check(m: dict, base: pathlib.Path):
                 stage_sum[r["stage"]] = stage_sum.get(r["stage"], 0) + p["value"]
         for k in HUMAN:
             if k in r and r[k] != "":
-                problems.append(f"row {i} {k}: human column must be empty, translator wrote {r[k]!r}")
-        if r.get("claude_does") not in CLAUDE_DOES:
-            problems.append(f"row {i} claude_does: not one of the fixed phrases")
+                problems.append(f"row {i} {k}: must be empty (filled downstream), translator wrote {r[k]!r}")
         if r.get("status") != "open":
             problems.append(f"row {i} status: must be 'open'")
         pos = cite_pos(src, r.get("criterion"))
@@ -218,6 +369,17 @@ def check(m: dict, base: pathlib.Path):
                 problems.append(f"row {i}: criterion cited at {r['criterion']['cite']} comes before the previous row; "
                                 f"rows follow the RFP's order")
             last_pos = pos
+
+    if not isinstance(m["disqualifiers"], list):
+        problems.append("disqualifiers must be a list (empty is fine)")
+    else:
+        for i, d in enumerate(m["disqualifiers"], start=1):
+            if not isinstance(d, dict) or set(d) != {"text", "cite", "kind"}:
+                problems.append(f"disqualifiers {i}: exactly text, cite, kind")
+                continue
+            check_field(src, f"disqualifiers {i}", {"text": d["text"], "cite": d["cite"]}, problems)
+            if d["kind"] not in KIND:
+                problems.append(f"disqualifiers {i} kind: not one of the fixed phrases")
 
     if not isinstance(m["could_not_map"], list):
         problems.append("could_not_map must be a list (empty is fine)")
@@ -229,6 +391,22 @@ def check(m: dict, base: pathlib.Path):
             check_field(src, f"could_not_map {i}", {"text": c["text"], "cite": c["cite"]}, problems)
             if c["why"] not in WHY:
                 problems.append(f"could_not_map {i} why: not one of the fixed reasons")
+
+    if not isinstance(m["reviewed"], list):
+        problems.append("reviewed must be a list (empty is fine)")
+    else:
+        for i, rv in enumerate(m["reviewed"], start=1):
+            if not isinstance(rv, dict) or set(rv) != {"cite", "why"}:
+                problems.append(f"reviewed {i}: exactly cite, why")
+                continue
+            lines = citation_lines(src, rv.get("cite"))
+            if lines is None:
+                problems.append(f"reviewed {i}: citation {rv.get('cite')!r} is invalid, not in source, "
+                                f"or crosses a page")
+            elif len(lines) > MAX_SPAN:
+                problems.append(f"reviewed {i}: citation spans {len(lines)} lines; the limit is {MAX_SPAN}")
+            if rv.get("why") not in REVIEWED_WHY:
+                problems.append(f"reviewed {i} why: not one of the fixed reasons")
 
     stop = m.get("stop")
     if stop is not None and stop not in STOP:
@@ -248,6 +426,10 @@ def check(m: dict, base: pathlib.Path):
             problems.append("stated_total is not in source; stop must be 'no scoring table published'")
         if m["rows"]:
             problems.append("no stated total in source but the matrix has rows with points")
+
+    # Coverage runs last, over the whole (already-parsed-enough) matrix and the loaded source.
+    check_coverage(m, src, problems)
+
     total = int(total) if total == int(total) else total
     return problems, total
 
@@ -278,9 +460,13 @@ def main():
         for x in problems:
             print("  -", x)
         sys.exit(1)
+    n_hits, counts = coverage_stats(m, p.parent)
     print(f"PASS {p}: {len(m['rows'])} rows, every cited claim found in {m['source']}; "
           f"points {total} vs stated {stated_label(m['stated_total'])} "
-          f"({'reconciles' if reconciles(m, total) else 'STOP: ' + str(m.get('stop'))})")
+          f"({'reconciles' if reconciles(m, total) else 'STOP: ' + str(m.get('stop'))}); "
+          f"coverage {n_hits} trigger line(s) accounted for "
+          f"(rows {counts['rows']}, disqualifiers {counts['disqualifiers']}, "
+          f"could-not-map {counts['could_not_map']}, reviewed {counts['reviewed']})")
 
 
 if __name__ == "__main__":
