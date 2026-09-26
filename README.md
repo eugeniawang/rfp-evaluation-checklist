@@ -1,6 +1,6 @@
-# RFP → Evaluation Matrix
+# RFP Evaluation Checklist
 
-Live demo: https://eugeniawang.github.io/rfp-evaluation-matrix/
+Live demo: https://eugeniawang.github.io/rfp-evaluation-checklist/
 
 A folder that turns a public-sector Request for Proposals into the nine-column evaluation matrix a proposal manager builds by hand at the start of every pursuit. Drop it into a Claude project, hand it an RFP, get back one row per scored criterion, in the RFP's own words, with every cell cited to the page and line it came from, plus a list of everything that would get the proposal disqualified before scoring. A stdlib checker re-reads every citation and refuses the matrix if a single cell is not in the source, or if a scoring or gate sentence in the source was never accounted for.
 
