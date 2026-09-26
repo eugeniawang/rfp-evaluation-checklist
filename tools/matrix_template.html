@@ -34,14 +34,19 @@
   .wrap { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
 
   /* ---------- header: the drawing sheet ---------- */
-  .sheet-head { border-bottom: 1px solid var(--rule); padding: 36px 0 30px;
+  .sheet-head { scroll-margin-top: 80px; border-bottom: 1px solid var(--rule); padding: 36px 0 30px;
     background-color: var(--sheet);
     background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
     background-size: 24px 24px; }
   .headgrid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 12px 48px; align-items: end; }
   @media (max-width: 1000px) { .headgrid { grid-template-columns: 1fr; } }
-  h1 { font: 700 clamp(28px, 4vw, 44px)/1.05 var(--head); letter-spacing: -.01em; margin: 0; color: var(--blue); max-width: 22ch; }
+  h1 { font: 700 clamp(28px, 4vw, 44px)/1.05 var(--head); letter-spacing: -.01em; margin: 0; color: var(--blue); max-width: 30ch; }
   h1 .kicker { display: block; font: 500 15px/1.4 var(--body); color: var(--pencil); letter-spacing: 0; margin-bottom: 8px; }
+  .t-dot { color: var(--pencil); font-weight: 400; }
+  h1 .chip { vertical-align: 8px; font-size: 11px; }
+  .rfpno { margin: 12px 0 0; font: 700 19px/1.3 var(--head); color: var(--ink); }
+  .due { margin: 6px 0 0; font: 600 17px/1.35 var(--body); color: var(--ink); }
+  .due .chip, .rfpno .chip { vertical-align: 2px; }
   .srcfile { margin: 12px 0 0; color: var(--pencil); font-size: 14px; overflow-wrap: anywhere; }
   .srcfile strong { color: var(--ink); font-weight: 600; }
   .facts { display: flex; flex-wrap: wrap; gap: 14px 32px; margin: 0; padding: 0; }
@@ -57,6 +62,17 @@
   .box p { margin: 0; max-width: 64ch; }
   .box ul { margin: 0; padding-left: 18px; }
   .box li { margin: 3px 0; }
+  .leftcol { display: grid; gap: 16px; align-content: start; }
+  .tip { background: var(--blue-soft); border: 1px solid var(--rule); border-left: 4px solid var(--c2); border-radius: 6px; padding: 16px 18px 26px; font-size: 15px; }
+  .tip p { margin: 0; line-height: 2.1; }
+  .tip-label { display: inline-block; font: 700 12px/1.6 var(--body); color: var(--sheet); background: var(--c2); border-radius: 3px; padding: 0 7px; margin-right: 4px; vertical-align: 1px; }
+  .ring { position: relative; display: inline-block; padding: 0 6px; margin: 0 4px; }
+  .ring .chip { position: relative; z-index: 1; font-size: 12.5px; }
+  .ring-svg { position: absolute; left: -10px; top: -9px; width: calc(100% + 20px); height: calc(100% + 18px); overflow: visible; pointer-events: none; }
+  .ring-svg path { fill: none; stroke: var(--c2); stroke-width: 2.4; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+  .tryit { position: absolute; right: -58px; bottom: -22px; font: italic 600 13px/1 var(--body); color: var(--c2); white-space: nowrap; display: inline-flex; align-items: flex-end; gap: 2px; pointer-events: none; }
+  .tryit svg { width: 22px; height: 17px; overflow: visible; }
+  .tryit svg path { fill: none; stroke: var(--c2); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
   .tablenote { margin: 0 0 10px; color: var(--pencil); font-size: 13.5px; }
   .sb-file { margin: 0; padding: 6px 18px; font-size: 12.5px; color: var(--pencil); border-bottom: 1px solid var(--rule); }
   .foot code { font: 12px var(--mono); overflow-wrap: anywhere; }
@@ -149,6 +165,8 @@
     border-radius: 4px; padding: 0 6px; font: 600 11.5px/1.7 var(--body); font-variant-numeric: tabular-nums; cursor: pointer; white-space: nowrap; vertical-align: 1px; }
   .chip:hover { border-color: var(--blue); }
     .nis { display: inline-block; border: 1px dashed var(--pencil); color: var(--pencil); border-radius: 4px; padding: 0 7px; font-size: 12px; line-height: 1.7; font-style: normal; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  .nis small { display: block; font-size: 10.5px; line-height: 1.3; padding-bottom: 2px; font-style: normal; opacity: .85; }
+  .nis:has(small) { display: inline-block; vertical-align: middle; text-align: left; }
 
   /* disqualifiers */
   .gates { columns: 2 460px; column-gap: 16px; }
@@ -185,7 +203,6 @@
   .howchecked { margin: 18px 0 0; font-size: 13.5px; color: var(--pencil); max-width: 110ch; }
   .howchecked summary { cursor: pointer; color: var(--ink); font-weight: 600; }
   .howchecked p { margin: 6px 0; }
-  .chip.demo { cursor: default; }
   td .p + .p { margin-top: 6px; padding-top: 6px; border-top: 1px dotted var(--rule); }
   tfoot td { font-weight: 700; }
   .flat { margin: 0; padding-left: 22px; }
@@ -247,11 +264,24 @@
 </style>
 </head>
 <body data-view="cards">
+<nav class="tabbar" aria-label="Page sections">
+  <div class="wrap">
+    <div class="tabs">
+      <a class="tab" href="#top" data-tab="top">Home</a>
+      <a class="tab" href="#part1" data-tab="part1">How you'll be scored <span class="n">(@@ROW_COUNT@@)</span></a>
+      <a class="tab" href="#part2" data-tab="part2">What gets you thrown out <span class="n">(@@DISQ_COUNT@@)</span></a>
+      <a class="tab" href="#part3" data-tab="part3">Other scoring notes <span class="n">(@@CNM_COUNT@@)</span></a>
+    </div>
+  </div>
+</nav>
+
 <header class="sheet-head" id="top">
   <div class="wrap">
     <div class="headgrid">
     <div>
       <h1><span class="kicker">RFP Evaluation Criteria Checklist</span>@@TITLE_HTML@@</h1>
+      @@RFP_LINE@@
+      @@DUE_LINE@@
       <p class="srcfile">Read from: <strong>@@PDF@@</strong></p>
     </div>
     <dl class="facts">
@@ -263,18 +293,23 @@
     </div>
     @@STOP_LINE@@
     <div class="explain">
+      <div class="leftcol">
       <section class="box">
         <h2>What this is</h2>
         <p>This page shows how <strong>@@TITLE@@</strong> will be scored. It's built from <strong>@@PDF@@</strong>, the actual RFP document, not a summary of it. @@TOTAL_SENTENCE@@ Below that, you'll find <strong>@@ROW_COUNT@@</strong> things that earn points, <strong>@@DISQ_COUNT@@</strong> rules that can get a proposal thrown out before scoring even starts, and <strong>@@CNM_COUNT@@</strong> other things the RFP says about scoring that aren't tied to a specific scored item.</p>
       </section>
+      <aside class="tip">
+        <p><span class="tip-label">Tip:</span> Click on grey boxes like this <span class="ring">@@SAMPLE_CHIP@@<svg class="ring-svg" viewBox="0 0 200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M18 34 C 16 14, 70 5, 112 7 C 160 9, 194 18, 190 34 C 186 52, 120 57, 80 55 C 40 53, 8 46, 14 28 C 18 18, 34 12, 50 10"/></svg><span class="tryit" aria-hidden="true"><svg viewBox="0 0 40 30"><path d="M36 26 C 30 10, 18 4, 6 6 M6 6 L 13 2 M6 6 L 11 12"/></svg>try it</span></span> to see the exact words from the RFP.</p>
+      </aside>
+      </div>
       <section class="box">
         <h2>How to read this page</h2>
         <ul>
           <li><b>This page has three parts:</b> <i>How you'll be scored</i> (the points table), <i>What gets you thrown out</i> (rules that can disqualify a proposal no matter how good it is), and <i>Other things the RFP says about scoring</i> (RFP sentences about scoring that aren't tied to a specific scored item). Use the tabs below to jump between them.</li>
-          <li><b>A grey box like <span class="chip demo">Page 5, line 36</span> is a button.</b> Click it to see the exact words in the RFP, highlighted, so you can check our work against the real document.</li>
-          <li><b>"<span class="nis">The RFP doesn't say</span>" means exactly that.</b> The RFP is silent on that point. We never guess or fill it in for you.</li>
+          <li><b>A grey box like @@SAMPLE_CHIP@@ is a button.</b> Click it to see the exact words in the RFP, highlighted, so you can check our work against the real document.</li>
+          <li><b><span class="nis">not in source</span> means the RFP is silent on that point.</b> We never guess or fill it in for you.</li>
           <li><b>The blank, striped boxes are for your team.</b> We don't know who at your firm owns what, so those are left empty on purpose for someone to fill in.</li>
-          <li><b>Everything on this page is a fact from the RFP, not our opinion.</b> We don't judge your bid, rank your chances, or suggest a strategy. We only report what the RFP itself says.</li>
+          <li><b>Every quote on this page is copied from the RFP and linked to its page and line.</b> The headings and labels are ours. We don't judge your bid, rank your chances, or suggest a strategy.</li>
         </ul>
       </section>
     </div>
@@ -287,16 +322,6 @@
   </div>
 </header>
 
-<nav class="tabbar" aria-label="Page sections">
-  <div class="wrap">
-    <div class="tabs">
-      <a class="tab" href="#top" data-tab="top">Home</a>
-      <a class="tab" href="#part1" data-tab="part1">How you'll be scored <span class="n">(@@ROW_COUNT@@)</span></a>
-      <a class="tab" href="#part2" data-tab="part2">What gets you thrown out <span class="n">(@@DISQ_COUNT@@)</span></a>
-      <a class="tab" href="#part3" data-tab="part3">Other scoring notes <span class="n">(@@CNM_COUNT@@)</span></a>
-    </div>
-  </div>
-</nav>
 
 <main class="wrap">
   <section class="part" id="part1">

@@ -80,11 +80,11 @@ def plain_title(v):
     return first.get("text", first.get("value", "")) if isinstance(first, dict) else str(first)
 
 
-def row_cells(i, r, plain=False):
+def row_cells(i, r, plain=False, note=False):
     """The nine column cells. The row number isn't its own column (Ruling 18:25): it's
-    folded into the criterion cell as a leading 'N. '."""
-    render = cell_plain if plain else cell
-    cells = [render(r.get(k, "")) for k in COLUMNS]
+    folded into the criterion cell as a leading 'N. '. `note` only matters when `plain` is
+    set: it's the md-only " (the RFP doesn't say)" gloss on a literal "not in source"."""
+    cells = [cell_plain(r.get(k, ""), note) if plain else cell(r.get(k, "")) for k in COLUMNS]
     ci = COLUMNS.index("criterion")
     cells[ci] = f"{i}. {cells[ci]}" if cells[ci] else f"{i}."
     return cells
@@ -201,7 +201,7 @@ def to_markdown(m, cov):
         out.append("| " + " | ".join(HDR) + " |")
         out.append("|" + "---|" * len(HDR))
         for i, r in group:
-            cells = row_cells(i, r, plain=True)
+            cells = row_cells(i, r, plain=True, note=True)
             out.append("| " + " | ".join(c.replace("|", "\\|").replace("\n", " ") for c in cells) + " |")
     out.append("")
     out.append("**TOTAL** points: " + str(m["_sum"]))
@@ -393,7 +393,8 @@ def chip_html(cite):
 
 
 def nis_html():
-    return f'<span class="nis">{esc(NIS_LABEL)}</span>'
+    return (f'<span class="nis" title="{esc(NIS_LABEL)}">{esc(EMPTY)}'
+            f'<small>{esc(NIS_LABEL)}</small></span>')
 
 
 def parts_of(v):
@@ -674,9 +675,35 @@ def to_html(m, cov, src, src_path=None):
         pages.setdefault(page, []).append([line, src["lines"][(page, line)]])
     source_json = json.dumps({str(k): v for k, v in pages.items()}).replace("</", "<\\/")
 
-    rfp_parts = parts_of(m["rfp"])
-    title = part_text(rfp_parts[0])[0] if rfp_parts else str(m["rfp"])
-    title_html = " ".join(f'{esc(part_text(p)[0])} {chip_html(part_text(p)[1])}' for p in rfp_parts) or esc(title)
+    def plain(v):
+        return " ".join(str(part_text(p)[0]) for p in parts_of(v))
+
+    def cited(v):
+        return " ".join(f'{esc(part_text(p)[0])} {chip_html(part_text(p)[1])}' for p in parts_of(v)) or nis_html()
+
+    # Who, what, when (owner ruling 18:49): "<issuer> · <title>", then "RFP <number>", then the due date.
+    issuer, rtitle, due = m.get("issuer", EMPTY), m.get("title", EMPTY), m.get("due", EMPTY)
+    rfp_text = plain(m["rfp"])
+    if parts_of(issuer) or parts_of(rtitle):
+        title = " · ".join(x for x in (plain(issuer), plain(rtitle)) if x) or rfp_text
+        title_html = (f'<span class="t-issuer">{cited(issuer)}</span><span class="t-dot" aria-hidden="true"> · </span>'
+                      f'<span class="t-name">{cited(rtitle)}</span>')
+        rfp_prefix = "" if rfp_text.strip().upper().startswith("RFP") else "RFP "
+        rfp_line = f'<p class="rfpno">{rfp_prefix}{cited(m["rfp"])}</p>' if parts_of(m["rfp"]) else ""
+    else:
+        title = rfp_text or EMPTY
+        title_html = cited(m["rfp"])
+        rfp_line = ""
+    due_line = f'<p class="due">Proposals due: {cited(due)}</p>' if "due" in m else ""
+    # Sample chips in the explainer boxes are real: they open the first criterion's citation.
+    first_cite = ""
+    for r in rows:
+        first_cite = part_text(r.get("criterion", ""))[1]
+        if first_cite:
+            break
+    if not first_cite:
+        first_cite = part_text(parts_of(m["rfp"])[0])[1] if parts_of(m["rfp"]) else ""
+    sample_chip = chip_html(first_cite) if first_cite else nis_html()
 
     stop_line = (f'<p class="stop">This checklist stopped early. The reason: {esc(m["stop"])}.</p>'
                  if m.get("stop") else "")
@@ -689,6 +716,9 @@ def to_html(m, cov, src, src_path=None):
     fills = {
         "TITLE": esc(title),
         "TITLE_HTML": title_html,
+        "RFP_LINE": rfp_line,
+        "SAMPLE_CHIP": sample_chip,
+        "DUE_LINE": due_line,
         "PDF": esc(pdf_name(m, src_path or m["source"])),
         "SOURCE": esc(m["source"]),
         "STATED_HTML": stated_html,
