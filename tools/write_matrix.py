@@ -56,15 +56,17 @@ def plain_cite(c):
     return f"Page {p1}, lines {l1}-{l2}"
 
 
-def cell_plain(v):
-    """Like cell(), but for the plain-language md/csv rendering: "not in source" reads as
-    "The RFP doesn't say" (the JSON value is untouched), and citations read as "Page N, line M"."""
+def cell_plain(v, note=False):
+    """Like cell(), but for the plain-language md/csv rendering: citations read as
+    "Page N, line M". The literal JSON value "not in source" is always shown as-is (per
+    audit: the brief says the output literally says "not in source"); in md only (note=True)
+    it gets a plain-English gloss appended, " (the RFP doesn't say)"."""
     if v is None or v == "":
         return ""
     if v == EMPTY:
-        return DOESNT_SAY
+        return f"{EMPTY} (the RFP doesn't say)" if note else EMPTY
     if isinstance(v, list):
-        return " · ".join(cell_plain(part) for part in v)
+        return " · ".join(cell_plain(part, note) for part in v)
     if isinstance(v, dict):
         t = v.get("text", v.get("value", ""))
         c = v.get("cite", "")
