@@ -80,7 +80,7 @@
       "owner": "",
       "claude_does": "",
       "human_check": "",
-      "status": "open"
+      "status": ""
     },
     {
       "stage": "Proposal",
@@ -123,7 +123,7 @@
       "owner": "",
       "claude_does": "",
       "human_check": "",
-      "status": "open"
+      "status": ""
     },
     {
       "stage": "Proposal",
@@ -179,7 +179,7 @@
       "owner": "",
       "claude_does": "",
       "human_check": "",
-      "status": "open"
+      "status": ""
     },
     {
       "stage": "Proposal",
@@ -231,7 +231,7 @@
       "owner": "",
       "claude_does": "",
       "human_check": "",
-      "status": "open"
+      "status": ""
     },
     {
       "stage": "Interview",
@@ -260,7 +260,7 @@
       "owner": "",
       "claude_does": "",
       "human_check": "",
-      "status": "open"
+      "status": ""
     },
     {
       "stage": "Interview",
@@ -289,7 +289,7 @@
       "owner": "",
       "claude_does": "",
       "human_check": "",
-      "status": "open"
+      "status": ""
     }
   ],
   "disqualifiers": [
@@ -373,6 +373,10 @@
   ],
   "reviewed": [
     {
+      "cite": "p2:27",
+      "why": "table of contents or index entry"
+    },
+    {
       "cite": "p2:43-p2:45",
       "why": "table of contents or index entry"
     },
@@ -398,6 +402,10 @@
     },
     {
       "cite": "p19:24-p19:26",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p21:34",
       "why": "not about how proposals are evaluated or rejected"
     },
     {
@@ -429,7 +437,19 @@
       "why": "not about how proposals are evaluated or rejected"
     },
     {
+      "cite": "p29:18-p29:20",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p29:36",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
       "cite": "p30:20",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p30:26-p30:29",
       "why": "not about how proposals are evaluated or rejected"
     },
     {
@@ -497,6 +517,10 @@
       "why": "repeats a sentence already cited"
     },
     {
+      "cite": "p46:8",
+      "why": "repeats a sentence already cited"
+    },
+    {
       "cite": "p46:16",
       "why": "not about how proposals are evaluated or rejected"
     },
@@ -505,7 +529,15 @@
       "why": "not about how proposals are evaluated or rejected"
     },
     {
+      "cite": "p46:21",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
       "cite": "p46:25",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p46:34",
       "why": "not about how proposals are evaluated or rejected"
     },
     {
@@ -518,6 +550,10 @@
     },
     {
       "cite": "p47:26",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p47:42",
       "why": "not about how proposals are evaluated or rejected"
     }
   ]
