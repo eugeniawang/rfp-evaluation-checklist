@@ -31,12 +31,9 @@
         "text": "The proposal shall outline the plan that the company will use to provide the most effective delivery of the requested services as outlined in the Scope of Work.",
         "cite": "p14:16-p14:17"
       },
-      "answering_section": {
-        "text": "3. Describe the company’s understanding of the proposed services as described in the Scope of Work.",
-        "cite": "p13:14-p13:15"
-      },
+      "answering_section": "not in source",
       "owner": "",
-      "claude_does": "draft: write the response to this criterion from the inputs in Input needed, citing each one",
+      "claude_does": "",
       "human_check": "",
       "status": "open"
     },
@@ -62,12 +59,9 @@
         "text": "The proposal must give a detailed report of related experiences that demonstrate the ability of the proposer to perform requested services as outlined in the Scope of Work. The proposal shall include sufficient information to indicate the abilities, qualifications, and experience of all persons who would be assigned to provide the required services.",
         "cite": "p14:21-p14:25"
       },
-      "answering_section": {
-        "text": "5. List and describe company experience in the past five years that best matches the Scope of Work.",
-        "cite": "p13:25-p13:26"
-      },
+      "answering_section": "not in source",
       "owner": "",
-      "claude_does": "draft: write the response to this criterion from the inputs in Input needed, citing each one",
+      "claude_does": "",
       "human_check": "",
       "status": "open"
     },
@@ -90,15 +84,15 @@
       },
       "input_source": "",
       "evaluation_criteria": {
-        "text": "The contract award will include an annual Not-to-Exceed amount to be determined by the City of Tucker based on the rates provided.",
-        "cite": "p14:30-p14:31"
+        "text": "In scoring against stated criteria, the City may consider such factors as accepted industry standards and a comparative evaluation of all other qualified RFP responses in terms of differing price, quality, and contractual factors.",
+        "cite": "p13:35-p13:38"
       },
       "answering_section": {
-        "text": "6. Submit the required forms provided as part of the bid package, which will not be counted toward the 15-page limit.",
-        "cite": "p13:30-p13:31"
+        "text": "Cost Proposal (form provided)",
+        "cite": "p3:11"
       },
       "owner": "",
-      "claude_does": "assemble: fill the RFP's own form from figures a person supplies; no prose",
+      "claude_does": "",
       "human_check": "",
       "status": "open"
     }
@@ -107,17 +101,100 @@
     {
       "text": "Age and condition of equipment will be factored into contractor scoring for these services.",
       "cite": "p5:36",
-      "why": "submittal item the RFP does not tie to a scored criterion"
-    },
-    {
-      "text": "In scoring against stated criteria, the City may consider such factors as accepted industry standards and a comparative evaluation of all other qualified RFP responses in terms of differing price, quality, and contractual factors.",
-      "cite": "p13:35-p13:38",
-      "why": "applies to every row; no points of its own"
+      "why": "sits inside a scored criterion with no points of its own"
     },
     {
       "text": "The City reserves the right to invite Offerors to present their proposal to the Evaluation Team. Evaluation criteria for such presentations will be provided to offerors prior to presentations.",
       "cite": "p14:35-p14:37",
       "why": "later stage whose criteria and points are not in this document"
+    }
+  ],
+  "disqualifiers": [
+    {
+      "text": "Late bids will not be considered.",
+      "cite": "p3:23-p3:24",
+      "kind": "late submittal"
+    },
+    {
+      "text": "Bids received after the bid deadline will be filed unopened.",
+      "cite": "p3:24",
+      "kind": "late submittal"
+    },
+    {
+      "text": "The City of Tucker reserves the right to reject any and all bids or any part, to waive any formalities to make an award and to re-advertise in the best interest of the City.",
+      "cite": "p3:24-p3:26",
+      "kind": "owner reserves the right to reject"
+    },
+    {
+      "text": "All Proposals will initially be classified as either “responsive” or “non‐responsive”. Proposals may be found non‐responsive any time during the evaluation process or contract negotiation if any of the required information is not provided; the submitted price is found to be excessive or inadequate as measured by criteria stated in the RFP; or the Proposals is not within the plans and specifications described and required in the RFP. If a Proposal is found to be non‐responsive, it will not be considered further.",
+      "cite": "p11:23-p11:28",
+      "kind": "non-responsive or non-responsible determination"
+    },
+    {
+      "text": "The procurement officer will determine whether an offeror has met the standards of responsibility. Such a determination may be made at any time during the evaluation process and through contract negotiation if information surfaces that would result in a determination of non‐responsibility. If an offeror is found non‐responsible, the determination must be in writing, made a part of the procurement file, and mailed to the affected offeror.",
+      "cite": "p11:31-p11:36",
+      "kind": "non-responsive or non-responsible determination"
+    },
+    {
+      "text": "reject any or all Proposals received in response to this RFP;",
+      "cite": "p12:4",
+      "kind": "owner reserves the right to reject"
+    },
+    {
+      "text": "Incomplete submittals will not be considered.",
+      "cite": "p12:26",
+      "kind": "incomplete submittal or missing required item"
+    },
+    {
+      "text": "Late submittals will not be accepted.",
+      "cite": "p12:26",
+      "kind": "late submittal"
+    },
+    {
+      "text": "Failure to meet these requirements will result in the Proposals being determined",
+      "cite": "p12:40",
+      "kind": "non-responsive or non-responsible determination"
+    },
+    {
+      "text": "and the entire submittal will be rejected.",
+      "cite": "p13:1",
+      "kind": "non-responsive or non-responsible determination"
+    },
+    {
+      "text": "Any other supplemental information and pages outside the page limit will not be reviewed and will be considered as non‐responsive to the page limit requirement.",
+      "cite": "p13:6-p13:8",
+      "kind": "page, format, or delivery rule"
+    },
+    {
+      "text": "Information or materials presented by offerors outside the formal response or subsequent discussion/negotiation or “best and final offer,” if requested, will not be considered, will have no bearing on any award, and may result in the offeror being disqualified from further consideration.",
+      "cite": "p14:3-p14:6",
+      "kind": "explicit disqualification"
+    }
+  ],
+  "reviewed": [
+    {
+      "cite": "p2:19",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p3:30",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p10:22-p10:24",
+      "why": "not about how proposals are evaluated or rejected"
+    },
+    {
+      "cite": "p14:12",
+      "why": "repeats a sentence already cited"
+    },
+    {
+      "cite": "p14:39",
+      "why": "table of contents or index entry"
+    },
+    {
+      "cite": "p21:21",
+      "why": "not about how proposals are evaluated or rejected"
     }
   ]
 }
