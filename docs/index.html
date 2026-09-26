@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RFP Evaluation Criteria Checklist</title>
+<meta name="description" content="Turn a public-sector RFP into a checklist of how you'll be scored and what gets you thrown out, every line linked to the page it came from.">
+<style>
+:root{--paper:#f5f3ef;--sheet:#fffefb;--ink:#1e2422;--pencil:#5a615e;--rule:#ddd8cf;--accent:#0e5a55;--accent-soft:#e3eeeb;--gate:#9b2226;--gate-soft:#f7e4e2;--orange:#b85a0c;--chip-bg:#fde5cc}
+@media (prefers-color-scheme:dark){:root{--paper:#161a19;--sheet:#1e2322;--ink:#ecebe7;--pencil:#a9afac;--rule:#343a38;--accent:#5cc2b6;--accent-soft:#1f3431;--gate:#f08a8a;--gate-soft:#3a2323;--orange:#f3a35c;--chip-bg:#4a3322}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:48px 16px 64px}
+.eyebrow{color:var(--pencil);font-size:14px;letter-spacing:.04em;text-transform:uppercase;margin:0 0 8px}
+h1{font-size:clamp(30px,5vw,44px);line-height:1.12;margin:0 0 16px}
+.lede{font-size:19px;color:var(--pencil);max-width:640px;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:48px}
+.btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--sheet)}
+.btn.ghost{color:var(--accent);background:transparent}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-bottom:48px}
+.card{background:var(--sheet);border:1px solid var(--rule);border-top:4px solid var(--accent);border-radius:10px;padding:18px}
+.card.gate{border-top-color:var(--gate)}
+.card.src{border-top-color:var(--orange)}
+.card h2{font-size:18px;margin:0 0 6px}
+.card p{margin:0;color:var(--pencil);font-size:15.5px}
+.chip{display:inline-block;background:var(--chip-bg);color:var(--orange);border-radius:6px;padding:1px 7px;font-size:13px;font-weight:600;white-space:nowrap}
+h2.sec{font-size:22px;margin:0 0 12px}
+ol.steps{padding-left:22px;margin:0 0 40px}
+ol.steps li{margin-bottom:10px}
+code{background:var(--accent-soft);padding:1px 6px;border-radius:5px;font-size:15px}
+ul.demos{list-style:none;padding:0;margin:0 0 40px}
+ul.demos li{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:14px 16px;margin-bottom:10px}
+ul.demos a{color:var(--accent);font-weight:600}
+footer{color:var(--pencil);font-size:14px;border-top:1px solid var(--rule);padding-top:16px}
+footer a{color:var(--accent)}
+</style>
+</head>
+<body>
+<main>
+<p class="eyebrow">Built for Clief Notes weekly competition #13, The Translator</p>
+<h1>RFP Evaluation Criteria Checklist</h1>
+<p class="lede">Give Claude a public-sector RFP. Get back a checklist of how the agency will score you and what gets a proposal thrown out, in the RFP's own words, with every line linked to the page and line it came from.</p>
+<div class="btns">
+<a class="btn primary" href="demo/tucker-2026-008.html">Try the demo</a>
+<a class="btn ghost" href="https://github.com/eugeniawang/rfp-evaluation-matrix">Get the folder on GitHub</a>
+</div>
+
+<div class="grid">
+<div class="card"><h2>How you'll be scored</h2><p>Every item the RFP scores, its points, what to provide, and what the scorer looks for. Quoted, never paraphrased.</p></div>
+<div class="card gate"><h2>What gets you thrown out</h2><p>Every rule that can disqualify a proposal before anyone scores it: late, missing a form, over the page limit, non-responsive.</p></div>
+<div class="card src"><h2>Every line clickable</h2><p>Click a box like <span class="chip">Page 14, line 15</span> to see the exact words in the RFP. Where the RFP is silent, the cell says <code>not in source</code>.</p></div>
+</div>
+
+<h2 class="sec">How to use it</h2>
+<ol class="steps">
+<li><strong>Claude Code:</strong> open the folder, put the RFP PDF in it, and say <code>Translate rfp.pdf.</code></li>
+<li><strong>claude.ai Projects:</strong> add the folder's files to a project with code execution turned on, attach the RFP, and ask for the translation.</li>
+<li><strong>Command line:</strong> the steps are in the README: extract, check, render.</li>
+</ol>
+
+<h2 class="sec">Demos</h2>
+<ul class="demos">
+<li><a href="demo/tucker-2026-008.html">City of Tucker, GA: Right of Way Maintenance Services (RFP 2026-008)</a></li>
+<li><a href="demo/tucker-2026-016.html">City of Tucker, GA: CEI services (RFP 2026-016)</a></li>
+<li><a href="demo/cdot-us50.html">Colorado DOT: US50B passing lanes, CM/GC (two stages: proposal and interview)</a></li>
+</ul>
+
+<footer>A checker re-reads every quote and refuses the checklist if one word isn't at its citation, or if a scoring or disqualifying line in the RFP was left out. <a href="https://github.com/eugeniawang/rfp-evaluation-matrix">Source on GitHub</a>.</footer>
+</main>
+</body>
+</html>
