@@ -183,235 +183,399 @@ def esc(s) -> str:
     return htmllib.escape(str(s), quote=True)
 
 
+# ---- HTML rendering (design worker). Markup/CSS/JS live in tools/matrix_template.html. ----
+# Every word on the page is a field from the JSON, a line of the source, or one of the fixed
+# labels below / in the template. Nothing here summarises or rates the RFP.
+
+import re  # noqa: E402
+
+TEMPLATE_PATH = pathlib.Path(__file__).parent / "matrix_template.html"
+N_COLORS = 8  # categorical swatches --c0..--c7 in the template; colour marks identity only
+HUMAN_FIELDS = ("status", "input_source", "lead", "reviewer")  # always "" on hand-over
+# The nine columns (owner ruling 18:25), in order, with their plain headers.
+HTML_COLS = [
+    ("status", "Status"),
+    ("criterion", "What the RFP will score (their exact words)"),
+    ("points", "Points for this item"),
+    ("input_needed", "What the RFP asks you to provide"),
+    ("input_source", "Where your team will get it"),
+    ("evaluation_criteria", "What the scorer will look for"),
+    ("answering_section", "Where it goes in your proposal"),
+    ("lead", "Lead for this section"),
+    ("reviewer", "Reviewer for this section"),
+]
+HEAD = dict(HTML_COLS)
+NIS_LABEL = "The RFP doesn't say"
+# Plain names for the closed vocabularies. Unknown values show as written in the JSON.
+KIND_LABEL = {
+    "late submittal": "Turned in late",
+    "incomplete submittal or missing required item": "Missing something required",
+    "missing or incorrect required form": "Missing or wrong required form",
+    "prequalification, license, or registration required": "Must be prequalified, licensed, or registered",
+    "page, format, or delivery rule": "Broke a formatting or delivery rule (like a page limit)",
+    "non-responsive or non-responsible determination": "Doesn't meet the agency's requirements",
+    "explicit disqualification": "The RFP says this specifically disqualifies a proposal",
+    "owner reserves the right to reject": "The agency keeps the right to reject proposals",
+    "other gate stated in the source": "Another rule in the RFP that can remove a proposal",
+}
+WHY_LABEL = {
+    "applies to every row; no points of its own": "Applies to everything above, but isn't worth its own points",
+    "scoring method that applies to every row; no points of its own":
+        "Explains how scoring works overall, not a separate scored item",
+    "later stage whose criteria and points are not in this document":
+        "Happens later in the process; its scoring is not in this RFP document",
+    "submittal item the RFP does not tie to a scored criterion":
+        "The RFP asks for this, but doesn't say it's worth points",
+    "sits inside a scored criterion with no points of its own":
+        "Mentioned inside a scored item above, but doesn't carry its own points",
+    "named criterion with no points printed": "The RFP names this as a criterion but prints no points for it",
+}
+CITE_RE = re.compile(r"^p(\d+):(\d+)(?:-p(\d+):(\d+))?$")
+
+
+def cite_label(cite):
+    """p14:15 -> 'Page 14, line 15'; p10:18-p10:20 -> 'Page 10, lines 18-20'."""
+    mo = CITE_RE.match(cite or "")
+    if not mo:
+        return str(cite)
+    page, a, b = mo.group(1), mo.group(2), mo.group(4)
+    if b and b != a:
+        return f"Page {page}, lines {a}–{b}"
+    return f"Page {page}, line {a}"
+
+
 def chip_html(cite):
+    """A clickable citation. Shows 'Page N, line N'; the raw cite stays in data-cite."""
     if not cite:
         return ""
-    return f'<button type="button" class="chip" data-cite="{esc(cite)}">[{esc(cite)}]</button>'
+    return (f'<button type="button" class="chip" data-cite="{esc(cite)}" '
+            f'title="{esc(cite)}">{esc(cite_label(cite))}</button>')
+
+
+def nis_html():
+    return f'<span class="nis">{esc(NIS_LABEL)}</span>'
+
+
+def parts_of(v):
+    if v is None or v == "" or v == EMPTY:
+        return []
+    return v if isinstance(v, list) else [v]
+
+
+def part_text(part):
+    if isinstance(part, dict):
+        return part.get("text", part.get("value", "")), part.get("cite", "")
+    return part, ""
 
 
 def sourced_html(v):
-    if v is None or v == "" or v == EMPTY:
-        return '<span class="empty">not in source</span>'
-    parts = v if isinstance(v, list) else [v]
-    chunks = []
-    for part in parts:
-        if isinstance(part, dict):
-            t = part.get("text", part.get("value", ""))
-            c = part.get("cite", "")
-            chunks.append(f'<div class="part"><span class="ftext">{esc(t)}</span> {chip_html(c)}</div>')
-        else:
-            chunks.append(f'<div class="part">{esc(part)}</div>')
-    return "".join(chunks)
+    """Table cell / inline: each part is its text followed by its chip, one per line."""
+    ps = parts_of(v)
+    if not ps:
+        return nis_html()
+    out = []
+    for part in ps:
+        t, c = part_text(part)
+        out.append(f'<div class="p"><span class="quote">{esc(t)}</span> {chip_html(c)}</div>')
+    return "".join(out)
+
+
+def block_html(label, v):
+    """Card block: a label, then the parts as a list (one item per cited part)."""
+    ps = parts_of(v)
+    if not ps:
+        return f'<div class="block single"><h5>{esc(label)}</h5><ul><li>{nis_html()}</li></ul></div>'
+    items = []
+    for part in ps:
+        t, c = part_text(part)
+        items.append(f'<li><span class="quote">{esc(t)}</span> {chip_html(c)}</li>')
+    cls = "block" + (" single" if len(ps) == 1 else "")
+    return f'<div class="{cls}"><h5>{esc(label)}</h5><ul>{"".join(items)}</ul></div>'
+
+
+def points_value(r):
+    p = r.get("points")
+    if isinstance(p, dict) and isinstance(p.get("value"), (int, float)):
+        return p["value"]
+    return None
+
+
+def num(x):
+    return int(x) if isinstance(x, float) and x == int(x) else x
+
+
+def pct(part, whole):
+    if not whole:
+        return None
+    v = 100.0 * part / whole
+    return f"{v:.0f}" if abs(v - round(v)) < 0.05 else f"{v:.1f}"
+
+
+def groups_for_share(m):
+    """Rows grouped for percent-of-sum arithmetic: by stage when staged, else one group."""
+    st = m["stated_total"]
+    if isinstance(st, dict) and "stages" in st:
+        names = [s["name"] for s in st["stages"]]
+        groups = [(n, [(i, r) for i, r in enumerate(m["rows"], 1) if r.get("stage") == n]) for n in names]
+        return [(n, g) for n, g in groups if g]
+    return [(None, list(enumerate(m["rows"], 1)))]
+
+
+def group_sum(g):
+    return sum(points_value(r) or 0 for _, r in g)
+
+
+def ruler_html(name, g):
+    total = group_sum(g)
+    if not total:
+        return ""
+    step = 10 if total >= 50 else 5
+    ticks, t = [], 0
+    while t <= total:
+        major = t % (step * 2) == 0
+        cls = "tick" + (" major" if major else "") + (" first" if t == 0 else "")
+        near_end = total - t < step and t != total
+        label = f"<span>{num(t)}</span>" if major and not near_end else ""
+        ticks.append(f'<i class="{cls}" style="left:{100.0 * t / total:.4f}%">{label}</i>')
+        t += step
+    if total % step == 0:
+        ticks[-1] = f'<i class="tick major last" style="left:100%"><span>{num(total)}</span></i>'
+    else:
+        ticks.append(f'<i class="tick major last" style="left:100%"><span>{num(total)}</span></i>')
+    segs, legend = [], []
+    for i, r in g:
+        v = points_value(r) or 0
+        color = f"var(--c{(i - 1) % N_COLORS})"
+        crit, _ = part_text(r.get("criterion", ""))
+        share = pct(v, total)
+        segs.append(f'<a class="seg" href="#row-{i}" style="--w:{v};--c:{color}" '
+                    f'title="{esc(crit)}: {esc(num(v))} points">{esc(num(v))}</a>')
+        legend.append(f'<li style="--c:{color}"><span class="sw"></span><a href="#row-{i}">{esc(crit)}</a>'
+                      f'<span class="pts">{esc(num(v))} <span class="pct">({share}%)</span></span></li>')
+    head = (f"<h2>{esc(name)}: {esc(num(total))} points in all</h2>" if name
+            else f"<h2>How the {esc(num(total))} points are split</h2>")
+    return (f'<div class="ruler">{head}'
+            f'<div class="scale" aria-hidden="true">{"".join(ticks)}</div>'
+            f'<div class="bar">{"".join(segs)}</div><ul class="legend">{"".join(legend)}</ul></div>')
+
+
+def slots_html(r):
+    out = []
+    for key in HUMAN_FIELDS:
+        val = r.get(key, "")
+        out.append(f'<div class="slot"><b>{esc(HEAD[key])}</b>{esc(val)}</div>')
+    return "".join(out)
+
+
+def section_key(r):
+    return json.dumps(r.get("section", ""), sort_keys=True)
+
+
+def section_heading_html(r, tag="h3"):
+    ps = parts_of(r.get("section"))
+    inner = " ".join(f'{esc(part_text(p)[0])} {chip_html(part_text(p)[1])}' for p in ps) or nis_html()
+    return f'<{tag} class="group-head">From the RFP section: {inner}</{tag}>'
+
+
+def card_html(i, n_rows, r, share, stage_name):
+    color = f"var(--c{(i - 1) % N_COLORS})"
+    crit, crit_cite = part_text(r.get("criterion", ""))
+    p = r.get("points")
+    v = points_value(r)
+    p_cite = p.get("cite", "") if isinstance(p, dict) else ""
+    pct_line = ""
+    if share is not None:
+        of = f"of the {esc(stage_name)} points" if stage_name else "of all the points"
+        pct_line = f'<span class="pct">{share}% {of}</span>'
+    stage_html = f'<div class="rowmeta">Scoring stage: {esc(r["stage"])}</div>' if r.get("stage") else ""
+    return (
+        f'<article class="card" id="row-{i}" style="--c:{color}">'
+        f'<div class="card-points"><span class="bignum">{esc(num(v)) if v is not None else ""}</span>'
+        f'<span class="bignum-unit">points</span>{pct_line}{chip_html(p_cite)}</div>'
+        f'<div class="card-body"><span class="rowno">Item {i} of {n_rows}</span>'
+        f'<h4 class="crit">{esc(crit)} {chip_html(crit_cite)}</h4>{stage_html}'
+        f'{block_html(HEAD["input_needed"], r.get("input_needed"))}'
+        f'{block_html(HEAD["evaluation_criteria"], r.get("evaluation_criteria"))}'
+        f'{block_html(HEAD["answering_section"], r.get("answering_section"))}'
+        f'<div class="people"><div class="slots">{slots_html(r)}</div></div>'
+        f'</div></article>')
 
 
 def row_html(i, r):
-    tds = [f'<td class="num">{i}</td>']
-    for k in COLUMNS[1:]:
-        if k in HUMAN_KEYS:
-            tds.append('<td class="human"></td>')
-        elif k == "status":
-            tds.append(f"<td>{esc(r.get(k, ''))}</td>")
+    tds = []
+    for k, _ in HTML_COLS:
+        if k in HUMAN_FIELDS:
+            tds.append(f'<td class="human">{esc(r.get(k, ""))}</td>')
+        elif k == "criterion":
+            crit, c = part_text(r.get("criterion", ""))
+            tds.append(f'<td><span class="idx">{i}</span> <span class="quote">{esc(crit)}</span> {chip_html(c)}</td>')
+        elif k == "points":
+            v = points_value(r)
+            c = r["points"].get("cite", "") if isinstance(r.get("points"), dict) else ""
+            tds.append(f'<td class="pts">{esc(num(v)) if v is not None else nis_html()}<br>{chip_html(c)}</td>')
         else:
             tds.append(f"<td>{sourced_html(r.get(k))}</td>")
     return "<tr>" + "".join(tds) + "</tr>"
 
 
-HTML_TEMPLATE = """<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Evaluation matrix — @@TITLE@@</title>
-<style>
-  :root {
-    --bg: #ffffff; --fg: #1a1a1a; --muted: #5a5a5a; --border: #d8d8d8;
-    --head-bg: #1f3a5f; --head-fg: #ffffff; --chip-bg: #eef3fa; --chip-fg: #1f3a5f;
-    --hl-bg: #fff2a8; --ok: #1a7f37; --bad: #b42318; --sidebar-bg: #f7f7f8;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #14161a; --fg: #e8e8e8; --muted: #a0a0a0; --border: #34373d;
-      --head-bg: #2a4266; --head-fg: #ffffff; --chip-bg: #223047; --chip-fg: #cfe0ff;
-      --hl-bg: #4a3f0d; --ok: #4fbf67; --bad: #e5695b; --sidebar-bg: #1c1e23;
-    }
-  }
-  * { box-sizing: border-box; }
-  body { background: var(--bg); color: var(--fg); font: 15px/1.5 -apple-system, BlinkMacSystemFont,
-         "Segoe UI", Helvetica, Arial, sans-serif; margin: 0; padding: 24px; }
-  header { margin-bottom: 24px; }
-  h1 { font-size: 1.3rem; margin: 0 0 8px; }
-  h2 { font-size: 1.05rem; margin: 28px 0 10px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
-  h3 { font-size: 0.95rem; margin: 0 0 10px; }
-  p { margin: 4px 0; color: var(--muted); }
-  code { background: var(--chip-bg); padding: 1px 5px; border-radius: 4px; color: var(--fg); }
-  .ok { color: var(--ok); }
-  .bad { color: var(--bad); }
-  .stop { color: var(--bad); font-weight: 600; }
-  table { border-collapse: collapse; width: 100%; font-size: 13px; }
-  th, td { border: 1px solid var(--border); padding: 6px 8px; vertical-align: top; text-align: left; }
-  th { background: var(--head-bg); color: var(--head-fg); position: sticky; top: 0; }
-  td.num { text-align: center; width: 2.5em; }
-  td.human { background: repeating-linear-gradient(45deg, transparent, transparent 6px,
-             var(--chip-bg) 6px, var(--chip-bg) 7px); }
-  .part + .part { margin-top: 6px; }
-  .empty { color: var(--muted); font-style: italic; }
-  .chip { background: var(--chip-bg); color: var(--chip-fg); border: 1px solid var(--border);
-          border-radius: 999px; padding: 1px 8px; font: 12px/1.6 monospace; cursor: pointer; }
-  .chip:hover { filter: brightness(1.08); }
-  ul.disq, ul.cnm { padding-left: 20px; }
-  ul.disq li, ul.cnm li { margin: 6px 0; }
-  .total { font-weight: 600; }
-  .footer { margin-top: 18px; font-style: italic; }
-  #scrim { position: fixed; inset: 0; background: rgba(0,0,0,.35); display: none; z-index: 40; }
-  #scrim.open { display: block; }
-  #sidebar { position: fixed; top: 0; right: 0; height: 100%; width: min(480px, 92vw);
-             background: var(--sidebar-bg); border-left: 1px solid var(--border);
-             transform: translateX(100%); transition: transform .18s ease-out;
-             z-index: 50; overflow-y: auto; padding: 18px; }
-  #sidebar.open { transform: translateX(0); }
-  #closeSidebar { position: sticky; top: 0; float: right; background: none; border: none;
-                  font-size: 22px; line-height: 1; cursor: pointer; color: var(--fg); }
-  .srcline { font: 12px/1.6 ui-monospace, SFMono-Regular, monospace; white-space: pre-wrap;
-             padding: 1px 4px; border-radius: 3px; }
-  .srcline.hl { background: var(--hl-bg); }
-  @media (max-width: 700px) {
-    #sidebar { top: auto; bottom: 0; right: 0; left: 0; width: 100%; height: min(70vh, 520px);
-               border-left: none; border-top: 1px solid var(--border);
-               transform: translateY(100%); border-radius: 12px 12px 0 0; }
-    #sidebar.open { transform: translateY(0); }
-    table { font-size: 12px; }
-  }
-</style>
-</head>
-<body>
-<header>
-  <h1>Evaluation matrix: @@TITLE@@</h1>
-  <p>Source: <code>@@SOURCE@@</code></p>
-  <p>Stated total: @@STATED_LINE@@</p>
-  @@STAGE_LINE@@
-  <p>Sum of Points: <strong>@@SUM@@</strong> — reconciles: <strong class="@@RECONCILE_CLASS@@">@@RECONCILE_TEXT@@</strong></p>
-  <p>@@COVERAGE_LINE@@</p>
-  @@STOP_LINE@@
-</header>
-<main>
-  <h2>Part 1: Scored criteria</h2>
-  <table>
-    <thead><tr>@@HDR_CELLS@@</tr></thead>
-    <tbody>@@BODY_ROWS@@</tbody>
-  </table>
-  <p class="total">TOTAL points: @@SUM@@</p>
-
-  <h2>Part 2: Disqualifiers — what gets a proposal thrown out before scoring (@@DISQ_COUNT@@)</h2>
-  <ul class="disq">@@DISQ_ROWS@@</ul>
-
-  <h2>Part 3: Could not map</h2>
-  <ul class="cnm">@@CNM_ROWS@@</ul>
-
-  <p class="footer">@@ROW_COUNT@@ row(s) waiting on a person (Input data source, Owner, Human check, Claude does).</p>
-</main>
-
-<div id="scrim"></div>
-<aside id="sidebar" aria-hidden="true">
-  <button id="closeSidebar" type="button" aria-label="Close">&times;</button>
-  <div id="sidebarContent"></div>
-</aside>
-
-<script>
-const SOURCE = @@SOURCE_JSON@@;
-function escapeHtml(s) {
-  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-}
-function openSidebar(cite) {
-  const m = /^p(\\d+):(\\d+)(?:-p(\\d+):(\\d+))?$/.exec(cite);
-  if (!m) return;
-  const page = m[1];
-  const startLine = parseInt(m[2], 10);
-  const endLine = m[4] ? parseInt(m[4], 10) : startLine;
-  const lines = SOURCE[page] || [];
-  const rows = lines.map(function (pair) {
-    const ln = pair[0], text = pair[1];
-    const hl = (ln >= startLine && ln <= endLine) ? ' hl' : '';
-    return '<div class="srcline' + hl + '" id="ln-' + ln + '">p' + page + ':' + ln + '| ' + escapeHtml(text) + '</div>';
-  }).join('');
-  document.getElementById('sidebarContent').innerHTML = '<h3>Page ' + page + '</h3>' + rows;
-  const sidebar = document.getElementById('sidebar');
-  sidebar.classList.add('open');
-  sidebar.setAttribute('aria-hidden', 'false');
-  document.getElementById('scrim').classList.add('open');
-  const target = document.getElementById('ln-' + startLine);
-  if (target) target.scrollIntoView({ block: 'center' });
-}
-function closeSidebar() {
-  const sidebar = document.getElementById('sidebar');
-  sidebar.classList.remove('open');
-  sidebar.setAttribute('aria-hidden', 'true');
-  document.getElementById('scrim').classList.remove('open');
-}
-document.addEventListener('click', function (e) {
-  const chip = e.target.closest('.chip');
-  if (chip) { openSidebar(chip.dataset.cite); return; }
-  if (e.target.id === 'closeSidebar' || e.target.id === 'scrim') closeSidebar();
-});
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape') closeSidebar();
-});
-</script>
-</body>
-</html>
-"""
+def grouped(rows):
+    """Consecutive rows that share an RFP section, in RFP order: [(first_row, [(i, r), ...]), ...]."""
+    out = []
+    for i, r in enumerate(rows, start=1):
+        if out and section_key(out[-1][0]) == section_key(r):
+            out[-1][1].append((i, r))
+        else:
+            out.append((r, [(i, r)]))
+    return out
 
 
-def to_html(m, cov, src):
+def disq_groups_html(disq):
+    if not disq:
+        return '<p class="empty-note">The RFP states no rules that throw a proposal out before scoring.</p>'
+    order, groups = [], {}
+    for d in disq:
+        if d["kind"] not in groups:
+            order.append(d["kind"])
+            groups[d["kind"]] = []
+        groups[d["kind"]].append(d)
+    out = []
+    for k in order:
+        items = "".join(f'<li><span class="quote">{esc(d["text"])}</span> {chip_html(d["cite"])}</li>'
+                        for d in groups[k])
+        out.append(f'<div class="gate-group"><h3>{esc(KIND_LABEL.get(k, k))}<span class="n">{len(groups[k])}</span></h3>'
+                   f'<ol>{items}</ol></div>')
+    return "".join(out)
+
+
+def pdf_name(m, src_path):
+    """The PDF the source text was extracted from, when it sits beside it; else the text file."""
+    p = pathlib.Path(src_path)
+    stem = p.name[:-len(".source.txt")] if p.name.endswith(".source.txt") else p.stem
+    pdf = p.with_name(stem + ".pdf")
+    return pdf.name if pdf.exists() else p.name
+
+
+def to_html(m, cov, src, src_path=None):
+    n_hits, counts = cov
     st = m["stated_total"]
-    if isinstance(st, dict) and "stages" in st:
-        stated_line = "; ".join(f"{esc(s['name'])} {esc(s['value'])} {chip_html(s['cite'])}" for s in st["stages"])
+    total_s = esc(num(m["_sum"]))
+    staged = isinstance(st, dict) and "stages" in st
+    stage_line = ""
+    if staged:
+        stated_html = " ".join(
+            f'<span class="stagefact">{esc(s["name"])} {esc(s["value"])}</span>{chip_html(s["cite"])}'
+            for s in st["stages"])
+        sums = stage_sums(m)
+        stage_line = "<p>" + "; ".join(
+            f'{esc(s["name"])}: the RFP says {esc(s["value"])} points, the items add up to '
+            f'{esc(num(sums.get(s["name"], 0)))}' for s in st["stages"]) + ".</p>"
         if st.get("combined"):
-            stated_line += f" — combined: {sourced_html(st['combined'])}"
-        line = stage_reconcile_line(m)
-        stage_line_html = f"<p>Per-stage reconcile: {esc(line)}</p>" if line else ""
+            stage_line += f"<p>How the stages combine: {sourced_html(st['combined'])}</p>"
+        stated_words = " + ".join(f'{esc(s["value"])} ({esc(s["name"])})' for s in st["stages"])
+    elif isinstance(st, dict):
+        t, c = part_text(st)
+        stated_html = f"{esc(t)} {chip_html(c)}"
+        stated_words = esc(t)
     else:
-        stated_line = sourced_html(st)
-        stage_line_html = ""
+        stated_html = nis_html()
+        stated_words = None
 
-    body_rows = "".join(row_html(i, r) for i, r in enumerate(m["rows"], start=1))
-    hdr_cells = "".join(f"<th>{esc(h)}</th>" for h in HDR)
+    if stated_words is None:
+        total_sentence = f"The RFP doesn't state a total. The items below add up to <strong>{total_s}</strong>."
+    elif m["_reconciles"]:
+        total_sentence = (f"The RFP says proposals are scored out of <strong>{stated_words}</strong> points, "
+                          f"and the items below add up to <strong>{total_s}</strong>.")
+    else:
+        total_sentence = (f"The RFP says proposals are scored out of <strong>{stated_words}</strong> points, but the "
+                          f"items below only add up to <strong>{total_s}</strong>. Something doesn't add up here: "
+                          f"check this before you rely on this page.")
+    if staged:
+        total_sentence += " This RFP scores in stages. Each stage's own total is shown next to that stage's items below."
 
-    disq_rows = "".join(
-        f"<li>{esc(d['text'])} {chip_html(d['cite'])} — <em>{esc(d['kind'])}</em></li>" for d in m["disqualifiers"]
-    ) or "<li class='empty'>nothing: the source states no disqualifying conditions</li>"
+    shares, stage_of, rulers = {}, {}, []
+    for name, g in groups_for_share(m):
+        total = group_sum(g)
+        for i, r in g:
+            v = points_value(r)
+            shares[i] = pct(v, total) if v is not None else None
+            stage_of[i] = name
+        rulers.append(ruler_html(name, g))
+    rulers_html = "".join(rulers)
+    if rulers_html:
+        rulers_html += '<p class="arith">Bar sizes and percentages are simple math on the points the RFP prints.</p>'
 
-    cnm_rows = "".join(
-        f"<li>{esc(c['text'])} {chip_html(c['cite'])} — <em>{esc(c['why'])}</em></li>" for c in m["could_not_map"]
-    ) or "<li class='empty'>nothing: every scoring sentence found in the source is in a row above</li>"
+    rows = m["rows"]
+    n_rows = len(rows)
+    cards, body_rows = [], []
+    for first, g in grouped(rows):
+        cards.append('<div class="group">' + section_heading_html(first) +
+                     "".join(card_html(i, n_rows, r, shares.get(i), stage_of.get(i)) for i, r in g) + "</div>")
+        body_rows.append(f'<tr class="grouprow"><td colspan="{len(HTML_COLS)}">'
+                         f'{section_heading_html(first, "span")}</td></tr>')
+        body_rows.extend(row_html(i, r) for i, r in g)
+    cards_html = "".join(cards) or '<p class="empty-note">No scored items: see the note at the top of the page.</p>'
+    hdr_cells = "".join(f"<th>{esc(h)}</th>" for _, h in HTML_COLS)
+
+    disq_flat = "".join(
+        f'<li><span class="quote">{esc(d["text"])}</span> {chip_html(d["cite"])} '
+        f'<span class="kind">{esc(KIND_LABEL.get(d["kind"], d["kind"]))}</span></li>' for d in m["disqualifiers"]
+    ) or '<li class="empty-note">The RFP states no rules that throw a proposal out before scoring.</li>'
+
+    if m["could_not_map"]:
+        cnm = '<ul class="cnm">' + "".join(
+            f'<li>{esc(c["text"])} {chip_html(c["cite"])}'
+            f'<span class="why">{esc(WHY_LABEL.get(c["why"], c["why"]))}</span></li>'
+            for c in m["could_not_map"]) + "</ul>"
+    else:
+        cnm = '<p class="empty-note">Nothing: every line about scoring is in one of the two parts above.</p>'
 
     pages = {}
     for (page, line) in src["order"]:
         pages.setdefault(page, []).append([line, src["lines"][(page, line)]])
     source_json = json.dumps({str(k): v for k, v in pages.items()}).replace("</", "<\\/")
 
-    title = m["rfp"]["text"] if isinstance(m["rfp"], dict) else (
-        m["rfp"][0]["text"] if isinstance(m["rfp"], list) else str(m["rfp"]))
+    rfp_parts = parts_of(m["rfp"])
+    title = part_text(rfp_parts[0])[0] if rfp_parts else str(m["rfp"])
+    title_html = " ".join(f'{esc(part_text(p)[0])} {chip_html(part_text(p)[1])}' for p in rfp_parts) or esc(title)
 
-    stop_line = f'<p class="stop">STOP: {esc(m["stop"])}</p>' if m.get("stop") else ""
+    stop_line = (f'<p class="stop">This checklist stopped early. The reason: {esc(m["stop"])}.</p>'
+                 if m.get("stop") else "")
+    coverage = (f"We checked {n_hits} lines in the RFP that talk about scoring or rejection. Every one of them is "
+                f"accounted for: {counts['rows']} in How you'll be scored, {counts['disqualifiers']} in What gets you "
+                f"thrown out, {counts['could_not_map']} in Things we found but couldn't place, and "
+                f"{counts['reviewed']} read and set aside, each with its reason recorded in the matrix file.")
+    empty_boxes = sum(1 for r in rows for k in HUMAN_FIELDS if not r.get(k))
 
-    out = HTML_TEMPLATE
-    out = out.replace("@@TITLE@@", esc(title))
-    out = out.replace("@@SOURCE@@", esc(m["source"]))
-    out = out.replace("@@STATED_LINE@@", stated_line)
-    out = out.replace("@@STAGE_LINE@@", stage_line_html)
-    out = out.replace("@@SUM@@", esc(m["_sum"]))
-    out = out.replace("@@RECONCILE_CLASS@@", "ok" if m["_reconciles"] else "bad")
-    out = out.replace("@@RECONCILE_TEXT@@", "yes" if m["_reconciles"] else "NO")
-    out = out.replace("@@COVERAGE_LINE@@", esc(coverage_line(cov)))
-    out = out.replace("@@STOP_LINE@@", stop_line)
-    out = out.replace("@@HDR_CELLS@@", hdr_cells)
-    out = out.replace("@@BODY_ROWS@@", body_rows)
-    out = out.replace("@@DISQ_COUNT@@", str(len(m["disqualifiers"])))
-    out = out.replace("@@DISQ_ROWS@@", disq_rows)
-    out = out.replace("@@CNM_ROWS@@", cnm_rows)
-    out = out.replace("@@ROW_COUNT@@", str(len(m["rows"])))
-    out = out.replace("@@SOURCE_JSON@@", source_json)
-    return out
+    fills = {
+        "TITLE": esc(title),
+        "TITLE_HTML": title_html,
+        "PDF": esc(pdf_name(m, src_path or m["source"])),
+        "SOURCE": esc(m["source"]),
+        "STATED_HTML": stated_html,
+        "TOTAL_SENTENCE": total_sentence,
+        "STAGE_LINE": stage_line,
+        "SUM": total_s,
+        "RECONCILE_CLASS": "na" if stated_words is None else "ok" if m["_reconciles"] else "bad",
+        "RECONCILE_TEXT": ("No total to compare" if stated_words is None
+                           else "Yes" if m["_reconciles"] else "No"),
+        "COVERAGE_LINE": esc(coverage),
+        "STOP_LINE": stop_line,
+        "RULERS": rulers_html,
+        "CARDS": cards_html,
+        "HDR_CELLS": hdr_cells,
+        "BODY_ROWS": "".join(body_rows),
+        "NCOLS_REST": str(len(HTML_COLS) - 3),
+        "DISQ_COUNT": str(len(m["disqualifiers"])),
+        "DISQ_GROUPS": disq_groups_html(m["disqualifiers"]),
+        "DISQ_FLAT": disq_flat,
+        "CNM_COUNT": str(len(m["could_not_map"])),
+        "CNM": cnm,
+        "ROW_COUNT": str(n_rows),
+        "EMPTY_BOXES": str(empty_boxes),
+        "SOURCE_JSON": source_json,
+    }
+    # One pass, so text from the JSON can never be re-read as a placeholder.
+    return re.sub(r"@@([A-Z_]+)@@", lambda mo: fills[mo.group(1)], TEMPLATE_PATH.read_text())
 
 
 def main():
@@ -433,7 +597,7 @@ def main():
     pathlib.Path(base + ".md").write_text(to_markdown(m, cov))
     to_csv(m, base + ".csv")
     to_xlsx(m, base + ".xlsx")
-    pathlib.Path(base + ".html").write_text(to_html(m, cov, src))
+    pathlib.Path(base + ".html").write_text(to_html(m, cov, src, src_path))
     print(f"wrote {base}.md .csv .xlsx .html — {len(m['rows'])} rows, {total} points, "
           f"reconciles={'yes' if m['_reconciles'] else 'NO'}, "
           f"{len(m['disqualifiers'])} disqualifier(s)")

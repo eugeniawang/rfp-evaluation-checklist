@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evaluation matrix: @@TITLE@@</title>
+<style>
+  :root {
+    --paper: #f3f6f9; --sheet: #ffffff; --ink: #1b2230; --pencil: #566072; --rule: #d6dde6;
+    --blue: #17427a; --blue-soft: #eceff3; --hatch: rgba(86, 96, 114, .16); --grid: rgba(23, 66, 122, .07);
+    --gate: #a3262d; --gate-soft: #fbeeee; --mark: #ffe27a; --mark-ink: #1b2230;
+    --ok: #1d6b3a; --bad: #a3262d;
+    --c0: #2f6fd6; --c1: #178f82; --c2: #b87a12; --c3: #7457cf; --c4: #3895bf; --c5: #4d8a2c; --c6: #b8467b; --c7: #5d7183;
+    --head: "DIN Alternate", "DIN Next", Bahnschrift, "D-DIN", "Barlow Semi Condensed", "Roboto Condensed", "Arial Narrow", sans-serif;
+    --body: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0d141d; --sheet: #141d29; --ink: #e5ebf2; --pencil: #9aa7b7; --rule: #2a3748;
+      --blue: #8db8ff; --blue-soft: #232d3b; --hatch: rgba(154, 167, 183, .16); --grid: rgba(141, 184, 255, .07);
+      --gate: #f08a8a; --gate-soft: #2a1a1f; --mark: #6b5710; --mark-ink: #fff6d6;
+      --ok: #6fcf8f; --bad: #f08a8a;
+      --c0: #6b9cf0; --c1: #3fbfae; --c2: #e0a640; --c3: #a08cf0; --c4: #62bde3; --c5: #7fbf5a; --c6: #e47aac; --c7: #93a6b8;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.55 var(--body); }
+  button { font: inherit; color: inherit; }
+  :focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+
+  /* ---------- header: the drawing sheet ---------- */
+  .sheet-head { border-bottom: 1px solid var(--rule); padding: 36px 0 30px;
+    background-color: var(--sheet);
+    background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 24px 24px; }
+  .headgrid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 12px 48px; align-items: end; }
+  @media (max-width: 1000px) { .headgrid { grid-template-columns: 1fr; } }
+  h1 { font: 700 clamp(28px, 4vw, 44px)/1.05 var(--head); letter-spacing: -.01em; margin: 0; color: var(--blue); max-width: 22ch; }
+  h1 .kicker { display: block; font: 500 15px/1.4 var(--body); color: var(--pencil); letter-spacing: 0; margin-bottom: 8px; }
+  .srcfile { margin: 12px 0 0; color: var(--pencil); font-size: 14px; overflow-wrap: anywhere; }
+  .srcfile strong { color: var(--ink); font-weight: 600; }
+  .facts { display: flex; flex-wrap: wrap; gap: 14px 32px; margin: 0; padding: 0; }
+  .fact { margin: 0; min-width: 0; }
+  .fact dt { font-size: 12.5px; color: var(--pencil); margin: 0 0 2px; }
+  .fact dd { margin: 0; font: 700 26px/1.1 var(--head); display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+  .fact dd .stagefact { font-size: 20px; }
+  .verdict { font: 700 13px/1 var(--body); padding: 5px 10px; border-radius: 4px; border: 1.5px solid currentColor; align-self: center; }
+  .verdict.ok { color: var(--ok); } .verdict.bad { color: var(--bad); } .verdict.na { color: var(--pencil); }
+  .explain { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 16px; margin: 26px 0 0; align-items: start; }
+  .box { background: var(--sheet); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 18px; }
+  .box h2 { font: 700 17px/1.25 var(--head); margin: 0 0 6px; color: var(--blue); }
+  .box p { margin: 0; max-width: 64ch; }
+  .box ul { margin: 0; padding-left: 18px; }
+  .box li { margin: 3px 0; }
+  .tablenote { margin: 0 0 10px; color: var(--pencil); font-size: 13.5px; }
+  .sb-file { margin: 0; padding: 6px 18px; font-size: 12.5px; color: var(--pencil); border-bottom: 1px solid var(--rule); }
+  .foot code { font: 12px var(--mono); overflow-wrap: anywhere; }
+  .meta-lines { margin: 18px 0 0; font-size: 13.5px; color: var(--pencil); max-width: 110ch; }
+  .meta-lines p { margin: 3px 0; }
+  .stop { margin: 16px 0 0; padding: 10px 14px; border-left: 4px solid var(--gate); background: var(--gate-soft); color: var(--ink); font-weight: 600; }
+
+  /* the scale ruler */
+  .ruler { margin: 30px 0 0; }
+  .ruler + .ruler { margin-top: 22px; }
+  .ruler h2 { font: 600 13px/1.3 var(--body); color: var(--pencil); margin: 0 0 8px; }
+  .scale { position: relative; height: 18px; border-bottom: 1.5px solid var(--ink); margin: 0 0 0; }
+  .tick { position: absolute; bottom: 0; width: 0; border-left: 1px solid var(--ink); height: 6px; }
+  .tick.major { height: 11px; }
+  .tick span { position: absolute; bottom: 12px; left: 0; transform: translateX(-50%); font: 600 11px/1 var(--head); color: var(--pencil); }
+  .tick.last span { transform: translateX(-100%); }
+  .tick.first span { transform: none; }
+  .bar { display: flex; height: 46px; gap: 2px; margin-top: 2px; }
+  .seg { flex: var(--w) 1 0; min-width: 4px; background: var(--c); color: #fff; border: 0; padding: 0 8px; cursor: pointer;
+    display: flex; align-items: center; justify-content: flex-start; overflow: hidden; text-decoration: none;
+    font: 700 20px/1 var(--head); }
+  .seg:hover { filter: brightness(1.08); }
+  @media (prefers-color-scheme: dark) { .seg { color: #0d141d; } }
+  .legend { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 28px; font-size: 13.5px; }
+  .legend li { display: flex; gap: 8px; align-items: baseline; min-width: 0; }
+  .legend .sw { width: 12px; height: 12px; border-radius: 2px; background: var(--c); transform: translateY(1px); }
+  .legend a { color: var(--ink); text-decoration: none; }
+  .legend a:hover { text-decoration: underline; }
+  .legend .pts { font: 700 14px var(--head); white-space: nowrap; }
+  .legend .pct { color: var(--pencil); font-weight: 400; font-family: var(--body); font-size: 12px; }
+  .arith { margin: 8px 0 0; font-size: 12px; color: var(--pencil); }
+
+  /* ---------- toolbar ---------- */
+  .toolbar { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter: blur(6px); border-bottom: 1px solid var(--rule); }
+  .toolbar .wrap { display: flex; align-items: center; gap: 14px; justify-content: space-between; min-height: 52px; flex-wrap: wrap; }
+  .toc { display: flex; gap: 18px; font-size: 13.5px; flex-wrap: wrap; }
+  .toc a { color: var(--ink); text-decoration: none; }
+  .toc a:hover { color: var(--blue); }
+  .toc .n { color: var(--pencil); font-family: var(--head); font-weight: 700; margin-left: 4px; }
+  .seg-toggle { display: inline-flex; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; background: var(--sheet); }
+  .seg-toggle button { border: 0; background: none; padding: 6px 14px; font-size: 13.5px; cursor: pointer; }
+  .seg-toggle button[aria-pressed="true"] { background: var(--blue); color: var(--sheet); }
+
+  /* ---------- parts ---------- */
+  main { padding: 10px 0 60px; }
+  .part { margin-top: 44px; scroll-margin-top: 64px; }
+  .part-head { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; border-bottom: 2px solid var(--ink); padding-bottom: 8px; margin-bottom: 18px; }
+  .part-head h2 { font: 700 24px/1.15 var(--head); margin: 0; }
+  .part-head .partno { font: 700 24px/1.15 var(--head); color: var(--pencil); }
+  .part-head .count { font-size: 13.5px; color: var(--pencil); }
+  .empty-note { color: var(--pencil); font-style: italic; }
+
+  /* criterion cards */
+  .cards { display: grid; gap: 18px; }
+  .card { background: var(--sheet); border: 1px solid var(--rule); border-top: 5px solid var(--c); border-radius: 6px;
+    display: grid; grid-template-columns: 150px minmax(0, 1fr); scroll-margin-top: 70px; }
+  .card:target { box-shadow: 0 0 0 2px var(--c); }
+  .card-points { padding: 20px 18px; border-right: 1px solid var(--rule); }
+  .bignum { font: 700 54px/0.9 var(--head); color: var(--c); display: block; }
+  .bignum-unit { font: 600 13px var(--body); color: var(--pencil); display: block; margin-top: 6px; }
+  .card-points .pct { display: block; margin-top: 14px; font-size: 12px; color: var(--pencil); line-height: 1.35; }
+  .card-points .chip { margin-top: 10px; }
+  .card-body { padding: 18px 22px 20px; min-width: 0; }
+  .rowno { font: 700 13px var(--head); color: var(--pencil); }
+  .crit { font: 700 22px/1.2 var(--head); margin: 2px 0 6px; }
+  .crit .chip { vertical-align: 3px; margin-left: 6px; }
+  .rowmeta { font-size: 13px; color: var(--pencil); display: flex; gap: 6px 18px; flex-wrap: wrap; }
+  .rowmeta .part-line { display: inline; }
+  .block { margin-top: 16px; }
+  .block h5 { font: 600 12.5px/1.3 var(--body); color: var(--pencil); margin: 0 0 6px; }
+  .block ul { margin: 0; padding: 0; list-style: none; }
+  .block li { position: relative; padding-left: 16px; margin: 6px 0; max-width: 78ch; }
+  .block li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 6px; height: 6px; border-radius: 1px; background: var(--c); }
+  .block.single li { padding-left: 0; } .block.single li::before { display: none; }
+  .quote { overflow-wrap: anywhere; }
+  .people { margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--rule); }
+  .slots { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; align-items: stretch; }
+  .slot { border: 1px solid var(--rule); border-radius: 5px; padding: 7px 10px; min-height: 56px; font-size: 12.5px; color: var(--ink);
+    background: repeating-linear-gradient(135deg, transparent 0 7px, var(--hatch) 7px 8px); }
+  .slot b { display: block; font-weight: 600; color: var(--ink); font-size: 12.5px; }
+
+  /* chips and pills */
+  .chip { display: inline-flex; align-items: center; gap: 4px; background: var(--blue-soft); color: var(--blue); border: 1px solid transparent;
+    border-radius: 4px; padding: 0 6px; font: 600 11.5px/1.7 var(--body); font-variant-numeric: tabular-nums; cursor: pointer; white-space: nowrap; vertical-align: 1px; }
+  .chip:hover { border-color: var(--blue); }
+    .nis { display: inline-block; border: 1px dashed var(--pencil); color: var(--pencil); border-radius: 4px; padding: 0 7px; font-size: 12px; line-height: 1.7; font-style: normal; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+  /* disqualifiers */
+  .gates { columns: 2 460px; column-gap: 16px; }
+  .gates .gate-group { break-inside: avoid; margin: 0 0 16px; display: inline-block; width: 100%; }
+  .gate-intro { column-span: all; }
+  .gate-group { background: var(--sheet); border: 1px solid var(--rule); border-left: 5px solid var(--gate); border-radius: 6px; padding: 14px 20px 10px; }
+  .gate-group h3 { font: 700 17px/1.25 var(--head); margin: 0 0 4px; color: var(--gate); display: flex; gap: 10px; align-items: baseline; }
+  .gate-group h3 .n { font: 600 12.5px var(--body); color: var(--pencil); }
+  .gate-group ol { margin: 0; padding: 0; list-style: none; }
+  .gate-group li { padding: 9px 0; border-top: 1px solid var(--rule); max-width: 90ch; }
+  .gate-group li:first-child { border-top: 0; }
+  .gate-intro { margin: -6px 0 16px; color: var(--pencil); font-size: 13.5px; }
+
+  /* could not map */
+  .cnm { list-style: none; margin: 0; padding: 0; background: var(--sheet); border: 1px solid var(--rule); border-radius: 6px; }
+  .cnm li { padding: 12px 20px; border-top: 1px solid var(--rule); }
+  .cnm li:first-child { border-top: 0; }
+  .why { display: block; font-size: 12.5px; color: var(--pencil); margin-top: 4px; }
+
+  /* table view */
+  .tablewrap { overflow-x: auto; background: var(--sheet); border: 1px solid var(--rule); border-radius: 6px; }
+  table { border-collapse: collapse; width: 100%; min-width: 1180px; font-size: 12.5px; }
+  th, td { border-bottom: 1px solid var(--rule); border-right: 1px solid var(--rule); padding: 7px 9px; vertical-align: top; text-align: left; }
+  th { background: var(--blue); color: var(--sheet); font: 600 12px/1.3 var(--body); position: sticky; top: 0; }
+  td.num, td.pts { text-align: center; font-family: var(--head); font-weight: 700; }
+  td.pts { font-size: 16px; }
+  td.human { background: repeating-linear-gradient(135deg, transparent 0 7px, var(--hatch) 7px 8px); min-width: 90px; }
+  .idx { display: inline-block; min-width: 1.6em; font: 700 11px/1.6 var(--head); color: var(--pencil); border: 1px solid var(--rule); border-radius: 3px; text-align: center; margin-right: 2px; }
+  tr.grouprow td { background: var(--blue-soft); padding: 8px 10px; }
+  .group-head { font: 600 14px/1.4 var(--body); color: var(--pencil); margin: 0; }
+  .group > .group-head { margin: 0 0 10px; }
+  .group { display: grid; gap: 18px; }
+  .cards { gap: 34px; }
+  .howchecked { margin: 18px 0 0; font-size: 13.5px; color: var(--pencil); max-width: 110ch; }
+  .howchecked summary { cursor: pointer; color: var(--ink); font-weight: 600; }
+  .howchecked p { margin: 6px 0; }
+  .chip.demo { cursor: default; }
+  td .p + .p { margin-top: 6px; padding-top: 6px; border-top: 1px dotted var(--rule); }
+  tfoot td { font-weight: 700; }
+  .flat { margin: 0; padding-left: 22px; }
+  .flat li { margin: 6px 0; }
+  .kind { color: var(--pencil); font-style: italic; }
+
+  body[data-view="cards"] .v-table { display: none; }
+  body[data-view="table"] .v-cards { display: none; }
+
+  .foot { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--rule); color: var(--pencil); font-size: 13.5px; }
+
+  /* ---------- source sidebar ---------- */
+  #scrim { position: fixed; inset: 0; background: rgba(10, 16, 26, .35); opacity: 0; pointer-events: none; transition: opacity .18s; z-index: 40; }
+  #scrim.open { opacity: 1; pointer-events: auto; }
+  #sidebar { position: fixed; top: 0; right: 0; height: 100%; width: min(520px, 94vw); background: var(--sheet);
+    border-left: 1px solid var(--rule); box-shadow: -12px 0 32px rgba(10, 16, 26, .18);
+    transform: translateX(102%); visibility: hidden; transition: transform .2s ease-out, visibility 0s linear .2s; z-index: 50; display: flex; flex-direction: column; }
+  #sidebar.open { transform: none; visibility: visible; transition: transform .2s ease-out, visibility 0s; }
+  .sb-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid var(--rule); }
+  .sb-head h2 { font: 700 20px/1.2 var(--head); margin: 0; }
+  .sb-head p { margin: 2px 0 0; font-size: 12.5px; color: var(--pencil); }
+  #closeSidebar { border: 1px solid var(--rule); background: none; border-radius: 6px; padding: 4px 12px; cursor: pointer; font-size: 13px; }
+  #sidebarContent { overflow-y: auto; padding: 10px 0 40px; flex: 1; }
+  .srcline { display: grid; grid-template-columns: 4.2em 1fr; gap: 10px; padding: 1px 18px 1px 8px; font: 12.5px/1.6 var(--mono); }
+  .srcline .ln { color: var(--pencil); text-align: right; user-select: none; }
+  .srcline .tx { white-space: pre-wrap; overflow-wrap: anywhere; }
+  .srcline.hl { background: var(--mark); color: var(--mark-ink); }
+  .srcline.hl .ln { color: var(--mark-ink); font-weight: 700; }
+
+  @media (max-width: 760px) {
+    .wrap { padding: 0 16px; }
+    .sheet-head { padding: 26px 0 22px; }
+    .card { grid-template-columns: 1fr; }
+    .card-points { border-right: 0; border-bottom: 1px solid var(--rule); display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; padding: 14px 16px; }
+    .bignum { font-size: 40px; }
+    .bignum-unit, .card-points .pct, .card-points .chip { margin-top: 0; }
+    .card-body { padding: 14px 16px 16px; }
+    .slots { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .explain { grid-template-columns: 1fr; }
+    .seg { font-size: 15px; padding: 0 5px; }
+    .toc { gap: 12px; font-size: 13px; }
+    .toolbar { position: static; }
+    .toolbar .wrap { gap: 6px 14px; padding-top: 6px; padding-bottom: 6px; }
+    .seg-toggle button { padding: 4px 12px; font-size: 13px; }
+    .facts { margin-top: 18px; }
+    #sidebar { top: auto; bottom: 0; left: 0; right: 0; width: 100%; height: min(72vh, 560px); border-left: 0; border-top: 1px solid var(--rule);
+      border-radius: 14px 14px 0 0; transform: translateY(102%); box-shadow: 0 -12px 32px rgba(10, 16, 26, .2); }
+    #sidebar.open { transform: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { #sidebar, #scrim { transition: none; } }
+  @media print {
+    body { background: #fff; color: #000; font-size: 11px; }
+    .toolbar, #sidebar, #scrim { display: none !important; }
+    .sheet-head { background: none; padding: 0 0 12px; }
+    .card, .gate-group { break-inside: avoid; }
+    .chip { border: 0; padding: 0; background: none; color: #333; }
+    .tablewrap { overflow: visible; border: 0; }
+    table { min-width: 0; font-size: 9px; }
+    th { position: static; }
+  }
+</style>
+</head>
+<body data-view="cards">
+<header class="sheet-head">
+  <div class="wrap">
+    <div class="headgrid">
+    <div>
+      <h1><span class="kicker">Scoring checklist</span>@@TITLE_HTML@@</h1>
+      <p class="srcfile">Read from: <strong>@@PDF@@</strong></p>
+    </div>
+    <dl class="facts">
+      <div class="fact"><dt>The RFP says it scores out of</dt><dd>@@STATED_HTML@@</dd></div>
+      <div class="fact"><dt>The items below add up to</dt><dd>@@SUM@@</dd></div>
+      <div class="fact"><dt>Do they match?</dt><dd><span class="verdict @@RECONCILE_CLASS@@">@@RECONCILE_TEXT@@</span></dd></div>
+      <div class="fact"><dt>Rules that can throw a proposal out</dt><dd>@@DISQ_COUNT@@</dd></div>
+    </dl>
+    </div>
+    @@STOP_LINE@@
+    <div class="explain">
+      <section class="box">
+        <h2>What this is</h2>
+        <p>This page shows how <strong>@@TITLE@@</strong> will be scored. It's built from <strong>@@PDF@@</strong>, the actual RFP document, not a summary of it. @@TOTAL_SENTENCE@@ Below that, you'll find <strong>@@ROW_COUNT@@</strong> things that earn points, <strong>@@DISQ_COUNT@@</strong> rules that can get a proposal thrown out before scoring even starts, and <strong>@@CNM_COUNT@@</strong> lines from the RFP we found but couldn't tie to a specific scored item.</p>
+      </section>
+      <section class="box">
+        <h2>How to read this page</h2>
+        <ul>
+          <li><b>This page has three parts:</b> <i>How you'll be scored</i> (the points table), <i>What gets you thrown out</i> (rules that can disqualify a proposal no matter how good it is), and <i>Things we found but couldn't place</i> (RFP sentences we spotted but couldn't tie to a specific scored item).</li>
+          <li><b>A grey box like <span class="chip demo">Page 5, line 36</span> is a button.</b> Click it to see the exact words in the RFP, highlighted, so you can check our work against the real document.</li>
+          <li><b>"<span class="nis">The RFP doesn't say</span>" means exactly that.</b> The RFP is silent on that point. We never guess or fill it in for you.</li>
+          <li><b>The blank, striped boxes are for your team.</b> We don't know who at your firm owns what, so those are left empty on purpose for someone to fill in.</li>
+          <li><b>Everything on this page is a fact from the RFP, not our opinion.</b> We don't judge your bid, rank your chances, or suggest a strategy. We only report what the RFP itself says.</li>
+        </ul>
+      </section>
+    </div>
+    @@RULERS@@
+    <details class="howchecked">
+      <summary>How we checked this</summary>
+      @@STAGE_LINE@@
+      <p>@@COVERAGE_LINE@@</p>
+    </details>
+  </div>
+</header>
+
+<nav class="toolbar" aria-label="Sections">
+  <div class="wrap">
+    <div class="toc">
+      <a href="#part1">How you'll be scored<span class="n">@@ROW_COUNT@@</span></a>
+      <a href="#part2">What gets you thrown out<span class="n">@@DISQ_COUNT@@</span></a>
+      <a href="#part3">Couldn't place<span class="n">@@CNM_COUNT@@</span></a>
+    </div>
+    <div class="seg-toggle" role="group" aria-label="View">
+      <button type="button" data-view="cards" aria-pressed="true">Cards</button>
+      <button type="button" data-view="table" aria-pressed="false">Table</button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section class="part" id="part1">
+    <div class="part-head"><span class="partno">Part 1</span><h2>How you'll be scored</h2><span class="count">@@ROW_COUNT@@ item(s), @@SUM@@ points</span></div>
+    <div class="v-cards cards">@@CARDS@@</div>
+    <div class="v-table">
+      <div class="tablewrap">
+      <table>
+        <thead><tr>@@HDR_CELLS@@</tr></thead>
+        <tbody>@@BODY_ROWS@@</tbody>
+        <tfoot><tr><td></td><td>Total points</td><td class="pts">@@SUM@@</td><td colspan="@@NCOLS_REST@@"></td></tr></tfoot>
+      </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="part" id="part2">
+    <div class="part-head"><span class="partno">Part 2</span><h2>What gets you thrown out (@@DISQ_COUNT@@)</h2></div>
+    <p class="gate-intro">Rules in the RFP that can remove a proposal before scoring. <span class="v-cards">Grouped by kind of rule, in the order each kind first appears; the Table view lists them in RFP order.</span></p>
+    <div class="v-cards gates">@@DISQ_GROUPS@@</div>
+    <div class="v-table"><ol class="flat">@@DISQ_FLAT@@</ol></div>
+  </section>
+
+  <section class="part" id="part3">
+    <div class="part-head"><span class="partno">Part 3</span><h2>Things we found but couldn't place (@@CNM_COUNT@@)</h2></div>
+    @@CNM@@
+  </section>
+
+  <p class="foot">Boxes your team still needs to fill in: @@EMPTY_BOXES@@ of them.<br><small>Numbered text the checklist was checked against: <code>@@SOURCE@@</code></small></p>
+</main>
+
+<div id="scrim"></div>
+<aside id="sidebar" role="dialog" aria-modal="true" aria-labelledby="sbTitle" aria-hidden="true">
+  <div class="sb-head">
+    <div><h2 id="sbTitle">RFP page</h2><p id="sbSub"></p></div>
+    <button id="closeSidebar" type="button">Close</button>
+  </div>
+  <p class="sb-file">@@PDF@@</p>
+  <div id="sidebarContent"></div>
+</aside>
+
+<script>
+const SOURCE = @@SOURCE_JSON@@;
+(function () {
+  var sidebar = document.getElementById('sidebar');
+  var scrim = document.getElementById('scrim');
+  var content = document.getElementById('sidebarContent');
+  var lastChip = null;
+  function esc(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function openSidebar(cite, chip) {
+    var m = /^p(\d+):(\d+)(?:-p(\d+):(\d+))?$/.exec(cite);
+    if (!m) return;
+    var page = m[1], a = parseInt(m[2], 10), b = m[4] ? parseInt(m[4], 10) : a;
+    var lines = SOURCE[page] || [];
+    content.innerHTML = lines.map(function (pair) {
+      var hl = (pair[0] >= a && pair[0] <= b) ? ' hl' : '';
+      return '<div class="srcline' + hl + '" id="ln-' + pair[0] + '"><span class="ln">' + pair[0] +
+        '</span><span class="tx">' + esc(pair[1]) + '</span></div>';
+    }).join('');
+    document.getElementById('sbTitle').textContent = 'RFP page ' + page;
+    document.getElementById('sbSub').textContent = (a === b ? 'Line ' + a : 'Lines ' + a + ' to ' + b) + ' highlighted';
+    sidebar.classList.add('open'); scrim.classList.add('open');
+    sidebar.setAttribute('aria-hidden', 'false');
+    lastChip = chip || null;
+    var target = document.getElementById('ln-' + a);
+    if (target) target.scrollIntoView({ block: 'center' });
+    document.getElementById('closeSidebar').focus({ preventScroll: true });
+  }
+  function closeSidebar() {
+    if (!sidebar.classList.contains('open')) return;
+    sidebar.classList.remove('open'); scrim.classList.remove('open');
+    sidebar.setAttribute('aria-hidden', 'true');
+    if (lastChip) lastChip.focus({ preventScroll: true });
+  }
+  function setView(v) {
+    document.body.setAttribute('data-view', v);
+    Array.prototype.forEach.call(document.querySelectorAll('.seg-toggle button'), function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-view') === v ? 'true' : 'false');
+    });
+    try { localStorage.setItem('matrix-view', v); } catch (e) {}
+  }
+  try { var saved = localStorage.getItem('matrix-view'); if (saved === 'table' || saved === 'cards') setView(saved); } catch (e) {}
+  document.addEventListener('click', function (e) {
+    var chip = e.target.closest('.chip');
+    if (chip) { openSidebar(chip.getAttribute('data-cite'), chip); return; }
+    var vb = e.target.closest('.seg-toggle button');
+    if (vb) { setView(vb.getAttribute('data-view')); return; }
+    if (e.target.id === 'closeSidebar' || e.target === scrim) closeSidebar();
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSidebar(); });
+})();
+</script>
+</body>
+</html>
