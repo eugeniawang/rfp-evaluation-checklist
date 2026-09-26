@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Evaluation matrix: @@TITLE@@</title>
+<title>RFP Evaluation Criteria Checklist: @@TITLE@@</title>
 <style>
   :root {
     --paper: #f3f6f9; --sheet: #ffffff; --ink: #1b2230; --pencil: #566072; --rule: #d6dde6;
@@ -89,21 +89,26 @@
   .legend .pct { color: var(--pencil); font-weight: 400; font-family: var(--body); font-size: 12px; }
   .arith { margin: 8px 0 0; font-size: 12px; color: var(--pencil); }
 
-  /* ---------- toolbar ---------- */
-  .toolbar { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--paper) 92%, transparent);
-    backdrop-filter: blur(6px); border-bottom: 1px solid var(--rule); }
-  .toolbar .wrap { display: flex; align-items: center; gap: 14px; justify-content: space-between; min-height: 52px; flex-wrap: wrap; }
-  .toc { display: flex; gap: 18px; font-size: 13.5px; flex-wrap: wrap; }
-  .toc a { color: var(--ink); text-decoration: none; }
-  .toc a:hover { color: var(--blue); }
-  .toc .n { color: var(--pencil); font-family: var(--head); font-weight: 700; margin-left: 4px; }
-  .seg-toggle { display: inline-flex; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; background: var(--sheet); }
-  .seg-toggle button { border: 0; background: none; padding: 6px 14px; font-size: 13.5px; cursor: pointer; }
+  /* ---------- tab bar ---------- */
+  .tabbar { position: sticky; top: 0; z-index: 20; background: var(--sheet); border-bottom: 1px solid var(--rule); box-shadow: 0 1px 0 var(--rule); }
+  .tabs { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
+  .tab { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 5px; padding: 14px 16px 12px; color: var(--ink); text-decoration: none;
+    font: 600 14.5px/1.2 var(--body); border-bottom: 3px solid transparent; cursor: pointer; white-space: nowrap; border-radius: 6px 6px 0 0; }
+  .tab .n { color: var(--pencil); font-weight: 600; }
+  .tab:hover { background: var(--blue-soft); color: var(--blue); border-bottom-color: var(--rule); }
+  .tab.active { color: var(--blue); border-bottom-color: var(--blue); background: var(--blue-soft); }
+  .tab.active .n { color: var(--blue); }
+  .viewas { display: flex; align-items: center; gap: 10px; margin: 0 0 20px; }
+  .viewas-label { font-weight: 600; font-size: 14px; }
+  .seg-toggle { display: inline-flex; border: 1.5px solid var(--blue); border-radius: 7px; overflow: hidden; background: var(--sheet); }
+  .seg-toggle button { border: 0; background: var(--sheet); color: var(--blue); padding: 8px 20px; font: 600 14px/1.2 var(--body); cursor: pointer; }
+  .seg-toggle button + button { border-left: 1.5px solid var(--blue); }
+  .seg-toggle button:hover { background: var(--blue-soft); }
   .seg-toggle button[aria-pressed="true"] { background: var(--blue); color: var(--sheet); }
 
   /* ---------- parts ---------- */
   main { padding: 10px 0 60px; }
-  .part { margin-top: 44px; scroll-margin-top: 64px; }
+  .part { margin-top: 44px; scroll-margin-top: 70px; }
   .part-head { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; border-bottom: 2px solid var(--ink); padding-bottom: 8px; margin-bottom: 18px; }
   .part-head h2 { font: 700 24px/1.15 var(--head); margin: 0; }
   .part-head .partno { font: 700 24px/1.15 var(--head); color: var(--pencil); }
@@ -221,10 +226,8 @@
     .slots { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .explain { grid-template-columns: 1fr; }
     .seg { font-size: 15px; padding: 0 5px; }
-    .toc { gap: 12px; font-size: 13px; }
-    .toolbar { position: static; }
-    .toolbar .wrap { gap: 6px 14px; padding-top: 6px; padding-bottom: 6px; }
-    .seg-toggle button { padding: 4px 12px; font-size: 13px; }
+    .tabbar .wrap { padding: 0 8px; }
+    .tab { padding: 12px 12px 10px; font-size: 13.5px; }
     .facts { margin-top: 18px; }
     #sidebar { top: auto; bottom: 0; left: 0; right: 0; width: 100%; height: min(72vh, 560px); border-left: 0; border-top: 1px solid var(--rule);
       border-radius: 14px 14px 0 0; transform: translateY(102%); box-shadow: 0 -12px 32px rgba(10, 16, 26, .2); }
@@ -233,7 +236,7 @@
   @media (prefers-reduced-motion: reduce) { #sidebar, #scrim { transition: none; } }
   @media print {
     body { background: #fff; color: #000; font-size: 11px; }
-    .toolbar, #sidebar, #scrim { display: none !important; }
+    .tabbar, .viewas, #sidebar, #scrim { display: none !important; }
     .sheet-head { background: none; padding: 0 0 12px; }
     .card, .gate-group { break-inside: avoid; }
     .chip { border: 0; padding: 0; background: none; color: #333; }
@@ -244,11 +247,11 @@
 </style>
 </head>
 <body data-view="cards">
-<header class="sheet-head">
+<header class="sheet-head" id="top">
   <div class="wrap">
     <div class="headgrid">
     <div>
-      <h1><span class="kicker">Scoring checklist</span>@@TITLE_HTML@@</h1>
+      <h1><span class="kicker">RFP Evaluation Criteria Checklist</span>@@TITLE_HTML@@</h1>
       <p class="srcfile">Read from: <strong>@@PDF@@</strong></p>
     </div>
     <dl class="facts">
@@ -262,12 +265,12 @@
     <div class="explain">
       <section class="box">
         <h2>What this is</h2>
-        <p>This page shows how <strong>@@TITLE@@</strong> will be scored. It's built from <strong>@@PDF@@</strong>, the actual RFP document, not a summary of it. @@TOTAL_SENTENCE@@ Below that, you'll find <strong>@@ROW_COUNT@@</strong> things that earn points, <strong>@@DISQ_COUNT@@</strong> rules that can get a proposal thrown out before scoring even starts, and <strong>@@CNM_COUNT@@</strong> lines from the RFP we found but couldn't tie to a specific scored item.</p>
+        <p>This page shows how <strong>@@TITLE@@</strong> will be scored. It's built from <strong>@@PDF@@</strong>, the actual RFP document, not a summary of it. @@TOTAL_SENTENCE@@ Below that, you'll find <strong>@@ROW_COUNT@@</strong> things that earn points, <strong>@@DISQ_COUNT@@</strong> rules that can get a proposal thrown out before scoring even starts, and <strong>@@CNM_COUNT@@</strong> other things the RFP says about scoring that aren't tied to a specific scored item.</p>
       </section>
       <section class="box">
         <h2>How to read this page</h2>
         <ul>
-          <li><b>This page has three parts:</b> <i>How you'll be scored</i> (the points table), <i>What gets you thrown out</i> (rules that can disqualify a proposal no matter how good it is), and <i>Things we found but couldn't place</i> (RFP sentences we spotted but couldn't tie to a specific scored item).</li>
+          <li><b>This page has three parts:</b> <i>How you'll be scored</i> (the points table), <i>What gets you thrown out</i> (rules that can disqualify a proposal no matter how good it is), and <i>Other things the RFP says about scoring</i> (RFP sentences about scoring that aren't tied to a specific scored item). Use the tabs below to jump between them.</li>
           <li><b>A grey box like <span class="chip demo">Page 5, line 36</span> is a button.</b> Click it to see the exact words in the RFP, highlighted, so you can check our work against the real document.</li>
           <li><b>"<span class="nis">The RFP doesn't say</span>" means exactly that.</b> The RFP is silent on that point. We never guess or fill it in for you.</li>
           <li><b>The blank, striped boxes are for your team.</b> We don't know who at your firm owns what, so those are left empty on purpose for someone to fill in.</li>
@@ -284,16 +287,13 @@
   </div>
 </header>
 
-<nav class="toolbar" aria-label="Sections">
+<nav class="tabbar" aria-label="Page sections">
   <div class="wrap">
-    <div class="toc">
-      <a href="#part1">How you'll be scored<span class="n">@@ROW_COUNT@@</span></a>
-      <a href="#part2">What gets you thrown out<span class="n">@@DISQ_COUNT@@</span></a>
-      <a href="#part3">Couldn't place<span class="n">@@CNM_COUNT@@</span></a>
-    </div>
-    <div class="seg-toggle" role="group" aria-label="View">
-      <button type="button" data-view="cards" aria-pressed="true">Cards</button>
-      <button type="button" data-view="table" aria-pressed="false">Table</button>
+    <div class="tabs">
+      <a class="tab" href="#top" data-tab="top">Home</a>
+      <a class="tab" href="#part1" data-tab="part1">How you'll be scored <span class="n">(@@ROW_COUNT@@)</span></a>
+      <a class="tab" href="#part2" data-tab="part2">What gets you thrown out <span class="n">(@@DISQ_COUNT@@)</span></a>
+      <a class="tab" href="#part3" data-tab="part3">Other scoring notes <span class="n">(@@CNM_COUNT@@)</span></a>
     </div>
   </div>
 </nav>
@@ -301,6 +301,11 @@
 <main class="wrap">
   <section class="part" id="part1">
     <div class="part-head"><span class="partno">Part 1</span><h2>How you'll be scored</h2><span class="count">@@ROW_COUNT@@ item(s), @@SUM@@ points</span></div>
+    <div class="viewas"><span class="viewas-label" id="viewasLabel">View as:</span>
+      <div class="seg-toggle" role="group" aria-labelledby="viewasLabel">
+        <button type="button" data-view="cards" aria-pressed="true">Cards</button><button type="button" data-view="table" aria-pressed="false">Table</button>
+      </div>
+    </div>
     <div class="v-cards cards">@@CARDS@@</div>
     <div class="v-table">
       <div class="tablewrap">
@@ -321,7 +326,7 @@
   </section>
 
   <section class="part" id="part3">
-    <div class="part-head"><span class="partno">Part 3</span><h2>Things we found but couldn't place (@@CNM_COUNT@@)</h2></div>
+    <div class="part-head"><span class="partno">Part 3</span><h2>Other things the RFP says about scoring (@@CNM_COUNT@@)</h2></div>
     @@CNM@@
   </section>
 
@@ -384,11 +389,50 @@ const SOURCE = @@SOURCE_JSON@@;
   document.addEventListener('click', function (e) {
     var chip = e.target.closest('.chip');
     if (chip) { openSidebar(chip.getAttribute('data-cite'), chip); return; }
+    var tb = e.target.closest('.tab');
+    if (tb) { setActive(tb.getAttribute('data-tab')); clickedUntil = Date.now() + 700; setTimeout(pick, 750); return; }
     var vb = e.target.closest('.seg-toggle button');
     if (vb) { setView(vb.getAttribute('data-view')); return; }
     if (e.target.id === 'closeSidebar' || e.target === scrim) closeSidebar();
   });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSidebar(); });
+  var tabs = {};
+  Array.prototype.forEach.call(document.querySelectorAll('.tab'), function (t) { tabs[t.getAttribute('data-tab')] = t; });
+  function setActive(id) {
+    Object.keys(tabs).forEach(function (k) {
+      var on = k === id;
+      tabs[k].classList.toggle('active', on);
+      if (on) { tabs[k].setAttribute('aria-current', 'true'); } else { tabs[k].removeAttribute('aria-current'); }
+    });
+    var t = tabs[id];
+    if (t && t.parentNode.scrollWidth > t.parentNode.clientWidth) {
+      var bar = t.parentNode;
+      if (t.offsetLeft < bar.scrollLeft || t.offsetLeft + t.offsetWidth > bar.scrollLeft + bar.clientWidth) {
+        bar.scrollLeft = t.offsetLeft - 8;
+      }
+    }
+  }
+  var sections = ['top', 'part1', 'part2', 'part3'].map(function (id) { return document.getElementById(id); }).filter(Boolean);
+  var visible = {}, clickedUntil = 0;
+  window.addEventListener('scroll', function () { pick(); }, { passive: true });
+  function pick() {
+    var best = 'top';
+    sections.forEach(function (s) { if (visible[s.id]) best = s.id; });
+    var doc = document.documentElement;
+    if (window.scrollY > 0 && window.innerHeight + window.scrollY >= doc.scrollHeight - 4) {
+      best = sections[sections.length - 1].id;
+    }
+    if (Date.now() < clickedUntil) return;
+    setActive(best);
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { visible[en.target.id] = en.isIntersecting; });
+      pick();
+    }, { rootMargin: '-80px 0px -55% 0px', threshold: 0 });
+    sections.forEach(function (s) { io.observe(s); });
+  } else { setActive('top'); }
+  setActive('top');
 })();
 </script>
 </body>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Evaluation matrix: US50B SHIFT Passing Lanes</title>
+<title>RFP Evaluation Criteria Checklist: US50B SHIFT Passing Lanes</title>
 <style>
   :root {
     --paper: #f3f6f9; --sheet: #ffffff; --ink: #1b2230; --pencil: #566072; --rule: #d6dde6;
@@ -89,21 +89,26 @@
   .legend .pct { color: var(--pencil); font-weight: 400; font-family: var(--body); font-size: 12px; }
   .arith { margin: 8px 0 0; font-size: 12px; color: var(--pencil); }
 
-  /* ---------- toolbar ---------- */
-  .toolbar { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--paper) 92%, transparent);
-    backdrop-filter: blur(6px); border-bottom: 1px solid var(--rule); }
-  .toolbar .wrap { display: flex; align-items: center; gap: 14px; justify-content: space-between; min-height: 52px; flex-wrap: wrap; }
-  .toc { display: flex; gap: 18px; font-size: 13.5px; flex-wrap: wrap; }
-  .toc a { color: var(--ink); text-decoration: none; }
-  .toc a:hover { color: var(--blue); }
-  .toc .n { color: var(--pencil); font-family: var(--head); font-weight: 700; margin-left: 4px; }
-  .seg-toggle { display: inline-flex; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; background: var(--sheet); }
-  .seg-toggle button { border: 0; background: none; padding: 6px 14px; font-size: 13.5px; cursor: pointer; }
+  /* ---------- tab bar ---------- */
+  .tabbar { position: sticky; top: 0; z-index: 20; background: var(--sheet); border-bottom: 1px solid var(--rule); box-shadow: 0 1px 0 var(--rule); }
+  .tabs { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
+  .tab { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 5px; padding: 14px 16px 12px; color: var(--ink); text-decoration: none;
+    font: 600 14.5px/1.2 var(--body); border-bottom: 3px solid transparent; cursor: pointer; white-space: nowrap; border-radius: 6px 6px 0 0; }
+  .tab .n { color: var(--pencil); font-weight: 600; }
+  .tab:hover { background: var(--blue-soft); color: var(--blue); border-bottom-color: var(--rule); }
+  .tab.active { color: var(--blue); border-bottom-color: var(--blue); background: var(--blue-soft); }
+  .tab.active .n { color: var(--blue); }
+  .viewas { display: flex; align-items: center; gap: 10px; margin: 0 0 20px; }
+  .viewas-label { font-weight: 600; font-size: 14px; }
+  .seg-toggle { display: inline-flex; border: 1.5px solid var(--blue); border-radius: 7px; overflow: hidden; background: var(--sheet); }
+  .seg-toggle button { border: 0; background: var(--sheet); color: var(--blue); padding: 8px 20px; font: 600 14px/1.2 var(--body); cursor: pointer; }
+  .seg-toggle button + button { border-left: 1.5px solid var(--blue); }
+  .seg-toggle button:hover { background: var(--blue-soft); }
   .seg-toggle button[aria-pressed="true"] { background: var(--blue); color: var(--sheet); }
 
   /* ---------- parts ---------- */
   main { padding: 10px 0 60px; }
-  .part { margin-top: 44px; scroll-margin-top: 64px; }
+  .part { margin-top: 44px; scroll-margin-top: 70px; }
   .part-head { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; border-bottom: 2px solid var(--ink); padding-bottom: 8px; margin-bottom: 18px; }
   .part-head h2 { font: 700 24px/1.15 var(--head); margin: 0; }
   .part-head .partno { font: 700 24px/1.15 var(--head); color: var(--pencil); }
@@ -221,10 +226,8 @@
     .slots { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .explain { grid-template-columns: 1fr; }
     .seg { font-size: 15px; padding: 0 5px; }
-    .toc { gap: 12px; font-size: 13px; }
-    .toolbar { position: static; }
-    .toolbar .wrap { gap: 6px 14px; padding-top: 6px; padding-bottom: 6px; }
-    .seg-toggle button { padding: 4px 12px; font-size: 13px; }
+    .tabbar .wrap { padding: 0 8px; }
+    .tab { padding: 12px 12px 10px; font-size: 13.5px; }
     .facts { margin-top: 18px; }
     #sidebar { top: auto; bottom: 0; left: 0; right: 0; width: 100%; height: min(72vh, 560px); border-left: 0; border-top: 1px solid var(--rule);
       border-radius: 14px 14px 0 0; transform: translateY(102%); box-shadow: 0 -12px 32px rgba(10, 16, 26, .2); }
@@ -233,7 +236,7 @@
   @media (prefers-reduced-motion: reduce) { #sidebar, #scrim { transition: none; } }
   @media print {
     body { background: #fff; color: #000; font-size: 11px; }
-    .toolbar, #sidebar, #scrim { display: none !important; }
+    .tabbar, .viewas, #sidebar, #scrim { display: none !important; }
     .sheet-head { background: none; padding: 0 0 12px; }
     .card, .gate-group { break-inside: avoid; }
     .chip { border: 0; padding: 0; background: none; color: #333; }
@@ -244,11 +247,11 @@
 </style>
 </head>
 <body data-view="cards">
-<header class="sheet-head">
+<header class="sheet-head" id="top">
   <div class="wrap">
     <div class="headgrid">
     <div>
-      <h1><span class="kicker">Scoring checklist</span>US50B SHIFT Passing Lanes <button type="button" class="chip" data-cite="p32:3" title="p32:3">Page 32, line 3</button></h1>
+      <h1><span class="kicker">RFP Evaluation Criteria Checklist</span>US50B SHIFT Passing Lanes <button type="button" class="chip" data-cite="p32:3" title="p32:3">Page 32, line 3</button></h1>
       <p class="srcfile">Read from: <strong>codot-us50-passing-lanes-cm-rfp.pdf</strong></p>
     </div>
     <dl class="facts">
@@ -262,12 +265,12 @@
     <div class="explain">
       <section class="box">
         <h2>What this is</h2>
-        <p>This page shows how <strong>US50B SHIFT Passing Lanes</strong> will be scored. It's built from <strong>codot-us50-passing-lanes-cm-rfp.pdf</strong>, the actual RFP document, not a summary of it. The RFP says proposals are scored out of <strong>60 (Proposal) + 40 (Interview)</strong> points, and the items below add up to <strong>100</strong>. This RFP scores in stages. Each stage's own total is shown next to that stage's items below. Below that, you'll find <strong>6</strong> things that earn points, <strong>14</strong> rules that can get a proposal thrown out before scoring even starts, and <strong>1</strong> lines from the RFP we found but couldn't tie to a specific scored item.</p>
+        <p>This page shows how <strong>US50B SHIFT Passing Lanes</strong> will be scored. It's built from <strong>codot-us50-passing-lanes-cm-rfp.pdf</strong>, the actual RFP document, not a summary of it. The RFP says proposals are scored out of <strong>60 (Proposal) + 40 (Interview)</strong> points, and the items below add up to <strong>100</strong>. This RFP scores in stages. Each stage's own total is shown next to that stage's items below. Below that, you'll find <strong>6</strong> things that earn points, <strong>14</strong> rules that can get a proposal thrown out before scoring even starts, and <strong>1</strong> other things the RFP says about scoring that aren't tied to a specific scored item.</p>
       </section>
       <section class="box">
         <h2>How to read this page</h2>
         <ul>
-          <li><b>This page has three parts:</b> <i>How you'll be scored</i> (the points table), <i>What gets you thrown out</i> (rules that can disqualify a proposal no matter how good it is), and <i>Things we found but couldn't place</i> (RFP sentences we spotted but couldn't tie to a specific scored item).</li>
+          <li><b>This page has three parts:</b> <i>How you'll be scored</i> (the points table), <i>What gets you thrown out</i> (rules that can disqualify a proposal no matter how good it is), and <i>Other things the RFP says about scoring</i> (RFP sentences about scoring that aren't tied to a specific scored item). Use the tabs below to jump between them.</li>
           <li><b>A grey box like <span class="chip demo">Page 5, line 36</span> is a button.</b> Click it to see the exact words in the RFP, highlighted, so you can check our work against the real document.</li>
           <li><b>"<span class="nis">The RFP doesn't say</span>" means exactly that.</b> The RFP is silent on that point. We never guess or fill it in for you.</li>
           <li><b>The blank, striped boxes are for your team.</b> We don't know who at your firm owns what, so those are left empty on purpose for someone to fill in.</li>
@@ -279,21 +282,18 @@
     <details class="howchecked">
       <summary>How we checked this</summary>
       <p>Proposal: the RFP says 60 points, the items add up to 60; Interview: the RFP says 40 points, the items add up to 40.</p><p>How the stages combine: <div class="p"><span class="quote">The Proposers Technical Score and their Interview Score will be summed and tabulated which will be referred to as their “Total Score”,</span> <button type="button" class="chip" data-cite="p24:11-p24:12" title="p24:11-p24:12">Page 24, lines 11–12</button></div></p>
-      <p>We checked 105 lines in the RFP that talk about scoring or rejection. Every one of them is accounted for: 11 in How you&#x27;ll be scored, 22 in What gets you thrown out, 2 in Things we found but couldn&#x27;t place, and 70 read and set aside, each with its reason recorded in the matrix file.</p>
+      <p>We checked 105 lines in the RFP that talk about scoring or rejection. Every one of them is accounted for: 11 in How you&#x27;ll be scored, 22 in What gets you thrown out, 2 in Other things the RFP says about scoring, and 70 read and set aside, each with its reason recorded in the matrix file.</p>
     </details>
   </div>
 </header>
 
-<nav class="toolbar" aria-label="Sections">
+<nav class="tabbar" aria-label="Page sections">
   <div class="wrap">
-    <div class="toc">
-      <a href="#part1">How you'll be scored<span class="n">6</span></a>
-      <a href="#part2">What gets you thrown out<span class="n">14</span></a>
-      <a href="#part3">Couldn't place<span class="n">1</span></a>
-    </div>
-    <div class="seg-toggle" role="group" aria-label="View">
-      <button type="button" data-view="cards" aria-pressed="true">Cards</button>
-      <button type="button" data-view="table" aria-pressed="false">Table</button>
+    <div class="tabs">
+      <a class="tab" href="#top" data-tab="top">Home</a>
+      <a class="tab" href="#part1" data-tab="part1">How you'll be scored <span class="n">(6)</span></a>
+      <a class="tab" href="#part2" data-tab="part2">What gets you thrown out <span class="n">(14)</span></a>
+      <a class="tab" href="#part3" data-tab="part3">Other scoring notes <span class="n">(1)</span></a>
     </div>
   </div>
 </nav>
@@ -301,6 +301,11 @@
 <main class="wrap">
   <section class="part" id="part1">
     <div class="part-head"><span class="partno">Part 1</span><h2>How you'll be scored</h2><span class="count">6 item(s), 100 points</span></div>
+    <div class="viewas"><span class="viewas-label" id="viewasLabel">View as:</span>
+      <div class="seg-toggle" role="group" aria-labelledby="viewasLabel">
+        <button type="button" data-view="cards" aria-pressed="true">Cards</button><button type="button" data-view="table" aria-pressed="false">Table</button>
+      </div>
+    </div>
     <div class="v-cards cards"><div class="group"><h3 class="group-head">From the RFP section: 3.1. EVALUATION CRITERIA FOR PROPOSALS (60 Points Possible) <button type="button" class="chip" data-cite="p32:8" title="p32:8">Page 32, line 8</button></h3><article class="card" id="row-1" style="--c:var(--c0)"><div class="card-points"><span class="bignum">10</span><span class="bignum-unit">points</span><span class="pct">16.7% of the Proposal points</span><button type="button" class="chip" data-cite="p32:9" title="p32:9">Page 32, line 9</button></div><div class="card-body"><span class="rowno">Item 1 of 6</span><h4 class="crit">A. CM Project Management Team <button type="button" class="chip" data-cite="p32:9" title="p32:9">Page 32, line 9</button></h4><div class="rowmeta">Scoring stage: Proposal</div><div class="block"><h5>What the RFP asks you to provide</h5><ul><li><span class="quote">● Provide a description of the composition of the team’s Project Key Personnel. If the Proposer team is a Joint Venture or association, indicate specific responsibilities of each party to the Joint Venture.</span> <button type="button" class="chip" data-cite="p32:11-p32:13" title="p32:11-p32:13">Page 32, lines 11–13</button></li><li><span class="quote">● Provide, identify, and discuss the qualifications of the Key Personnel and include the following:</span> <button type="button" class="chip" data-cite="p32:14-p32:15" title="p32:14-p32:15">Page 32, lines 14–15</button></li><li><span class="quote">o Provide job descriptions, responsibilities, and authority; o Provide a list of the concurrent projects, responsibilities, and commitments that each may have for the duration of the Project; o Current home office location; o Qualifications and past construction experience relevant to this Project, in addition to length of time performing those job duties;</span> <button type="button" class="chip" data-cite="p32:16-p32:21" title="p32:16-p32:21">Page 32, lines 16–21</button></li><li><span class="quote">o Unique skills or knowledge each may possess related to the Project; o Length of time of overall experience pertinent to the scope of this project and length of time with the current firm for each; o Experience on similar projects as a team; and o Provide resumes and two current references for the Key Personnel in an appendix to the Proposal. References will be considered current if the party’s name, current position/title, and position/title held at the time for which the recommendation is being sought are provided; telephone numbers must be current as of the proposal due date.</span> <button type="button" class="chip" data-cite="p32:22-p32:29" title="p32:22-p32:29">Page 32, lines 22–29</button></li><li><span class="quote">● Provide a graphic showing the CM’s organizational chart, complete with working titles for the team for the preconstruction phase. Provide an explanation of any variation to the anticipated Key Personnel time commitments stated above.</span> <button type="button" class="chip" data-cite="p35:14-p35:16" title="p35:14-p35:16">Page 35, lines 14–16</button></li><li><span class="quote">● Provide a narrative describing succession planning for team stability and planning for any member of the project team that may leave.</span> <button type="button" class="chip" data-cite="p35:17-p35:18" title="p35:17-p35:18">Page 35, lines 17–18</button></li><li><span class="quote">● Provide a narrative of the Proposer’s largest foreseen safety risks for the Project and describe the safety programs, processes, and initiatives that the Proposer currently has in place to help manage/mitigate/or eliminate the safety risks.</span> <button type="button" class="chip" data-cite="p35:21-p35:23" title="p35:21-p35:23">Page 35, lines 21–23</button></li><li><span class="quote">● Provide the following information for each entity involved, covering the last 4 years (2021- 2025). o Experience Modification Rates (EMR) o OSHA Reportable Incident Statistics</span> <button type="button" class="chip" data-cite="p35:24-p35:27" title="p35:24-p35:27">Page 35, lines 24–27</button></li></ul></div><div class="block single"><h5>What the scorer will look for</h5><ul><li><span class="quote">Composition and Commitment of the CM Project Management Team</span> <button type="button" class="chip" data-cite="p32:10" title="p32:10">Page 32, line 10</button></li></ul></div><div class="block single"><h5>Where it goes in your proposal</h5><ul><li><span class="nis">The RFP doesn&#x27;t say</span></li></ul></div><div class="people"><div class="slots"><div class="slot"><b>Status</b></div><div class="slot"><b>Where your team will get it</b></div><div class="slot"><b>Lead for this section</b></div><div class="slot"><b>Reviewer for this section</b></div></div></div></div></article><article class="card" id="row-2" style="--c:var(--c1)"><div class="card-points"><span class="bignum">10</span><span class="bignum-unit">points</span><span class="pct">16.7% of the Proposal points</span><button type="button" class="chip" data-cite="p35:28" title="p35:28">Page 35, line 28</button></div><div class="card-body"><span class="rowno">Item 2 of 6</span><h4 class="crit">B. Contractor Capability <button type="button" class="chip" data-cite="p35:28" title="p35:28">Page 35, line 28</button></h4><div class="rowmeta">Scoring stage: Proposal</div><div class="block"><h5>What the RFP asks you to provide</h5><ul><li><span class="quote">● Provide a summary of the Proposer’s previous project experience relevant to the general scope and construction value of work for this Project.</span> <button type="button" class="chip" data-cite="p35:33-p35:34" title="p35:33-p35:34">Page 35, lines 33–34</button></li><li><span class="quote">● Provide three or more relevant projects/programs that demonstrate the Proposer’s ability to be successful on this Project. For each listed project or experience, include the name of the owner, any architect/engineer references, and the contract information CDOT may at its</span> <button type="button" class="chip" data-cite="p35:35-p35:37" title="p35:35-p35:37">Page 35, lines 35–37</button></li><li><span class="quote">Provide at a minimum: o The project/contract name, o Project delivery method, o Description of services provided,</span> <button type="button" class="chip" data-cite="p35:39-p35:42" title="p35:39-p35:42">Page 35, lines 39–42</button></li><li><span class="quote">o Overall construction cost of the project, as applicable, including the initial contract/construction value and value at final acceptance. Please provide reasoning for any differential, o Description of project schedule performance, including initial schedule, and reasons for schedule change, o Coordination with stakeholders, if any, o Key personnel assigned or in-house staff and their level of involvement, o Senior Leadership assigned and their commitment in time to the overall success of the project, as well as their commitment to the success of the Owner’s Program, o Major subcontractors and primary subcontracts used in the performance of the contract, and o Project Reference(s). All references submitted shall be current for relevant projects.</span> <button type="button" class="chip" data-cite="p36:5-p36:16" title="p36:5-p36:16">Page 36, lines 5–16</button></li></ul></div><div class="block single"><h5>What the scorer will look for</h5><ul><li><span class="quote">Prior Project Experience/Performance/References</span> <button type="button" class="chip" data-cite="p35:32" title="p35:32">Page 35, line 32</button></li></ul></div><div class="block single"><h5>Where it goes in your proposal</h5><ul><li><span class="nis">The RFP doesn&#x27;t say</span></li></ul></div><div class="people"><div class="slots"><div class="slot"><b>Status</b></div><div class="slot"><b>Where your team will get it</b></div><div class="slot"><b>Lead for this section</b></div><div class="slot"><b>Reviewer for this section</b></div></div></div></div></article><article class="card" id="row-3" style="--c:var(--c2)"><div class="card-points"><span class="bignum">20</span><span class="bignum-unit">points</span><span class="pct">33.3% of the Proposal points</span><button type="button" class="chip" data-cite="p36:20" title="p36:20">Page 36, line 20</button></div><div class="card-body"><span class="rowno">Item 3 of 6</span><h4 class="crit">C. Strategic Project Approach <button type="button" class="chip" data-cite="p36:20" title="p36:20">Page 36, line 20</button></h4><div class="rowmeta">Scoring stage: Proposal</div><div class="block"><h5>What the RFP asks you to provide</h5><ul><li><span class="quote">Provide a narrative that describes the Proposer’s project specific plan and approach to meeting the Project Goals. Identify how the Proposer will manage schedule, budget, and incorporation of innovation.</span> <button type="button" class="chip" data-cite="p36:22-p36:24" title="p36:22-p36:24">Page 36, lines 22–24</button></li><li><span class="quote">Describe the Proposer’s role and responsibility in refinement of the design, quality of the design, accuracy of the scope, and ensuring efficiency of the execution of delivery for the Project. Specifically, the Proposer shall address: ● Grant Alignment &amp; Milestone Management, Site Selection &amp; Optimization</span> <button type="button" class="chip" data-cite="p36:27-p36:32" title="p36:27-p36:32">Page 36, lines 27–32</button></li><li><span class="quote">Describe the Proposer’s strategy for project management for the Project that would encourage building a culture of success and collaboration. Highlight how the Proposer will manage preconstruction milestones, quality control during preconstruction, project resources, and environmental resources. The narrative should specifically address the &quot;Categorical Exclusion&quot; (CatEx) strategy and how the Proposer will identify site-specific stipulations (endangered species, historic ditches, noise, etc.) early to avoid design restarts. Describe how the Proposer will partner with CDOT, and the designer, to ensure that every dollar invested into the preconstruction phase of the Project adds value to the Project.</span> <button type="button" class="chip" data-cite="p36:33-p36:42" title="p36:33-p36:42">Page 36, lines 33–42</button></li><li><span class="quote">Describe the Proposer’s project specific plan and approach to construction project management for the Project. Describe how the Proposer is uniquely skilled to manage the challenges of the Project. Highlight the strategy to meeting construction milestones,</span> <button type="button" class="chip" data-cite="p36:44-p36:46" title="p36:44-p36:46">Page 36, lines 44–46</button></li><li><span class="quote">project sequencing, early action opportunities, critical scope elements, stakeholder coordination, and market conditions. In addition, please provide specific details regarding:</span> <button type="button" class="chip" data-cite="p37:5-p37:7" title="p37:5-p37:7">Page 37, lines 5–7</button></li><li><span class="quote">● Corridor Logistics &amp; Phasing ● Freight &amp; Agricultural Vehicle Access ● Phasing and Packaging Strategy Describe the Proposer’s project specific plan and approach to scope management, self- performance, subcontractor management, and management of Civil Rights compliance. Describe the Proposer’s plan and approach to environmental management for the Project. Address how the Proposer will manage construction activities around the irrigation season and avoid impacts to irrigation ditches and wetlands.</span> <button type="button" class="chip" data-cite="p37:8-p37:16" title="p37:8-p37:16">Page 37, lines 8–16</button></li><li><span class="quote">Describe the Proposer’s plan and approach for incident response. Include how your team will remain agile to coordinate, adapt, complement, and contribute to the Incident Command’s direction, if required. Due to the long emergency detour routes on the US 50 corridor, specifically describe the communication plan for rapid incident clearance to prevent corridor-wide delays.</span> <button type="button" class="chip" data-cite="p37:18-p37:22" title="p37:18-p37:22">Page 37, lines 18–22</button></li><li><span class="quote">Describe the Proposer’s practical innovative ideas specific to the Project in detail.</span> <button type="button" class="chip" data-cite="p37:24" title="p37:24">Page 37, line 24</button></li></ul></div><div class="block single"><h5>What the scorer will look for</h5><ul><li><span class="nis">The RFP doesn&#x27;t say</span></li></ul></div><div class="block single"><h5>Where it goes in your proposal</h5><ul><li><span class="nis">The RFP doesn&#x27;t say</span></li></ul></div><div class="people"><div class="slots"><div class="slot"><b>Status</b></div><div class="slot"><b>Where your team will get it</b></div><div class="slot"><b>Lead for this section</b></div><div class="slot"><b>Reviewer for this section</b></div></div></div></div></article><article class="card" id="row-4" style="--c:var(--c3)"><div class="card-points"><span class="bignum">20</span><span class="bignum-unit">points</span><span class="pct">33.3% of the Proposal points</span><button type="button" class="chip" data-cite="p37:27" title="p37:27">Page 37, line 27</button></div><div class="card-body"><span class="rowno">Item 4 of 6</span><h4 class="crit">D. Approach to Risk, Schedule, and Pricing <button type="button" class="chip" data-cite="p37:27" title="p37:27">Page 37, line 27</button></h4><div class="rowmeta">Scoring stage: Proposal</div><div class="block"><h5>What the RFP asks you to provide</h5><ul><li><span class="quote">Define the key steps to risk management that the Proposer will employ. Describe how those steps will be applied to both the preconstruction and construction process.</span> <button type="button" class="chip" data-cite="p37:29-p37:30" title="p37:29-p37:30">Page 37, lines 29–30</button></li><li><span class="quote">Describe the techniques and tools that the Proposer will use to quantify the risk, establish a risk pool, and participate in management of the risk pools and contingencies.</span> <button type="button" class="chip" data-cite="p37:31-p37:32" title="p37:31-p37:32">Page 37, lines 31–32</button></li><li><span class="quote">Identify and describe the top five risks the Proposer has identified on the Project and what are the preliminary plans to manage those risks. Be specific on how the Proposer will prioritize those risks and manage them.</span> <button type="button" class="chip" data-cite="p37:33-p37:35" title="p37:33-p37:35">Page 37, lines 33–35</button></li><li><span class="quote">Describe the Proposer’s plan and approach to managing the construction schedule in such a way as to minimize impacts to the traveling public, encourage efficient execution, inform the preconstruction process, manage the critical path, incorporate innovation, and provide reasonable float.</span> <button type="button" class="chip" data-cite="p37:37-p37:40" title="p37:37-p37:40">Page 37, lines 37–40</button></li><li><span class="quote">Describe the Proposer’s approach to Transparency and Accountability in the Cost Model. Describe how the Proposer will contribute to the pursuit of the project goals and provide easy to interpret deliverables using standard agreed upon terms and inputs.</span> <button type="button" class="chip" data-cite="p37:42-p37:44" title="p37:42-p37:44">Page 37, lines 42–44</button></li><li><span class="quote">Describe how the Proposer’s cost model will incorporate the variables that affect project costs, innovation, essential inputs needed, coordination with the Owner and their</span> <button type="button" class="chip" data-cite="p37:45-p37:46" title="p37:45-p37:46">Page 37, lines 45–46</button></li><li><span class="quote">Independent Cost Estimator, and be reliable over multiple construction seasons.</span> <button type="button" class="chip" data-cite="p38:5" title="p38:5">Page 38, line 5</button></li></ul></div><div class="block single"><h5>What the scorer will look for</h5><ul><li><span class="nis">The RFP doesn&#x27;t say</span></li></ul></div><div class="block single"><h5>Where it goes in your proposal</h5><ul><li><span class="nis">The RFP doesn&#x27;t say</span></li></ul></div><div class="people"><div class="slots"><div class="slot"><b>Status</b></div><div class="slot"><b>Where your team will get it</b></div><div class="slot"><b>Lead for this section</b></div><div class="slot"><b>Reviewer for this section</b></div></div></div></div></article></div><div class="group"><h3 class="group-head">From the RFP section: 3.2 EVALUATION CRITERIA FOR INTERVIEWS (40 Points Possible) <button type="button" class="chip" data-cite="p38:8" title="p38:8">Page 38, line 8</button></h3><article class="card" id="row-5" style="--c:var(--c4)"><div class="card-points"><span class="bignum">15</span><span class="bignum-unit">points</span><span class="pct">37.5% of the Interview points</span><button type="button" class="chip" data-cite="p38:12" title="p38:12">Page 38, line 12</button></div><div class="card-body"><span class="rowno">Item 5 of 6</span><h4 class="crit">A. Short Presentation <button type="button" class="chip" data-cite="p38:12" title="p38:12">Page 38, line 12</button></h4><div class="rowmeta">Scoring stage: Interview</div><div class="block single"><h5>What the RFP asks you to provide</h5><ul><li><span class="quote">Summarize the Proposal and describe the Proposer’s innovative ideas and unique resources (20 Minutes).</span> <button type="button" class="chip" data-cite="p38:13-p38:14" title="p38:13-p38:14">Page 38, lines 13–14</button></li></ul></div><div class="block single"><h5>What the scorer will look for</h5><ul><li><span class="quote">The interview presentation and question/answer scoring will be based on the following criteria: ● Project Understanding and goals, ● Project Approach, ● Project Innovation, ● Team Collaboration ● Communication Skills, and ● Understanding of CM/GC Project Delivery Method.</span> <button type="button" class="chip" data-cite="p38:28-p38:34" title="p38:28-p38:34">Page 38, lines 28–34</button></li></ul></div><div class="block single"><h5>Where it goes in your proposal</h5><ul><li><span class="nis">The RFP doesn&#x27;t say</span></li></ul></div><div class="people"><div class="slots"><div class="slot"><b>Status</b></div><div class="slot"><b>Where your team will get it</b></div><div class="slot"><b>Lead for this section</b></div><div class="slot"><b>Reviewer for this section</b></div></div></div></div></article><article class="card" id="row-6" style="--c:var(--c5)"><div class="card-points"><span class="bignum">25</span><span class="bignum-unit">points</span><span class="pct">62.5% of the Interview points</span><button type="button" class="chip" data-cite="p38:19" title="p38:19">Page 38, line 19</button></div><div class="card-body"><span class="rowno">Item 6 of 6</span><h4 class="crit">B. Question and Answer Session with the Selection Panel <button type="button" class="chip" data-cite="p38:19" title="p38:19">Page 38, line 19</button></h4><div class="rowmeta">Scoring stage: Interview</div><div class="block single"><h5>What the RFP asks you to provide</h5><ul><li><span class="quote">The questions asked by the Selection Panel in this session will be the same for each Proposer. The Proposer will be allocated 60 total minutes for this session.</span> <button type="button" class="chip" data-cite="p38:20-p38:21" title="p38:20-p38:21">Page 38, lines 20–21</button></li></ul></div><div class="block single"><h5>What the scorer will look for</h5><ul><li><span class="quote">The interview presentation and question/answer scoring will be based on the following criteria: ● Project Understanding and goals, ● Project Approach, ● Project Innovation, ● Team Collaboration ● Communication Skills, and ● Understanding of CM/GC Project Delivery Method.</span> <button type="button" class="chip" data-cite="p38:28-p38:34" title="p38:28-p38:34">Page 38, lines 28–34</button></li></ul></div><div class="block single"><h5>Where it goes in your proposal</h5><ul><li><span class="nis">The RFP doesn&#x27;t say</span></li></ul></div><div class="people"><div class="slots"><div class="slot"><b>Status</b></div><div class="slot"><b>Where your team will get it</b></div><div class="slot"><b>Lead for this section</b></div><div class="slot"><b>Reviewer for this section</b></div></div></div></div></article></div></div>
     <div class="v-table">
       <div class="tablewrap">
@@ -321,7 +326,7 @@
   </section>
 
   <section class="part" id="part3">
-    <div class="part-head"><span class="partno">Part 3</span><h2>Things we found but couldn't place (1)</h2></div>
+    <div class="part-head"><span class="partno">Part 3</span><h2>Other things the RFP says about scoring (1)</h2></div>
     <ul class="cnm"><li>Selection Panel scoring values will be only numbers in whole, half, or quarter-number increments (i.e. 2.25, 3.50, 4.00.). Scoring of the Proposal and Interview will be based on the Evaluation Assessment Guidelines as set forth in the table below. <button type="button" class="chip" data-cite="p44:18-p44:20" title="p44:18-p44:20">Page 44, lines 18–20</button><span class="why">Explains how scoring works overall, not a separate scored item</span></li></ul>
   </section>
 
@@ -384,11 +389,50 @@ const SOURCE = {"1": [[1, "         Final Request for Proposals (RFP)"], [2, ""]
   document.addEventListener('click', function (e) {
     var chip = e.target.closest('.chip');
     if (chip) { openSidebar(chip.getAttribute('data-cite'), chip); return; }
+    var tb = e.target.closest('.tab');
+    if (tb) { setActive(tb.getAttribute('data-tab')); clickedUntil = Date.now() + 700; setTimeout(pick, 750); return; }
     var vb = e.target.closest('.seg-toggle button');
     if (vb) { setView(vb.getAttribute('data-view')); return; }
     if (e.target.id === 'closeSidebar' || e.target === scrim) closeSidebar();
   });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSidebar(); });
+  var tabs = {};
+  Array.prototype.forEach.call(document.querySelectorAll('.tab'), function (t) { tabs[t.getAttribute('data-tab')] = t; });
+  function setActive(id) {
+    Object.keys(tabs).forEach(function (k) {
+      var on = k === id;
+      tabs[k].classList.toggle('active', on);
+      if (on) { tabs[k].setAttribute('aria-current', 'true'); } else { tabs[k].removeAttribute('aria-current'); }
+    });
+    var t = tabs[id];
+    if (t && t.parentNode.scrollWidth > t.parentNode.clientWidth) {
+      var bar = t.parentNode;
+      if (t.offsetLeft < bar.scrollLeft || t.offsetLeft + t.offsetWidth > bar.scrollLeft + bar.clientWidth) {
+        bar.scrollLeft = t.offsetLeft - 8;
+      }
+    }
+  }
+  var sections = ['top', 'part1', 'part2', 'part3'].map(function (id) { return document.getElementById(id); }).filter(Boolean);
+  var visible = {}, clickedUntil = 0;
+  window.addEventListener('scroll', function () { pick(); }, { passive: true });
+  function pick() {
+    var best = 'top';
+    sections.forEach(function (s) { if (visible[s.id]) best = s.id; });
+    var doc = document.documentElement;
+    if (window.scrollY > 0 && window.innerHeight + window.scrollY >= doc.scrollHeight - 4) {
+      best = sections[sections.length - 1].id;
+    }
+    if (Date.now() < clickedUntil) return;
+    setActive(best);
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { visible[en.target.id] = en.isIntersecting; });
+      pick();
+    }, { rootMargin: '-80px 0px -55% 0px', threshold: 0 });
+    sections.forEach(function (s) { io.observe(s); });
+  } else { setActive('top'); }
+  setActive('top');
 })();
 </script>
 </body>

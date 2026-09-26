@@ -594,7 +594,7 @@ def to_html(m, cov, src, src_path=None):
                  if m.get("stop") else "")
     coverage = (f"We checked {n_hits} lines in the RFP that talk about scoring or rejection. Every one of them is "
                 f"accounted for: {counts['rows']} in How you'll be scored, {counts['disqualifiers']} in What gets you "
-                f"thrown out, {counts['could_not_map']} in Things we found but couldn't place, and "
+                f"thrown out, {counts['could_not_map']} in Other things the RFP says about scoring, and "
                 f"{counts['reviewed']} read and set aside, each with its reason recorded in the matrix file.")
     empty_boxes = sum(1 for r in rows for k in HUMAN_FIELDS if not r.get(k))
 
