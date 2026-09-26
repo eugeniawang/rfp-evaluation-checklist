@@ -8,7 +8,7 @@
   :root {
     --paper: #f5f3ef; --sheet: #fffefb; --ink: #1e2422; --pencil: #5a615e; --rule: #ddd8cf;
     --blue: #0e5a55; --blue-soft: #e3eeeb; --hatch: rgba(90, 97, 94, .16); --grid: rgba(14, 90, 85, .06);
-    --note: #6b5a42; --note-soft: #f1ebe1; --orange: #b85a0c; --tip-bg: #fdf2e6;
+    --note: #6b5a42; --note-soft: #f1ebe1; --orange: #b85a0c; --tip-bg: #eeede9; --nis-bg: #ebeae6;
     --chip-bg: #fde5cc; --chip-fg: #873b04; --chip-hover: #f8c48e;
     --gate: #a3262d; --gate-soft: #fbecec; --mark: #ffe27a; --mark-ink: #1e2422;
     --ok: #1d6b3a; --bad: #a3262d;
@@ -22,7 +22,7 @@
     :root {
       --paper: #121614; --sheet: #1a1f1d; --ink: #e7e5df; --pencil: #a3a69f; --rule: #2f3632;
       --blue: #5cc2b3; --blue-soft: #1d302d; --hatch: rgba(163, 166, 159, .16); --grid: rgba(92, 194, 179, .06);
-      --note: #cdbb9f; --note-soft: #28251f; --orange: #f0a060; --tip-bg: #2a2117;
+      --note: #cdbb9f; --note-soft: #28251f; --orange: #f0a060; --tip-bg: #2a2d2c; --nis-bg: #2e3130;
       --chip-bg: #45290f; --chip-fg: #ffc996; --chip-hover: #633b16;
       --gate: #f08a8a; --gate-soft: #2c1b1d; --mark: #6b5710; --mark-ink: #fff6d6;
       --ok: #6fcf8f; --bad: #f08a8a;
@@ -175,7 +175,7 @@
   .chip { display: inline-flex; align-items: center; gap: 4px; background: var(--chip-bg); color: var(--chip-fg); border: 1px solid transparent;
     border-radius: 4px; padding: 0 6px; font: 600 11.5px/1.7 var(--body); font-variant-numeric: tabular-nums; cursor: pointer; white-space: nowrap; vertical-align: 1px; }
   .chip:hover { background: var(--chip-hover); border-color: var(--chip-fg); }
-    .nis { display: inline-block; border: 1px dashed var(--pencil); color: var(--pencil); border-radius: 4px; padding: 0 7px; font-size: 12px; line-height: 1.7; font-style: normal; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+    .nis { display: inline-block; background: var(--nis-bg); border: 1px dashed var(--pencil); color: var(--pencil); border-radius: 4px; padding: 0 7px; font-size: 12px; line-height: 1.7; font-style: normal; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
   .nis small { display: block; font-size: 10.5px; line-height: 1.3; padding-bottom: 2px; font-style: normal; opacity: .85; }
   .nis:has(small) { display: inline-block; vertical-align: middle; text-align: left; }
 
