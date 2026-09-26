@@ -77,10 +77,9 @@
         "cite": "p32:10"
       },
       "answering_section": "not in source",
-      "owner": "",
-      "claude_does": "",
-      "human_check": "",
-      "status": ""
+      "status": "",
+      "lead": "",
+      "reviewer": ""
     },
     {
       "stage": "Proposal",
@@ -120,10 +119,9 @@
         "cite": "p35:32"
       },
       "answering_section": "not in source",
-      "owner": "",
-      "claude_does": "",
-      "human_check": "",
-      "status": ""
+      "status": "",
+      "lead": "",
+      "reviewer": ""
     },
     {
       "stage": "Proposal",
@@ -176,10 +174,9 @@
       "input_source": "",
       "evaluation_criteria": "not in source",
       "answering_section": "not in source",
-      "owner": "",
-      "claude_does": "",
-      "human_check": "",
-      "status": ""
+      "status": "",
+      "lead": "",
+      "reviewer": ""
     },
     {
       "stage": "Proposal",
@@ -228,10 +225,9 @@
       "input_source": "",
       "evaluation_criteria": "not in source",
       "answering_section": "not in source",
-      "owner": "",
-      "claude_does": "",
-      "human_check": "",
-      "status": ""
+      "status": "",
+      "lead": "",
+      "reviewer": ""
     },
     {
       "stage": "Interview",
@@ -257,10 +253,9 @@
         "cite": "p38:28-p38:34"
       },
       "answering_section": "not in source",
-      "owner": "",
-      "claude_does": "",
-      "human_check": "",
-      "status": ""
+      "status": "",
+      "lead": "",
+      "reviewer": ""
     },
     {
       "stage": "Interview",
@@ -286,10 +281,9 @@
         "cite": "p38:28-p38:34"
       },
       "answering_section": "not in source",
-      "owner": "",
-      "claude_does": "",
-      "human_check": "",
-      "status": ""
+      "status": "",
+      "lead": "",
+      "reviewer": ""
     }
   ],
   "disqualifiers": [

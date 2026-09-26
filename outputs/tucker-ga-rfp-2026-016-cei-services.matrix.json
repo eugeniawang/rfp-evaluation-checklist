@@ -41,10 +41,9 @@
         "text": "5. Provide the resumes of key personnel who will perform the work.",
         "cite": "p10:18"
       },
-      "owner": "",
-      "claude_does": "",
-      "human_check": "",
-      "status": "open"
+      "status": "",
+      "lead": "",
+      "reviewer": ""
     },
     {
       "section": {
@@ -78,10 +77,9 @@
         "text": "3. In table format, provide a brief description of CEI services or related projects",
         "cite": "p10:12"
       },
-      "owner": "",
-      "claude_does": "",
-      "human_check": "",
-      "status": "open"
+      "status": "",
+      "lead": "",
+      "reviewer": ""
     },
     {
       "section": {
@@ -109,10 +107,9 @@
         "text": "3. Cost Proposal (submit as separate file)",
         "cite": "p3:8"
       },
-      "owner": "",
-      "claude_does": "",
-      "human_check": "",
-      "status": "open"
+      "status": "",
+      "lead": "",
+      "reviewer": ""
     }
   ],
   "disqualifiers": [

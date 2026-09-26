@@ -32,10 +32,9 @@
         "cite": "p14:16-p14:17"
       },
       "answering_section": "not in source",
-      "owner": "",
-      "claude_does": "",
-      "human_check": "",
-      "status": "open"
+      "status": "",
+      "lead": "",
+      "reviewer": ""
     },
     {
       "section": {
@@ -60,10 +59,9 @@
         "cite": "p14:21-p14:25"
       },
       "answering_section": "not in source",
-      "owner": "",
-      "claude_does": "",
-      "human_check": "",
-      "status": "open"
+      "status": "",
+      "lead": "",
+      "reviewer": ""
     },
     {
       "section": {
@@ -91,10 +89,9 @@
         "text": "Cost Proposal (form provided)",
         "cite": "p3:11"
       },
-      "owner": "",
-      "claude_does": "",
-      "human_check": "",
-      "status": "open"
+      "status": "",
+      "lead": "",
+      "reviewer": ""
     }
   ],
   "could_not_map": [
@@ -102,6 +99,11 @@
       "text": "Age and condition of equipment will be factored into contractor scoring for these services.",
       "cite": "p5:36",
       "why": "sits inside a scored criterion with no points of its own"
+    },
+    {
+      "text": "Proposals will be evaluated and scored in categories. Each category is assigned a maximum point value.",
+      "cite": "p14:12-p14:13",
+      "why": "scoring method that applies to every row; no points of its own"
     },
     {
       "text": "The City reserves the right to invite Offerors to present their proposal to the Evaluation Team. Evaluation criteria for such presentations will be provided to offerors prior to presentations.",
@@ -127,7 +129,7 @@
     },
     {
       "text": "All Proposals will initially be classified as either “responsive” or “non‐responsive”. Proposals may be found non‐responsive any time during the evaluation process or contract negotiation if any of the required information is not provided; the submitted price is found to be excessive or inadequate as measured by criteria stated in the RFP; or the Proposals is not within the plans and specifications described and required in the RFP. If a Proposal is found to be non‐responsive, it will not be considered further.",
-      "cite": "p11:23-p11:28",
+      "cite": "p11:22-p11:28",
       "kind": "non-responsive or non-responsible determination"
     },
     {
